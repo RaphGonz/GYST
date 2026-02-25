@@ -347,7 +347,162 @@ Store whatever they said as user_named_competitors (may be empty or "none").
 Tell the user:
 > "Got it. Let me research this now."
 
-<!-- RESEARCH AND OUTPUT: See section_competitors_research — added in Plan 02-02 -->
+</section>
+
+<section name="section_competitors_research">
+
+## Research invocation (RESEARCH-01)
+
+After the user provides competitor names (or says "none"):
+
+1. Say exactly:
+   > "Got it. Researching now — I'll find both tools and how people solve this today."
+
+2. Invoke gyst-researcher as a sub-agent via the Task tool with this brief:
+
+   ```
+   Customer segment: [locked customer segment from section_customer]
+   Problem: [locked problem from section_problem]
+   User-named competitors: [what the user said in section_competitors, or "none"]
+
+   Task: Find up to 7 competitors — both direct products and status-quo alternatives for this exact problem.
+   ```
+
+3. Wait for the agent to return results.
+
+4. FILTER results: Review every returned candidate. Discard any that do not directly address THE stated problem for THE stated customer segment. Err toward exclusion — only keep what clearly applies. If a competitor's description says "general productivity" or "adjacent to the problem", discard it.
+
+5. If 0 valid candidates remain after filtering:
+   Ask the user:
+   > "How do people solve this today without a dedicated product? Any manual workarounds, habits, or tools they use?"
+
+   Wait for their response, then search again using their answer. If still no valid candidates after the second search:
+   > "I couldn't find any competitors, which is unusual. Let's revisit the problem statement before proceeding — it may be framed too narrowly or use non-standard terminology."
+
+   Wait for user to decide: refine the problem (return to section_problem, discarding Competitors) or proceed with no competitors.
+
+6. Present remaining candidates (max 5 shown to user) as a numbered checklist:
+
+   > I found these competitors for [customer segment] solving [problem]:
+   >
+   > 1. **[Name]** — [one-sentence description of how they solve the problem]
+   > 2. **[Name]** — [one-sentence description]
+   > 3. **[Name]** — [one-sentence description]
+   > (up to 5 entries)
+   >
+   > Which of these should we track? Reply with numbers (e.g., "1, 3, 5") or "all".
+
+7. Wait for user selection.
+
+</section>
+
+<section name="section_main_adversary">
+
+## Main adversary selection
+
+After the user selects which competitors to track:
+
+Ask:
+> "Which one is your main adversary — the one capturing your target customer's budget or habit today?"
+
+Present the confirmed list by name so the user can pick:
+> (Your confirmed list: [Name 1], [Name 2], [Name 3], ...)
+
+Wait for user response.
+
+Lock:
+> "Got it — main adversary: **[name]**."
+
+Re-render the Step 1 banner with Competitors updated — include count and adversary name:
+```
+Competitors: [N] selected, [main adversary name] is main adversary
+```
+
+</section>
+
+<section name="write_competitors_md">
+
+## Write COMPETITORS.md (OUTPUT-04)
+
+After main adversary is confirmed:
+
+1. Read the template for structure reference: @~/.claude/get-your-shit-together/templates/COMPETITORS.md
+
+2. Write ./COMPETITORS.md with ALL of the following:
+   - Sprint date (today's date in YYYY-MM-DD format)
+   - Customer segment (locked value from section_customer)
+   - Main adversary name in the header
+   - Problem statement from section_problem in the header
+   - One entry per confirmed competitor (max 5) using the template's field structure:
+     - **Type:** (Direct product or Workaround/status-quo behavior)
+     - **What they do:** (specific, 2-4 sentences)
+     - **Pricing model:** (real pricing — no placeholders)
+     - **Known strengths:** (2-3 specific bullets)
+     - **Known weaknesses:** (2 specific bullets)
+     - **Positioning signals:** (their actual tagline, target audience, key claims)
+     - **Research sources:** (URLs or named sources)
+   - The main adversary's heading must include: `* MAIN ADVERSARY` (matching the template's marker style exactly)
+   - Summary Table at the bottom populated with all confirmed competitors
+
+   CRITICAL: No template placeholders in the output. No square brackets [...] remain. Every field has real content from research.
+
+3. Confirm to the user:
+   > "COMPETITORS.md written to your project directory."
+
+</section>
+
+<section name="navigation_controls">
+
+## Step 1 navigation (NAVIG-01, NAVIG-02, NAVIG-03)
+
+After COMPETITORS.md is written, present exactly this:
+
+> Step 1 complete. COMPETITORS.md written.
+>
+> What would you like to do?
+>
+> **A) Advance to Step 2** — move on to Differentiation
+> **B) Revisit something in Step 1** — go back to a specific sub-decision
+> **C) Start Step 1 over** — discard everything and start from customer segment
+>
+> Your choice:
+
+Wait for user response. Do NOT auto-advance. Do NOT ask "are you sure?" — accept their choice and act on it.
+
+---
+
+### If user picks A (advance to Step 2)
+
+Proceed to step2_stub.
+
+---
+
+### If user picks B (go back to a sub-decision) — NAVIG-02
+
+Ask:
+> "Which sub-decision do you want to revisit? (Customer segment / Problem / Founder advantages / Competitors)"
+
+Wait for user response.
+
+CRITICAL — DISCARD RULE: ALL decisions made AFTER the chosen sub-decision are DISCARDED. Do not try to preserve them, reference them, or offer to keep any of them. Re-run the full sequence from the chosen section forward as if those downstream decisions were never made. Delete them from your context.
+
+Examples:
+- User goes back to **Customer segment**: wipe Problem, Advantages, and Competitors. Re-run sections 1, 2, 3, and 4 in full.
+- User goes back to **Problem**: wipe Advantages and Competitors. Re-run sections 2, 3, and 4 in full.
+- User goes back to **Founder advantages**: wipe Competitors. Re-run sections 3 and 4 in full.
+- User goes back to **Competitors**: wipe only the competitor selection and main adversary. Re-run section 4 in full (keep Customer, Problem, Advantages locked).
+
+To restart a section: re-render the Step 1 banner showing the locked values you kept and "pending" for everything that was discarded, then ask that section's open question again.
+
+---
+
+### If user picks C (start Step 1 over)
+
+- Wipe ALL Step 1 decisions: customer segment, problem, advantages, competitors
+- Treat this as a fresh sprint start: re-render the Step 1 banner with all four values as "pending"
+- Ask the customer segment open question again (the same one from section_customer)
+
+Do not apologize or explain — just start fresh.
 
 </section>
 
