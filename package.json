@@ -1,0 +1,19 @@
+{
+  "name": "get-your-shit-together",
+  "version": "1.0.0",
+  "description": "One command, one session, one testable hypothesis — Foundation Sprint for solo entrepreneurs.",
+  "bin": {
+    "get-your-shit-together": "bin/install.js"
+  },
+  "files": [
+    "bin",
+    "commands",
+    "get-your-shit-together",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16.7.0"
+  },
+  "dependencies": {},
+  "license": "MIT"
+}
