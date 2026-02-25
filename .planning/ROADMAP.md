@@ -29,10 +29,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Main workflow file exists at `~/.claude/get-your-shit-together/workflows/foundation-sprint.md`
   4. Researcher agent file exists at `~/.claude/get-your-shit-together/agents/gyst-researcher.md`
   5. README.md contains copy-paste install instructions that get the package running from scratch
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: Create package directory structure and scaffold all files
+- [ ] 01-01-PLAN.md — Create package machinery: package.json, bin/install.js, slash command wrapper
+- [ ] 01-02-PLAN.md — Create content stubs: workflow stub, agent stub, 4 output templates, README
 
 ### Phase 2: The Basics (Step 1)
 **Goal**: User can run `/gyst:foundation-sprint`, receive a clear onboarding, work through Step 1 (client, problem, founder advantages, competitors), use the navigation controls, receive AI-researched competitor context, and have COMPETITORS.md written to disk with the fixed competitor list (max 5, main adversary flagged)
@@ -90,7 +91,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure | 0/1 | Not started | - |
+| 1. Infrastructure | 0/2 | Planned | - |
 | 2. The Basics (Step 1) | 0/2 | Not started | - |
 | 3. Differentiation (Step 2) | 0/2 | Not started | - |
 | 4. Approaches + Hypothesis + Outputs | 0/2 | Not started | - |
