@@ -1,3 +1,16 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: unknown
+last_updated: "2026-02-25T19:38:14.007Z"
+progress:
+  total_phases: 1
+  completed_phases: 1
+  total_plans: 2
+  completed_plans: 2
+---
+
 # Project State
 
 ## Project Reference
@@ -34,6 +47,7 @@ Progress: [##░░░░░░░░] 25%
 - Trend: On track
 
 *Updated after each plan completion*
+| Phase 01-infrastructure P01 | 15 | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -50,6 +64,8 @@ Recent decisions affecting current work:
 - 01-02: Agent files use comma-separated `tools:` field (not YAML array `allowed-tools:`)
 - 01-02: COMPETITORS.md template marks main adversary with `* MAIN ADVERSARY` for Step 2 grep
 - 01-02: Workflow stub lists all 4 sprint steps by name to satisfy non-empty file requirement
+- [Phase 01-infrastructure]: npm package name get-your-shit-together is a placeholder — final publish name TBD at publish time
+- [Phase 01-infrastructure]: bin/install.js auto-installs (no TTY prompt) when stdin is non-interactive for npx pipe compatibility
 
 ### Pending Todos
 

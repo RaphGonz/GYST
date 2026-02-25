@@ -54,8 +54,8 @@
 
 ### Infrastructure
 
-- [ ] **INFRA-01**: Package installs at `~/.claude/get-your-shit-together/` as a standalone directory
-- [ ] **INFRA-02**: Slash command entry point at `~/.claude/commands/gyst/foundation-sprint.md`
+- [x] **INFRA-01**: Package installs at `~/.claude/get-your-shit-together/` as a standalone directory
+- [x] **INFRA-02**: Slash command entry point at `~/.claude/commands/gyst/foundation-sprint.md`
 - [ ] **INFRA-03**: Main workflow at `~/.claude/get-your-shit-together/workflows/foundation-sprint.md`
 - [ ] **INFRA-04**: Researcher agent at `~/.claude/get-your-shit-together/agents/gyst-researcher.md`
 - [ ] **INFRA-05**: Output templates for HYPOTHESIS.md, SPRINT.md, POSITIONING.md, and COMPETITORS.md
@@ -86,8 +86,8 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | Phase 1 | Pending |
-| INFRA-02 | Phase 1 | Pending |
+| INFRA-01 | Phase 1 | Complete |
+| INFRA-02 | Phase 1 | Complete |
 | INFRA-03 | Phase 1 | Pending |
 | INFRA-04 | Phase 1 | Pending |
 | INFRA-05 | Phase 1 | Pending |
