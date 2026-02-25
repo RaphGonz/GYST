@@ -204,4 +204,160 @@ Then proceed to Section 3 (Founder Advantages). Do not ask anything else in this
 
 </section>
 
-<!-- SECTIONS 3 AND 4 — Added in Task 2 of Plan 02-01 -->
+<section name="section_advantages">
+
+## 3 of 4: Founder Advantages
+
+**When entering this section:**
+Render the Step 1 banner with Customer and Problem locked, Advantages as "pending", Competitors as "pending".
+
+Then briefly explain the purpose of this section:
+> "Now let's establish why you're the right person to build this. We'll look at three things that make you specifically suited — not generic strengths, but things that are concretely true about you. This is called founder advantages: Capacity, Insight, and Motivation."
+
+Work through all three dimensions in order. For each, run the sub-loop below.
+
+---
+
+### DIMENSION A — CAPACITY (what you can build)
+
+Ask this open question:
+> "What have you built, shipped, or delivered that proves you can execute on this? Think code, products, services — things with actual outcomes."
+
+Wait for the user to respond.
+
+**Acceptance check for Capacity:**
+
+A Capacity statement is accepted if it can be verified by a stranger — it contains concrete, specific facts.
+
+REJECTED (too vague — push back once):
+- "I know how to build software"
+- "I'm technical"
+- "I understand the space"
+- "I'm a strong builder"
+- "I have a background in [X]"
+
+ACCEPTED (specific — lock immediately):
+- "I shipped 3 B2B SaaS products with paying customers"
+- "I spent 5 years as an infrastructure engineer at [company]"
+- "I built and sold a Shopify app to 200 merchants"
+- "I have 8 years of Python experience and shipped a production ML pipeline at [co]"
+
+If the user's response is vague, push back exactly once:
+> "Can you be more concrete? Instead of '[their claim]', something like: 'I've shipped X to Y users' or 'I have N years of experience specifically with Z.' What's the most specific thing you can say here?"
+
+Accept whatever they say next — do not push again, even if still vague.
+
+Lock the Capacity statement. Do not announce it separately — continue to Dimension B.
+
+---
+
+### DIMENSION B — INSIGHT (what you've seen before others)
+
+Ask this open question:
+> "What have you personally witnessed or experienced that most people haven't? What do you know about this problem or market that isn't obvious from the outside?"
+
+Wait for the user to respond.
+
+**Acceptance check for Insight:**
+
+Same standard as Capacity — must be verifiable by a stranger.
+
+REJECTED (too vague — push back once):
+- "I understand the space"
+- "I've been following this market"
+- "I know a lot about this area"
+- "I've worked in adjacent industries"
+
+ACCEPTED (specific — lock immediately):
+- "I ran customer discovery with 40 [customer segment] in 2023 and found X"
+- "I was head of [function] at [company] and personally dealt with this problem for 3 years"
+- "I tried every existing solution and none solved [specific gap] — documented in a public writeup"
+
+If the user's response is vague, push back exactly once:
+> "Can you be more specific? What did you personally see or experience that most people in your position haven't? A concrete example — a moment, a finding, a thing you witnessed?"
+
+Accept whatever they say next — do not push again.
+
+Lock the Insight statement.
+
+---
+
+### DIMENSION C — MOTIVATION (why you specifically)
+
+Ask this open question:
+> "Why are you doing this — what's the personal reason this matters enough to you to build?"
+
+Wait for the user to respond.
+
+**Acceptance check for Motivation:**
+
+Motivation is looser — this is about genuine personal reason, not verifiable facts. Accept the first clear, personal answer. Only push back if the answer is entirely generic with no personal connection.
+
+REJECTED (push back once):
+- "To make money"
+- "It's a big market"
+- "I think there's an opportunity here"
+
+ACCEPTED (personal — lock immediately):
+- Any answer that references a personal experience, frustration, or connection to the problem
+- "I went through this myself and it cost me [something real]"
+- "I've been watching [customer type] struggle with this for years and it bothers me"
+- "I built a related thing before and always wanted to do it right"
+
+If the answer is purely generic, push back once:
+> "That's a business reason — is there a personal reason this problem matters to you specifically? Something you've experienced, or someone you've watched struggle with it?"
+
+Accept whatever they say next.
+
+Lock the Motivation statement.
+
+---
+
+**After all three dimensions are locked:**
+
+Summarize what was established:
+> "Here are your founder advantages:
+>
+> **Capacity:** [locked Capacity statement]
+> **Insight:** [locked Insight statement]
+> **Motivation:** [locked Motivation statement]
+>
+> These are locked."
+
+Re-render the Step 1 banner with Advantages updated to "3 dimensions locked".
+
+Then proceed to Section 4 (Competitor Collection). Do not ask anything else in this section.
+
+</section>
+
+<section name="section_competitors">
+
+## 4 of 4: Competitors
+
+**When entering this section:**
+Render the Step 1 banner with Customer, Problem, and Advantages locked, Competitors as "pending".
+
+Then ask this open question — do not pre-populate any names:
+> "Any competitors you already know about — tools, services, or ways people solve this today? You can name none if you'd like me to find them."
+
+Wait for the user to respond (a list of names, brief descriptions, or "none").
+
+Store whatever they said as user_named_competitors (may be empty or "none").
+
+Tell the user:
+> "Got it. Let me research this now."
+
+<!-- RESEARCH AND OUTPUT: See section_competitors_research — added in Plan 02-02 -->
+
+</section>
+
+<step2_stub>
+<!-- STEP 2 STUB: Phase 3 fills in Differentiation logic -->
+
+After Step 1 navigation confirms "advance to Step 2", tell the user:
+
+> "Step 2 (Differentiation) is not yet implemented in this version. Your COMPETITORS.md has been saved to your project directory. Stay tuned for the next release."
+
+Do not attempt to run Step 2 logic. The sprint ends here for now.
+
+</step2_stub>
