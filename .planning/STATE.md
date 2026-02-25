@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-02-25T19:51:29.067Z"
+last_updated: "2026-02-25T21:22:00Z"
 progress:
-  total_phases: 1
+  total_phases: 4
   completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
+  total_plans: 8
+  completed_plans: 3
 ---
 
 # Project State
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-25)
 
 **Core value:** One command, one session, one testable hypothesis — solo entrepreneurs get the clarity the Foundation Sprint was designed to produce, without needing a team.
-**Current focus:** Phase 1 — Infrastructure
+**Current focus:** Phase 2 — The Basics (Step 1)
 
 ## Current Position
 
-Phase: 1 of 4 (Infrastructure)
-Plan: 2 of 2 in current phase
-Status: Phase 1 complete — ready for Phase 2
-Last activity: 2026-02-25 — Plan 01-02 complete: workflow stub, agent stub, 4 templates, README
+Phase: 2 of 4 (The Basics — Step 1)
+Plan: 1 of 2 in current phase (02-01 complete)
+Status: Phase 2 in progress — Plan 02-01 complete, Plan 02-02 next
+Last activity: 2026-02-25 — Plan 02-01 complete: full foundation-sprint.md workflow (onboarding, banner, 4 sub-decision sections, research seam)
 
-Progress: [##░░░░░░░░] 25%
+Progress: [###░░░░░░░] 37%
 
 ## Performance Metrics
 
@@ -41,13 +41,15 @@ Progress: [##░░░░░░░░] 25%
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1. Infrastructure | 2 | ~18 min | ~9 min |
+| 2. The Basics Step 1 | 1 (of 2) | ~10 min | ~10 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01, 01-02
+- Last 5 plans: 01-01, 01-02, 02-01
 - Trend: On track
 
 *Updated after each plan completion*
 | Phase 01-infrastructure P01 | 15 | 3 tasks | 3 files |
+| Phase 02-the-basics-step-1 P01 | 10 | 2 tasks | 1 file |
 
 ## Accumulated Context
 
@@ -66,6 +68,9 @@ Recent decisions affecting current work:
 - 01-02: Workflow stub lists all 4 sprint steps by name to satisfy non-empty file requirement
 - [Phase 01-infrastructure]: npm package name get-your-shit-together is a placeholder — final publish name TBD at publish time
 - [Phase 01-infrastructure]: bin/install.js auto-installs (no TTY prompt) when stdin is non-interactive for npx pipe compatibility
+- 02-01: Inline WebSearch (not sub-agent) for problem validation — lightweight check in main conversation thread
+- 02-01: Motivation acceptance is looser than Capacity/Insight — accepts any personal answer, only pushes back on purely generic (no personal connection)
+- 02-01: Research handoff seam placed as HTML comment in section_competitors — Plan 02-02 splices research block at that exact point
 
 ### Pending Todos
 
@@ -78,5 +83,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Completed 01-02-PLAN.md — Phase 1 Infrastructure complete
+Stopped at: Completed 02-01-PLAN.md — foundation-sprint.md workflow written through competitor collection trigger
 Resume file: None

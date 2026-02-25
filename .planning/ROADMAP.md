@@ -46,11 +46,11 @@ Plans:
   4. AI researches identified competitors and validates the proposed customer segment and pain point via web search before advancing
   5. User can iterate within Step 1, go back to an earlier sub-decision, or explicitly advance — the sprint never auto-advances
   6. At the end of Step 1, `COMPETITORS.md` is written to disk containing the finalized competitor list (max 5, main adversary flagged) with a research profile for each competitor
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: Implement sprint entry point, onboarding, and Step 1 guided monologue flow
-- [ ] 02-02: Implement navigation controls, research/validation calls for Step 1, and COMPETITORS.md writer
+- [ ] 02-01-PLAN.md — Write foundation-sprint.md workflow: onboarding block, Step 1 banner, and elicitation sections for customer segment, problem (with inline validation), founder advantages, and competitor name collection trigger
+- [ ] 02-02-PLAN.md — Write gyst-researcher agent full operating instructions; extend workflow with research invocation, competitor checklist, main adversary selection, COMPETITORS.md writer, and navigation controls
 
 ### Phase 3: Differentiation (Step 2)
 **Goal**: User can rate their dream company on bipolar axes, AI rates each competitor from COMPETITORS.md on the 2 proposed axes using their existing research profiles (no re-searching), see the 2x2 matrix plotted, detect and resolve positioning conflicts, and write the mini-manifesto
@@ -92,6 +92,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Infrastructure | 2/2 | Complete    | 2026-02-25 |
-| 2. The Basics (Step 1) | 0/2 | Not started | - |
+| 2. The Basics (Step 1) | 1/2 | In Progress|  |
 | 3. Differentiation (Step 2) | 0/2 | Not started | - |
 | 4. Approaches + Hypothesis + Outputs | 0/2 | Not started | - |

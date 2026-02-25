@@ -7,11 +7,11 @@
 
 ### Sprint Flow
 
-- [ ] **SPRINT-01**: User can start a Foundation Sprint from scratch with `/gyst:foundation-sprint`
-- [ ] **SPRINT-02**: Step 1 (The Basics) — User can identify and select a target customer segment from AI-generated options
-- [ ] **SPRINT-03**: Step 1 — User can identify and select the core problem/pain point from AI-generated options
-- [ ] **SPRINT-04**: Step 1 — AI verifies client-problem fit (is this pain real, critical, and frequent for this specific client?)
-- [ ] **SPRINT-05**: Step 1 — User can articulate founder advantages across three dimensions: Capacity (what you can build), Insight (what you've seen before others), Motivation (why you're doing this). AI does not simply record what the user says — it pushes back until each advantage is formalized as a concrete, specific assertion rather than a slogan. Vague claims are rejected and rephrased collaboratively (e.g., "I know how to build things" is rejected; "I shipped 3 B2B SaaS products and know the sales cycle personally" is accepted).
+- [x] **SPRINT-01**: User can start a Foundation Sprint from scratch with `/gyst:foundation-sprint`
+- [x] **SPRINT-02**: Step 1 (The Basics) — User can identify and select a target customer segment from AI-generated options
+- [x] **SPRINT-03**: Step 1 — User can identify and select the core problem/pain point from AI-generated options
+- [x] **SPRINT-04**: Step 1 — AI verifies client-problem fit (is this pain real, critical, and frequent for this specific client?)
+- [x] **SPRINT-05**: Step 1 — User can articulate founder advantages across three dimensions: Capacity (what you can build), Insight (what you've seen before others), Motivation (why you're doing this). AI does not simply record what the user says — it pushes back until each advantage is formalized as a concrete, specific assertion rather than a slogan. Vague claims are rejected and rephrased collaboratively (e.g., "I know how to build things" is rejected; "I shipped 3 B2B SaaS products and know the sales cycle personally" is accepted).
 - [ ] **SPRINT-06**: Step 1 — User can map direct and indirect competitors and identify the main adversary (the one capturing the budget or habit today)
 
 - [ ] **SPRINT-07**: Step 2 (Differentiation) — User can rate their dream company on the 8 standard bipolar axes (slow/fast, hard/easy, expensive/free, complex/simple, dumb/smart, siloed/integrated, manual/automatic, and one more)
@@ -29,9 +29,9 @@
 
 ### Interaction Model
 
-- [ ] **INTER-01**: Sprint opens with a clear onboarding message explaining the 4 steps, the no-brainstorm method, and what the session produces
-- [ ] **INTER-02**: At each step, AI asks open freeform questions first, then proposes a concrete set of options for the user to choose from (replacing the silent-vote group mechanic)
-- [ ] **INTER-03**: Stage banners and progress indicators clearly show which step is active and what has been decided so far
+- [x] **INTER-01**: Sprint opens with a clear onboarding message explaining the 4 steps, the no-brainstorm method, and what the session produces
+- [x] **INTER-02**: At each step, AI asks open freeform questions first, then proposes a concrete set of options for the user to choose from (replacing the silent-vote group mechanic)
+- [x] **INTER-03**: Stage banners and progress indicators clearly show which step is active and what has been decided so far
 
 ### Research & Competitor Rating
 
@@ -92,15 +92,15 @@
 | INFRA-04 | Phase 1 | Pending |
 | INFRA-05 | Phase 1 | Pending |
 | INFRA-06 | Phase 1 | Pending |
-| SPRINT-01 | Phase 2 | Pending |
-| SPRINT-02 | Phase 2 | Pending |
-| SPRINT-03 | Phase 2 | Pending |
-| SPRINT-04 | Phase 2 | Pending |
-| SPRINT-05 | Phase 2 | Pending |
+| SPRINT-01 | Phase 2 | Complete |
+| SPRINT-02 | Phase 2 | Complete |
+| SPRINT-03 | Phase 2 | Complete |
+| SPRINT-04 | Phase 2 | Complete |
+| SPRINT-05 | Phase 2 | Complete |
 | SPRINT-06 | Phase 2 | Pending |
-| INTER-01 | Phase 2 | Pending |
-| INTER-02 | Phase 2 | Pending |
-| INTER-03 | Phase 2 | Pending |
+| INTER-01 | Phase 2 | Complete |
+| INTER-02 | Phase 2 | Complete |
+| INTER-03 | Phase 2 | Complete |
 | NAVIG-01 | Phase 2 | Pending |
 | NAVIG-02 | Phase 2 | Pending |
 | NAVIG-03 | Phase 2 | Pending |
