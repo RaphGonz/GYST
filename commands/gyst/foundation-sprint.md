@@ -7,6 +7,7 @@ allowed-tools:
   - Bash
   - WebSearch
   - WebFetch
+  - Task
 argument-hint: (no arguments needed — just run it)
 ---
 
