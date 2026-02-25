@@ -12,7 +12,7 @@ Four phases that build from nothing to a fully functional Foundation Sprint comm
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Infrastructure** - Scaffold the package directory, slash command entry point, agent, templates, and README
+- [x] **Phase 1: Infrastructure** - Scaffold the package directory, slash command entry point, agent, templates, and README
 - [ ] **Phase 2: The Basics (Step 1)** - Running sprint command with onboarding, customer/problem/founder/competitor elicitation, navigation, research foundation, and COMPETITORS.md written to disk
 - [ ] **Phase 3: Differentiation (Step 2)** - Bipolar axis rating, competitor re-rating from COMPETITORS.md on proposed axes, 2x2 plotting, conflict detection, and mini-manifesto
 - [ ] **Phase 4: Approaches + Hypothesis + Outputs (Steps 3-4)** - Solution approach generation and evaluation, final hypothesis formulation, testable form derivation, and three remaining output files
@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [ ] 01-01-PLAN.md — Create package machinery: package.json, bin/install.js, slash command wrapper
-- [ ] 01-02-PLAN.md — Create content stubs: workflow stub, agent stub, 4 output templates, README
+- [x] 01-02-PLAN.md — Create content stubs: workflow stub, agent stub, 4 output templates, README
 
 ### Phase 2: The Basics (Step 1)
 **Goal**: User can run `/gyst:foundation-sprint`, receive a clear onboarding, work through Step 1 (client, problem, founder advantages, competitors), use the navigation controls, receive AI-researched competitor context, and have COMPETITORS.md written to disk with the fixed competitor list (max 5, main adversary flagged)
@@ -91,7 +91,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure | 0/2 | Planned | - |
+| 1. Infrastructure | 2/2 | Complete | 2026-02-25 |
 | 2. The Basics (Step 1) | 0/2 | Not started | - |
 | 3. Differentiation (Step 2) | 0/2 | Not started | - |
 | 4. Approaches + Hypothesis + Outputs | 0/2 | Not started | - |
