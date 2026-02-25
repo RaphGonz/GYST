@@ -12,7 +12,7 @@
 - [x] **SPRINT-03**: Step 1 — User can identify and select the core problem/pain point from AI-generated options
 - [x] **SPRINT-04**: Step 1 — AI verifies client-problem fit (is this pain real, critical, and frequent for this specific client?)
 - [x] **SPRINT-05**: Step 1 — User can articulate founder advantages across three dimensions: Capacity (what you can build), Insight (what you've seen before others), Motivation (why you're doing this). AI does not simply record what the user says — it pushes back until each advantage is formalized as a concrete, specific assertion rather than a slogan. Vague claims are rejected and rephrased collaboratively (e.g., "I know how to build things" is rejected; "I shipped 3 B2B SaaS products and know the sales cycle personally" is accepted).
-- [ ] **SPRINT-06**: Step 1 — User can map direct and indirect competitors and identify the main adversary (the one capturing the budget or habit today)
+- [x] **SPRINT-06**: Step 1 — User can map direct and indirect competitors and identify the main adversary (the one capturing the budget or habit today)
 
 - [ ] **SPRINT-07**: Step 2 (Differentiation) — User can rate their dream company on the 8 standard bipolar axes (slow/fast, hard/easy, expensive/free, complex/simple, dumb/smart, siloed/integrated, manual/automatic, and one more)
 - [ ] **SPRINT-08**: Step 2 — User can add custom bipolar axes relevant to their specific domain and client
@@ -35,22 +35,22 @@
 
 ### Research & Competitor Rating
 
-- [ ] **RESEARCH-01**: During Step 1, AI researches the identified competitors (direct and indirect) via web search to build a factual competitor profile before Differentiation
+- [x] **RESEARCH-01**: During Step 1, AI researches the identified competitors (direct and indirect) via web search to build a factual competitor profile before Differentiation
 - [ ] **RESEARCH-02**: During Step 2, when the user proposes 2 axes, AI rates each competitor from COMPETITORS.md on those axes using the existing research profiles — no additional web searching required
-- [ ] **RESEARCH-03**: During Step 1, AI validates the proposed customer segment and pain point — confirms they exist and that the pain is real (not assumed)
+- [x] **RESEARCH-03**: During Step 1, AI validates the proposed customer segment and pain point — confirms they exist and that the pain is real (not assumed)
 
 ### Navigation
 
-- [ ] **NAVIG-01**: At the end of each step, user is presented with three options: iterate more within the step, advance to the next step, or go back to a specific earlier step
-- [ ] **NAVIG-02**: When user goes back to an earlier step, all downstream decisions and outputs are discarded and rebuilt from that point — no patching
-- [ ] **NAVIG-03**: Each step loops until the user explicitly chooses to advance — never auto-advanced
+- [x] **NAVIG-01**: At the end of each step, user is presented with three options: iterate more within the step, advance to the next step, or go back to a specific earlier step
+- [x] **NAVIG-02**: When user goes back to an earlier step, all downstream decisions and outputs are discarded and rebuilt from that point — no patching
+- [x] **NAVIG-03**: Each step loops until the user explicitly chooses to advance — never auto-advanced
 
 ### Output
 
 - [ ] **OUTPUT-01**: `HYPOTHESIS.md` produced at end of sprint — full X/Y/Z/W/U/V hypothesis, testable form, success metric, falsification condition, and fastest validation test
 - [ ] **OUTPUT-02**: `SPRINT.md` produced at end of sprint — full journal of every decision made at each step, with the options considered and the rationale for what was chosen
 - [ ] **OUTPUT-03**: `POSITIONING.md` produced at end of sprint — the 2x2 matrix with all competitor positions plotted, the mini-manifesto, and the chosen differentiation axes
-- [ ] **OUTPUT-04**: `COMPETITORS.md` produced at end of Step 1 — the fixed competitor list (max 5, main adversary flagged) with research profiles for each; read by Step 2 for axis rating without re-searching
+- [x] **OUTPUT-04**: `COMPETITORS.md` produced at end of Step 1 — the fixed competitor list (max 5, main adversary flagged) with research profiles for each; read by Step 2 for axis rating without re-searching
 
 ### Infrastructure
 
@@ -97,16 +97,16 @@
 | SPRINT-03 | Phase 2 | Complete |
 | SPRINT-04 | Phase 2 | Complete |
 | SPRINT-05 | Phase 2 | Complete |
-| SPRINT-06 | Phase 2 | Pending |
+| SPRINT-06 | Phase 2 | Complete |
 | INTER-01 | Phase 2 | Complete |
 | INTER-02 | Phase 2 | Complete |
 | INTER-03 | Phase 2 | Complete |
-| NAVIG-01 | Phase 2 | Pending |
-| NAVIG-02 | Phase 2 | Pending |
-| NAVIG-03 | Phase 2 | Pending |
-| RESEARCH-01 | Phase 2 | Pending |
-| RESEARCH-03 | Phase 2 | Pending |
-| OUTPUT-04 | Phase 2 | Pending |
+| NAVIG-01 | Phase 2 | Complete |
+| NAVIG-02 | Phase 2 | Complete |
+| NAVIG-03 | Phase 2 | Complete |
+| RESEARCH-01 | Phase 2 | Complete |
+| RESEARCH-03 | Phase 2 | Complete |
+| OUTPUT-04 | Phase 2 | Complete |
 | SPRINT-07 | Phase 3 | Pending |
 | SPRINT-08 | Phase 3 | Pending |
 | SPRINT-09 | Phase 3 | Pending |
@@ -129,4 +129,4 @@
 
 ---
 *Requirements defined: 2026-02-25*
-*Last updated: 2026-02-25 — added OUTPUT-04 (COMPETITORS.md), updated SPRINT-09 and RESEARCH-02 to reflect re-rating from persisted profiles rather than re-discovering competitors, updated INFRA-05 to include COMPETITORS.md template*
+*Last updated: 2026-02-25 — 02-02 complete: marked SPRINT-06, NAVIG-01, NAVIG-02, NAVIG-03, RESEARCH-01, RESEARCH-03, OUTPUT-04 as complete*

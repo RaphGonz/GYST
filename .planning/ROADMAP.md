@@ -13,7 +13,7 @@ Four phases that build from nothing to a fully functional Foundation Sprint comm
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Infrastructure** - Scaffold the package directory, slash command entry point, agent, templates, and README
-- [ ] **Phase 2: The Basics (Step 1)** - Running sprint command with onboarding, customer/problem/founder/competitor elicitation, navigation, research foundation, and COMPETITORS.md written to disk
+- [x] **Phase 2: The Basics (Step 1)** - Running sprint command with onboarding, customer/problem/founder/competitor elicitation, navigation, research foundation, and COMPETITORS.md written to disk
 - [ ] **Phase 3: Differentiation (Step 2)** - Bipolar axis rating, competitor re-rating from COMPETITORS.md on proposed axes, 2x2 plotting, conflict detection, and mini-manifesto
 - [ ] **Phase 4: Approaches + Hypothesis + Outputs (Steps 3-4)** - Solution approach generation and evaluation, final hypothesis formulation, testable form derivation, and three remaining output files
 
@@ -49,8 +49,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Write foundation-sprint.md workflow: onboarding block, Step 1 banner, and elicitation sections for customer segment, problem (with inline validation), founder advantages, and competitor name collection trigger
-- [ ] 02-02-PLAN.md — Write gyst-researcher agent full operating instructions; extend workflow with research invocation, competitor checklist, main adversary selection, COMPETITORS.md writer, and navigation controls
+- [x] 02-01-PLAN.md — Write foundation-sprint.md workflow: onboarding block, Step 1 banner, and elicitation sections for customer segment, problem (with inline validation), founder advantages, and competitor name collection trigger
+- [x] 02-02-PLAN.md — Write gyst-researcher agent full operating instructions; extend workflow with research invocation, competitor checklist, main adversary selection, COMPETITORS.md writer, and navigation controls
 
 ### Phase 3: Differentiation (Step 2)
 **Goal**: User can rate their dream company on bipolar axes, AI rates each competitor from COMPETITORS.md on the 2 proposed axes using their existing research profiles (no re-searching), see the 2x2 matrix plotted, detect and resolve positioning conflicts, and write the mini-manifesto
@@ -92,6 +92,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Infrastructure | 2/2 | Complete    | 2026-02-25 |
-| 2. The Basics (Step 1) | 1/2 | In Progress|  |
+| 2. The Basics (Step 1) | 2/2 | Complete    | 2026-02-25 |
 | 3. Differentiation (Step 2) | 0/2 | Not started | - |
 | 4. Approaches + Hypothesis + Outputs | 0/2 | Not started | - |
