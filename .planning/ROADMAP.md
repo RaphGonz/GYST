@@ -62,11 +62,11 @@ Plans:
   3. The 2x2 matrix is plotted with all competitors from COMPETITORS.md positioned based on the ratings derived from their research profiles, with visible rationale for each placement
   4. If any competitor lands in the top-right quadrant (same position as the dream company), AI flags the conflict and prompts axis selection again
   5. User can write the 3-phrase mini-manifesto (two differentiators + safeguard) before advancing
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: Implement bipolar axis rating, custom axes, and COMPETITORS.md-based competitor scoring (read profiles, derive ratings, no re-search)
-- [ ] 03-02: Implement 2x2 matrix rendering, conflict detection, and mini-manifesto step
+- [ ] 03-01-PLAN.md — Axis rating flow: step2_banner, section_axis_rating (8 standard axes -5 to +5), section_custom_axes (AI proposes 1-2 domain axes; user can add or skip), section_axis_selection (user picks 2 differentiators; banner re-renders locked)
+- [ ] 03-02-PLAN.md — Scoring and output: section_competitor_scoring (Read COMPETITORS.md; no web search), section_matrix_render (ASCII 2x2 + rationale), conflict detection hard-block, section_manifesto (holistic eval), section_step2_navigation (summary + A/B nav), step3_stub
 
 ### Phase 4: Approaches + Hypothesis + Outputs (Steps 3-4)
 **Goal**: Step 3 opens by reloading the founder's advantages (Capacity + Insight) and the chosen differentiating axes as active context. User proposes their own initial approach first; AI then generates additional approaches to reach a total of 3-4, filtered by the founder's actual capabilities and constrained by the Step 2 positioning axes. All approaches are evaluated across 4 standard matrices. User commits to the strongest approach, formulates the full hypothesis, derives the testable form, and receives all three remaining output files written to disk
