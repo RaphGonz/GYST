@@ -784,3 +784,120 @@ After the conflict message: ask the user to pick 2 new differentiating axes. Ret
 **If NO conflict:** Proceed directly to section_manifesto.
 
 </section>
+
+<section name="section_manifesto">
+
+## Mini-Manifesto (SPRINT-11)
+
+**When entering this section:** After the 2x2 matrix is confirmed with no conflict.
+
+Say:
+
+> "Now write your mini-manifesto — 3 short phrases that define what you stand for.
+>
+> Write them as advice to a new team member, not as marketing copy.
+> They should constrain decisions, not describe aspirations.
+>
+> **Phrase 1 (Differentiator 1):** Connected to your X-axis position
+>    Example: "We are fully automated — no manual steps for the customer, ever."
+>
+> **Phrase 2 (Differentiator 2):** Connected to your Y-axis position
+>    Example: "We are always free to start — no credit card, no trial expiry."
+>
+> **Phrase 3 (Safeguard):** What you will never compromise on, even if it costs you
+>    Example: "We will never add enterprise features that break the simple user experience."
+>
+> Write all three at once."
+
+Wait for user response.
+
+**Evaluate all 3 phrases together in ONE holistic response — do NOT critique each phrase separately.**
+
+Evaluation criteria (check all three together):
+- Do they read as decision-making tools, not marketing headlines?
+- Are they specific enough to actually constrain a product decision?
+- Do they connect to the chosen differentiating axes?
+
+Invalid examples (marketing copy — reject these):
+- "We are the leader in X" / "We deliver unparalleled Y" / "We are the fastest/best/cheapest"
+
+Valid examples (decision-making constraints):
+- "We build for one persona and say no to feature requests from others"
+- "We never charge per seat — pricing is always flat"
+- "We will never add features that require a sales call to explain"
+
+**If strong:** Say "These work. Locking your manifesto." Then lock all 3 phrases.
+
+**If marketing copy or too vague:** Give ONE round of feedback — explain what a decision-constraining version looks like and give a specific rewrite example. Then accept whatever the user writes next without further pushback.
+
+After locking: re-render the Step 2 banner with "Manifesto: locked". Then proceed to section_step2_navigation.
+
+</section>
+
+<section name="section_step2_navigation">
+
+## Step 2 Summary and Navigation
+
+**When entering this section:** After the manifesto is locked.
+
+Display the Step 2 complete summary block:
+
+─── Step 2 Complete ─────────────────────────────
+Differentiating axes:
+  X: [axis name] — You: [score]
+  Y: [axis name] — You: [score]
+
+Competitor positions:
+  [CompA]: X: [score], Y: [score] → [quadrant]
+  [CompB]: X: [score], Y: [score] → [quadrant]
+  (all competitors from COMPETITORS.md)
+
+Mini-manifesto:
+  [Phrase 1]
+  [Phrase 2]
+  [Phrase 3]
+─────────────────────────────────────────────────
+
+Then ask:
+
+> "What would you like to do?
+>
+> **A) Continue to Step 3** — solution approaches
+> **B) Go back** — revisit axis selection or manifesto"
+
+Wait for user response.
+
+**If A:** Proceed to step3_stub.
+
+**If B:** Ask what they want to revisit:
+
+> "What do you want to go back to?
+>
+> **1) Axis selection** — pick different X and Y axes (your ratings on all 8+ axes are preserved)
+> **2) Manifesto** — rewrite your mini-manifesto (axes and matrix are preserved)"
+
+Wait for user choice.
+- If "1" or "axis selection": return to section_axis_selection. All axis ratings are preserved — only the choice of which 2 to use as differentiators is redone.
+- If "2" or "manifesto": return to section_manifesto. Axes, matrix, and scores are preserved.
+
+Do NOT offer to wipe all of Step 2. Do NOT offer to restart Step 1. Targeted redo only.
+
+</section>
+
+<step3_stub>
+<!-- STEP 3 STUB: Phase 4 fills in Approaches logic -->
+
+After Step 2 navigation confirms "advance to Step 3", tell the user:
+
+> "Step 3 (Approaches) is not yet implemented in this version. Your Step 2 decisions have been captured in this session.
+>
+> **Your Step 2 summary:**
+> - X-axis: [locked X-axis and your score]
+> - Y-axis: [locked Y-axis and your score]
+> - Manifesto: [your 3 phrases]
+>
+> Stay tuned for the next release."
+
+Do not attempt to run Step 3 logic. The sprint ends here for now.
+
+</step3_stub>
