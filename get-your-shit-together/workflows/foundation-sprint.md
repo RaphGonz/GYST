@@ -473,7 +473,7 @@ Wait for user response. Do NOT auto-advance. Do NOT ask "are you sure?" — acce
 
 ### If user picks A (advance to Step 2)
 
-Proceed to step2_stub.
+Proceed to step2_banner, then section_axis_rating.
 
 ---
 
@@ -506,13 +506,74 @@ Do not apologize or explain — just start fresh.
 
 </section>
 
-<step2_stub>
-<!-- STEP 2 STUB: Phase 3 fills in Differentiation logic -->
+<step2_banner>
+<!-- BANNER RENDER INSTRUCTION — reusable for Step 2. Render on Step 2 entry AND after axes are locked. -->
 
-After Step 1 navigation confirms "advance to Step 2", tell the user:
+The Step 2 banner format:
 
-> "Step 2 (Differentiation) is not yet implemented in this version. Your COMPETITORS.md has been saved to your project directory. Stay tuned for the next release."
+─── Step 2: Differentiation ─────────────────────
+X-axis: [value or "pending"]
+Y-axis: [value or "pending"]
+Dream company: [X score, Y score or "pending"]
+Manifesto: [locked / pending]
+─────────────────────────────────────────────────
 
-Do not attempt to run Step 2 logic. The sprint ends here for now.
+After axes are locked (example with real values):
+─── Step 2: Differentiation ─────────────────────
+X-axis: Manual ←→ Automatic (You: +4)
+Y-axis: Expensive ←→ Free (You: +3)
+Dream company: top-right (+4, +3)
+Manifesto: pending
+─────────────────────────────────────────────────
 
-</step2_stub>
+Rules: Same visual style as Step 1 banner. No emoji. Width ~50 chars. Show locked values inline; "pending" for not-yet-decided.
+</step2_banner>
+
+<section name="section_axis_rating">
+
+## Step 2: Rating the Dream Company
+
+**When entering this section:** Render the Step 2 banner with all four values as "pending".
+
+Then say:
+
+> "Now we position your dream company on 8 bipolar axes. Each axis has two poles — rate where YOUR DREAM COMPANY sits.
+>
+> Scale: -5 = far left pole, 0 = neutral, +5 = far right pole
+>
+> 1. Slow ←————————→ Fast
+> 2. Hard ←————————→ Easy
+> 3. Expensive ←———→ Free
+> 4. Complex ←—————→ Simple
+> 5. Dumb ←————————→ Smart
+> 6. Siloed ←——————→ Integrated
+> 7. Manual ←——————→ Automatic
+> 8. Narrow ←——————→ Broad
+>
+> Reply with 8 numbers in order, e.g.: "+3, -1, +5, +2, +4, 0, +3, +2"
+> Or rate them one at a time — your choice."
+
+Wait for the user to respond.
+
+Accept any readable format: comma-separated list, numbered list, or axis-by-axis. Parse the 8 values.
+
+Confirm back with all 8 ratings listed:
+
+> "Got it. Your dream company ratings:
+>
+> 1. Slow ←→ Fast: [score]
+> 2. Hard ←→ Easy: [score]
+> 3. Expensive ←→ Free: [score]
+> 4. Complex ←→ Simple: [score]
+> 5. Dumb ←→ Smart: [score]
+> 6. Siloed ←→ Integrated: [score]
+> 7. Manual ←→ Automatic: [score]
+> 8. Narrow ←→ Broad: [score]
+>
+> Are these right? (Yes to lock, or tell me what to change.)"
+
+Wait for confirmation. Accept on first confirmation — do not push back on ratings.
+
+After confirmation: lock all 8 ratings. Proceed to section_custom_axes.
+
+</section>
