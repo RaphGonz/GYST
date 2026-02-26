@@ -577,3 +577,91 @@ Wait for confirmation. Accept on first confirmation — do not push back on rati
 After confirmation: lock all 8 ratings. Proceed to section_custom_axes.
 
 </section>
+
+<section name="section_custom_axes">
+
+## Custom Axes (optional but prominent)
+
+**When entering this section:** After all 8 standard axis ratings are locked.
+
+Analyze the competitors' industries and profiles from the Step 1 conversation context (the competitor names and any market signals already discussed). Propose 1-2 domain-specific axes that would be meaningful differentiators in this particular market.
+
+Say:
+
+> "Now let's think about axes specific to your market.
+>
+> Based on your competitors' profiles, I'd suggest these domain-specific axes:
+>
+> **A) [AI-proposed axis 1 name]:** [Left pole] ←→ [Right pole]
+>    *Why: [one sentence — what this measures and why it matters in your specific market]*
+>
+> **B) [AI-proposed axis 2 name]:** [Left pole] ←→ [Right pole]
+>    *Why: [one sentence]*
+>
+> Do you want to add any of these, or propose your own?
+>
+> - Type 'A', 'B', or 'A and B' to add my suggestions (and I'll ask you to rate them)
+> - Describe your own axis (give it a name and two poles)
+> - Type 'skip' to work with just the standard 8"
+
+Wait for user response.
+
+If they accept one or both AI axes: ask them to rate each accepted axis on -5 to +5 immediately. Lock the custom axis scores alongside the standard 8.
+
+If they propose their own axis: accept the name and poles, ask them to rate it on -5 to +5, lock it.
+
+If they skip: acknowledge and proceed immediately to section_axis_selection.
+
+**Do NOT suggest which 2 axes to use as differentiators.** The custom axis step only adds axes to the rated pool — selection happens in the next section.
+
+After all accepted custom axes are rated and locked: proceed to section_axis_selection.
+
+</section>
+
+<section name="section_axis_selection">
+
+## Selecting 2 Differentiating Axes
+
+**When entering this section:** After all axes (standard 8 + any custom) are rated and locked.
+
+List all rated axes with their scores so the user can see them at a glance:
+
+> "Here are all your rated axes. Pick the 2 that best capture where YOUR dream company is different from the competitors:
+>
+> 1. Slow ←→ Fast: [score]
+> 2. Hard ←→ Easy: [score]
+> 3. Expensive ←→ Free: [score]
+> 4. Complex ←→ Simple: [score]
+> 5. Dumb ←→ Smart: [score]
+> 6. Siloed ←→ Integrated: [score]
+> 7. Manual ←→ Automatic: [score]
+> 8. Narrow ←→ Broad: [score]
+> [9+. Custom axes if any, with scores]
+>
+> Which 2 do you want as your X-axis and Y-axis?
+> (e.g., '3 and 7' or 'Expensive-Free as X, Manual-Automatic as Y')"
+
+Wait for user response.
+
+**Do NOT suggest or recommend any axes.** Accept whatever 2 the user picks without commentary on whether they're "good" choices.
+
+After user picks their 2 axes: confirm back:
+
+> "Got it:
+> X-axis: [axis name] — You: [score]
+> Y-axis: [axis name] — You: [score]
+>
+> Locking these as your differentiating axes."
+
+Re-render the Step 2 banner with the locked axis names and the dream company's scores on each:
+
+─── Step 2: Differentiation ─────────────────────
+X-axis: [axis] (You: [X score])
+Y-axis: [axis] (You: [Y score])
+Dream company: top-right ([X score], [Y score])
+Manifesto: pending
+─────────────────────────────────────────────────
+
+After the banner: proceed to section_competitor_scoring (implemented in Plan 03-02).
+
+</section>
