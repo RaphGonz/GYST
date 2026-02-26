@@ -665,3 +665,122 @@ Manifesto: pending
 After the banner: proceed to section_competitor_scoring (implemented in Plan 03-02).
 
 </section>
+
+<section name="section_competitor_scoring">
+
+## Competitor Scoring (RESEARCH-02)
+
+**When entering this section:** After the 2 differentiating axes are locked and the Step 2 banner has been re-rendered.
+
+**CRITICAL: Do NOT run any web searches in this section. Do NOT call WebSearch or WebFetch. There is NO exception to this rule. All scoring uses ONLY information already in COMPETITORS.md. If a profile field is missing or empty, score 0 and flag as "limited data".**
+
+Read the competitor profiles now:
+
+@./COMPETITORS.md
+
+For each competitor in COMPETITORS.md, derive a score from -5 to +5 on each of the 2 selected axes (X-axis and Y-axis locked in section_axis_selection).
+
+Use ONLY these profile fields as evidence:
+- **For price-related axes (Expensive ←→ Free):** Use the "Pricing model" field directly.
+- **For speed-related axes (Slow ←→ Fast):** Look for time-to-value claims and onboarding descriptions in "What they do."
+- **For ease-related axes (Hard ←→ Easy):** Look for setup friction, technical audience signals in "Known strengths" and "Known weaknesses."
+- **For complexity axes (Complex ←→ Simple):** Count feature breadth signals; "all-in-one" or "comprehensive" = more complex; "focused" or "single-purpose" = simpler.
+- **For intelligence axes (Dumb ←→ Smart):** Look for AI, automation, or intelligence claims in "Known strengths" and "Positioning signals."
+- **For integration axes (Siloed ←→ Integrated):** Look for API, integration ecosystem, or "connects with" mentions in "Known strengths" and "Positioning signals."
+- **For automation axes (Manual ←→ Automatic):** Look for workflow automation claims in "Known strengths" and "What they do."
+- **For scope axes (Narrow ←→ Broad):** Look for vertical/horizontal claims and target audience breadth in "What they do" and "Positioning signals."
+- **For domain-specific custom axes:** Use the "Positioning signals" field as the primary signal source.
+
+If a required field is empty or "Unknown": score 0 and flag it explicitly.
+
+Do NOT infer from general market knowledge. Do NOT search the web. Score 0 if you cannot support a score from the profile text.
+
+Display scores with rationale BEFORE rendering the matrix:
+
+> Scoring competitors on [X-axis] and [Y-axis]:
+>
+> [CompA]: X-axis [score], Y-axis [score] — [one key detail from their profile that drove this rating]
+> [CompB]: X-axis [score], Y-axis [score] — [key detail]; [axis] 0 — limited data ([field name] not found)
+> (repeat for each competitor)
+
+After displaying all scores: proceed to section_matrix_render.
+
+</section>
+
+<section name="section_matrix_render">
+
+## 2x2 Matrix and Conflict Check (SPRINT-09, SPRINT-10)
+
+**When entering this section:** After all competitor scores are displayed.
+
+**Step 1: Assign quadrants.**
+
+For each competitor:
+- X-score > 0 → right half. X-score ≤ 0 → left half.
+- Y-score > 0 → top half. Y-score ≤ 0 → bottom half.
+- Score of exactly 0 → place near the center line of that axis.
+
+"You" (dream company) is ALWAYS placed in top-right, regardless of scores.
+
+**Step 2: Render the ASCII grid.**
+
+Grid format (approximately 60 characters wide):
+
+```
+              High [Y-axis right pole]
+                        ^
+  [top-left names]      |      You
+                        |  [top-right names]
+  ────────────────────────────────────────►
+                        |   High [X-axis right pole]
+  [bottom-left names]   |
+                        |  [bottom-right names]
+              Low [Y-axis left pole]
+```
+
+Rules:
+- Place competitor names spatially within their quadrant region — names only, no coordinates.
+- Truncate names longer than 15 characters with "..." (e.g., "CompetitorName..." → "CompetitorNam...")
+- If multiple competitors land in the same quadrant: stack them vertically (one per line).
+- If a quadrant is empty: render "—" in that quadrant region.
+- The grid must always show all 4 quadrants even if some are empty.
+- "You" appears in the top-right area of the grid.
+- Label axes outside the grid: top = High [Y right pole], bottom = Low [Y left pole], right = High [X right pole].
+
+**Step 3: Render the rationale block below the grid.**
+
+After the grid, show one line per competitor:
+
+> Competitor positions:
+> - [CompA] (top-right): [key profile detail that drove placement] — CONFLICT
+> - [CompB] (bottom-left): [key profile detail]
+> - [CompC] (bottom-right): [key profile detail]
+> (Note conflicts in rationale with "— CONFLICT" marker)
+
+**Step 4: Conflict check (SPRINT-10).**
+
+After the matrix and rationale block are rendered:
+
+Check: Does any competitor have BOTH x_score > 0 AND y_score > 0?
+
+**If YES (conflict):**
+
+Display immediately after the rationale block:
+
+> **CONFLICT DETECTED**
+>
+> [CompA] lands in the top-right quadrant — the same position as your dream company.
+>
+> This means [CompA] already holds the differentiating position you're claiming.
+> Customers who see both of you won't have a clear reason to choose you over them.
+>
+> You need to choose 2 different differentiating axes — ones where YOU are in the
+> top-right and [CompA] is not. Your ratings on all 8+ axes are preserved.
+
+**There is NO option to continue with a conflict. Do NOT say "you could proceed anyway." Do NOT offer any alternative path. The ONLY available action is axis re-selection.**
+
+After the conflict message: ask the user to pick 2 new differentiating axes. Return to section_axis_selection. Start the selection process from the beginning of that section.
+
+**If NO conflict:** Proceed directly to section_manifesto.
+
+</section>
