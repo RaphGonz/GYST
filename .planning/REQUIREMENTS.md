@@ -16,9 +16,9 @@
 
 - [x] **SPRINT-07**: Step 2 (Differentiation) — User can rate their dream company on the 8 standard bipolar axes (slow/fast, hard/easy, expensive/free, complex/simple, dumb/smart, siloed/integrated, manual/automatic, and one more)
 - [x] **SPRINT-08**: Step 2 — User can add custom bipolar axes relevant to their specific domain and client
-- [ ] **SPRINT-09**: Step 2 — When user proposes 2 axes as differentiators, AI rates all competitors from COMPETITORS.md on those 2 axes using existing research profiles, then plots the full 2x2 matrix
-- [ ] **SPRINT-10**: Step 2 — If any competitor lands in the top-right quadrant (same as the dream company), AI flags the conflict and prompts the user to choose different axes
-- [ ] **SPRINT-11**: Step 2 — User can write a 3-phrase mini-manifesto: Differentiator 1, Differentiator 2, Safeguard (formulated as advice to new team members, not marketing copy)
+- [x] **SPRINT-09**: Step 2 — When user proposes 2 axes as differentiators, AI rates all competitors from COMPETITORS.md on those 2 axes using existing research profiles, then plots the full 2x2 matrix
+- [x] **SPRINT-10**: Step 2 — If any competitor lands in the top-right quadrant (same as the dream company), AI flags the conflict and prompts the user to choose different axes
+- [x] **SPRINT-11**: Step 2 — User can write a 3-phrase mini-manifesto: Differentiator 1, Differentiator 2, Safeguard (formulated as advice to new team members, not marketing copy)
 
 - [ ] **SPRINT-12**: Step 3 (Approaches) — Step 3 opens by loading the founder's advantages (Capacity + Insight from Step 1) and the chosen differentiating axes (from Step 2) as active context. The user proposes their OWN initial approach first (their existing idea). AI then generates additional approaches to reach a total of 3-4, using web research and reasoning about the problem space, filtered by the founder's actual Capacity and Insight (only executable approaches are proposed) and constrained by the Step 2 differentiating axes (approaches must reinforce the chosen positioning). All approaches — user's and AI's — are then evaluated together on the 4 standard matrices.
 - [ ] **SPRINT-13**: Step 3 — Each approach is evaluated on 4 standard 2x2 matrices: Customer Vision (ease × solves perfectly), Money Vision (recurring revenue × number of clients), Pragmatic Vision (ease to build × speed to build), Growth Vision (adaptability × client acquisition over time)
@@ -36,7 +36,7 @@
 ### Research & Competitor Rating
 
 - [x] **RESEARCH-01**: During Step 1, AI researches the identified competitors (direct and indirect) via web search to build a factual competitor profile before Differentiation
-- [ ] **RESEARCH-02**: During Step 2, when the user proposes 2 axes, AI rates each competitor from COMPETITORS.md on those axes using the existing research profiles — no additional web searching required
+- [x] **RESEARCH-02**: During Step 2, when the user proposes 2 axes, AI rates each competitor from COMPETITORS.md on those axes using the existing research profiles — no additional web searching required
 - [x] **RESEARCH-03**: During Step 1, AI validates the proposed customer segment and pain point — confirms they exist and that the pain is real (not assumed)
 
 ### Navigation
@@ -109,10 +109,10 @@
 | OUTPUT-04 | Phase 2 | Complete |
 | SPRINT-07 | Phase 3 | Complete |
 | SPRINT-08 | Phase 3 | Complete |
-| SPRINT-09 | Phase 3 | Pending |
-| SPRINT-10 | Phase 3 | Pending |
-| SPRINT-11 | Phase 3 | Pending |
-| RESEARCH-02 | Phase 3 | Pending |
+| SPRINT-09 | Phase 3 | Complete |
+| SPRINT-10 | Phase 3 | Complete |
+| SPRINT-11 | Phase 3 | Complete |
+| RESEARCH-02 | Phase 3 | Complete |
 | SPRINT-12 | Phase 4 | Pending |
 | SPRINT-13 | Phase 4 | Pending |
 | SPRINT-14 | Phase 4 | Pending |
