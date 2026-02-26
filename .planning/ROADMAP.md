@@ -93,5 +93,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Infrastructure | 2/2 | Complete    | 2026-02-25 |
 | 2. The Basics (Step 1) | 2/2 | Complete    | 2026-02-25 |
-| 3. Differentiation (Step 2) | 0/2 | Not started | - |
+| 3. Differentiation (Step 2) | 1/2 | In Progress|  |
 | 4. Approaches + Hypothesis + Outputs | 0/2 | Not started | - |

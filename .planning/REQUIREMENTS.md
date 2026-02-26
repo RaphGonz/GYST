@@ -14,8 +14,8 @@
 - [x] **SPRINT-05**: Step 1 — User can articulate founder advantages across three dimensions: Capacity (what you can build), Insight (what you've seen before others), Motivation (why you're doing this). AI does not simply record what the user says — it pushes back until each advantage is formalized as a concrete, specific assertion rather than a slogan. Vague claims are rejected and rephrased collaboratively (e.g., "I know how to build things" is rejected; "I shipped 3 B2B SaaS products and know the sales cycle personally" is accepted).
 - [x] **SPRINT-06**: Step 1 — User can map direct and indirect competitors and identify the main adversary (the one capturing the budget or habit today)
 
-- [ ] **SPRINT-07**: Step 2 (Differentiation) — User can rate their dream company on the 8 standard bipolar axes (slow/fast, hard/easy, expensive/free, complex/simple, dumb/smart, siloed/integrated, manual/automatic, and one more)
-- [ ] **SPRINT-08**: Step 2 — User can add custom bipolar axes relevant to their specific domain and client
+- [x] **SPRINT-07**: Step 2 (Differentiation) — User can rate their dream company on the 8 standard bipolar axes (slow/fast, hard/easy, expensive/free, complex/simple, dumb/smart, siloed/integrated, manual/automatic, and one more)
+- [x] **SPRINT-08**: Step 2 — User can add custom bipolar axes relevant to their specific domain and client
 - [ ] **SPRINT-09**: Step 2 — When user proposes 2 axes as differentiators, AI rates all competitors from COMPETITORS.md on those 2 axes using existing research profiles, then plots the full 2x2 matrix
 - [ ] **SPRINT-10**: Step 2 — If any competitor lands in the top-right quadrant (same as the dream company), AI flags the conflict and prompts the user to choose different axes
 - [ ] **SPRINT-11**: Step 2 — User can write a 3-phrase mini-manifesto: Differentiator 1, Differentiator 2, Safeguard (formulated as advice to new team members, not marketing copy)
@@ -107,8 +107,8 @@
 | RESEARCH-01 | Phase 2 | Complete |
 | RESEARCH-03 | Phase 2 | Complete |
 | OUTPUT-04 | Phase 2 | Complete |
-| SPRINT-07 | Phase 3 | Pending |
-| SPRINT-08 | Phase 3 | Pending |
+| SPRINT-07 | Phase 3 | Complete |
+| SPRINT-08 | Phase 3 | Complete |
 | SPRINT-09 | Phase 3 | Pending |
 | SPRINT-10 | Phase 3 | Pending |
 | SPRINT-11 | Phase 3 | Pending |
