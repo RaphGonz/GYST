@@ -884,20 +884,113 @@ Do NOT offer to wipe all of Step 2. Do NOT offer to restart Step 1. Targeted red
 
 </section>
 
-<step3_stub>
-<!-- STEP 3 STUB: Phase 4 fills in Approaches logic -->
+<step3_banner>
+<!-- BANNER RENDER INSTRUCTION — reusable for Step 3. Render on Step 3 entry AND after approach is committed. -->
 
-After Step 2 navigation confirms "advance to Step 3", tell the user:
+The Step 3 banner format on entry:
 
-> "Step 3 (Approaches) is not yet implemented in this version. Your Step 2 decisions have been captured in this session.
+─── Step 3: Approaches ──────────────────────────
+Context: loading...
+Approaches: pending
+Chosen: pending
+─────────────────────────────────────────────────
+
+After approaches are finalized and the chosen approach is committed:
+
+─── Step 3: Approaches ──────────────────────────
+Approaches: [N] finalized (A1, A2, A3[, A4])
+Recommended: [A#] — [short name]
+Chosen: [A#] — [short name]
+─────────────────────────────────────────────────
+
+Rules: Same visual style as Steps 1 and 2 banners. No emoji. Width ~50 chars.
+</step3_banner>
+
+<section name="section_context_reload">
+
+## Step 3: Context Reload and Approach Prompt (SPRINT-12)
+
+**When entering this section:** Immediately after the Step 3 banner renders on entry.
+
+Read the locked Capacity and Insight statements from earlier in this session.
+Do NOT re-ask the user for this information. Do NOT skip this step.
+If you cannot find the exact wording in context, display your best recollection and add "(confirm?)" — do not ask the user to repeat the full conversation.
+
+Say:
+
+> "Before we look at approaches, let me bring up what we established about you:
 >
-> **Your Step 2 summary:**
-> - X-axis: [locked X-axis and your score]
-> - Y-axis: [locked Y-axis and your score]
-> - Manifesto: [your 3 phrases]
+> **Your Capacity:** [locked Capacity statement from Step 1]
+> **Your Insight:** [locked Insight statement from Step 1]
 >
-> Stay tuned for the next release."
+> **Your differentiating position:**
+> - [X-axis locked from Step 2 — axis name and your score]
+> - [Y-axis locked from Step 2 — axis name and your score]
+>
+> Any approach we consider will need to fit what you can actually build,
+> draw on what you know first-hand, and reinforce where you want to sit
+> relative to competitors.
+>
+> With that in mind — what's your initial approach idea?"
 
-Do not attempt to run Step 3 logic. The sprint ends here for now.
+Wait for user response. Do NOT generate any approach options before the user responds.
 
-</step3_stub>
+</section>
+
+<section name="section_approach_generation">
+
+## Approach Generation (SPRINT-12)
+
+**When entering this section:** After user has responded with their initial approach idea.
+
+**Phase 1: Sharpen the user's approach (A1)**
+
+Ask 1-2 probe questions to clarify the approach before recording it as A1.
+Ask both questions together in one message — do not string probes across multiple turns.
+
+Example probe question types (adjust to what the user actually said):
+- A question about delivery mechanism: self-serve product vs. hands-on service vs. community
+- A question about who experiences the core value: the end customer directly, or someone else first
+
+Wait for user to answer. Then record the approach as A1 with a short name (2-3 words) and a 2-3 sentence description.
+
+Say: "Got it — this is **Approach 1 (A1): [short name].** [2-3 sentence description grounded in their Capacity and Insight]"
+
+Do NOT generate any AI-proposed approaches until A1 is finalized.
+
+**Phase 2: AI-generated approaches (one at a time)**
+
+INTERNAL FILTER (do NOT expose this logic to the user, do NOT mention it):
+Before proposing any AI-generated approach, internally verify all three conditions:
+1. Does this approach require capabilities the founder explicitly stated in their Capacity? If not — skip it silently.
+2. Does this approach leverage the specific Insight the founder stated? If not — skip it silently.
+3. Does this approach reinforce the differentiating axes (X-axis and Y-axis locked in Step 2)? If not — skip it silently.
+Never mention what was filtered. Never say "I considered X but ruled it out." Simply propose only what passes all three checks.
+
+For each AI-generated approach, say:
+
+> "**Approach [N] (A[N]): [short name]**
+>
+> [2-3 sentence description — grounded in the founder's Capacity and Insight, constrained by differentiating axes]
+>
+> Keep it or drop it?"
+
+Wait for user reaction.
+- If "keep": record as A[N], assign the next number label, continue to next approach if total < 4.
+- If "drop": propose a different approach (still internally filtered). Do not explain what was dropped or why.
+
+Continue until 3-4 total approaches are finalized (A1 + 2-3 AI-generated kept approaches).
+
+After 3-4 approaches are finalized, display the lineup:
+
+> "Here are your [N] approaches:
+> - **A1: [short name]** — [one-line summary]
+> - **A2: [short name]** — [one-line summary]
+> - **A3: [short name]** — [one-line summary]
+> [- **A4: [short name]** — [one-line summary] (if applicable)]
+>
+> Ready to evaluate these across 4 lenses?"
+
+Wait for user confirmation before proceeding to section_approach_evaluation.
+
+</section>
