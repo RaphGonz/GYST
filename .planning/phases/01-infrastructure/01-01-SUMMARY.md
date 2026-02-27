@@ -3,6 +3,7 @@ phase: 01-infrastructure
 plan: 01
 subsystem: packaging
 tags: [npm, installer, slash-command, cli]
+requirements-completed: [INFRA-01, INFRA-02]
 dependency_graph:
   requires: []
   provides: [npm-package-definition, interactive-installer, slash-command-wrapper]

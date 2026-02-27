@@ -4,6 +4,7 @@ plan: 02
 subsystem: workflow
 
 tags: [foundation-sprint, competitor-research, sub-agent, competitors-md, navigation, markdown-workflow]
+requirements-completed: [SPRINT-06, NAVIG-01, NAVIG-02, NAVIG-03, RESEARCH-01, OUTPUT-04]
 
 # Dependency graph
 requires:

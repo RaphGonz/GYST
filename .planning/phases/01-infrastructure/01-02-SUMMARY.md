@@ -3,6 +3,7 @@ phase: 01-infrastructure
 plan: 02
 subsystem: content-stubs
 tags: [workflow, agent, templates, readme]
+requirements-completed: [INFRA-03, INFRA-04, INFRA-05, INFRA-06]
 dependency_graph:
   requires: []
   provides: [workflow-stub, agent-stub, output-templates, readme]
