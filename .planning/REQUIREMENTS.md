@@ -56,10 +56,10 @@
 
 - [x] **INFRA-01**: Package installs at `~/.claude/get-your-shit-together/` as a standalone directory
 - [x] **INFRA-02**: Slash command entry point at `~/.claude/commands/gyst/foundation-sprint.md`
-- [ ] **INFRA-03**: Main workflow at `~/.claude/get-your-shit-together/workflows/foundation-sprint.md`
-- [ ] **INFRA-04**: Researcher agent at `~/.claude/get-your-shit-together/agents/gyst-researcher.md`
-- [ ] **INFRA-05**: Output templates for HYPOTHESIS.md, SPRINT.md, POSITIONING.md, and COMPETITORS.md
-- [ ] **INFRA-06**: `README.md` with install instructions (copy commands to get it running)
+- [x] **INFRA-03**: Main workflow at `~/.claude/get-your-shit-together/workflows/foundation-sprint.md`
+- [x] **INFRA-04**: Researcher agent at `~/.claude/get-your-shit-together/agents/gyst-researcher.md`
+- [x] **INFRA-05**: Output templates for HYPOTHESIS.md, SPRINT.md, POSITIONING.md, and COMPETITORS.md
+- [x] **INFRA-06**: `README.md` with install instructions (copy commands to get it running)
 
 ## v2 Requirements
 
