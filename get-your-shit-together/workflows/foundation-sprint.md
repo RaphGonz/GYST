@@ -867,7 +867,7 @@ Then ask:
 
 Wait for user response.
 
-**If A:** Proceed to step3_stub.
+**If A:** Proceed to step3_banner.
 
 **If B:** Ask what they want to revisit:
 
@@ -992,5 +992,129 @@ After 3-4 approaches are finalized, display the lineup:
 > Ready to evaluate these across 4 lenses?"
 
 Wait for user confirmation before proceeding to section_approach_evaluation.
+
+</section>
+
+<section name="section_approach_evaluation">
+
+## 4-Matrix Evaluation (SPRINT-13)
+
+**When entering this section:** After all 3-4 approaches are finalized and user confirms ready to evaluate.
+
+Walk through each of the 4 matrices sequentially — one at a time. Do NOT render all 4 matrices in a single response. Show Matrix 1, wait for the user to engage or say "next", then show Matrix 2, and so on.
+
+**For each matrix:**
+1. Name the matrix and define its two axes
+2. Explain each approach's quadrant placement in 1 sentence each
+3. Render the ASCII 2x2 grid with approach labels (A1, A2, A3[, A4])
+4. Wait for user to say "next" or ask questions before proceeding to the next matrix
+
+ASCII grid format (same as the Step 2 competitor matrix):
+
+```
+      [Y-axis high label]
+              ^
+  [top-left]  |  [top-right]
+              |
+──────────────+──────────────► [X-axis high label]
+              |
+  [bot-left]  |  [bot-right]
+              |
+      [Y-axis low label]
+```
+
+Quadrant placement rules:
+- X-axis: positive → right half; zero or negative → left half
+- Y-axis: positive → top half; zero or negative → bottom half
+- Stack labels vertically if multiple approaches share a quadrant
+- If a quadrant is empty, render "—" in that area
+
+---
+
+**Matrix 1: Customer Vision**
+Axes: Ease to use (Hard → Easy) × How perfectly it solves the problem (Partially → Perfectly)
+
+For each approach: does it require expertise or hand-holding (left) or is it self-explanatory (right)? Does it solve the problem partially (bottom) or completely as described by the user (top)?
+
+> [Explain each approach's quadrant placement, 1 sentence each]
+>
+> [ASCII grid with A1/A2/A3/A4 placed in their quadrants]
+>
+> Ready for Matrix 2: Money Vision?
+
+---
+
+**Matrix 2: Money Vision**
+Axes: Revenue type (One-time → Recurring long term) × Number of customers (Few → Many)
+
+For each approach: does it generate one-time revenue (left) or recurring long-term revenue (right)? Does it naturally serve a small number of customers (bottom) or can it scale to many (top)?
+
+> [Explain each approach's quadrant placement, 1 sentence each]
+>
+> [ASCII grid]
+>
+> Ready for Matrix 3: Pragmatic Vision?
+
+---
+
+**Matrix 3: Pragmatic Vision**
+Axes: Ease to build (Hard → Easy) × Speed to build (Slow → Fast)
+
+For each approach: how technically complex is it to build given the founder's stated Capacity (hard = left, easy = right)? How long until a first working version given realistic effort (slow = bottom, fast = top)?
+
+> [Explain each approach's quadrant placement, 1 sentence each]
+>
+> [ASCII grid]
+>
+> Ready for Matrix 4: Growth Vision?
+
+---
+
+**Matrix 4: Growth Vision**
+Axes: Adaptability (Rigid → Highly Adaptable) × Number of customers over time (Few → Many)
+
+For each approach: how rigid is this product — does it lock into one configuration (left) or can it flex as the market shifts (right)? Will the customer base stay small niche (bottom) or can it grow to many over time (top)?
+
+> [Explain each approach's quadrant placement, 1 sentence each]
+>
+> [ASCII grid]
+
+After Matrix 4 is displayed: proceed immediately to section_approach_recommendation.
+
+</section>
+
+<section name="section_approach_recommendation">
+
+## Global Pattern Recommendation (SPRINT-14)
+
+**When entering this section:** Immediately after Matrix 4 (Growth Vision) is displayed.
+
+Review all 4 matrices. Identify which approach has the strongest global pattern: most consistently in the top-right quadrant, fewest bottom-left placements. Name the second-best as well.
+
+Say:
+
+> "**Looking across all 4 matrices:**
+>
+> **[A#] ([short name])** has the strongest overall pattern — top-right in [Matrix X] and [Matrix Y], favorable in [Matrix Z].
+>
+> **My recommendation: [A#].**
+>
+> Second-best: **[A#] ([short name])** — strong in [dimension], weaker in [dimension].
+>
+> You're free to choose any approach. What's your call?"
+
+Wait for user to name their chosen approach.
+
+Accept the user's choice unconditionally. If they pick the recommended approach, acknowledge briefly. If they pick a different approach, acknowledge and move forward — no "are you sure?" or pushback of any kind.
+
+After user commits, re-render the Step 3 banner with the chosen approach locked:
+
+─── Step 3: Approaches ──────────────────────────
+Approaches: [N] finalized (A1, A2, A3[, A4])
+Recommended: [A#] — [short name]
+Chosen: [A#] — [short name]
+─────────────────────────────────────────────────
+
+Then proceed to step4_banner.
 
 </section>
