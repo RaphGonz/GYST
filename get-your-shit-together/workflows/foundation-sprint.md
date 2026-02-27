@@ -1168,3 +1168,99 @@ Wait for user response.
 Do NOT advance to section_testable_form until explicit lock language is received.
 
 </section>
+
+<section name="section_testable_form">
+
+## Testable Form (SPRINT-16)
+
+**When entering this section:** Immediately after the hypothesis is locked.
+
+Derive all 4 testable form components automatically from the locked hypothesis. Do NOT ask the user for input on these — they are AI-derived from the locked content.
+
+| Component | What it is | How to derive it |
+|-----------|-----------|-----------------|
+| Success metric | Observable, measurable sign the hypothesis is working | What "enough customers choosing Z to solve Y" looks like as a specific number + timeframe |
+| Falsification condition | The specific threshold at which the hypothesis is proven wrong | N outreach attempts with M% conversion as a concrete failure boundary |
+| Main risk | The single biggest assumption that could kill this | What about X, Y, or Z is most uncertain or unproven |
+| Fastest validation test | The cheapest experiment to confirm or kill the hypothesis first | Manual validation, landing page test, or direct outreach |
+
+Display all 4 components together:
+
+> "**Your hypothesis in testable form:**
+>
+> **Success metric:** [specific, measurable — number + timeframe]
+> **Falsification condition:** [specific threshold — if X then proven wrong]
+> **Main risk:** [one sentence — the assumption most likely to be false]
+> **Fastest validation test:** [one concrete experiment to run first]
+>
+> These are locked with your hypothesis. Ready to write your output files?"
+
+Wait for user to confirm readiness before proceeding to section_write_outputs.
+
+</section>
+
+<section name="section_write_outputs">
+
+## Sprint End — Output Files (OUTPUT-01, OUTPUT-02, OUTPUT-03)
+
+**When entering this section:** After testable form is displayed and user confirms readiness.
+
+This is the ONLY place in the entire workflow where HYPOTHESIS.md, SPRINT.md, and POSITIONING.md are written. Do NOT write these files anywhere else.
+
+Say: "Sprint complete. Writing your 3 output files now."
+
+**1. Write HYPOTHESIS.md**
+
+Read template for structure:
+@~/.claude/get-your-shit-together/templates/HYPOTHESIS.md
+
+Write ./HYPOTHESIS.md with ALL of the following — no template placeholders, no square brackets in the output:
+- The full hypothesis statement as a single sentence: "If we help X solve Y with Z, they will choose us over W because we are U and V"
+- Breakdown table with all 6 variables explicitly labeled: X (target customer), Y (core problem), Z (chosen approach), W (main adversary), U (differentiator 1), V (differentiator 2)
+- Success metric (from testable form above)
+- Falsification condition (from testable form above)
+- Main risk (from testable form above)
+- Fastest validation test (from testable form above)
+
+CRITICAL: Zero square brackets remain in HYPOTHESIS.md. No field may say "[placeholder]" or "[TARGET CUSTOMER: ...]".
+
+**2. Write SPRINT.md**
+
+Read template for structure:
+@~/.claude/get-your-shit-together/templates/SPRINT.md
+
+Write ./SPRINT.md with ALL of the following — no template placeholders, no square brackets:
+- **Step 1:** target customer (options considered, chosen, rationale), core problem (options considered, chosen, validation result), founder advantages (Capacity statement, Insight statement, Motivation statement), competitors (all listed, main adversary flagged, one-line research summary per competitor)
+- **Step 2:** all axis ratings (all 8+ axes with the user's score for each), chosen X-axis and Y-axis with rationale, conflict check result (whether a conflict was found and how it was resolved), mini-manifesto (all 3 phrases verbatim)
+- **Step 3:** all approach descriptions (A1 through A[N] — each with short name and full 2-3 sentence description), 4-matrix evaluation table (each approach's quadrant placement in each of the 4 matrices), recommended approach (which A# and why), backup approach (which A# and why), chosen approach (which A# the user selected)
+- **Step 4:** full hypothesis statement (must match HYPOTHESIS.md exactly, character for character)
+
+CRITICAL: Zero square brackets remain in SPRINT.md. Every section has real content from the session.
+
+**3. Write POSITIONING.md**
+
+Read template for structure:
+@~/.claude/get-your-shit-together/templates/POSITIONING.md
+
+Write ./POSITIONING.md with ALL of the following — no template placeholders, no square brackets:
+- X-axis (from Step 2): axis name, description of what it measures, rationale for choosing it as a differentiator
+- Y-axis (from Step 2): axis name, description of what it measures, rationale for choosing it as a differentiator
+- The Step 2 2x2 ASCII matrix — the SAME matrix from section_matrix_render showing COMPETITORS positioned on the two differentiating axes. This matrix shows COMPETITOR NAMES (from COMPETITORS.md), NOT approach labels (A1/A2/A3). The approach evaluation matrices from Step 3 do NOT appear in POSITIONING.md.
+- Competitor positions table: each competitor from Step 1 with their X-axis score, Y-axis score, quadrant, and 1-sentence rationale (sourced from the scoring in section_competitor_scoring)
+- Mini-manifesto: all 3 phrases verbatim from Step 2 (Differentiator 1, Differentiator 2, Safeguard)
+
+CRITICAL: POSITIONING.md's matrix uses competitor names — it does NOT use A1/A2/A3/A4. The approach evaluation exists only in SPRINT.md.
+CRITICAL: Zero square brackets remain in POSITIONING.md.
+
+**After all 3 files are written:**
+
+> "Done. Your Foundation Sprint is complete.
+>
+> **Files written to your project directory:**
+> - `HYPOTHESIS.md` — your testable hypothesis
+> - `SPRINT.md` — the complete decision journal
+> - `POSITIONING.md` — your positioning map and manifesto
+>
+> **Your next move:** [fastest validation test from the testable form]"
+
+</section>
