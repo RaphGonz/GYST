@@ -24,8 +24,8 @@
 - [x] **SPRINT-13**: Step 3 — Each approach is evaluated on 4 standard 2x2 matrices: Customer Vision (ease × solves perfectly), Money Vision (recurring revenue × number of clients), Pragmatic Vision (ease to build × speed to build), Growth Vision (adaptability × client acquisition over time)
 - [x] **SPRINT-14**: Step 3 — AI identifies the approach with the strongest global pattern (consistently top-right across matrices) and recommends it, keeping the 2nd best as backup
 
-- [ ] **SPRINT-15**: Step 4 (Final Hypothesis) — User fills in the full hypothesis template: "If we help X solve Y with Z, they will choose us over W because we are U and V"
-- [ ] **SPRINT-16**: Step 4 — AI transforms the hypothesis into a testable form: success metric, falsification condition, main risk, and fastest test to validate
+- [x] **SPRINT-15**: Step 4 (Final Hypothesis) — User fills in the full hypothesis template: "If we help X solve Y with Z, they will choose us over W because we are U and V"
+- [x] **SPRINT-16**: Step 4 — AI transforms the hypothesis into a testable form: success metric, falsification condition, main risk, and fastest test to validate
 
 ### Interaction Model
 
@@ -47,9 +47,9 @@
 
 ### Output
 
-- [ ] **OUTPUT-01**: `HYPOTHESIS.md` produced at end of sprint — full X/Y/Z/W/U/V hypothesis, testable form, success metric, falsification condition, and fastest validation test
-- [ ] **OUTPUT-02**: `SPRINT.md` produced at end of sprint — full journal of every decision made at each step, with the options considered and the rationale for what was chosen
-- [ ] **OUTPUT-03**: `POSITIONING.md` produced at end of sprint — the 2x2 matrix with all competitor positions plotted, the mini-manifesto, and the chosen differentiation axes
+- [x] **OUTPUT-01**: `HYPOTHESIS.md` produced at end of sprint — full X/Y/Z/W/U/V hypothesis, testable form, success metric, falsification condition, and fastest validation test
+- [x] **OUTPUT-02**: `SPRINT.md` produced at end of sprint — full journal of every decision made at each step, with the options considered and the rationale for what was chosen
+- [x] **OUTPUT-03**: `POSITIONING.md` produced at end of sprint — the 2x2 matrix with all competitor positions plotted, the mini-manifesto, and the chosen differentiation axes
 - [x] **OUTPUT-04**: `COMPETITORS.md` produced at end of Step 1 — the fixed competitor list (max 5, main adversary flagged) with research profiles for each; read by Step 2 for axis rating without re-searching
 
 ### Infrastructure
@@ -116,11 +116,11 @@
 | SPRINT-12 | Phase 4 | Complete |
 | SPRINT-13 | Phase 4 | Complete |
 | SPRINT-14 | Phase 4 | Complete |
-| SPRINT-15 | Phase 4 | Pending |
-| SPRINT-16 | Phase 4 | Pending |
-| OUTPUT-01 | Phase 4 | Pending |
-| OUTPUT-02 | Phase 4 | Pending |
-| OUTPUT-03 | Phase 4 | Pending |
+| SPRINT-15 | Phase 4 | Complete (04-02) |
+| SPRINT-16 | Phase 4 | Complete (04-02) |
+| OUTPUT-01 | Phase 4 | Complete (04-02) |
+| OUTPUT-02 | Phase 4 | Complete (04-02) |
+| OUTPUT-03 | Phase 4 | Complete (04-02) |
 
 **Coverage:**
 - v1 requirements: 31 total
