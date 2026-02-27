@@ -1118,3 +1118,53 @@ Chosen: [A#] — [short name]
 Then proceed to step4_banner.
 
 </section>
+
+<step4_banner>
+<!-- BANNER RENDER INSTRUCTION — Step 4 stage transition. Render immediately after approach is committed in section_approach_recommendation. -->
+
+The Step 4 banner format:
+
+─── Step 4: Final Hypothesis ─────────────────────
+Segment:   [X — target customer from Step 1]
+Problem:   [Y — core problem from Step 1]
+Approach:  [Z — chosen approach from Step 3]
+Adversary: [W — main adversary from Step 1]
+Axes:      [U — Differentiator 1 from manifesto]
+           [V — Differentiator 2 from manifesto]
+Hypothesis: pending
+──────────────────────────────────────────────────
+
+Rules: Same visual style as Steps 1, 2, 3 banners. No emoji. Width ~50 chars.
+Render all 6 variables filled in from session context — do NOT leave any variable as "[placeholder]".
+</step4_banner>
+
+<section name="section_hypothesis">
+
+## Step 4: Final Hypothesis (SPRINT-15)
+
+**When entering this section:** Immediately after the Step 4 banner renders.
+
+Pre-fill the hypothesis from session context. Read each variable from the conversation — do NOT ask the user to repeat anything.
+
+Say:
+
+> "Here's your hypothesis, built from everything we've decided:
+>
+> **If we help** [X — target customer segment from Step 1]
+> **solve** [Y — core problem from Step 1]
+> **with** [Z — chosen approach from Step 3],
+> **they will choose us over** [W — main adversary flagged in Step 1]
+> **because we are** [U — Phrase 1 from Step 2 mini-manifesto] **and** [V — Phrase 2 from Step 2 mini-manifesto].
+>
+> Edit any part you'd change, or say **"lock it"** to finalize."
+
+Wait for user response.
+
+**Iteration loop:**
+- If user edits one or more variables: update those variables, display the full hypothesis sentence again, ask "Anything else to change, or lock it?"
+- If user says "lock it" / "locked" / "finalize" / "done" / "that's it" / "confirmed": lock the hypothesis. Proceed to section_testable_form.
+- A simple "yes", "looks good", "that works", or "ok" is NOT a lock. Ask "Ready to lock this hypothesis?" if the response is ambiguous.
+
+Do NOT advance to section_testable_form until explicit lock language is received.
+
+</section>
