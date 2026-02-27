@@ -664,7 +664,7 @@ Dream company: top-right ([X score], [Y score])
 Manifesto: pending
 ─────────────────────────────────────────────────
 
-After the banner: proceed to section_competitor_scoring (implemented in Plan 03-02).
+After the banner: proceed to section_competitor_scoring.
 
 </section>
 
