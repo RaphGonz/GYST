@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-02-26T21:16:18.369Z"
+last_updated: "2026-02-27T18:04:30.228Z"
 progress:
-  total_phases: 3
+  total_phases: 4
   completed_phases: 3
-  total_plans: 6
-  completed_plans: 6
+  total_plans: 8
+  completed_plans: 7
 ---
 
 # Project State
@@ -18,23 +18,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-25)
 
 **Core value:** One command, one session, one testable hypothesis — solo entrepreneurs get the clarity the Foundation Sprint was designed to produce, without needing a team.
-**Current focus:** Phase 4 — Approaches (Step 3) — next phase
+**Current focus:** Phase 4 — Approaches (Step 3) + Hypothesis (Step 4)
 
 ## Current Position
 
-Phase: 3 of 4 (Differentiation — Step 2) — COMPLETE
-Plan: 2 of 2 in phase 3 complete (03-01, 03-02 done)
-Status: Plan 03-02 complete — section_competitor_scoring, section_matrix_render, section_manifesto, section_step2_navigation, step3_stub live. foundation-sprint.md complete through Step 2 end-to-end (903 lines).
-Last activity: 2026-02-26 — Plan 03-02 complete: Step 2 second half — competitor scoring, ASCII 2x2 matrix, conflict detection, manifesto, navigation
+Phase: 4 of 4 (Approaches + Hypothesis — Steps 3-4) — IN PROGRESS
+Plan: 1 of 2 in phase 4 complete (04-01 done)
+Status: Plan 04-01 complete — step3_banner, section_context_reload, section_approach_generation, section_approach_evaluation, section_approach_recommendation live. foundation-sprint.md extended to 1120 lines (Step 3 complete end-to-end).
+Last activity: 2026-02-27 — Plan 04-01 complete: Step 3 full flow — approach generation, 4-matrix ASCII evaluation, recommendation with unconditional user override
 
 Progress: [##########] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: ~11 min
-- Total execution time: ~1.1 hours
+- Total plans completed: 7
+- Average duration: ~12 min
+- Total execution time: ~1.4 hours
 
 **By Phase:**
 
@@ -43,9 +43,10 @@ Progress: [##########] 100%
 | 1. Infrastructure | 2 | ~18 min | ~9 min |
 | 2. The Basics Step 1 | 2 (of 2) | ~24 min | ~12 min |
 | 3. Differentiation Step 2 | 2 (of 2) | ~23 min | ~11.5 min |
+| 4. Approaches + Hypothesis | 1 (of 2) | ~18 min | ~18 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02, 02-01, 02-02, 03-01, 03-02
+- Last 5 plans: 02-01, 02-02, 03-01, 03-02, 04-01
 - Trend: On track
 
 *Updated after each plan completion*
@@ -54,6 +55,7 @@ Progress: [##########] 100%
 | Phase 02-the-basics-step-1 P02 | 14 | 2 tasks | 2 files |
 | Phase 03-differentiation-step-2 P01 | 12 | 2 tasks | 1 files |
 | Phase 03-differentiation-step-2 P02 | 11 | 2 tasks | 1 files |
+| Phase 04-approaches-hypothesis-outputs-steps-3-4 P01 | 18 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -85,6 +87,9 @@ Recent decisions affecting current work:
 - [Phase 03-differentiation-step-2]: Manifesto evaluation is holistic (all 3 phrases at once) — no phrase-by-phrase critique per SPRINT-11
 - [Phase 03-differentiation-step-2]: Go-back in section_step2_navigation offers targeted redo only (axes or manifesto) — no full Step 2 wipe
 - [Phase 03-differentiation-step-2]: RESEARCH-02 enforced — @./COMPETITORS.md Read reference in section_competitor_scoring; explicit WebSearch/WebFetch prohibition
+- [Phase 04-approaches-hypothesis-outputs-steps-3-4]: SPRINT-12: User-first approach generation — user proposes A1 before AI generates any alternatives; INTERNAL FILTER silently excludes Capacity/Insight/axis mismatches
+- [Phase 04-approaches-hypothesis-outputs-steps-3-4]: SPRINT-13: 4-matrix evaluation is sequential (one matrix per response); Do NOT render all 4 matrices in a single response
+- [Phase 04-approaches-hypothesis-outputs-steps-3-4]: SPRINT-14: Recommendation is AI-named but unconditional — user can pick any approach; AI accepts without pushback of any kind
 
 ### Pending Todos
 
@@ -96,6 +101,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26
-Stopped at: Completed 03-02-PLAN.md — section_competitor_scoring, section_matrix_render, section_manifesto, section_step2_navigation, step3_stub appended. foundation-sprint.md complete through Step 2 end-to-end (903 lines). Phase 3 complete.
+Last session: 2026-02-27
+Stopped at: Completed 04-01-PLAN.md — step3_banner, section_context_reload, section_approach_generation, section_approach_evaluation, section_approach_recommendation appended. foundation-sprint.md extended to 1120 lines. Step 3 (Approaches) complete end-to-end. Phase 4 plan 1 of 2 done.
 Resume file: None

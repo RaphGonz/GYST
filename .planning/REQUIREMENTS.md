@@ -20,9 +20,9 @@
 - [x] **SPRINT-10**: Step 2 — If any competitor lands in the top-right quadrant (same as the dream company), AI flags the conflict and prompts the user to choose different axes
 - [x] **SPRINT-11**: Step 2 — User can write a 3-phrase mini-manifesto: Differentiator 1, Differentiator 2, Safeguard (formulated as advice to new team members, not marketing copy)
 
-- [ ] **SPRINT-12**: Step 3 (Approaches) — Step 3 opens by loading the founder's advantages (Capacity + Insight from Step 1) and the chosen differentiating axes (from Step 2) as active context. The user proposes their OWN initial approach first (their existing idea). AI then generates additional approaches to reach a total of 3-4, using web research and reasoning about the problem space, filtered by the founder's actual Capacity and Insight (only executable approaches are proposed) and constrained by the Step 2 differentiating axes (approaches must reinforce the chosen positioning). All approaches — user's and AI's — are then evaluated together on the 4 standard matrices.
-- [ ] **SPRINT-13**: Step 3 — Each approach is evaluated on 4 standard 2x2 matrices: Customer Vision (ease × solves perfectly), Money Vision (recurring revenue × number of clients), Pragmatic Vision (ease to build × speed to build), Growth Vision (adaptability × client acquisition over time)
-- [ ] **SPRINT-14**: Step 3 — AI identifies the approach with the strongest global pattern (consistently top-right across matrices) and recommends it, keeping the 2nd best as backup
+- [x] **SPRINT-12**: Step 3 (Approaches) — Step 3 opens by loading the founder's advantages (Capacity + Insight from Step 1) and the chosen differentiating axes (from Step 2) as active context. The user proposes their OWN initial approach first (their existing idea). AI then generates additional approaches to reach a total of 3-4, using web research and reasoning about the problem space, filtered by the founder's actual Capacity and Insight (only executable approaches are proposed) and constrained by the Step 2 differentiating axes (approaches must reinforce the chosen positioning). All approaches — user's and AI's — are then evaluated together on the 4 standard matrices.
+- [x] **SPRINT-13**: Step 3 — Each approach is evaluated on 4 standard 2x2 matrices: Customer Vision (ease × solves perfectly), Money Vision (recurring revenue × number of clients), Pragmatic Vision (ease to build × speed to build), Growth Vision (adaptability × client acquisition over time)
+- [x] **SPRINT-14**: Step 3 — AI identifies the approach with the strongest global pattern (consistently top-right across matrices) and recommends it, keeping the 2nd best as backup
 
 - [ ] **SPRINT-15**: Step 4 (Final Hypothesis) — User fills in the full hypothesis template: "If we help X solve Y with Z, they will choose us over W because we are U and V"
 - [ ] **SPRINT-16**: Step 4 — AI transforms the hypothesis into a testable form: success metric, falsification condition, main risk, and fastest test to validate
@@ -113,9 +113,9 @@
 | SPRINT-10 | Phase 3 | Complete |
 | SPRINT-11 | Phase 3 | Complete |
 | RESEARCH-02 | Phase 3 | Complete |
-| SPRINT-12 | Phase 4 | Pending |
-| SPRINT-13 | Phase 4 | Pending |
-| SPRINT-14 | Phase 4 | Pending |
+| SPRINT-12 | Phase 4 | Complete |
+| SPRINT-13 | Phase 4 | Complete |
+| SPRINT-14 | Phase 4 | Complete |
 | SPRINT-15 | Phase 4 | Pending |
 | SPRINT-16 | Phase 4 | Pending |
 | OUTPUT-01 | Phase 4 | Pending |
