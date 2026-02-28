@@ -14,6 +14,10 @@ After failing for the fifth time to create a company that makes money or that is
 
 So the next was simply to make an interactive tool to let anyone create an hypothesis and start working immediatly !
 
+You should read the book [https://www.theclickbook.com/](there) It provides way deeper insights and examples that the wizard simply doesn't provide. It will give you the deeper understanding of what you're doing.
+
+I didn't implement what comes after a foundation sprint. It's all detailed [https://www.thesprintbook.com/](there).
+
 ##Who is it for
 
 Solo entrepreneurs, existing companies but also artists or game-designers that want to make money and live from their art. Any solo weirdos. Could also be used in group, if you guys can share a screen.
