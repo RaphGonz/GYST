@@ -1,6 +1,20 @@
 # Get Your Shit Together (GYST)
 
-A Claude Code command that guides solo entrepreneurs through the Foundation Sprint — from fuzzy idea to testable hypothesis in one focused session.
+An interactive wizard for solo entrepreneurs to find solid ideas ! Based on the excellent book "Click" by Jake Knapp and John Zeratsky. 
+
+```bash
+npx get-your-shit-together
+```
+## Why did I do this
+
+After failing for the fifth time to create a company that makes money or that is somewhat useful to anyone in the world, I decided to work on myself and learn everything again, back to the roots. I stumbled across a book called "Click : Make something people want" and it just blew my mind. I read it in a morning, and tried to apply the method on a vague idea I had of a start-up. It cleared up so many questions, I thought it was incredible. I finally have something solid to work on and huge motivations to do so !
+
+So the next was simply to make an interactive tool to let anyone create an hypothesis and start working immediatly !
+
+##Who is it for
+
+Solo entrepreneurs, existing companies but also artists or game-designers that want to make money and live from their art. Any solo weirdos. Could also be used in group, if you guys can share a screen.
+
 
 ## What It Does
 
