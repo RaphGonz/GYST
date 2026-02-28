@@ -1,10 +1,23 @@
+
 # Get Your Shit Together (GYST)
+
 
 An interactive wizard for solo entrepreneurs to find solid ideas ! Based on the excellent book "Click" by Jake Knapp and John Zeratsky. 
 
 ```bash
 npx get-your-shit-together
 ```
+
+ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓███████▓▒░▒▓████████▓▒░ 
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░         ░▒▓█▓▒░     
+░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░         ░▒▓█▓▒░     
+░▒▓█▓▒▒▓███▓▒░░▒▓██████▓▒░ ░▒▓██████▓▒░   ░▒▓█▓▒░     
+░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░          ░▒▓█▓▒░  ░▒▓█▓▒░     
+░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░          ░▒▓█▓▒░  ░▒▓█▓▒░     
+ ░▒▓██████▓▒░   ░▒▓█▓▒░   ░▒▓███████▓▒░   ░▒▓█▓▒░     
+                                                      
+                                                      
+
 ## Why did I do this
 
 After failing for the fifth time to create a company that makes money or that is somewhat useful to anyone in the world, I decided to work on myself and learn everything again, back to the roots. I stumbled across a book called "Click : Make something people want" and it just blew my mind. I read it in a morning, and tried to apply the method on a vague idea I had of a start-up. It cleared up so many questions, I thought it was incredible. I finally have something solid to work on and huge motivations to do so !
@@ -40,8 +53,6 @@ git clone https://github.com/your-repo/GYST
 cd GYST
 node bin/install.js
 ```
-
-> **Note:** The npx package name is a placeholder pending npm publish. For now, dev install via `node bin/install.js` is the working path.
 
 ## Usage
 
