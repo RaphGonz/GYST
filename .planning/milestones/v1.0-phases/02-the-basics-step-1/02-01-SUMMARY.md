@@ -110,6 +110,14 @@ None - no external service configuration required.
 - The step2_stub gracefully handles the "advance to Step 2" case — Plan 02-02 can replace or extend it with navigation controls
 - The workflow is self-contained: developers must re-run `node bin/install.js` after editing to push changes to `~/.claude/get-your-shit-together/workflows/foundation-sprint.md`
 
+## Self-Check: PASSED
+
+- FOUND: get-your-shit-together/workflows/foundation-sprint.md (364 lines, all 20 verification checks pass)
+- FOUND: .planning/phases/02-the-basics-step-1/02-01-SUMMARY.md
+- FOUND: commit cff8692 (Task 1)
+- FOUND: commit 8876eb4 (Task 2)
+- FOUND: commit 6bd4b2b (metadata)
+
 ---
 *Phase: 02-the-basics-step-1*
 *Completed: 2026-02-25*
