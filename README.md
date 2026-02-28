@@ -4,8 +4,6 @@
 
 An interactive wizard for solo entrepreneurs to find solid ideas ! Based on the excellent book "Click" by Jake Knapp and John Zeratsky. 
 
-https://img.shields.io/badge/LICENSE-MIT?labelColor=blue
-
 
 ```bash
 npx get-your-shit-together
