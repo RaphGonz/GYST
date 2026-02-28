@@ -92,7 +92,7 @@ Render the Step 1 banner with all four values as "pending" (this is the first se
 
 Then ask the following open question — ask it exactly, do not lead with options first:
 
-> "Who is this for? Describe them in your own words — role, company type, situation, anything that comes to mind."
+"Who is this for? Describe them in your own words — role, company type, situation, anything that comes to mind."
 
 Wait for the user to respond.
 
@@ -103,20 +103,20 @@ Wait for the user to respond.
 Distill what they said into 2-3 labeled options. Frame each option specifically — role-based, situation-based, or segment-based. Never leave an option vague. Include an escape hatch.
 
 Example format:
-> "Based on what you said, here are a few ways to frame your target customer:
->
-> **A)** [Specific framing — role + context, e.g., "Solo founders building B2B SaaS, pre-revenue"]
-> **B)** [Slightly broader or alternative angle, e.g., "Early-stage startup founders (1-3 people) with no dedicated ops team"]
-> **C)** [Third framing if clearly distinct from A and B]
->
-> Which fits best, or how would you rephrase it?"
+"Based on what you said, here are a few ways to frame your target customer:
+
+**A)** [Specific framing — role + context, e.g., "Solo founders building B2B SaaS, pre-revenue"]
+**B)** [Slightly broader or alternative angle, e.g., "Early-stage startup founders (1-3 people) with no dedicated ops team"]
+**C)** [Third framing if clearly distinct from A and B]
+
+Which fits best, or how would you rephrase it?"
 
 ---
 
 **If the user's response is vague (e.g., "small businesses", "everyone", "founders"):**
 
 Ask one sharpening probe — exactly one, no more:
-> "That's a broad group — is there a specific role or situation within [X] you have in mind?"
+"That's a broad group — is there a specific role or situation within [X] you have in mind?"
 
 Accept whatever they say next. Do not probe again, even if it's still vague.
 
@@ -125,7 +125,7 @@ Accept whatever they say next. Do not probe again, even if it's still vague.
 **When the user confirms a framing (picks an option, rephrases their own, or says "that's it"):**
 
 Lock it. Announce the lock:
-> "Got it — your target customer: **[confirmed framing]**"
+"Got it — your target customer: **[confirmed framing]**"
 
 Re-render the Step 1 banner with Customer updated to the confirmed framing.
 
@@ -142,7 +142,7 @@ Render the Step 1 banner with Customer showing the locked value and the remainin
 
 Then ask the following open question — do not lead with options:
 
-> "What's the problem they're stuck on? Describe it in your own words — what do they struggle with, fail at, or avoid because it's too hard?"
+"What's the problem they're stuck on? Describe it in your own words — what do they struggle with, fail at, or avoid because it's too hard?"
 
 Wait for the user to respond.
 
@@ -153,20 +153,20 @@ Wait for the user to respond.
 Distill what they said into 2-3 labeled options. Frame each option as a concrete, pain-centered statement — what specifically breaks down, what they can't do, what they keep failing at. Include an escape hatch.
 
 Example format:
-> "Here are a few ways to frame the core problem:
->
-> **A)** [Specific pain framing — what they can't do or keep failing at]
-> **B)** [Alternative angle — different moment when the pain hits]
-> **C)** [Third framing if clearly distinct]
->
-> Which captures it best, or how would you phrase it?"
+"Here are a few ways to frame the core problem:
+
+**A)** [Specific pain framing — what they can't do or keep failing at]
+**B)** [Alternative angle — different moment when the pain hits]
+**C)** [Third framing if clearly distinct]
+
+Which captures it best, or how would you phrase it?"
 
 ---
 
 **If the user's response is vague (e.g., "they're overwhelmed", "it's hard", "they don't have time"):**
 
 Ask one sharpening probe — exactly one, no more:
-> "Is there a specific moment or task where they feel this most acutely?"
+"Is there a specific moment or task where they feel this most acutely?"
 
 Accept whatever they say next. Do not probe again.
 
@@ -186,19 +186,19 @@ Search query to use: "[customer segment] [problem description] pain points" or e
 After the search, evaluate what you found:
 
 **If validation finds strong evidence** (articles, forum discussions, job postings, product reviews confirming this pain is real and active for this segment):
-> "I searched and confirmed this is a well-documented pain for [customer segment] — [one sentence summary of what you found]. Locking the problem."
+"I searched and confirmed this is a well-documented pain for [customer segment] — [one sentence summary of what you found]. Locking the problem."
 
 **If validation finds little or no evidence** (results are off-topic, the segment doesn't discuss this pain, results describe a different problem):
-> "I searched and couldn't confirm this pain is well-documented for [customer segment]. Here's what I found: [brief honest summary]. Do you want to refine the problem statement, or should we proceed anyway?"
->
-> Wait for the user's response and accept their decision — they may have inside knowledge that research can't surface.
+"I searched and couldn't confirm this pain is well-documented for [customer segment]. Here's what I found: [brief honest summary]. Do you want to refine the problem statement, or should we proceed anyway?"
+
+Wait for the user's response and accept their decision — they may have inside knowledge that research can't surface.
 
 ---
 
 **When the problem is confirmed (validation passed, or user decides to proceed anyway):**
 
 Lock it. Announce the lock:
-> "Got it — core problem: **[confirmed framing]**"
+"Got it — core problem: **[confirmed framing]**"
 
 Re-render the Step 1 banner with Problem updated to the confirmed framing.
 
@@ -214,7 +214,7 @@ Then proceed to Section 3 (Founder Advantages). Do not ask anything else in this
 Render the Step 1 banner with Customer and Problem locked, Advantages as "pending", Competitors as "pending".
 
 Then briefly explain the purpose of this section:
-> "Now let's establish why you're the right person to build this. We'll look at three things that make you specifically suited — not generic strengths, but things that are concretely true about you. This is called founder advantages: Capacity, Insight, and Motivation."
+"Now let's establish why you're the right person to build this. We'll look at three things that make you specifically suited — not generic strengths, but things that are concretely true about you. This is called founder advantages: Capacity, Insight, and Motivation."
 
 Work through all three dimensions in order. For each, run the sub-loop below.
 
@@ -223,7 +223,7 @@ Work through all three dimensions in order. For each, run the sub-loop below.
 ### DIMENSION A — CAPACITY (what you can build)
 
 Ask this open question:
-> "What have you built, shipped, or delivered that proves you can execute on this? Think code, products, services — things with actual outcomes."
+"What have you built, shipped, or delivered that proves you can execute on this? Think code, products, services — things with actual outcomes."
 
 Wait for the user to respond.
 
@@ -245,7 +245,7 @@ ACCEPTED (specific — lock immediately):
 - "I have 8 years of Python experience and shipped a production ML pipeline at [co]"
 
 If the user's response is vague, push back exactly once:
-> "Can you be more concrete? Instead of '[their claim]', something like: 'I've shipped X to Y users' or 'I have N years of experience specifically with Z.' What's the most specific thing you can say here?"
+"Can you be more concrete? Instead of '[their claim]', something like: 'I've shipped X to Y users' or 'I have N years of experience specifically with Z.' What's the most specific thing you can say here?"
 
 Accept whatever they say next — do not push again, even if still vague.
 
@@ -256,7 +256,7 @@ Lock the Capacity statement. Do not announce it separately — continue to Dimen
 ### DIMENSION B — INSIGHT (what you've seen before others)
 
 Ask this open question:
-> "What have you personally witnessed or experienced that most people haven't? What do you know about this problem or market that isn't obvious from the outside?"
+"What have you personally witnessed or experienced that most people haven't? What do you know about this problem or market that isn't obvious from the outside?"
 
 Wait for the user to respond.
 
@@ -276,7 +276,7 @@ ACCEPTED (specific — lock immediately):
 - "I tried every existing solution and none solved [specific gap] — documented in a public writeup"
 
 If the user's response is vague, push back exactly once:
-> "Can you be more specific? What did you personally see or experience that most people in your position haven't? A concrete example — a moment, a finding, a thing you witnessed?"
+"Can you be more specific? What did you personally see or experience that most people in your position haven't? A concrete example — a moment, a finding, a thing you witnessed?"
 
 Accept whatever they say next — do not push again.
 
@@ -287,7 +287,7 @@ Lock the Insight statement.
 ### DIMENSION C — MOTIVATION (why you specifically)
 
 Ask this open question:
-> "Why are you doing this — what's the personal reason this matters enough to you to build?"
+"Why are you doing this — what's the personal reason this matters enough to you to build?"
 
 Wait for the user to respond.
 
@@ -307,7 +307,7 @@ ACCEPTED (personal — lock immediately):
 - "I built a related thing before and always wanted to do it right"
 
 If the answer is purely generic, push back once:
-> "That's a business reason — is there a personal reason this problem matters to you specifically? Something you've experienced, or someone you've watched struggle with it?"
+"That's a business reason — is there a personal reason this problem matters to you specifically? Something you've experienced, or someone you've watched struggle with it?"
 
 Accept whatever they say next.
 
@@ -318,13 +318,13 @@ Lock the Motivation statement.
 **After all three dimensions are locked:**
 
 Summarize what was established:
-> "Here are your founder advantages:
->
-> **Capacity:** [locked Capacity statement]
-> **Insight:** [locked Insight statement]
-> **Motivation:** [locked Motivation statement]
->
-> These are locked."
+"Here are your founder advantages:
+
+**Capacity:** [locked Capacity statement]
+**Insight:** [locked Insight statement]
+**Motivation:** [locked Motivation statement]
+
+These are locked."
 
 Re-render the Step 1 banner with Advantages updated to "3 dimensions locked".
 
@@ -340,14 +340,14 @@ Then proceed to Section 4 (Competitor Collection). Do not ask anything else in t
 Render the Step 1 banner with Customer, Problem, and Advantages locked, Competitors as "pending".
 
 Then ask this open question — do not pre-populate any names:
-> "Any competitors you already know about — tools, services, or ways people solve this today? You can name none if you'd like me to find them."
+"Any competitors you already know about — tools, services, or ways people solve this today? You can name none if you'd like me to find them."
 
 Wait for the user to respond (a list of names, brief descriptions, or "none").
 
 Store whatever they said as user_named_competitors (may be empty or "none").
 
 Tell the user:
-> "Got it. Let me research this now."
+"Got it. Let me research this now."
 
 </section>
 
@@ -405,15 +405,15 @@ After the user provides competitor names (or says "none"):
 After the user selects which competitors to track:
 
 Ask:
-> "Which one is your main adversary — the one capturing your target customer's budget or habit today?"
+"Which one is your main adversary — the one capturing your target customer's budget or habit today?"
 
 Present the confirmed list by name so the user can pick:
-> (Your confirmed list: [Name 1], [Name 2], [Name 3], ...)
+(Your confirmed list: [Name 1], [Name 2], [Name 3], ...)
 
 Wait for user response.
 
 Lock:
-> "Got it — main adversary: **[name]**."
+"Got it — main adversary: **[name]**."
 
 Re-render the Step 1 banner with Competitors updated — include count and adversary name:
 ```
@@ -459,15 +459,15 @@ After main adversary is confirmed:
 
 After COMPETITORS.md is written, present exactly this:
 
-> Step 1 complete. COMPETITORS.md written.
->
-> What would you like to do?
->
-> **A) Advance to Step 2** — move on to Differentiation
-> **B) Revisit something in Step 1** — go back to a specific sub-decision
-> **C) Start Step 1 over** — discard everything and start from customer segment
->
-> Your choice:
+Step 1 complete. COMPETITORS.md written.
+
+What would you like to do?
+
+**A) Advance to Step 2** — move on to Differentiation
+**B) Revisit something in Step 1** — go back to a specific sub-decision
+**C) Start Step 1 over** — discard everything and start from customer segment
+
+Your choice:
 
 Wait for user response. Do NOT auto-advance. Do NOT ask "are you sure?" — accept their choice and act on it.
 
@@ -482,7 +482,7 @@ Proceed to step2_banner, then section_axis_rating.
 ### If user picks B (go back to a sub-decision) — NAVIG-02
 
 Ask:
-> "Which sub-decision do you want to revisit? (Customer segment / Problem / Founder advantages / Competitors)"
+"Which sub-decision do you want to revisit? (Customer segment / Problem / Founder advantages / Competitors)"
 
 Wait for user response.
 
@@ -539,21 +539,21 @@ Rules: Same visual style as Step 1 banner. No emoji. Width ~50 chars. Show locke
 
 Then say:
 
-> "Now we position your dream company on 8 bipolar axes. Each axis has two poles — rate where YOUR DREAM COMPANY sits.
->
-> Scale: -5 = far left pole, 0 = neutral, +5 = far right pole
->
-> 1. Slow ←————————→ Fast
-> 2. Hard ←————————→ Easy
-> 3. Expensive ←———→ Free
-> 4. Complex ←—————→ Simple
-> 5. Dumb ←————————→ Smart
-> 6. Siloed ←——————→ Integrated
-> 7. Manual ←——————→ Automatic
-> 8. Narrow ←——————→ Broad
->
-> Reply with 8 numbers in order, e.g.: "+3, -1, +5, +2, +4, 0, +3, +2"
-> Or rate them one at a time — your choice."
+"Now we position your dream company on 8 bipolar axes. Each axis has two poles — rate where YOUR DREAM COMPANY sits.
+
+Scale: -5 = far left pole, 0 = neutral, +5 = far right pole
+
+1. Slow ←————————→ Fast
+2. Hard ←————————→ Easy
+3. Expensive ←———→ Free
+4. Complex ←—————→ Simple
+5. Dumb ←————————→ Smart
+6. Siloed ←——————→ Integrated
+7. Manual ←——————→ Automatic
+8. Narrow ←——————→ Broad
+
+Reply with 8 numbers in order, e.g.: "+3, -1, +5, +2, +4, 0, +3, +2"
+Or rate them one at a time — your choice."
 
 Wait for the user to respond.
 
@@ -561,18 +561,18 @@ Accept any readable format: comma-separated list, numbered list, or axis-by-axis
 
 Confirm back with all 8 ratings listed:
 
-> "Got it. Your dream company ratings:
->
-> 1. Slow ←→ Fast: [score]
-> 2. Hard ←→ Easy: [score]
-> 3. Expensive ←→ Free: [score]
-> 4. Complex ←→ Simple: [score]
-> 5. Dumb ←→ Smart: [score]
-> 6. Siloed ←→ Integrated: [score]
-> 7. Manual ←→ Automatic: [score]
-> 8. Narrow ←→ Broad: [score]
->
-> Are these right? (Yes to lock, or tell me what to change.)"
+"Got it. Your dream company ratings:
+
+1. Slow ←→ Fast: [score]
+2. Hard ←→ Easy: [score]
+3. Expensive ←→ Free: [score]
+4. Complex ←→ Simple: [score]
+5. Dumb ←→ Smart: [score]
+6. Siloed ←→ Integrated: [score]
+7. Manual ←→ Automatic: [score]
+8. Narrow ←→ Broad: [score]
+
+Are these right? (Yes to lock, or tell me what to change.)"
 
 Wait for confirmation. Accept on first confirmation — do not push back on ratings.
 
@@ -590,21 +590,21 @@ Analyze the competitors' industries and profiles from the Step 1 conversation co
 
 Say:
 
-> "Now let's think about axes specific to your market.
->
-> Based on your competitors' profiles, I'd suggest these domain-specific axes:
->
-> **A) [AI-proposed axis 1 name]:** [Left pole] ←→ [Right pole]
->    *Why: [one sentence — what this measures and why it matters in your specific market]*
->
-> **B) [AI-proposed axis 2 name]:** [Left pole] ←→ [Right pole]
->    *Why: [one sentence]*
->
-> Do you want to add any of these, or propose your own?
->
-> - Type 'A', 'B', or 'A and B' to add my suggestions (and I'll ask you to rate them)
-> - Describe your own axis (give it a name and two poles)
-> - Type 'skip' to work with just the standard 8"
+"Now let's think about axes specific to your market.
+
+Based on your competitors' profiles, I'd suggest these domain-specific axes:
+
+**A) [AI-proposed axis 1 name]:** [Left pole] ←→ [Right pole]
+   *Why: [one sentence — what this measures and why it matters in your specific market]*
+
+**B) [AI-proposed axis 2 name]:** [Left pole] ←→ [Right pole]
+   *Why: [one sentence]*
+
+Do you want to add any of these, or propose your own?
+
+- Type 'A', 'B', or 'A and B' to add my suggestions (and I'll ask you to rate them)
+- Describe your own axis (give it a name and two poles)
+- Type 'skip' to work with just the standard 8"
 
 Wait for user response.
 
@@ -628,20 +628,20 @@ After all accepted custom axes are rated and locked: proceed to section_axis_sel
 
 List all rated axes with their scores so the user can see them at a glance:
 
-> "Here are all your rated axes. Pick the 2 that best capture where YOUR dream company is different from the competitors:
->
-> 1. Slow ←→ Fast: [score]
-> 2. Hard ←→ Easy: [score]
-> 3. Expensive ←→ Free: [score]
-> 4. Complex ←→ Simple: [score]
-> 5. Dumb ←→ Smart: [score]
-> 6. Siloed ←→ Integrated: [score]
-> 7. Manual ←→ Automatic: [score]
-> 8. Narrow ←→ Broad: [score]
-> [9+. Custom axes if any, with scores]
->
-> Which 2 do you want as your X-axis and Y-axis?
-> (e.g., '3 and 7' or 'Expensive-Free as X, Manual-Automatic as Y')"
+"Here are all your rated axes. Pick the 2 that best capture where YOUR dream company is different from the competitors:
+
+1. Slow ←→ Fast: [score]
+2. Hard ←→ Easy: [score]
+3. Expensive ←→ Free: [score]
+4. Complex ←→ Simple: [score]
+5. Dumb ←→ Smart: [score]
+6. Siloed ←→ Integrated: [score]
+7. Manual ←→ Automatic: [score]
+8. Narrow ←→ Broad: [score]
+[9+. Custom axes if any, with scores]
+
+Which 2 do you want as your X-axis and Y-axis?
+(e.g., '3 and 7' or 'Expensive-Free as X, Manual-Automatic as Y')"
 
 Wait for user response.
 
@@ -649,11 +649,11 @@ Wait for user response.
 
 After user picks their 2 axes: confirm back:
 
-> "Got it:
-> X-axis: [axis name] — You: [score]
-> Y-axis: [axis name] — You: [score]
->
-> Locking these as your differentiating axes."
+"Got it:
+X-axis: [axis name] — You: [score]
+Y-axis: [axis name] — You: [score]
+
+Locking these as your differentiating axes."
 
 Re-render the Step 2 banner with the locked axis names and the dream company's scores on each:
 
@@ -699,11 +699,11 @@ Do NOT infer from general market knowledge. Do NOT search the web. Score 0 if yo
 
 Display scores with rationale BEFORE rendering the matrix:
 
-> Scoring competitors on [X-axis] and [Y-axis]:
->
-> [CompA]: X-axis [score], Y-axis [score] — [one key detail from their profile that drove this rating]
-> [CompB]: X-axis [score], Y-axis [score] — [key detail]; [axis] 0 — limited data ([field name] not found)
-> (repeat for each competitor)
+Scoring competitors on [X-axis] and [Y-axis]:
+
+[CompA]: X-axis [score], Y-axis [score] — [one key detail from their profile that drove this rating]
+[CompB]: X-axis [score], Y-axis [score] — [key detail]; [axis] 0 — limited data ([field name] not found)
+(repeat for each competitor)
 
 After displaying all scores: proceed to section_matrix_render.
 
@@ -753,11 +753,11 @@ Rules:
 
 After the grid, show one line per competitor:
 
-> Competitor positions:
-> - [CompA] (top-right): [key profile detail that drove placement] — CONFLICT
-> - [CompB] (bottom-left): [key profile detail]
-> - [CompC] (bottom-right): [key profile detail]
-> (Note conflicts in rationale with "— CONFLICT" marker)
+Competitor positions:
+- [CompA] (top-right): [key profile detail that drove placement] — CONFLICT
+- [CompB] (bottom-left): [key profile detail]
+- [CompC] (bottom-right): [key profile detail]
+(Note conflicts in rationale with "— CONFLICT" marker)
 
 **Step 4: Conflict check (SPRINT-10).**
 
@@ -769,15 +769,15 @@ Check: Does any competitor have BOTH x_score > 0 AND y_score > 0?
 
 Display immediately after the rationale block:
 
-> **CONFLICT DETECTED**
->
-> [CompA] lands in the top-right quadrant — the same position as your dream company.
->
-> This means [CompA] already holds the differentiating position you're claiming.
-> Customers who see both of you won't have a clear reason to choose you over them.
->
-> You need to choose 2 different differentiating axes — ones where YOU are in the
-> top-right and [CompA] is not. Your ratings on all 8+ axes are preserved.
+**CONFLICT DETECTED**
+
+[CompA] lands in the top-right quadrant — the same position as your dream company.
+
+This means [CompA] already holds the differentiating position you're claiming.
+Customers who see both of you won't have a clear reason to choose you over them.
+
+You need to choose 2 different differentiating axes — ones where YOU are in the
+top-right and [CompA] is not. Your ratings on all 8+ axes are preserved.
 
 **There is NO option to continue with a conflict. Do NOT say "you could proceed anyway." Do NOT offer any alternative path. The ONLY available action is axis re-selection.**
 
@@ -795,21 +795,21 @@ After the conflict message: ask the user to pick 2 new differentiating axes. Ret
 
 Say:
 
-> "Now write your mini-manifesto — 3 short phrases that define what you stand for.
->
-> Write them as advice to a new team member, not as marketing copy.
-> They should constrain decisions, not describe aspirations.
->
-> **Phrase 1 (Differentiator 1):** Connected to your X-axis position
->    Example: "We are fully automated — no manual steps for the customer, ever."
->
-> **Phrase 2 (Differentiator 2):** Connected to your Y-axis position
->    Example: "We are always free to start — no credit card, no trial expiry."
->
-> **Phrase 3 (Safeguard):** What you will never compromise on, even if it costs you
->    Example: "We will never add enterprise features that break the simple user experience."
->
-> Write all three at once."
+"Now write your mini-manifesto — 3 short phrases that define what you stand for.
+
+Write them as advice to a new team member, not as marketing copy.
+They should constrain decisions, not describe aspirations.
+
+**Phrase 1 (Differentiator 1):** Connected to your X-axis position
+   Example: "We are fully automated — no manual steps for the customer, ever."
+
+**Phrase 2 (Differentiator 2):** Connected to your Y-axis position
+   Example: "We are always free to start — no credit card, no trial expiry."
+
+**Phrase 3 (Safeguard):** What you will never compromise on, even if it costs you
+   Example: "We will never add enterprise features that break the simple user experience."
+
+Write all three at once."
 
 Wait for user response.
 
@@ -862,10 +862,10 @@ Mini-manifesto:
 
 Then ask:
 
-> "What would you like to do?
->
-> **A) Continue to Step 3** — solution approaches
-> **B) Go back** — revisit axis selection or manifesto"
+"What would you like to do?
+
+**A) Continue to Step 3** — solution approaches
+**B) Go back** — revisit axis selection or manifesto"
 
 Wait for user response.
 
@@ -873,10 +873,10 @@ Wait for user response.
 
 **If B:** Ask what they want to revisit:
 
-> "What do you want to go back to?
->
-> **1) Axis selection** — pick different X and Y axes (your ratings on all 8+ axes are preserved)
-> **2) Manifesto** — rewrite your mini-manifesto (axes and matrix are preserved)"
+"What do you want to go back to?
+
+**1) Axis selection** — pick different X and Y axes (your ratings on all 8+ axes are preserved)
+**2) Manifesto** — rewrite your mini-manifesto (axes and matrix are preserved)"
 
 Wait for user choice.
 - If "1" or "axis selection": return to section_axis_selection. All axis ratings are preserved — only the choice of which 2 to use as differentiators is redone.
@@ -920,20 +920,20 @@ If you cannot find the exact wording in context, display your best recollection 
 
 Say:
 
-> "Before we look at approaches, let me bring up what we established about you:
->
-> **Your Capacity:** [locked Capacity statement from Step 1]
-> **Your Insight:** [locked Insight statement from Step 1]
->
-> **Your differentiating position:**
-> - [X-axis locked from Step 2 — axis name and your score]
-> - [Y-axis locked from Step 2 — axis name and your score]
->
-> Any approach we consider will need to fit what you can actually build,
-> draw on what you know first-hand, and reinforce where you want to sit
-> relative to competitors.
->
-> With that in mind — what's your initial approach idea?"
+"Before we look at approaches, let me bring up what we established about you:
+
+**Your Capacity:** [locked Capacity statement from Step 1]
+**Your Insight:** [locked Insight statement from Step 1]
+
+**Your differentiating position:**
+- [X-axis locked from Step 2 — axis name and your score]
+- [Y-axis locked from Step 2 — axis name and your score]
+
+Any approach we consider will need to fit what you can actually build,
+draw on what you know first-hand, and reinforce where you want to sit
+relative to competitors.
+
+With that in mind — what's your initial approach idea?"
 
 Wait for user response. Do NOT generate any approach options before the user responds.
 
@@ -971,11 +971,11 @@ Never mention what was filtered. Never say "I considered X but ruled it out." Si
 
 For each AI-generated approach, say:
 
-> "**Approach [N] (A[N]): [short name]**
->
-> [2-3 sentence description — grounded in the founder's Capacity and Insight, constrained by differentiating axes]
->
-> Keep it or drop it?"
+"**Approach [N] (A[N]): [short name]**
+
+[2-3 sentence description — grounded in the founder's Capacity and Insight, constrained by differentiating axes]
+
+Keep it or drop it?"
 
 Wait for user reaction.
 - If "keep": record as A[N], assign the next number label, continue to next approach if total < 4.
@@ -985,13 +985,13 @@ Continue until 3-4 total approaches are finalized (A1 + 2-3 AI-generated kept ap
 
 After 3-4 approaches are finalized, display the lineup:
 
-> "Here are your [N] approaches:
-> - **A1: [short name]** — [one-line summary]
-> - **A2: [short name]** — [one-line summary]
-> - **A3: [short name]** — [one-line summary]
-> [- **A4: [short name]** — [one-line summary] (if applicable)]
->
-> Ready to evaluate these across 4 lenses?"
+"Here are your [N] approaches:
+- **A1: [short name]** — [one-line summary]
+- **A2: [short name]** — [one-line summary]
+- **A3: [short name]** — [one-line summary]
+[- **A4: [short name]** — [one-line summary] (if applicable)]
+
+Ready to evaluate these across 4 lenses?"
 
 Wait for user confirmation before proceeding to section_approach_evaluation.
 
@@ -1038,11 +1038,11 @@ Axes: Ease to use (Hard → Easy) × How perfectly it solves the problem (Partia
 
 For each approach: does it require expertise or hand-holding (left) or is it self-explanatory (right)? Does it solve the problem partially (bottom) or completely as described by the user (top)?
 
-> [Explain each approach's quadrant placement, 1 sentence each]
->
-> [ASCII grid with A1/A2/A3/A4 placed in their quadrants]
->
-> Ready for Matrix 2: Money Vision?
+[Explain each approach's quadrant placement, 1 sentence each]
+
+[ASCII grid with A1/A2/A3/A4 placed in their quadrants]
+
+Ready for Matrix 2: Money Vision?
 
 ---
 
@@ -1051,11 +1051,11 @@ Axes: Revenue type (One-time → Recurring long term) × Number of customers (Fe
 
 For each approach: does it generate one-time revenue (left) or recurring long-term revenue (right)? Does it naturally serve a small number of customers (bottom) or can it scale to many (top)?
 
-> [Explain each approach's quadrant placement, 1 sentence each]
->
-> [ASCII grid]
->
-> Ready for Matrix 3: Pragmatic Vision?
+[Explain each approach's quadrant placement, 1 sentence each]
+
+[ASCII grid]
+
+Ready for Matrix 3: Pragmatic Vision?
 
 ---
 
@@ -1064,11 +1064,11 @@ Axes: Ease to build (Hard → Easy) × Speed to build (Slow → Fast)
 
 For each approach: how technically complex is it to build given the founder's stated Capacity (hard = left, easy = right)? How long until a first working version given realistic effort (slow = bottom, fast = top)?
 
-> [Explain each approach's quadrant placement, 1 sentence each]
->
-> [ASCII grid]
->
-> Ready for Matrix 4: Growth Vision?
+[Explain each approach's quadrant placement, 1 sentence each]
+
+[ASCII grid]
+
+Ready for Matrix 4: Growth Vision?
 
 ---
 
@@ -1077,9 +1077,9 @@ Axes: Adaptability (Rigid → Highly Adaptable) × Number of customers over time
 
 For each approach: how rigid is this product — does it lock into one configuration (left) or can it flex as the market shifts (right)? Will the customer base stay small niche (bottom) or can it grow to many over time (top)?
 
-> [Explain each approach's quadrant placement, 1 sentence each]
->
-> [ASCII grid]
+[Explain each approach's quadrant placement, 1 sentence each]
+
+[ASCII grid]
 
 After Matrix 4 is displayed: proceed immediately to section_approach_recommendation.
 
@@ -1095,15 +1095,15 @@ Review all 4 matrices. Identify which approach has the strongest global pattern:
 
 Say:
 
-> "**Looking across all 4 matrices:**
->
-> **[A#] ([short name])** has the strongest overall pattern — top-right in [Matrix X] and [Matrix Y], favorable in [Matrix Z].
->
-> **My recommendation: [A#].**
->
-> Second-best: **[A#] ([short name])** — strong in [dimension], weaker in [dimension].
->
-> You're free to choose any approach. What's your call?"
+"**Looking across all 4 matrices:**
+
+**[A#] ([short name])** has the strongest overall pattern — top-right in [Matrix X] and [Matrix Y], favorable in [Matrix Z].
+
+**My recommendation: [A#].**
+
+Second-best: **[A#] ([short name])** — strong in [dimension], weaker in [dimension].
+
+You're free to choose any approach. What's your call?"
 
 Wait for user to name their chosen approach.
 
@@ -1150,15 +1150,15 @@ Pre-fill the hypothesis from session context. Read each variable from the conver
 
 Say:
 
-> "Here's your hypothesis, built from everything we've decided:
->
-> **If we help** [X — target customer segment from Step 1]
-> **solve** [Y — core problem from Step 1]
-> **with** [Z — chosen approach from Step 3],
-> **they will choose us over** [W — main adversary flagged in Step 1]
-> **because we are** [U — Phrase 1 from Step 2 mini-manifesto] **and** [V — Phrase 2 from Step 2 mini-manifesto].
->
-> Edit any part you'd change, or say **"lock it"** to finalize."
+"Here's your hypothesis, built from everything we've decided:
+
+**If we help** [X — target customer segment from Step 1]
+**solve** [Y — core problem from Step 1]
+**with** [Z — chosen approach from Step 3],
+**they will choose us over** [W — main adversary flagged in Step 1]
+**because we are** [U — Phrase 1 from Step 2 mini-manifesto] **and** [V — Phrase 2 from Step 2 mini-manifesto].
+
+Edit any part you'd change, or say **"lock it"** to finalize."
 
 Wait for user response.
 
@@ -1188,14 +1188,14 @@ Derive all 4 testable form components automatically from the locked hypothesis. 
 
 Display all 4 components together:
 
-> "**Your hypothesis in testable form:**
->
-> **Success metric:** [specific, measurable — number + timeframe]
-> **Falsification condition:** [specific threshold — if X then proven wrong]
-> **Main risk:** [one sentence — the assumption most likely to be false]
-> **Fastest validation test:** [one concrete experiment to run first]
->
-> These are locked with your hypothesis. Ready to write your output files?"
+"**Your hypothesis in testable form:**
+
+**Success metric:** [specific, measurable — number + timeframe]
+**Falsification condition:** [specific threshold — if X then proven wrong]
+**Main risk:** [one sentence — the assumption most likely to be false]
+**Fastest validation test:** [one concrete experiment to run first]
+
+These are locked with your hypothesis. Ready to write your output files?"
 
 Wait for user to confirm readiness before proceeding to section_write_outputs.
 
@@ -1256,13 +1256,13 @@ CRITICAL: Zero square brackets remain in POSITIONING.md.
 
 **After all 3 files are written:**
 
-> "Done. Your Foundation Sprint is complete.
->
-> **Files written to your project directory:**
-> - `HYPOTHESIS.md` — your testable hypothesis
-> - `SPRINT.md` — the complete decision journal
-> - `POSITIONING.md` — your positioning map and manifesto
->
-> **Your next move:** [fastest validation test from the testable form]"
+"Done. Your Foundation Sprint is complete.
+
+**Files written to your project directory:**
+- `HYPOTHESIS.md` — your testable hypothesis
+- `SPRINT.md` — the complete decision journal
+- `POSITIONING.md` — your positioning map and manifesto
+
+**Your next move:** [fastest validation test from the testable form]"
 
 </section>
