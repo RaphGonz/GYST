@@ -2,7 +2,7 @@
 
 # Get Your Shit Together (GYST)
 
-<img src="asset/illustration.PNG" alt="GYST illustration" />
+
 
 </div>
 
@@ -12,6 +12,9 @@ An interactive wizard for solo entrepreneurs to find solid ideas ! Based on the 
 ```bash
 npx get-your-shit-together
 ```
+<div align="center">
+<img src="asset/illustration.PNG" alt="GYST illustration" />
+</div>
 
 ## Why did I do this
 
