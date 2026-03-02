@@ -59,7 +59,12 @@ node bin/install.js
 
 ## Usage
 
-After installing, open any project directory in Claude Code and run:
+After installing, open any project directory in Claude Code (with full permissions in order to not validate 50 times web searches)
+```
+claude --dangerously-skip-permissions
+```
+
+and run:
 
 ```
 /gyst:foundation-sprint
