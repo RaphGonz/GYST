@@ -84,4 +84,4 @@ Plans:
 | 4. Approaches + Hypothesis + Outputs (Steps 3-4) | v1.0 | 2/2 | Complete | 2026-02-27 |
 | 5. Language Routing | v1.1 | 1/1 | Complete | 2026-03-08 |
 | 6. French Output Templates | v1.1 | 1/1 | Complete | 2026-03-08 |
-| 7. French Workflow Translation | v1.1 | 0/2 | Not started | - |
+| 7. French Workflow Translation | 1/2 | In Progress|  | - |
