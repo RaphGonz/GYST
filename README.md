@@ -4,7 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/get-your-shit-together?style=for-the-badge&logo=npm&logoColor=white&color=CB3837)](https://www.npmjs.com/package/get-your-shit-together)
 [![npm downloads](https://img.shields.io/npm/dm/get-your-shit-together?style=for-the-badge&logo=npm&logoColor=white&color=CB3837)](https://www.npmjs.com/package/get-your-shit-together)
-[![Languages](https://img.shields.io/badge/languages-English%20%7C%20French-4B8BBE?style=for-the-badge)](https://github.com/RaphGonz/GYST)
+[![Languages](https://img.shields.io/badge/languages-English%20%7C%20French%20%7C%20Spanish-4B8BBE?style=for-the-badge)](https://github.com/RaphGonz/GYST)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Raphael%20Gonzales-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raphael-gonzales-ai-engineer/)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 
@@ -87,6 +87,18 @@ Pass the `-french` flag to run the entire sprint in French — all questions, gu
 Everything works the same way. Claude switches to a fully pre-translated workflow and writes `COMPETITORS.md`, `HYPOTHESIS.md`, `SPRINT.md`, and `POSITIONING.md` in French.
 
 > Unsupported language flags (e.g. `-spanish`) fall back to English with a message.
+
+### 🇪🇸 Run in Spanish
+
+Pass the `-spanish` flag to run the entire sprint in Spanish — all questions, guidance, and output files will be in Spanish:
+
+```
+/gyst:foundation-sprint -spanish
+```
+
+Everything works the same way. Claude switches to a fully pre-translated workflow and writes `COMPETITORS.md`, `HYPOTHESIS.md`, `SPRINT.md`, and `POSITIONING.md` in Spanish.
+
+> Unsupported language flags fall back to English with a message.
 
 ## What You Get
 

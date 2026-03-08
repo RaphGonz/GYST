@@ -8,7 +8,7 @@ allowed-tools:
   - WebSearch
   - WebFetch
   - Task
-argument-hint: "[-french]"
+argument-hint: "[-french | -spanish]"
 ---
 
 <objective>
@@ -26,6 +26,8 @@ Before executing any workflow, check $ARGUMENTS:
 
 - If $ARGUMENTS contains "-french": read and execute
   ~/.claude/get-your-shit-together/workflows/foundation-sprint-french.md
+- If $ARGUMENTS contains "-spanish": read and execute
+  ~/.claude/get-your-shit-together/workflows/foundation-sprint-spanish.md
 - If $ARGUMENTS is empty or contains no language flag: read and execute
   ~/.claude/get-your-shit-together/workflows/foundation-sprint.md
 - If $ARGUMENTS contains an unrecognized flag: say "Language '$ARGUMENTS' is
