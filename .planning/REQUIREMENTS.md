@@ -7,9 +7,9 @@
 
 ### Language Routing
 
-- [ ] **LANG-01**: User can run the sprint in French by passing `-french` flag: `/gyst:foundation-sprint, -french`
-- [ ] **LANG-02**: The language flag system is extensible — adding a new language requires only a pre-translated workflow file and templates, with zero changes to the command file
-- [ ] **LANG-03**: If an unsupported language flag is passed, the command informs the user and falls back to English
+- [x] **LANG-01**: User can run the sprint in French by passing `-french` flag: `/gyst:foundation-sprint, -french`
+- [x] **LANG-02**: The language flag system is extensible — adding a new language requires only a pre-translated workflow file and templates, with zero changes to the command file
+- [x] **LANG-03**: If an unsupported language flag is passed, the command informs the user and falls back to English
 
 ### French Output Templates
 
@@ -51,9 +51,9 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| LANG-01 | Phase 5 | Pending |
-| LANG-02 | Phase 5 | Pending |
-| LANG-03 | Phase 5 | Pending |
+| LANG-01 | Phase 5 | Complete |
+| LANG-02 | Phase 5 | Complete |
+| LANG-03 | Phase 5 | Complete |
 | LANG-04 | Phase 6 | Pending |
 | LANG-05 | Phase 7 | Pending |
 | LANG-06 | Phase 7 | Pending |

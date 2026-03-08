@@ -42,7 +42,7 @@ Full details: `.planning/milestones/v1.0-ROADMAP.md`
 **Plans**: 1 plan
 
 Plans:
-- [ ] 05-01-PLAN.md — Rewrite command file with $ARGUMENTS routing and deploy to both locations
+- [x] 05-01-PLAN.md — Rewrite command file with $ARGUMENTS routing and deploy to both locations (awaiting checkpoint:human-verify)
 
 ### Phase 6: French Output Templates
 **Goal**: The four French output template files exist at their canonical `templates/fr/` paths, with all user-facing text in French, so the French workflow has valid injection targets before a single line of translation is written
@@ -75,6 +75,6 @@ Plans:
 | 2. The Basics (Step 1) | v1.0 | 2/2 | Complete | 2026-02-25 |
 | 3. Differentiation (Step 2) | v1.0 | 2/2 | Complete | 2026-02-26 |
 | 4. Approaches + Hypothesis + Outputs (Steps 3-4) | v1.0 | 2/2 | Complete | 2026-02-27 |
-| 5. Language Routing | v1.1 | 0/1 | Not started | - |
+| 5. Language Routing | v1.1 | 1/1 | In progress (checkpoint) | - |
 | 6. French Output Templates | v1.1 | 0/TBD | Not started | - |
 | 7. French Workflow Translation | v1.1 | 0/TBD | Not started | - |
