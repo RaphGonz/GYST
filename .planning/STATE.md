@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: Multilingual Foundation Sprint
-status: planning
+status: executing
 last_updated: "2026-03-08"
 progress:
   total_phases: 3
   completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
+  total_plans: 1
+  completed_plans: 1
 ---
 
 # Project State
@@ -23,9 +23,9 @@ See: .planning/PROJECT.md (updated 2026-03-08)
 ## Current Position
 
 Phase: 5 of 7 (Language Routing — first phase of v1.1)
-Plan: 0 of TBD in current phase
-Status: Ready to plan
-Last activity: 2026-03-08 — v1.1 roadmap created; phases 5-7 defined; traceability confirmed
+Plan: 1 of 1 in current phase (AWAITING CHECKPOINT: human-verify Task 3)
+Status: Executing — checkpoint:human-verify reached
+Last activity: 2026-03-08 — 05-01 tasks 1-2 complete; awaiting human verification of routing branches in Claude Code
 
 Progress (v1.1): [░░░░░░░░░░] 0% (0/3 v1.1 phases complete)
 
@@ -62,6 +62,8 @@ Recent decisions affecting v1.1:
 - [v1.1 architecture]: French workflow must be a complete standalone file, not a conditional overlay — runtime translation is unreliable due to language drift
 - [v1.1 architecture]: `<execution_context>` static @-include must be removed from command file — it cannot participate in routing decisions
 - [v1.1 architecture]: English gyst-researcher sub-agent is shared and unchanged; French workflow adds French-language instruction to the Task call
+- [05-01 LANG-02]: Unrecognized-flag fallback satisfies "zero command file changes for future languages" — new languages need only a new workflow file; fallback catches all unknown flags automatically
+- [05-01 routing]: Plain paths inside `<process>` (not @-syntax) required — @-includes are static injections resolved before Claude reads process block, which would defeat routing
 
 ### Pending Todos
 
@@ -75,5 +77,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-03-08
-Stopped at: v1.1 roadmap created — ROADMAP.md updated with phases 5-7, STATE.md initialized for v1.1, REQUIREMENTS.md traceability confirmed
+Stopped at: 05-01 checkpoint:human-verify (Task 3) — routing command file written and deployed; awaiting user verification of all three branches in Claude Code
 Resume file: None
