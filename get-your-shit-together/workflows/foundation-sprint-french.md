@@ -530,3 +530,381 @@ Pour redémarrer une section : réaffichez le bandeau de l'Étape 1 montrant les
 Ne vous excusez pas et n'expliquez pas — recommencez simplement.
 
 </section>
+
+<step2_banner>
+<!-- INSTRUCTION DE RENDU DU BANDEAU — réutilisable pour l'Étape 2. Affichez à l'entrée de l'Étape 2 ET après que les axes sont verrouillés. -->
+
+Le format du bandeau de l'Étape 2 :
+
+─── Étape 2 : Différenciation ───────────────────
+Axe X :        [valeur ou "en attente"]
+Axe Y :        [valeur ou "en attente"]
+Entreprise idéale : [score X, score Y ou "en attente"]
+Manifeste :    [verrouillé / en attente]
+─────────────────────────────────────────────────
+
+Après que les axes sont verrouillés (exemple avec de vraies valeurs) :
+─── Étape 2 : Différenciation ───────────────────
+Axe X :        Manuel ←→ Automatique (Vous : +4)
+Axe Y :        Cher ←→ Gratuit (Vous : +3)
+Entreprise idéale : supérieur-droit (+4, +3)
+Manifeste :    en attente
+─────────────────────────────────────────────────
+
+Règles : Même style visuel que le bandeau de l'Étape 1. Pas d'émojis. Largeur ~50 caractères. Affichez les valeurs verrouillées en ligne ; « en attente » pour ce qui n'est pas encore décidé.
+</step2_banner>
+
+<section name="section_axis_rating">
+
+## Étape 2 : Évaluation de l'Entreprise Idéale
+
+**En entrant dans cette section :** Affichez le bandeau de l'Étape 2 avec les quatre valeurs comme « en attente ».
+
+Puis dites :
+
+« Nous allons maintenant positionner votre entreprise idéale sur 8 axes bipolaires. Chaque axe a deux pôles — évaluez où SE SITUE VOTRE ENTREPRISE IDÉALE.
+
+Échelle : -5 = pôle gauche extrême, 0 = neutre, +5 = pôle droit extrême
+
+1. Lent ←——————→ Rapide
+2. Difficile ←——————→ Facile
+3. Cher ←——————→ Gratuit
+4. Complexe ←——————→ Simple
+5. Basique ←——————→ Intelligent
+6. Cloisonné ←——————→ Intégré
+7. Manuel ←——————→ Automatique
+8. Étroit ←——————→ Large
+
+Répondez avec 8 chiffres dans l'ordre, par ex. : "+3, -1, +5, +2, +4, 0, +3, +2"
+Ou évaluez-les un par un — à votre guise. »
+
+Attendez que l'utilisateur réponde.
+
+Acceptez tout format lisible : liste séparée par des virgules, liste numérotée, ou axe par axe. Analysez les 8 valeurs.
+
+Confirmez avec les 8 évaluations listées :
+
+« Compris. Les évaluations de votre entreprise idéale :
+
+1. Lent ←→ Rapide : [score]
+2. Difficile ←→ Facile : [score]
+3. Cher ←→ Gratuit : [score]
+4. Complexe ←→ Simple : [score]
+5. Basique ←→ Intelligent : [score]
+6. Cloisonné ←→ Intégré : [score]
+7. Manuel ←→ Automatique : [score]
+8. Étroit ←→ Large : [score]
+
+Est-ce correct ? (Oui pour verrouiller, ou dites-moi ce qu'il faut changer.) »
+
+Attendez la confirmation. Acceptez à la première confirmation — ne repoussez pas sur les évaluations.
+
+Après la confirmation : verrouillez les 8 évaluations. Passez à section_custom_axes.
+
+</section>
+
+<section name="section_custom_axes">
+
+## Axes Personnalisés (facultatifs mais importants)
+
+**En entrant dans cette section :** Après que les 8 évaluations d'axes standard sont verrouillées.
+
+Analysez les industries et les profils des concurrents issus du contexte de la conversation de l'Étape 1 (les noms des concurrents et tous les signaux de marché déjà discutés). Proposez 1-2 axes spécifiques au domaine qui seraient des différenciateurs significatifs dans ce marché particulier.
+
+Dites :
+
+« Réfléchissons maintenant aux axes spécifiques à votre marché.
+
+En fonction des profils de vos concurrents, je suggérerais ces axes spécifiques au domaine :
+
+**A) [Nom de l'axe proposé par l'IA 1] :** [Pôle gauche] ←→ [Pôle droit]
+   *Pourquoi : [une phrase — ce que cela mesure et pourquoi c'est important dans votre marché spécifique]*
+
+**B) [Nom de l'axe proposé par l'IA 2] :** [Pôle gauche] ←→ [Pôle droit]
+   *Pourquoi : [une phrase]*
+
+Souhaitez-vous en ajouter, ou proposer le vôtre ?
+
+- Tapez 'A', 'B', ou 'A et B' pour ajouter mes suggestions (et je vous demanderai de les évaluer)
+- Décrivez votre propre axe (donnez-lui un nom et deux pôles)
+- Tapez 'passer' pour travailler uniquement avec les 8 axes standard »
+
+Attendez la réponse de l'utilisateur.
+
+S'il accepte un ou les deux axes IA : demandez-lui d'évaluer chaque axe accepté sur -5 à +5 immédiatement. Verrouillez les scores d'axes personnalisés aux côtés des 8 standard.
+
+S'il propose son propre axe : acceptez le nom et les pôles, demandez-lui de l'évaluer sur -5 à +5, verrouillez-le.
+
+S'il passe : acquiescez et passez immédiatement à section_axis_selection.
+
+**Ne suggérez PAS quels 2 axes utiliser comme différenciateurs.** L'étape des axes personnalisés ajoute uniquement des axes au pool évalué — la sélection se fait dans la section suivante.
+
+Après que tous les axes personnalisés acceptés sont évalués et verrouillés : passez à section_axis_selection.
+
+</section>
+
+<section name="section_axis_selection">
+
+## Sélection des 2 Axes Différenciants
+
+**En entrant dans cette section :** Après que tous les axes (les 8 standard + tous les personnalisés) sont évalués et verrouillés.
+
+Listez tous les axes évalués avec leurs scores afin que l'utilisateur puisse les voir d'un coup d'œil :
+
+« Voici tous vos axes évalués. Choisissez les 2 qui capturent le mieux en quoi VOTRE entreprise idéale se distingue des concurrents :
+
+1. Lent ←→ Rapide : [score]
+2. Difficile ←→ Facile : [score]
+3. Cher ←→ Gratuit : [score]
+4. Complexe ←→ Simple : [score]
+5. Basique ←→ Intelligent : [score]
+6. Cloisonné ←→ Intégré : [score]
+7. Manuel ←→ Automatique : [score]
+8. Étroit ←→ Large : [score]
+[9+. Axes personnalisés éventuels, avec scores]
+
+Quels 2 voulez-vous comme Axe X et Axe Y ?
+(par ex., '3 et 7' ou 'Cher-Gratuit en X, Manuel-Automatique en Y') »
+
+Attendez la réponse de l'utilisateur.
+
+**Ne suggérez NI ne recommandez aucun axe.** Acceptez quels que soient les 2 que l'utilisateur choisit sans commenter si ce sont de « bons » choix.
+
+Après que l'utilisateur a choisi ses 2 axes, confirmez :
+
+« Compris :
+Axe X : [nom de l'axe] — Vous : [score]
+Axe Y : [nom de l'axe] — Vous : [score]
+
+Je verrouille ces axes comme vos axes différenciants. »
+
+Réaffichez le bandeau de l'Étape 2 avec les noms d'axes verrouillés et les scores de l'entreprise idéale sur chacun :
+
+─── Étape 2 : Différenciation ───────────────────
+Axe X :        [axe] (Vous : [score X])
+Axe Y :        [axe] (Vous : [score Y])
+Entreprise idéale : supérieur-droit ([score X], [score Y])
+Manifeste :    en attente
+─────────────────────────────────────────────────
+
+Après le bandeau : passez à section_competitor_scoring.
+
+</section>
+
+<section name="section_competitor_scoring">
+
+## Évaluation des Concurrents (RESEARCH-02)
+
+**En entrant dans cette section :** Après que les 2 axes différenciants sont verrouillés et que le bandeau de l'Étape 2 a été réaffiché.
+
+**CRITIQUE : N'effectuez AUCUNE recherche web dans cette section. N'appelez PAS WebSearch ou WebFetch. Il n'y a AUCUNE exception à cette règle. Toute l'évaluation utilise UNIQUEMENT les informations déjà dans COMPETITORS.md. Si un champ de profil est manquant ou vide, attribuez 0 et signalez-le comme « données limitées ».**
+
+Lisez maintenant les profils des concurrents :
+
+@./COMPETITORS.md
+
+Pour chaque concurrent dans COMPETITORS.md, dérivez un score de -5 à +5 sur chacun des 2 axes sélectionnés (Axe X et Axe Y verrouillés dans section_axis_selection).
+
+Utilisez UNIQUEMENT ces champs de profil comme preuves :
+- **Pour les axes liés au prix (Cher ←→ Gratuit) :** Utilisez directement le champ « Modèle de tarification ».
+- **Pour les axes liés à la vitesse (Lent ←→ Rapide) :** Cherchez des affirmations de temps-à-valeur et des descriptions d'intégration dans « Ce qu'ils font ».
+- **Pour les axes liés à la facilité (Difficile ←→ Facile) :** Cherchez des signaux de friction à la configuration, d'audience technique dans « Points forts connus » et « Faiblesses connues ».
+- **Pour les axes de complexité (Complexe ←→ Simple) :** Comptez les signaux d'étendue des fonctionnalités ; « tout-en-un » ou « complet » = plus complexe ; « ciblé » ou « mono-usage » = plus simple.
+- **Pour les axes d'intelligence (Basique ←→ Intelligent) :** Cherchez des affirmations d'IA, d'automatisation ou d'intelligence dans « Points forts connus » et « Signaux de positionnement ».
+- **Pour les axes d'intégration (Cloisonné ←→ Intégré) :** Cherchez des mentions d'API, d'écosystème d'intégration ou de « se connecte avec » dans « Points forts connus » et « Signaux de positionnement ».
+- **Pour les axes d'automatisation (Manuel ←→ Automatique) :** Cherchez des affirmations d'automatisation de flux de travail dans « Points forts connus » et « Ce qu'ils font ».
+- **Pour les axes de portée (Étroit ←→ Large) :** Cherchez des affirmations verticales/horizontales et l'étendue du public cible dans « Ce qu'ils font » et « Signaux de positionnement ».
+- **Pour les axes personnalisés spécifiques au domaine :** Utilisez le champ « Signaux de positionnement » comme source de signal principale.
+
+Si un champ requis est vide ou « Inconnu » : attribuez 0 et signalez-le explicitement.
+
+N'inférez PAS à partir de connaissances générales du marché. Ne recherchez PAS sur le web. Attribuez 0 si vous ne pouvez pas soutenir un score à partir du texte du profil.
+
+Affichez les scores avec la justification AVANT de rendre la matrice :
+
+Évaluation des concurrents sur [Axe X] et [Axe Y] :
+
+[ConcA] : Axe X [score], Axe Y [score] — [un détail clé de leur profil qui a motivé cette évaluation]
+[ConcB] : Axe X [score], Axe Y [score] — [détail clé] ; [axe] 0 — données limitées ([nom du champ] introuvable)
+(répétez pour chaque concurrent)
+
+Après avoir affiché tous les scores : passez à section_matrix_render.
+
+</section>
+
+<section name="section_matrix_render">
+
+## Matrice 2x2 et Vérification des Conflits (SPRINT-09, SPRINT-10)
+
+**En entrant dans cette section :** Après que tous les scores des concurrents sont affichés.
+
+**Étape 1 : Assignez les quadrants.**
+
+Pour chaque concurrent :
+- Score X > 0 → moitié droite. Score X ≤ 0 → moitié gauche.
+- Score Y > 0 → moitié supérieure. Score Y ≤ 0 → moitié inférieure.
+- Score exactement 0 → placez près de la ligne centrale de cet axe.
+
+« Vous » (entreprise idéale) est TOUJOURS placé en supérieur-droit, indépendamment des scores.
+
+**Étape 2 : Affichez la grille ASCII.**
+
+Format de la grille (environ 60 caractères de large) :
+
+```
+              Haut [pôle droit de l'Axe Y]
+                        ^
+  [noms sup-gauche]     |      Vous
+                        |  [noms sup-droit]
+  ────────────────────────────────────────►
+                        |   Haut [pôle droit de l'Axe X]
+  [noms inf-gauche]     |
+                        |  [noms inf-droit]
+              Bas [pôle gauche de l'Axe Y]
+```
+
+Règles :
+- Placez les noms des concurrents spatialement dans leur région de quadrant — noms uniquement, pas de coordonnées.
+- Tronquez les noms de plus de 15 caractères avec « ... » (par ex., « NomConcurrent... » → « NomConcurren... »)
+- Si plusieurs concurrents se trouvent dans le même quadrant : empilez-les verticalement (un par ligne).
+- Si un quadrant est vide : affichez « — » dans cette région de quadrant.
+- La grille doit toujours montrer les 4 quadrants même si certains sont vides.
+- « Vous » apparaît dans la zone supérieure-droite de la grille.
+- Étiquetez les axes à l'extérieur de la grille : haut = Haut [pôle droit Y], bas = Bas [pôle gauche Y], droite = Haut [pôle droit X].
+
+**Étape 3 : Affichez le bloc de justification sous la grille.**
+
+Après la grille, montrez une ligne par concurrent :
+
+Positions des concurrents :
+- [ConcA] (supérieur-droit) : [détail clé du profil qui a motivé le placement] — CONFLIT
+- [ConcB] (inférieur-gauche) : [détail clé du profil]
+- [ConcC] (inférieur-droit) : [détail clé du profil]
+(Notez les conflits dans la justification avec le marqueur « — CONFLIT »)
+
+**Étape 4 : Vérification des conflits (SPRINT-10).**
+
+Après que la matrice et le bloc de justification sont affichés :
+
+Vérifiez : Est-ce qu'un concurrent a À LA FOIS un score_X > 0 ET un score_Y > 0 ?
+
+**Si OUI (conflit) :**
+
+Affichez immédiatement après le bloc de justification :
+
+**CONFLIT DÉTECTÉ**
+
+[ConcA] atterrit dans le quadrant supérieur-droit — la même position que votre entreprise idéale.
+
+Cela signifie que [ConcA] occupe déjà la position différenciante que vous revendiquez.
+Les clients qui vous voient tous les deux n'auront pas de raison claire de vous choisir plutôt qu'eux.
+
+Vous devez choisir 2 axes différenciants différents — ceux où VOUS êtes dans le
+supérieur-droit et [ConcA] ne l'est pas. Vos évaluations sur tous les 8+ axes sont préservées.
+
+**Il n'y a AUCUNE option pour continuer avec un conflit. NE DITES PAS « vous pourriez continuer quand même. » N'offrez AUCUNE voie alternative. La SEULE action disponible est la re-sélection des axes.**
+
+Après le message de conflit : demandez à l'utilisateur de choisir 2 nouveaux axes différenciants. Retournez à section_axis_selection. Démarrez le processus de sélection depuis le début de cette section.
+
+**Si PAS de conflit :** Passez directement à section_manifesto.
+
+</section>
+
+<section name="section_manifesto">
+
+## Mini-Manifeste (SPRINT-11)
+
+**En entrant dans cette section :** Après que la matrice 2x2 est confirmée sans conflit.
+
+Dites :
+
+« Rédigez maintenant votre mini-manifeste — 3 courtes phrases qui définissent ce pour quoi vous vous engagez.
+
+Rédigez-les comme des conseils à un nouveau membre d'équipe, pas comme du texte marketing.
+Elles doivent contraindre des décisions, pas décrire des aspirations.
+
+**Phrase 1 (Différenciateur 1) :** Liée à votre position sur l'Axe X
+   Exemple : « Nous sommes entièrement automatisés — aucune étape manuelle pour le client, jamais. »
+
+**Phrase 2 (Différenciateur 2) :** Liée à votre position sur l'Axe Y
+   Exemple : « Nous sommes toujours gratuits pour démarrer — pas de carte de crédit, pas d'expiration de période d'essai. »
+
+**Phrase 3 (Garde-fou) :** Ce sur quoi vous ne compromettrez jamais, même si cela vous coûte quelque chose
+   Exemple : « Nous n'ajouterons jamais de fonctionnalités enterprise qui brisent l'expérience utilisateur simple. »
+
+Rédigez les trois en même temps. »
+
+Attendez la réponse de l'utilisateur.
+
+**Évaluez les 3 phrases ensemble dans UNE seule réponse globale — ne critiquez PAS chaque phrase séparément.**
+
+Critères d'évaluation (vérifiez les trois ensemble) :
+- Se lisent-elles comme des outils de prise de décision, pas comme des titres marketing ?
+- Sont-elles suffisamment spécifiques pour véritablement contraindre une décision produit ?
+- Sont-elles connectées aux axes différenciants choisis ?
+
+Exemples invalides (texte marketing — rejetez ceci) :
+- « Nous sommes le leader en X » / « Nous offrons un Y sans pareil » / « Nous sommes les plus rapides/meilleurs/moins chers »
+
+Exemples valides (contraintes décisionnelles) :
+- « Nous construisons pour une seule persona et déclinons les demandes de fonctionnalités des autres »
+- « Nous ne facturons jamais par siège — la tarification est toujours forfaitaire »
+- « Nous n'ajouterons jamais de fonctionnalités qui nécessitent un appel commercial pour être expliquées »
+
+**Si solide :** Dites « Ces phrases fonctionnent. Je verrouille votre manifeste. » Puis verrouillez les 3 phrases.
+
+**Si texte marketing ou trop vague :** Donnez UN seul tour de feedback — expliquez à quoi ressemble une version contraignante pour les décisions et donnez un exemple de réécriture spécifique. Puis acceptez ce que l'utilisateur écrit ensuite sans pousser davantage.
+
+Après verrouillage : réaffichez le bandeau de l'Étape 2 avec « Manifeste : verrouillé ». Puis passez à section_step2_navigation.
+
+</section>
+
+<section name="section_step2_navigation">
+
+## Résumé et Navigation de l'Étape 2
+
+**En entrant dans cette section :** Après que le manifeste est verrouillé.
+
+Affichez le bloc récapitulatif de l'Étape 2 complète :
+
+─── Étape 2 Complète ────────────────────────────
+Axes différenciants :
+  X : [nom de l'axe] — Vous : [score]
+  Y : [nom de l'axe] — Vous : [score]
+
+Positions des concurrents :
+  [ConcA] : X : [score], Y : [score] → [quadrant]
+  [ConcB] : X : [score], Y : [score] → [quadrant]
+  (tous les concurrents de COMPETITORS.md)
+
+Mini-manifeste :
+  [Phrase 1]
+  [Phrase 2]
+  [Phrase 3]
+─────────────────────────────────────────────────
+
+Puis demandez :
+
+« Que souhaitez-vous faire ?
+
+**A) Continuer vers l'Étape 3** — approches de solution
+**B) Revenir en arrière** — revisiter la sélection des axes ou le manifeste »
+
+Attendez la réponse de l'utilisateur.
+
+**Si A :** Passez à step3_banner.
+
+**Si B :** Demandez ce qu'il souhaite revisiter :
+
+« À quoi souhaitez-vous revenir ?
+
+**1) Sélection des axes** — choisissez différents Axes X et Y (vos évaluations sur tous les 8+ axes sont préservées)
+**2) Manifeste** — réécrivez votre mini-manifeste (les axes et la matrice sont préservés) »
+
+Attendez le choix de l'utilisateur.
+- Si « 1 » ou « sélection des axes » : retournez à section_axis_selection. Toutes les évaluations d'axes sont préservées — seul le choix de quels 2 utiliser comme différenciateurs est refait.
+- Si « 2 » ou « manifeste » : retournez à section_manifesto. Les axes, la matrice et les scores sont préservés.
+
+N'offrez PAS d'effacer toute l'Étape 2. N'offrez PAS de redémarrer l'Étape 1. Redo ciblé uniquement.
+
+</section>
