@@ -6,7 +6,7 @@ status: executing
 last_updated: "2026-03-08"
 progress:
   total_phases: 3
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 1
   completed_plans: 1
 ---
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-08)
 
 **Core value:** One command, one session, one testable hypothesis — solo entrepreneurs get the clarity the Foundation Sprint was designed to produce, without needing a team.
-**Current focus:** Phase 5 — Language Routing (v1.1 milestone start)
+**Current focus:** Phase 6 — French Output Templates (next phase of v1.1)
 
 ## Current Position
 
-Phase: 5 of 7 (Language Routing — first phase of v1.1)
-Plan: 1 of 1 in current phase (AWAITING CHECKPOINT: human-verify Task 3)
-Status: Executing — checkpoint:human-verify reached
-Last activity: 2026-03-08 — 05-01 tasks 1-2 complete; awaiting human verification of routing branches in Claude Code
+Phase: 5 of 7 complete — now at Phase 6 (French Output Templates)
+Plan: 05-01 complete (1/1 plans in Phase 5)
+Status: Phase 5 complete — ready for Phase 6
+Last activity: 2026-03-08 — 05-01 all 3 tasks complete; human verified all routing branches in Claude Code
 
-Progress (v1.1): [░░░░░░░░░░] 0% (0/3 v1.1 phases complete)
+Progress (v1.1): [███░░░░░░░] 33% (1/3 v1.1 phases complete)
 
 ## Performance Metrics
 
@@ -64,6 +64,7 @@ Recent decisions affecting v1.1:
 - [v1.1 architecture]: English gyst-researcher sub-agent is shared and unchanged; French workflow adds French-language instruction to the Task call
 - [05-01 LANG-02]: Unrecognized-flag fallback satisfies "zero command file changes for future languages" — new languages need only a new workflow file; fallback catches all unknown flags automatically
 - [05-01 routing]: Plain paths inside `<process>` (not @-syntax) required — @-includes are static injections resolved before Claude reads process block, which would defeat routing
+- [05-01 verification]: French on-the-fly translation is acceptable Phase 5 interim behavior — routing is live; Phase 7 delivers the pre-translated file that replaces ad-hoc translation
 
 ### Pending Todos
 
@@ -77,5 +78,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-03-08
-Stopped at: 05-01 checkpoint:human-verify (Task 3) — routing command file written and deployed; awaiting user verification of all three branches in Claude Code
+Stopped at: Phase 5 complete — 05-01 all tasks done, human-verify approved; ready for Phase 6 (French Output Templates)
 Resume file: None
