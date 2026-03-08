@@ -53,7 +53,10 @@ Plans:
   2. Every header, label, section title, and structural prose string in each template file is in French
   3. The `* MAIN ADVERSARY` string and all YAML structural keys are preserved verbatim (untranslated) in COMPETITORS.md
   4. The filenames at `templates/fr/` are identical to the English root-level filenames (not `HYPOTHESIS-fr.md` or similar)
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 06-01-PLAN.md — Create all four French templates at templates/fr/ (COMPETITORS.md, HYPOTHESIS.md, SPRINT.md, POSITIONING.md)
 
 ### Phase 7: French Workflow Translation
 **Goal**: A complete, self-contained French workflow file exists that Claude can load and execute end-to-end in French, producing all four output files in French using the `templates/fr/` paths, with a translation sync record on disk
