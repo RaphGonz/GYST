@@ -8,7 +8,7 @@ allowed-tools:
   - WebSearch
   - WebFetch
   - Task
-argument-hint: (no arguments needed — just run it)
+argument-hint: "[-french]"
 ---
 
 <objective>
@@ -21,10 +21,16 @@ This sprint produces four output files in the user's current directory:
 - POSITIONING.md — 2x2 matrix, mini-manifesto, differentiation axes (written at sprint end)
 </objective>
 
-<execution_context>
-@~/.claude/get-your-shit-together/workflows/foundation-sprint.md
-</execution_context>
-
 <process>
-Execute the foundation-sprint workflow from @~/.claude/get-your-shit-together/workflows/foundation-sprint.md end-to-end. Follow all instructions in that workflow precisely.
+Before executing any workflow, check $ARGUMENTS:
+
+- If $ARGUMENTS contains "-french": read and execute
+  ~/.claude/get-your-shit-together/workflows/foundation-sprint-french.md
+- If $ARGUMENTS is empty or contains no language flag: read and execute
+  ~/.claude/get-your-shit-together/workflows/foundation-sprint.md
+- If $ARGUMENTS contains an unrecognized flag: say "Language '$ARGUMENTS' is
+  not yet supported. Running the sprint in English." then execute
+  ~/.claude/get-your-shit-together/workflows/foundation-sprint.md
+
+Follow all instructions in the selected workflow precisely.
 </process>
