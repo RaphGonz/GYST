@@ -2,7 +2,8 @@
 
 # Get Your Shit Together (GYST)
 
-
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Raphael%20Gonzales-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raphael-gonzales-ai-engineer/)
+![Languages](https://img.shields.io/badge/languages-English%20%7C%20French-blue?style=flat)
 
 </div>
 
