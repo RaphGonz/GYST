@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Multilingual Foundation Sprint
 status: unknown
-last_updated: "2026-03-08T11:33:50.206Z"
+last_updated: "2026-03-08T15:39:39.653Z"
 progress:
-  total_phases: 2
+  total_phases: 3
   completed_phases: 2
-  total_plans: 2
-  completed_plans: 2
+  total_plans: 4
+  completed_plans: 3
 ---
 
 # Project State
@@ -22,12 +22,12 @@ See: .planning/PROJECT.md (updated 2026-03-08)
 
 ## Current Position
 
-Phase: 6 of 7 complete — now at Phase 7 (French Workflow)
-Plan: 06-01 complete (1/1 plans in Phase 6)
-Status: Phase 6 complete — ready for Phase 7
-Last activity: 2026-03-08 — 06-01 all 3 tasks complete; human verified all four French templates; axis label translations canonical
+Phase: 7 (French Workflow) — in progress
+Plan: 07-01 complete (1/2 plans in Phase 7)
+Status: Phase 7 in progress — 07-01 done (Steps 1 and 2 translated, 15/22 sections); ready for 07-02
+Last activity: 2026-03-08 — 07-01 complete; Steps 1 and 2 of French workflow translated (language_directive, onboarding, 8 Step 1 sections, 7 Step 2 sections)
 
-Progress (v1.1): [██████░░░░] 67% (2/3 v1.1 phases complete)
+Progress (v1.1): [████████░░] 78% (Phase 7 in progress — 1/2 plans done)
 
 ## Performance Metrics
 
@@ -47,9 +47,15 @@ Progress (v1.1): [██████░░░░] 67% (2/3 v1.1 phases complete)
 
 **Recent Trend:**
 - v1.0 complete — all 8 plans executed across 4 phases
-- v1.1 not started yet
+- v1.1 in progress — Phase 5 (routing), Phase 6 (French templates), Phase 7 started
 
 *Updated after each plan completion*
+
+| Phase | Plans | Total | Avg/Plan |
+|-------|-------|-------|----------|
+| 5. Language Routing | 1 | ~10 min | ~10 min |
+| 6. French Output Templates | 1 | ~18 min | ~18 min |
+| 7. French Workflow (07-01) | 1 | ~14 min | ~14 min |
 
 ## Accumulated Context
 
@@ -68,6 +74,8 @@ Recent decisions affecting v1.1:
 - [06-01 LANG-04]: `* MAIN ADVERSARY` preserved verbatim (not translated) — machine-readable marker; translating it would silently break Phase 7 competitor identification
 - [06-01 axis translations]: Bipolar axis labels canonical: Lent/Rapide, Difficile/Facile, Cher/Gratuit, Complexe/Simple, Basique/Intelligent, Cloisonné/Intégré, Manuel/Automatique — Phase 7 section_axis_rating must output these exact strings
 - [06-01 hypothesis labels]: Bracket-labels in HYPOTHESIS.md blockquote are translated to French ([CLIENT CIBLE :], [PROBLÈME :], etc.) — user-visible content; variable letters X/Y/Z/W/U/V in Breakdown table preserved as formal identifiers
+- [Phase 07-01]: language_directive placed before objective — sets French session context for entire workflow
+- [Phase 07-01]: Étroit / Large confirmed as canonical 8th axis label in section_axis_rating
 
 ### Pending Todos
 
@@ -80,5 +88,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-03-08
-Stopped at: Phase 6 complete — 06-01 all tasks done, human-verify approved; ready for Phase 7 (French Workflow)
+Stopped at: Completed 07-01-PLAN.md — Steps 1 and 2 of French workflow translated (15/22 sections); ready for 07-02 (Steps 3 and 4)
 Resume file: None
