@@ -24,11 +24,24 @@ One command, one session, one testable hypothesis — solo entrepreneurs get the
 - ✓ Installs at `~/.claude/get-your-shit-together/` as a standalone package — v1.0
 - ✓ No binary tooling required — pure markdown workflows and agent files — v1.0
 
+## Current Milestone: v1.1 Multilingual Foundation Sprint
+
+**Goal:** Add language flag support to the sprint command so users can run the entire Foundation Sprint in French (and future languages), with a fully pre-translated workflow and output templates.
+
+**Target features:**
+- Language flag routing: `/gyst:foundation-sprint, -french` runs the French workflow
+- Extensible architecture: new languages require only a translated workflow + templates (no command changes)
+- Pre-translated French workflow (`foundation-sprint-french.md`) — all Claude instructions in French
+- French output templates (COMPETITORS.md, HYPOTHESIS.md, SPRINT.md, POSITIONING.md)
+
 ### Active
 
-- [ ] User can pause mid-sprint and resume in a new session (save sprint state to disk) — SESS-01
-- [ ] User can view a history of completed sprints — SESS-02
-- [ ] User can run multiple sprints and compare hypotheses side by side — COMP-01
+- [ ] User can run the sprint in French with `/gyst:foundation-sprint, -french` — LANG-01
+- [ ] Language flag system is extensible to any language automatically — LANG-02
+- [ ] Unsupported language flag falls back to English with a message — LANG-03
+- [ ] Complete pre-translated French workflow exists (`foundation-sprint-french.md`) — LANG-04
+- [ ] French versions of all 4 output templates exist — LANG-05
+- [ ] French workflow uses French templates to produce French output files — LANG-06
 
 ### Out of Scope
 
@@ -71,4 +84,4 @@ One command, one session, one testable hypothesis — solo entrepreneurs get the
 | section_write_outputs as ONLY output location | Prevents partial writes from earlier sections | ✓ Good — zero-placeholder rule enforced for all 3 output files |
 
 ---
-*Last updated: 2026-02-28 after v1.0 milestone*
+*Last updated: 2026-03-08 after v1.1 milestone start*
