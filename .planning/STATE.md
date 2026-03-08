@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Multilingual Foundation Sprint
 status: unknown
-last_updated: "2026-03-08T15:39:39.653Z"
+last_updated: "2026-03-08T16:05:34.228Z"
 progress:
   total_phases: 3
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 4
-  completed_plans: 3
+  completed_plans: 4
 ---
 
 # Project State
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-08)
 
 **Core value:** One command, one session, one testable hypothesis — solo entrepreneurs get the clarity the Foundation Sprint was designed to produce, without needing a team.
-**Current focus:** Phase 7 — French Workflow (next phase of v1.1)
+**Current focus:** v1.1 complete — Phase 7 (French Workflow) done
 
 ## Current Position
 
-Phase: 7 (French Workflow) — in progress
-Plan: 07-01 complete (1/2 plans in Phase 7)
-Status: Phase 7 in progress — 07-01 done (Steps 1 and 2 translated, 15/22 sections); ready for 07-02
-Last activity: 2026-03-08 — 07-01 complete; Steps 1 and 2 of French workflow translated (language_directive, onboarding, 8 Step 1 sections, 7 Step 2 sections)
+Phase: 7 (French Workflow) — COMPLETE
+Plan: 07-02 complete (2/2 plans in Phase 7)
+Status: Phase 7 complete — all 22 sections of foundation-sprint-french.md translated; TRANSLATION-SYNC.md created; v1.1 milestone done
+Last activity: 2026-03-08 — 07-02 complete; Steps 3 and 4 translated; full French workflow ready; LANG-05, LANG-06, LANG-07 all satisfied
 
-Progress (v1.1): [████████░░] 78% (Phase 7 in progress — 1/2 plans done)
+Progress (v1.1): [██████████] 100% (Phase 7 complete — 2/2 plans done)
 
 ## Performance Metrics
 
@@ -56,6 +56,7 @@ Progress (v1.1): [████████░░] 78% (Phase 7 in progress — 1
 | 5. Language Routing | 1 | ~10 min | ~10 min |
 | 6. French Output Templates | 1 | ~18 min | ~18 min |
 | 7. French Workflow (07-01) | 1 | ~14 min | ~14 min |
+| 7. French Workflow (07-02) | 1 | ~16 min | ~16 min |
 
 ## Accumulated Context
 
@@ -76,6 +77,8 @@ Recent decisions affecting v1.1:
 - [06-01 hypothesis labels]: Bracket-labels in HYPOTHESIS.md blockquote are translated to French ([CLIENT CIBLE :], [PROBLÈME :], etc.) — user-visible content; variable letters X/Y/Z/W/U/V in Breakdown table preserved as formal identifiers
 - [Phase 07-01]: language_directive placed before objective — sets French session context for entire workflow
 - [Phase 07-01]: Étroit / Large confirmed as canonical 8th axis label in section_axis_rating
+- [Phase 07-02]: section_approach_generation fully translated (HIGH complexity) — all sharpening probe logic and internal filter in French, no stubs
+- [Phase 07-02]: TRANSLATION-SYNC.md created at project root recording English source commit 97e468e21a184026db29b8f25aa54d8b5a185ab7 for future diff-based updates
 
 ### Pending Todos
 
@@ -83,10 +86,10 @@ None.
 
 ### Blockers/Concerns
 
-- [Phase 7]: Three HIGH-complexity sections (`section_advantages`, `section_manifesto`, `section_approach_generation`) warrant native French speaker review before shipping
+- [Phase 7 — resolved]: Three HIGH-complexity sections (`section_advantages`, `section_manifesto`, `section_approach_generation`) flagged for native French speaker review — recorded in TRANSLATION-SYNC.md; not a blocker for shipping
 
 ## Session Continuity
 
 Last session: 2026-03-08
-Stopped at: Completed 07-01-PLAN.md — Steps 1 and 2 of French workflow translated (15/22 sections); ready for 07-02 (Steps 3 and 4)
+Stopped at: Completed 07-02-PLAN.md — Phase 7 complete; foundation-sprint-french.md has all 22 sections; TRANSLATION-SYNC.md created; v1.1 milestone done
 Resume file: None
