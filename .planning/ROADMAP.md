@@ -56,19 +56,23 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 06-01-PLAN.md — Create all four French templates at templates/fr/ (COMPETITORS.md, HYPOTHESIS.md, SPRINT.md, POSITIONING.md)
+- [x] 06-01-PLAN.md — Create all four French templates at templates/fr/ (COMPETITORS.md, HYPOTHESIS.md, SPRINT.md, POSITIONING.md)
 
 ### Phase 7: French Workflow Translation
 **Goal**: A complete, self-contained French workflow file exists that Claude can load and execute end-to-end in French, producing all four output files in French using the `templates/fr/` paths, with a translation sync record on disk
 **Depends on**: Phase 6
 **Requirements**: LANG-05, LANG-06, LANG-07
 **Success Criteria** (what must be TRUE):
-  1. `foundation-sprint-french.md` exists and contains all 20 original section `name=` identifiers unchanged (verifiable by comparing byte-for-byte against the English source)
+  1. `foundation-sprint-french.md` exists and contains all 22 section `name=` identifiers unchanged (verifiable by comparing byte-for-byte against the English source; note: English source has 22 sections)
   2. A strong French-language directive appears at the top of the French workflow file before any section content, and per-section reinforcement directives appear before every WebSearch-heavy section
   3. Every `@` template reference in the French workflow points to `templates/fr/` (not the English root paths) — verifiable by searching the file for `@` and checking each path
   4. Running the French workflow end-to-end produces COMPETITORS.md, HYPOTHESIS.md, SPRINT.md, and POSITIONING.md with French-language content and correctly structured output (French headers, French labels, French prose)
   5. `TRANSLATION-SYNC.md` exists on disk and records the English source commit hash from which the French translation was derived
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 07-01-PLAN.md — Translate file header and Steps 1+2 sections (language_directive through section_step2_navigation — 15 of 22 sections)
+- [ ] 07-02-PLAN.md — Complete Steps 3+4 sections, validate full file, create TRANSLATION-SYNC.md
 
 ## Progress
 
@@ -79,5 +83,5 @@ Plans:
 | 3. Differentiation (Step 2) | v1.0 | 2/2 | Complete | 2026-02-26 |
 | 4. Approaches + Hypothesis + Outputs (Steps 3-4) | v1.0 | 2/2 | Complete | 2026-02-27 |
 | 5. Language Routing | v1.1 | 1/1 | Complete | 2026-03-08 |
-| 6. French Output Templates | 1/1 | Complete    | 2026-03-08 | - |
-| 7. French Workflow Translation | v1.1 | 0/TBD | Not started | - |
+| 6. French Output Templates | v1.1 | 1/1 | Complete | 2026-03-08 |
+| 7. French Workflow Translation | v1.1 | 0/2 | Not started | - |
