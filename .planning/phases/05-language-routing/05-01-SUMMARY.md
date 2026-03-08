@@ -49,10 +49,10 @@ completed: 2026-03-08
 
 ## Performance
 
-- **Duration:** 8 min
+- **Duration:** ~15 min (including human verification)
 - **Started:** 2026-03-08T09:15:37Z
-- **Completed:** 2026-03-08T09:23:52Z
-- **Tasks:** 2 of 3 complete (Task 3 is checkpoint:human-verify, awaiting user)
+- **Completed:** 2026-03-08
+- **Tasks:** 3 of 3 complete
 - **Files modified:** 1 (commands/gyst/foundation-sprint.md + deployed copy)
 
 ## Accomplishments
@@ -60,6 +60,7 @@ completed: 2026-03-08
 - Rewrote `<process>` block with explicit three-branch routing: no-flag -> English, `-french` -> French (graceful fail until Phase 7 delivers the file), unknown flag -> informative message + English fallback
 - Updated `argument-hint` to `"[-french]"` so Claude Code autocomplete surfaces the flag
 - Deployed updated file to installed location via cp; verified diff-clean
+- Human-verified all three routing branches in Claude Code: no-flag starts English sprint normally; `-french` acknowledges flag and attempts French file load (graceful failure — file does not exist yet); `-chinese` (unrecognized flag) states file not supported and starts in English
 
 ## Task Commits
 
@@ -67,9 +68,9 @@ Each task was committed atomically:
 
 1. **Task 1: Rewrite command file with routing logic** - `ba2110d` (feat)
 2. **Task 2: Deploy to installed location** - filesystem operation only (no repo change; ~/.claude/ is outside repo)
-3. **Task 3: Human verify routing branches** - PENDING (checkpoint:human-verify)
+3. **Task 3: Verify all three routing branches in Claude Code** - checkpoint:human-verify approved
 
-**Plan metadata:** pending final commit after checkpoint resolution
+**Plan metadata:** `e58b0a5` (docs: complete language routing plan) + `[this commit]` (docs: post-checkpoint summary update)
 
 ## Files Created/Modified
 - `commands/gyst/foundation-sprint.md` - Routing logic: removed execution_context, rewrote process block, updated argument-hint
@@ -79,6 +80,7 @@ Each task was committed atomically:
 - **Plain paths inside `<process>` (not @-syntax):** @-includes are resolved statically before Claude reads the process block. Using @-syntax inside process would pre-load the English file at parse time, collapsing all three branches to English before routing logic runs.
 - **LANG-02 fallback design:** The unrecognized-flag branch ("Language '$ARGUMENTS' is not yet supported. Running the sprint in English.") satisfies the requirement for "zero command file changes for future languages." Future languages only need a new workflow file; the fallback catches unknown flags without modifying the command file.
 - **cp over installer:** `node bin/install.js` copies all assets (workflows, templates) which are unchanged in Phase 5. cp is faster and more surgical — touches only the changed file.
+- **French on-the-fly translation is acceptable interim behavior (Phase 5 only):** User verified that `-french` causes Claude to acknowledge the missing file and translate on the fly. This is acceptable because Phase 5's scope is routing infrastructure, not delivering a quality French workflow. Phase 7 will replace on-the-fly translation with the pre-translated standalone file, at which point the `-french` branch will load `foundation-sprint-french.md` end-to-end without translation drift.
 
 ## Deviations from Plan
 
