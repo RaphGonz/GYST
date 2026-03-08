@@ -69,3 +69,34 @@ Aplica los cambios equivalentes a `foundation-sprint-spanish.md`, luego actualiz
 - Sub-agente gyst-researcher: opera en inglés (intencional); el brief Task permanece en inglés
 - Rutas de plantillas: `templates/es/` en lugar de `templates/fr/`
 - Recuento de secciones: 22 secciones `name=` — idéntico a la fuente inglesa y francesa
+
+---
+
+## Protokoll der deutschen Übersetzung
+
+| Feld | Wert |
+|------|------|
+| Deutsche Datei | `get-your-shit-together/workflows/foundation-sprint-german.md` |
+| Französische Quelle | `get-your-shit-together/workflows/foundation-sprint-french.md` |
+| Quell-Commit | `71d5893e82aa06e7f1937d606956a4d2d801c8d6` |
+| Übersetzungsdatum | 2026-03-08 |
+| Übersetzt von | Claude (gyst:add-language german) |
+
+## Verwendung dieses Protokolls
+
+Wenn der französische Workflow (`foundation-sprint-french.md`) aktualisiert wird, führe aus:
+
+```bash
+git diff 71d5893e82aa06e7f1937d606956a4d2d801c8d6 HEAD -- get-your-shit-together/workflows/foundation-sprint-french.md
+```
+
+Dadurch werden alle Änderungen an der Quelle seit der Erstellung der deutschen Übersetzung angezeigt.
+Wende entsprechende Änderungen auf `foundation-sprint-german.md` an und aktualisiere dann den Commit-Hash oben.
+
+## Übersetzungshinweise (Deutsch)
+
+- Anrede: „Sie" für die formelle Ansprache des Benutzers (professioneller Kontext)
+- Maschinenmarker `* MAIN ADVERSARY`: in write_competitors_md verbatim erhalten — niemals übersetzen
+- Sub-Agent gyst-researcher: arbeitet auf Englisch (beabsichtigt); Task-Brief bleibt auf Englisch
+- Vorlagenpfade: `templates/de/` anstelle von `templates/fr/`
+- Abschnittszählung: 22 `name=`-Abschnitte — identisch mit englischer und französischer Quelle
