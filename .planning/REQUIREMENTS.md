@@ -13,7 +13,7 @@
 
 ### French Output Templates
 
-- [ ] **LANG-04**: French versions of all 4 output templates exist at `templates/fr/` (COMPETITORS.md, HYPOTHESIS.md, SPRINT.md, POSITIONING.md) — all headers, labels, and structural text in French; `* MAIN ADVERSARY` string and YAML keys preserved verbatim
+- [x] **LANG-04**: French versions of all 4 output templates exist at `templates/fr/` (COMPETITORS.md, HYPOTHESIS.md, SPRINT.md, POSITIONING.md) — all headers, labels, and structural text in French; `* MAIN ADVERSARY` string and YAML keys preserved verbatim
 
 ### French Workflow
 
@@ -54,7 +54,7 @@
 | LANG-01 | Phase 5 | Complete |
 | LANG-02 | Phase 5 | Complete |
 | LANG-03 | Phase 5 | Complete |
-| LANG-04 | Phase 6 | Pending |
+| LANG-04 | Phase 6 | Complete |
 | LANG-05 | Phase 7 | Pending |
 | LANG-06 | Phase 7 | Pending |
 | LANG-07 | Phase 7 | Pending |
