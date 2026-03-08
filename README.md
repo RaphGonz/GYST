@@ -76,29 +76,22 @@ and run:
 
 The sprint runs entirely within your Claude Code session. No account, no API keys, no config.
 
-### 🇫🇷 Run in French
+### Run in another language
 
-Pass the `-french` flag to run the entire sprint in French — all questions, guidance, and output files will be in French:
+Pass a language flag to run the sprint in your language — all questions, guidance, and output files will be translated:
+
+| Flag | Language |
+|------|----------|
+| `-french` | 🇫🇷 French / Français |
+| `-spanish` | 🇪🇸 Spanish / Español |
 
 ```
 /gyst:foundation-sprint -french
 ```
 
-Everything works the same way. Claude switches to a fully pre-translated workflow and writes `COMPETITORS.md`, `HYPOTHESIS.md`, `SPRINT.md`, and `POSITIONING.md` in French.
+Claude switches to a fully pre-translated workflow and writes `COMPETITORS.md`, `HYPOTHESIS.md`, `SPRINT.md`, and `POSITIONING.md` in the chosen language.
 
-> Unsupported language flags (e.g. `-spanish`) fall back to English with a message.
-
-### 🇪🇸 Run in Spanish
-
-Pass the `-spanish` flag to run the entire sprint in Spanish — all questions, guidance, and output files will be in Spanish:
-
-```
-/gyst:foundation-sprint -spanish
-```
-
-Everything works the same way. Claude switches to a fully pre-translated workflow and writes `COMPETITORS.md`, `HYPOTHESIS.md`, `SPRINT.md`, and `POSITIONING.md` in Spanish.
-
-> Unsupported language flags fall back to English with a message.
+> Unsupported flags fall back to English with a message.
 
 ## What You Get
 
