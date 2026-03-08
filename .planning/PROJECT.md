@@ -4,11 +4,15 @@
 
 A Claude slash-command package that guides solo entrepreneurs through the Foundation Sprint from Jake Knapp's "Click." It replaces the group dynamic of the original sprint with an AI thinking partner: the AI asks questions, helps generate options, researches competitors and markets, and leads the user from a fuzzy idea to a testable hypothesis in one focused session.
 
-The full sprint runs as a single command (`/gyst:foundation-sprint`) across 4 steps in one Claude Code session, producing three structured output files: HYPOTHESIS.md, SPRINT.md, and POSITIONING.md.
+The full sprint runs as a single command (`/gyst:foundation-sprint`) across 4 steps in one Claude Code session, producing three structured output files: HYPOTHESIS.md, SPRINT.md, and POSITIONING.md. As of v1.1, the sprint supports multiple languages — French is available via `/gyst:foundation-sprint, -french`, with a fully pre-translated workflow and output templates. The architecture is extensible: adding a new language requires only a translated workflow file and templates.
 
 ## Core Value
 
 One command, one session, one testable hypothesis — solo entrepreneurs get the clarity that the Foundation Sprint was designed to produce, without needing a team.
+
+## Next Milestone Goals
+
+Spanish language support or v2.0 scope TBD. Start with `/gsd:new-milestone`.
 
 ## Requirements
 
@@ -23,25 +27,17 @@ One command, one session, one testable hypothesis — solo entrepreneurs get the
 - ✓ Produces POSITIONING.md (2x2 matrix, mini-manifesto, differentiation summary) — v1.0
 - ✓ Installs at `~/.claude/get-your-shit-together/` as a standalone package — v1.0
 - ✓ No binary tooling required — pure markdown workflows and agent files — v1.0
-
-## Current Milestone: v1.1 Multilingual Foundation Sprint
-
-**Goal:** Add language flag support to the sprint command so users can run the entire Foundation Sprint in French (and future languages), with a fully pre-translated workflow and output templates.
-
-**Target features:**
-- Language flag routing: `/gyst:foundation-sprint, -french` runs the French workflow
-- Extensible architecture: new languages require only a translated workflow + templates (no command changes)
-- Pre-translated French workflow (`foundation-sprint-french.md`) — all Claude instructions in French
-- French output templates (COMPETITORS.md, HYPOTHESIS.md, SPRINT.md, POSITIONING.md)
+- ✓ `/gyst:foundation-sprint, -french` runs the sprint fully in French — v1.1
+- ✓ Language flag routing is extensible: new languages require only a translated workflow + templates — v1.1
+- ✓ Unsupported language flag falls back to English with a message — v1.1
+- ✓ French output templates exist at `templates/fr/` (COMPETITORS, HYPOTHESIS, SPRINT, POSITIONING) — v1.1
+- ✓ Complete pre-translated French workflow (`foundation-sprint-french.md`) with 22 named sections, `vous` register, language directive, per-section reinforcements — v1.1
+- ✓ French workflow produces French output files via `templates/fr/` paths — v1.1
+- ✓ `TRANSLATION-SYNC.md` records English source commit hash for future updates — v1.1
 
 ### Active
 
-- [ ] User can run the sprint in French with `/gyst:foundation-sprint, -french` — LANG-01
-- [ ] Language flag system is extensible to any language automatically — LANG-02
-- [ ] Unsupported language flag falls back to English with a message — LANG-03
-- [ ] Complete pre-translated French workflow exists (`foundation-sprint-french.md`) — LANG-04
-- [ ] French versions of all 4 output templates exist — LANG-05
-- [ ] French workflow uses French templates to produce French output files — LANG-06
+- [ ] Spanish language support: `/gyst:foundation-sprint, -spanish` — LANG-08
 
 ### Out of Scope
 
@@ -58,7 +54,8 @@ One command, one session, one testable hypothesis — solo entrepreneurs get the
 - The original method uses a no-brainstorm, silent-vote approach for a group of max 5. GYST adapts this for solo use: the AI generates the option set the group would have generated, the user chooses.
 - GSD (`~/.claude/get-shit-done/`) is the reference architecture. GYST mirrors its structure but is entirely independent.
 - The `references/` folder contains: Click (Jake Knapp).pdf, Sprint (Jake Knapp).pdf, and Foundation Sprint.docx (structured summary with AI intervention points already mapped out).
-- **v1.0 shipped 2026-02-28:** 1,268-line workflow with 20 named sections; 35/35 requirements satisfied; 4 phases, 8 plans, 41 files changed.
+- **v1.0 shipped 2026-02-28:** 1,268-line workflow with 22 named sections; 4 phases, 8 plans.
+- **v1.1 shipped 2026-03-08:** French language support — `$ARGUMENTS`-based routing, 4 French templates (371 lines), 1,291-line French workflow, TRANSLATION-SYNC.md; 3 phases, 4 plans.
 
 ## Constraints
 
@@ -82,6 +79,11 @@ One command, one session, one testable hypothesis — solo entrepreneurs get the
 | User proposes A1 first in Step 3 | Respects founder's existing idea; AI generates additions only | ✓ Good — INTERNAL FILTER silently removes non-executable alternatives |
 | 4-matrix evaluation sequential (one per response) | Prevents overwhelming wall of ASCII grids | ✓ Good — SPRINT-13 enforced across Step 3 |
 | section_write_outputs as ONLY output location | Prevents partial writes from earlier sections | ✓ Good — zero-placeholder rule enforced for all 3 output files |
+| `$ARGUMENTS`-based language routing (v1.1) | Natural-language process block reads $ARGUMENTS — no code, no conditionals | ✓ Good — extensible to any language without touching command file |
+| Pre-translated workflow file per language (v1.1) | Full translation in one file — no runtime switching, no injection | ✓ Good — `language_directive` + `language_reinforcement` blocks prevent drift |
+| `* MAIN ADVERSARY` preserved verbatim (v1.1) | Machine-readable marker; translating it would break competitor lookup | ✓ Good — documented in STATE.md as hard rule; Phase 6 human checkpoint enforced it |
+| gyst-researcher Task brief stays English-only (v1.1) | Sub-agent is English-only by design; surrounding workflow prose translated | ✓ Good — language reinforcement block before section ensures French output despite English Task |
+| TRANSLATION-SYNC.md for diff-based updates (v1.1) | Records source commit hash so future English changes can be selectively synced | ✓ Good — establishes maintenance pattern for v1.2+ language updates |
 
 ---
-*Last updated: 2026-03-08 after v1.1 milestone start*
+*Last updated: 2026-03-08 after v1.1 milestone*

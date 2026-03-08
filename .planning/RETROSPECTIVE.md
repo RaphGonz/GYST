@@ -57,6 +57,55 @@
 
 ---
 
+## Milestone: v1.1 — Multilingual Foundation Sprint
+
+**Shipped:** 2026-03-08
+**Phases:** 3 | **Plans:** 4 | **Timeline:** 1 day (2026-03-08)
+
+### What Was Built
+
+- `$ARGUMENTS`-based language routing in `foundation-sprint.md` command file — three-branch natural-language dispatch (English default, French via `-french`, unsupported-flag fallback); deployed to both repo source and installed `~/.claude/` location
+- Four French output templates at `templates/fr/` (COMPETITORS.md, HYPOTHESIS.md, SPRINT.md, POSITIONING.md) — all user-facing text in French, `* MAIN ADVERSARY` preserved verbatim, canonical bipolar axis translations locked (Lent/Rapide, Difficile/Facile, Cher/Gratuit, Complexe/Simple, Basique/Intelligent, Cloisonné/Intégré, Manuel/Automatique, Étroit/Large)
+- 1,291-line `foundation-sprint-french.md` — complete French standalone workflow with `<language_directive>` before `<objective>`, `<language_reinforcement>` blocks before `section_problem` and `section_competitors_research`, all 22 `name=` identifiers preserved, `templates/fr/` paths applied to all output templates, gyst-researcher Task brief kept in English by design
+- `TRANSLATION-SYNC.md` at project root — records English source commit hash `97e468e` for future diff-based updates; flags 3 HIGH-complexity sections for native speaker review
+
+### What Worked
+
+- **`$ARGUMENTS`-based routing with no conditionals** — the routing instruction is natural-language prose Claude follows; no if/else, no code; extending to a new language is one new bullet point
+- **Splitting translation across two plans at the Step 2/3 boundary** — kept each plan's context manageable (15 sections then 7); HIGH-complexity sections (approach_generation, manifesto) distributed rather than clustered
+- **Human checkpoint in Phase 6** — verifying `* MAIN ADVERSARY` preservation and French heading correctness with a human gate before marking the plan done caught nothing (the executor got it right), but the gate structure gave confidence to proceed to Phase 7 without re-checking
+- **STATE.md as canonical decision record** — all 7 axis label canonicals were stored in STATE.md after Phase 6 human approval; Phase 7 planner and executor consumed them directly without re-deriving
+
+### What Was Inefficient
+
+- **No milestone audit run before complete-milestone** — proceeded directly to completion without `/gsd:audit-milestone`; coverage was verifiable from VERIFICATION.md files but cross-phase integration was not formally checked
+- **Section count discrepancy in LANG-05** — requirements said "20 sections" but the English source had 22 (two sections added in Phase 4 without updating LANG-05); caught by plan checker before execution, required a fix commit; should be caught at requirements-writing time
+- **ROADMAP.md Phase 7 progress table had stale data** — Phase 6 row was malformatted at completion (column mismatch); required a manual fix during milestone archival
+- **Phase directories had no CONTEXT.md** — all three phases used "continue without context"; small scope made this fine, but for Phase 7 especially, a discuss-phase session would have captured the `* MAIN ADVERSARY` constraint and gyst-researcher-stays-English decision upfront
+
+### Patterns Established
+
+- **Pre-translated workflow file per language** — full workflow translation in one standalone file; no runtime language injection; `language_directive` at top + `language_reinforcement` before high-drift sections
+- **TRANSLATION-SYNC.md pattern** — records source commit hash at translation time; future English updates can be diffed against this hash to identify what needs syncing to French
+- **Machine-readable marker preservation rule** — `* MAIN ADVERSARY` is the canonical example; any marker used for workflow parsing must be treated as code, not prose, and documented explicitly as untranslatable
+- **gyst-researcher stays English-only** — sub-agent scope decision: surrounding French workflow produces French output despite English brief; documented as a permanent constraint
+
+### Key Lessons
+
+1. **Requirements counts go stale fast** — LANG-05's "20 sections" was stale within 1 phase; requirements that reference implementation-level counts should be verified against the source at planning time, not assumed from memory
+2. **`$ARGUMENTS`-based routing is more extensible than flag parsing** — the routing prose can describe arbitrary logic (default, known flag, unknown flag) without any conditional logic; adding Spanish is literally one line
+3. **Translation tasks benefit from a per-string catalogue in research** — Phase 6 researcher catalogued every translatable vs. preserve string before the plan was written; this made Task actions extremely specific and eliminated ambiguity at execution time
+4. **Human checkpoints add value even when they pass** — the Phase 6 gate caught nothing wrong but produced a locked record of "these translations are approved"; downstream planning could reference this record without re-verifying
+5. **1-day build for a 1,291-line translation at ~15min/plan is fast** — the research-to-execution pipeline works well for content authoring tasks, not just code
+
+### Cost Observations
+
+- Model mix: ~100% sonnet (balanced profile throughout)
+- Sessions: 1 session (entire v1.1 built in a single day)
+- Notable: Translation is faster than original authoring — research produced a complete string catalogue, planning was one-shot (1 revision), execution needed no retries
+
+---
+
 ## Cross-Milestone Trends
 
 ### Process Evolution
@@ -64,8 +113,11 @@
 | Milestone | Phases | Plans | Key Process Change |
 |-----------|--------|-------|-------------------|
 | v1.0 | 4 | 8 | Initial build — established seam-based integration pattern |
+| v1.1 | 3 | 4 | Translation milestone — established pre-translated workflow pattern and TRANSLATION-SYNC.md |
 
 ### Top Lessons (Verified Across Milestones)
 
 1. Seam-based phase integration (stub → fill) scales cleanly for linear workflow files
 2. Write enforcement as prose in workflow text, not code comments
+3. Requirements that reference implementation counts go stale — verify counts at planning time
+4. Research-produced string catalogues make translation tasks nearly error-free at execution
