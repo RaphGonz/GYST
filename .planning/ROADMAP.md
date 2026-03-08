@@ -25,7 +25,7 @@ Full details: `.planning/milestones/v1.0-ROADMAP.md`
 **Milestone Goal:** Users can run the full Foundation Sprint in French via a single flag argument, with a fully pre-translated workflow and output templates, using an extensible routing architecture that requires zero command changes for future languages.
 
 - [x] **Phase 5: Language Routing** — Update the command file to route `-french` to the French workflow, route unknown flags to English with a message, and establish the extensible per-language dispatch pattern (completed 2026-03-08)
-- [ ] **Phase 6: French Output Templates** — Create the four French output templates at `templates/fr/` so the French workflow has valid target paths before translation begins
+- [x] **Phase 6: French Output Templates** — Create the four French output templates at `templates/fr/` so the French workflow has valid target paths before translation begins (completed 2026-03-08)
 - [ ] **Phase 7: French Workflow Translation** — Translate the 1,268-line workflow into a complete French standalone file, apply language-drift mitigations, verify template path references, and create `TRANSLATION-SYNC.md`
 
 ## Phase Details
@@ -79,5 +79,5 @@ Plans:
 | 3. Differentiation (Step 2) | v1.0 | 2/2 | Complete | 2026-02-26 |
 | 4. Approaches + Hypothesis + Outputs (Steps 3-4) | v1.0 | 2/2 | Complete | 2026-02-27 |
 | 5. Language Routing | v1.1 | 1/1 | Complete | 2026-03-08 |
-| 6. French Output Templates | v1.1 | 0/TBD | Not started | - |
+| 6. French Output Templates | 1/1 | Complete   | 2026-03-08 | - |
 | 7. French Workflow Translation | v1.1 | 0/TBD | Not started | - |

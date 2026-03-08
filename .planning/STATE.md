@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Multilingual Foundation Sprint
 status: unknown
-last_updated: "2026-03-08T10:00:16.502Z"
+last_updated: "2026-03-08T12:00:00.000Z"
 progress:
-  total_phases: 1
-  completed_phases: 1
-  total_plans: 1
-  completed_plans: 1
+  total_phases: 3
+  completed_phases: 2
+  total_plans: 3
+  completed_plans: 2
 ---
 
 # Project State
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-08)
 
 **Core value:** One command, one session, one testable hypothesis — solo entrepreneurs get the clarity the Foundation Sprint was designed to produce, without needing a team.
-**Current focus:** Phase 6 — French Output Templates (next phase of v1.1)
+**Current focus:** Phase 7 — French Workflow (next phase of v1.1)
 
 ## Current Position
 
-Phase: 5 of 7 complete — now at Phase 6 (French Output Templates)
-Plan: 05-01 complete (1/1 plans in Phase 5)
-Status: Phase 5 complete — ready for Phase 6
-Last activity: 2026-03-08 — 05-01 all 3 tasks complete; human verified all routing branches in Claude Code
+Phase: 6 of 7 complete — now at Phase 7 (French Workflow)
+Plan: 06-01 complete (1/1 plans in Phase 6)
+Status: Phase 6 complete — ready for Phase 7
+Last activity: 2026-03-08 — 06-01 all 3 tasks complete; human verified all four French templates; axis label translations canonical
 
-Progress (v1.1): [███░░░░░░░] 33% (1/3 v1.1 phases complete)
+Progress (v1.1): [██████░░░░] 67% (2/3 v1.1 phases complete)
 
 ## Performance Metrics
 
@@ -65,6 +65,9 @@ Recent decisions affecting v1.1:
 - [05-01 LANG-02]: Unrecognized-flag fallback satisfies "zero command file changes for future languages" — new languages need only a new workflow file; fallback catches all unknown flags automatically
 - [05-01 routing]: Plain paths inside `<process>` (not @-syntax) required — @-includes are static injections resolved before Claude reads process block, which would defeat routing
 - [05-01 verification]: French on-the-fly translation is acceptable Phase 5 interim behavior — routing is live; Phase 7 delivers the pre-translated file that replaces ad-hoc translation
+- [06-01 LANG-04]: `* MAIN ADVERSARY` preserved verbatim (not translated) — machine-readable marker; translating it would silently break Phase 7 competitor identification
+- [06-01 axis translations]: Bipolar axis labels canonical: Lent/Rapide, Difficile/Facile, Cher/Gratuit, Complexe/Simple, Basique/Intelligent, Cloisonné/Intégré, Manuel/Automatique — Phase 7 section_axis_rating must output these exact strings
+- [06-01 hypothesis labels]: Bracket-labels in HYPOTHESIS.md blockquote are translated to French ([CLIENT CIBLE :], [PROBLÈME :], etc.) — user-visible content; variable letters X/Y/Z/W/U/V in Breakdown table preserved as formal identifiers
 
 ### Pending Todos
 
@@ -73,10 +76,9 @@ None.
 ### Blockers/Concerns
 
 - [Phase 7]: Three HIGH-complexity sections (`section_advantages`, `section_manifesto`, `section_approach_generation`) warrant native French speaker review before shipping
-- [Phase 7]: Axis label translation decision (bipolar methodology axes) must be resolved during Phase 7 planning — French SPRINT.md template axis table must match what the French workflow produces
 
 ## Session Continuity
 
 Last session: 2026-03-08
-Stopped at: Phase 5 complete — 05-01 all tasks done, human-verify approved; ready for Phase 6 (French Output Templates)
+Stopped at: Phase 6 complete — 06-01 all tasks done, human-verify approved; ready for Phase 7 (French Workflow)
 Resume file: None
