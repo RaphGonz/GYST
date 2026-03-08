@@ -19,7 +19,7 @@
 
 - [x] **LANG-05**: A complete pre-translated French workflow exists (`foundation-sprint-french.md`) — all user-facing text in French using consistent "vous" register; all 22 section `name=` identifiers preserved in English; strong French-language directive at top to prevent language drift; per-section French reinforcements before WebSearch-heavy sections
 - [x] **LANG-06**: The French workflow references `templates/fr/` paths and produces French output files (COMPETITORS.md, HYPOTHESIS.md, SPRINT.md, POSITIONING.md all in French)
-- [ ] **LANG-07**: A `TRANSLATION-SYNC.md` file records the English source commit hash so future English updates can be tracked and synced to the French version
+- [x] **LANG-07**: A `TRANSLATION-SYNC.md` file records the English source commit hash so future English updates can be tracked and synced to the French version
 
 ## v2 Requirements
 
@@ -57,7 +57,7 @@
 | LANG-04 | Phase 6 | Complete |
 | LANG-05 | Phase 7 | Complete |
 | LANG-06 | Phase 7 | Complete |
-| LANG-07 | Phase 7 | Pending |
+| LANG-07 | Phase 7 | Complete |
 
 **Coverage:**
 - v1.1 requirements: 7 total
