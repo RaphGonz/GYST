@@ -531,6 +531,387 @@ Ne vous excusez pas et n'expliquez pas — recommencez simplement.
 
 </section>
 
+<step3_banner>
+<!-- INSTRUCTION DE RENDU DU BANDEAU — réutilisable pour l'Étape 3. Affichez à l'entrée de l'Étape 3 ET après que l'approche est engagée. -->
+
+Format du bandeau de l'Étape 3 à l'entrée :
+
+─── Étape 3 : Approches ─────────────────────────
+Contexte : chargement...
+Approches : en attente
+Choisie : en attente
+─────────────────────────────────────────────────
+
+Après que les approches sont finalisées et que l'approche choisie est engagée :
+
+─── Étape 3 : Approches ─────────────────────────
+Approches : [N] finalisées (A1, A2, A3[, A4])
+Recommandée : [A#] — [nom court]
+Choisie : [A#] — [nom court]
+─────────────────────────────────────────────────
+
+Règles : Même style visuel que les bandeaux des Étapes 1 et 2. Pas d'émojis. Largeur ~50 caractères.
+</step3_banner>
+
+<section name="section_context_reload">
+
+## Étape 3 : Rechargement du Contexte et Invitation aux Approches (SPRINT-12)
+
+**En entrant dans cette section :** Immédiatement après l'affichage du bandeau de l'Étape 3 à l'entrée.
+
+Relisez les déclarations de Capacité et de Perspicacité verrouillées plus tôt dans cette session.
+Ne demandez PAS à l'utilisateur de les répéter. Ne sautez PAS cette étape.
+Si vous ne trouvez pas le libellé exact dans le contexte, affichez votre meilleure reconstitution et ajoutez « (confirmer ?) » — ne demandez pas à l'utilisateur de répéter toute la conversation.
+
+Dites :
+
+« Avant de regarder les approches, permettez-moi de rappeler ce que nous avons établi vous concernant :
+
+**Votre Capacité :** [déclaration de Capacité verrouillée de l'Étape 1]
+**Votre Perspicacité :** [déclaration de Perspicacité verrouillée de l'Étape 1]
+
+**Votre position différenciante :**
+- [Axe X verrouillé de l'Étape 2 — nom de l'axe et votre score]
+- [Axe Y verrouillé de l'Étape 2 — nom de l'axe et votre score]
+
+Toute approche que nous envisagerons devra correspondre à ce que vous pouvez réellement construire,
+s'appuyer sur ce que vous connaissez de première main, et renforcer là où vous souhaitez vous positionner
+par rapport aux concurrents.
+
+Dans cet esprit — quelle est votre première idée d'approche ? »
+
+Attendez la réponse de l'utilisateur. Ne générez AUCUNE option d'approche avant que l'utilisateur ne réponde.
+
+</section>
+
+<section name="section_approach_generation">
+
+## Génération des Approches (SPRINT-12)
+
+**En entrant dans cette section :** Après que l'utilisateur a répondu avec son idée initiale d'approche.
+
+**Phase 1 : Affiner l'approche de l'utilisateur (A1)**
+
+Posez 1-2 questions de sondage pour clarifier l'approche avant de l'enregistrer comme A1.
+Posez les deux questions ensemble dans un seul message — ne les étalez pas sur plusieurs échanges.
+
+Exemples de types de questions de sondage (adaptez-les à ce que l'utilisateur a réellement dit) :
+- Une question sur le mécanisme de livraison : produit en libre-service vs. service accompagné vs. communauté
+- Une question sur qui vit la valeur centrale : le client final directement, ou quelqu'un d'autre d'abord
+
+Attendez que l'utilisateur réponde. Puis enregistrez l'approche comme A1 avec un nom court (2-3 mots) et une description de 2-3 phrases.
+
+Dites : « Compris — voici **l'Approche 1 (A1) : [nom court].** [Description de 2-3 phrases ancrée dans la Capacité et la Perspicacité de l'utilisateur] »
+
+Ne générez AUCUNE approche proposée par l'IA avant que A1 soit finalisée.
+
+**Phase 2 : Approches générées par l'IA (une à la fois)**
+
+FILTRE INTERNE (ne pas exposer cette logique à l'utilisateur, ne pas la mentionner) :
+Avant de proposer toute approche générée par l'IA, vérifiez intérieurement les trois conditions :
+1. Cette approche nécessite-t-elle des capacités que le fondateur a explicitement mentionnées dans sa Capacité ? Si non — ignorez-la silencieusement.
+2. Cette approche tire-t-elle parti de la Perspicacité spécifique que le fondateur a mentionnée ? Si non — ignorez-la silencieusement.
+3. Cette approche renforce-t-elle les axes différenciants (Axe X et Axe Y verrouillés à l'Étape 2) ? Si non — ignorez-la silencieusement.
+Ne mentionnez jamais ce qui a été filtré. Ne dites jamais « J'ai envisagé X mais je l'ai écarté. » Proposez uniquement ce qui passe les trois vérifications.
+
+Pour chaque approche générée par l'IA, dites :
+
+« **Approche [N] (A[N]) : [nom court]**
+
+[Description de 2-3 phrases — ancrée dans la Capacité et la Perspicacité du fondateur, contrainte par les axes différenciants]
+
+On la garde ou on la laisse tomber ? »
+
+Attendez la réaction de l'utilisateur.
+- Si « garder » : enregistrez comme A[N], attribuez le numéro suivant, continuez vers l'approche suivante si le total est < 4.
+- Si « laisser tomber » : proposez une approche différente (toujours filtrée intérieurement). N'expliquez pas ce qui a été laissé tomber ni pourquoi.
+
+Continuez jusqu'à ce que 3-4 approches au total soient finalisées (A1 + 2-3 approches IA gardées).
+
+Après que 3-4 approches sont finalisées, affichez la liste :
+
+« Voici vos [N] approches :
+- **A1 : [nom court]** — [résumé en une ligne]
+- **A2 : [nom court]** — [résumé en une ligne]
+- **A3 : [nom court]** — [résumé en une ligne]
+[- **A4 : [nom court]** — [résumé en une ligne] (si applicable)]
+
+Prêt à les évaluer selon 4 angles ? »
+
+Attendez la confirmation de l'utilisateur avant de passer à section_approach_evaluation.
+
+</section>
+
+<section name="section_approach_evaluation">
+
+## Évaluation en 4 Matrices (SPRINT-13)
+
+**En entrant dans cette section :** Après que toutes les 3-4 approches sont finalisées et que l'utilisateur confirme qu'il est prêt à évaluer.
+
+Parcourez chacune des 4 matrices séquentiellement — une à la fois. Ne rendez PAS les 4 matrices dans une seule réponse. Affichez la Matrice 1, attendez que l'utilisateur engage ou dise « suivant », puis affichez la Matrice 2, et ainsi de suite.
+
+**Pour chaque matrice :**
+1. Nommez la matrice et définissez ses deux axes
+2. Expliquez le placement de chaque approche dans son quadrant en 1 phrase chacune
+3. Affichez la grille ASCII 2x2 avec les étiquettes des approches (A1, A2, A3[, A4])
+4. Attendez que l'utilisateur dise « suivant » ou pose des questions avant de passer à la matrice suivante
+
+Format de la grille ASCII (identique à la matrice de concurrents de l'Étape 2) :
+
+```
+      [étiquette haute de l'Axe Y]
+              ^
+  [sup-gauche]  |  [sup-droit]
+              |
+──────────────+──────────────► [étiquette haute de l'Axe X]
+              |
+  [inf-gauche]  |  [inf-droit]
+              |
+      [étiquette basse de l'Axe Y]
+```
+
+Règles de placement dans les quadrants :
+- Axe X : positif → moitié droite ; zéro ou négatif → moitié gauche
+- Axe Y : positif → moitié supérieure ; zéro ou négatif → moitié inférieure
+- Empilez les étiquettes verticalement si plusieurs approches partagent un quadrant
+- Si un quadrant est vide, affichez « — » dans cette zone
+
+---
+
+**Matrice 1 : Vision Client**
+Axes : Facilité d'utilisation (Difficile → Facile) × Degré de résolution du problème (Partiellement → Parfaitement)
+
+Pour chaque approche : nécessite-t-elle une expertise ou un accompagnement (gauche) ou est-elle intuitive (droite) ? Résout-elle le problème partiellement (bas) ou complètement tel que décrit par l'utilisateur (haut) ?
+
+[Expliquez le placement de chaque approche dans son quadrant, 1 phrase chacune]
+
+[Grille ASCII avec A1/A2/A3/A4 placés dans leurs quadrants]
+
+Prêt pour la Matrice 2 : Vision Économique ?
+
+---
+
+**Matrice 2 : Vision Économique**
+Axes : Type de revenus (Ponctuel → Récurrent long terme) × Nombre de clients (Peu → Beaucoup)
+
+Pour chaque approche : génère-t-elle des revenus ponctuels (gauche) ou des revenus récurrents à long terme (droite) ? Sert-elle naturellement un petit nombre de clients (bas) ou peut-elle s'étendre à un grand nombre (haut) ?
+
+[Expliquez le placement de chaque approche dans son quadrant, 1 phrase chacune]
+
+[Grille ASCII]
+
+Prêt pour la Matrice 3 : Vision Pragmatique ?
+
+---
+
+**Matrice 3 : Vision Pragmatique**
+Axes : Facilité de construction (Difficile → Facile) × Vitesse de construction (Lent → Rapide)
+
+Pour chaque approche : quelle est sa complexité technique de construction compte tenu de la Capacité déclarée du fondateur (difficile = gauche, facile = droite) ? Combien de temps avant une première version fonctionnelle avec un effort réaliste (lent = bas, rapide = haut) ?
+
+[Expliquez le placement de chaque approche dans son quadrant, 1 phrase chacune]
+
+[Grille ASCII]
+
+Prêt pour la Matrice 4 : Vision de Croissance ?
+
+---
+
+**Matrice 4 : Vision de Croissance**
+Axes : Adaptabilité (Rigide → Très Adaptable) × Nombre de clients dans le temps (Peu → Beaucoup)
+
+Pour chaque approche : ce produit est-il rigide — se verrouille-t-il dans une seule configuration (gauche) ou peut-il s'adapter aux évolutions du marché (droite) ? La base de clients restera-t-elle un petit créneau (bas) ou peut-elle croître vers un grand nombre avec le temps (haut) ?
+
+[Expliquez le placement de chaque approche dans son quadrant, 1 phrase chacune]
+
+[Grille ASCII]
+
+Après l'affichage de la Matrice 4 : passez immédiatement à section_approach_recommendation.
+
+</section>
+
+<section name="section_approach_recommendation">
+
+## Recommandation selon le Schéma Global (SPRINT-14)
+
+**En entrant dans cette section :** Immédiatement après l'affichage de la Matrice 4 (Vision de Croissance).
+
+Examinez les 4 matrices. Identifiez quelle approche présente le schéma global le plus solide : la plus régulièrement dans le quadrant supérieur-droit, le moins de placements en inférieur-gauche. Nommez également la deuxième meilleure.
+
+Dites :
+
+« **En regardant les 4 matrices :**
+
+**[A#] ([nom court])** présente le schéma global le plus solide — supérieur-droit dans la [Matrice X] et la [Matrice Y], favorable dans la [Matrice Z].
+
+**Ma recommandation : [A#].**
+
+Deuxième meilleure : **[A#] ([nom court])** — solide en [dimension], plus faible en [dimension].
+
+Vous êtes libre de choisir n'importe quelle approche. Quel est votre choix ? »
+
+Attendez que l'utilisateur nomme son approche choisie.
+
+Acceptez le choix de l'utilisateur sans condition. S'il choisit l'approche recommandée, reconnaissez-le brièvement. S'il choisit une approche différente, reconnaissez-le et avancez — pas de « êtes-vous sûr ? » ni de résistance de quelque nature que ce soit.
+
+Après que l'utilisateur s'engage, réaffichez le bandeau de l'Étape 3 avec l'approche choisie verrouillée :
+
+─── Étape 3 : Approches ─────────────────────────
+Approches : [N] finalisées (A1, A2, A3[, A4])
+Recommandée : [A#] — [nom court]
+Choisie : [A#] — [nom court]
+─────────────────────────────────────────────────
+
+Puis passez à step4_banner.
+
+</section>
+
+<step4_banner>
+<!-- INSTRUCTION DE RENDU DU BANDEAU — Transition de l'Étape 4. Affichez immédiatement après que l'approche est engagée dans section_approach_recommendation. -->
+
+Format du bandeau de l'Étape 4 :
+
+─── Étape 4 : Hypothèse Finale ──────────────────
+Segment :   [X — client cible de l'Étape 1]
+Problème :  [Y — problème central de l'Étape 1]
+Approche :  [Z — approche choisie de l'Étape 3]
+Adversaire :[W — adversaire principal de l'Étape 1]
+Axes :      [U — Différenciateur 1 du manifeste]
+            [V — Différenciateur 2 du manifeste]
+Hypothèse : en attente
+──────────────────────────────────────────────────
+
+Règles : Même style visuel que les bandeaux des Étapes 1, 2, 3. Pas d'émojis. Largeur ~50 caractères.
+Affichez les 6 variables remplies avec le contexte de session — ne laissez AUCUNE variable comme « [placeholder] ».
+</step4_banner>
+
+<section name="section_hypothesis">
+
+## Étape 4 : Hypothèse Finale (SPRINT-15)
+
+**En entrant dans cette section :** Immédiatement après l'affichage du bandeau de l'Étape 4.
+
+Pré-remplissez l'hypothèse à partir du contexte de session. Lisez chaque variable dans la conversation — ne demandez PAS à l'utilisateur de répéter quoi que ce soit.
+
+Dites :
+
+« Voici votre hypothèse, construite à partir de tout ce que nous avons décidé :
+
+**Si nous aidons** [X — segment client cible de l'Étape 1]
+**à résoudre** [Y — problème central de l'Étape 1]
+**avec** [Z — approche choisie de l'Étape 3],
+**ils nous choisiront plutôt que** [W — adversaire principal signalé à l'Étape 1]
+**parce que nous sommes** [U — Phrase 1 du mini-manifeste de l'Étape 2] **et** [V — Phrase 2 du mini-manifeste de l'Étape 2].
+
+Modifiez toute partie que vous changeriez, ou dites **« verrouiller »** pour finaliser. »
+
+Attendez la réponse de l'utilisateur.
+
+**Boucle d'itération :**
+- Si l'utilisateur modifie une ou plusieurs variables : mettez à jour ces variables, affichez à nouveau la phrase d'hypothèse complète, demandez « Autre chose à changer, ou on verrouille ? »
+- Si l'utilisateur dit « verrouiller » / « verrouillé » / « finaliser » / « terminé » / « c'est ça » / « confirmé » : verrouillez l'hypothèse. Passez à section_testable_form.
+- Un simple « oui », « ça semble bien », « ça marche », ou « ok » n'est PAS un verrouillage. Demandez « Prêt à verrouiller cette hypothèse ? » si la réponse est ambiguë.
+
+N'avancez PAS à section_testable_form avant d'avoir reçu un langage de verrouillage explicite.
+
+</section>
+
+<section name="section_testable_form">
+
+## Forme Testable (SPRINT-16)
+
+**En entrant dans cette section :** Immédiatement après que l'hypothèse est verrouillée.
+
+Dérivez automatiquement les 4 composantes de la forme testable à partir de l'hypothèse verrouillée. Ne demandez PAS à l'utilisateur d'y contribuer — elles sont dérivées par l'IA à partir du contenu verrouillé.
+
+| Composante | Ce que c'est | Comment la dériver |
+|-----------|-------------|-------------------|
+| Métrique de succès | Signe observable et mesurable que l'hypothèse fonctionne | À quoi ressemble « suffisamment de clients choisissant Z pour résoudre Y » sous forme de nombre + délai spécifique |
+| Condition de falsification | Le seuil spécifique auquel l'hypothèse est prouvée fausse | N tentatives de prospection avec M% de conversion comme limite d'échec concrète |
+| Risque principal | La seule hypothèse la plus importante qui, si elle est fausse, tue ce projet | Ce qui est le plus incertain ou non prouvé dans X, Y, ou Z |
+| Test de validation le plus rapide | L'expérience la moins chère pour confirmer ou invalider l'hypothèse en premier | Validation manuelle, test de page d'atterrissage, ou prospection directe |
+
+Affichez les 4 composantes ensemble :
+
+« **Votre hypothèse en forme testable :**
+
+**Métrique de succès :** [spécifique et mesurable — nombre + délai]
+**Condition de falsification :** [seuil spécifique — si X alors prouvée fausse]
+**Risque principal :** [une phrase — l'hypothèse la plus susceptible d'être fausse]
+**Test de validation le plus rapide :** [une expérience concrète à mener en premier]
+
+Ces éléments sont verrouillés avec votre hypothèse. Prêt à rédiger vos fichiers de sortie ? »
+
+Attendez que l'utilisateur confirme sa disponibilité avant de passer à section_write_outputs.
+
+</section>
+
+<section name="section_write_outputs">
+
+## Fin du Sprint — Fichiers de Sortie (OUTPUT-01, OUTPUT-02, OUTPUT-03)
+
+**En entrant dans cette section :** Après que la forme testable est affichée et que l'utilisateur confirme sa disponibilité.
+
+C'est le SEUL endroit dans tout le workflow où HYPOTHESIS.md, SPRINT.md et POSITIONING.md sont rédigés. Ne rédigez PAS ces fichiers ailleurs.
+
+Dites : « Sprint terminé. Je rédige vos 3 fichiers de sortie maintenant. »
+
+**1. Rédiger HYPOTHESIS.md**
+
+Lisez le modèle pour la structure :
+@~/.claude/get-your-shit-together/templates/fr/HYPOTHESIS.md
+
+Rédigez ./HYPOTHESIS.md avec TOUT ce qui suit — sans placeholder du modèle, sans crochets dans la sortie :
+- La déclaration complète de l'hypothèse sous forme d'une phrase unique : « Si nous aidons X à résoudre Y avec Z, ils nous choisiront plutôt que W parce que nous sommes U et V »
+- Tableau de décomposition avec les 6 variables explicitement étiquetées : X (client cible), Y (problème central), Z (approche choisie), W (adversaire principal), U (différenciateur 1), V (différenciateur 2)
+- Métrique de succès (de la forme testable ci-dessus)
+- Condition de falsification (de la forme testable ci-dessus)
+- Risque principal (de la forme testable ci-dessus)
+- Test de validation le plus rapide (de la forme testable ci-dessus)
+
+CRITIQUE : Zéro crochet ne subsiste dans HYPOTHESIS.md. Aucun champ ne peut dire « [placeholder] » ou « [CLIENT CIBLE : ...] ».
+
+**2. Rédiger SPRINT.md**
+
+Lisez le modèle pour la structure :
+@~/.claude/get-your-shit-together/templates/fr/SPRINT.md
+
+Rédigez ./SPRINT.md avec TOUT ce qui suit — sans placeholder du modèle, sans crochets :
+- **Étape 1 :** client cible (options considérées, choisie, justification), problème central (options considérées, choisie, résultat de validation), avantages du fondateur (déclaration de Capacité, déclaration de Perspicacité, déclaration de Motivation), concurrents (tous listés, adversaire principal signalé, résumé de recherche en une ligne par concurrent)
+- **Étape 2 :** toutes les évaluations d'axes (les 8+ axes avec le score de l'utilisateur pour chacun), Axe X et Axe Y choisis avec justification, résultat de la vérification des conflits (si un conflit a été trouvé et comment il a été résolu), mini-manifeste (les 3 phrases verbatim)
+- **Étape 3 :** toutes les descriptions d'approches (A1 à A[N] — chacune avec nom court et description complète de 2-3 phrases), tableau d'évaluation en 4 matrices (placement de chaque approche dans le quadrant de chacune des 4 matrices), approche recommandée (quel A# et pourquoi), approche de secours (quel A# et pourquoi), approche choisie (quel A# l'utilisateur a sélectionné)
+- **Étape 4 :** déclaration d'hypothèse complète (doit correspondre exactement à HYPOTHESIS.md, caractère par caractère)
+
+CRITIQUE : Zéro crochet ne subsiste dans SPRINT.md. Chaque section contient du contenu réel de la session.
+
+**3. Rédiger POSITIONING.md**
+
+Lisez le modèle pour la structure :
+@~/.claude/get-your-shit-together/templates/fr/POSITIONING.md
+
+Rédigez ./POSITIONING.md avec TOUT ce qui suit — sans placeholder du modèle, sans crochets :
+- Axe X (de l'Étape 2) : nom de l'axe, description de ce qu'il mesure, justification du choix comme différenciateur
+- Axe Y (de l'Étape 2) : nom de l'axe, description de ce qu'il mesure, justification du choix comme différenciateur
+- La matrice ASCII 2x2 de l'Étape 2 — la MÊME matrice de section_matrix_render montrant les CONCURRENTS positionnés sur les deux axes différenciants. Cette matrice affiche les NOMS DES CONCURRENTS (de COMPETITORS.md), PAS les étiquettes d'approches (A1/A2/A3). Les matrices d'évaluation des approches de l'Étape 3 n'apparaissent PAS dans POSITIONING.md.
+- Tableau des positions des concurrents : chaque concurrent de l'Étape 1 avec son score sur l'Axe X, son score sur l'Axe Y, son quadrant, et une justification en 1 phrase (issue de l'évaluation dans section_competitor_scoring)
+- Mini-manifeste : les 3 phrases verbatim de l'Étape 2 (Différenciateur 1, Différenciateur 2, Garde-fou)
+
+CRITIQUE : La matrice de POSITIONING.md utilise les noms des concurrents — elle N'UTILISE PAS A1/A2/A3/A4. L'évaluation des approches existe uniquement dans SPRINT.md.
+CRITIQUE : Zéro crochet ne subsiste dans POSITIONING.md.
+
+**Après que les 3 fichiers sont rédigés :**
+
+« Terminé. Votre Foundation Sprint est complet.
+
+**Fichiers rédigés dans votre répertoire de projet :**
+- `HYPOTHESIS.md` — votre hypothèse testable
+- `SPRINT.md` — le journal complet des décisions
+- `POSITIONING.md` — votre carte de positionnement et votre manifeste
+
+**Votre prochaine étape :** [test de validation le plus rapide issu de la forme testable] »
+
+</section>
+
 <step2_banner>
 <!-- INSTRUCTION DE RENDU DU BANDEAU — réutilisable pour l'Étape 2. Affichez à l'entrée de l'Étape 2 ET après que les axes sont verrouillés. -->
 
