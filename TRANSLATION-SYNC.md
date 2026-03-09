@@ -46,17 +46,17 @@ Les sections suivantes comportent des traductions complexes et devraient être r
 | Campo | Valor |
 |-------|-------|
 | Archivo español | `get-your-shit-together/workflows/foundation-sprint-spanish.md` |
-| Fuente francesa | `get-your-shit-together/workflows/foundation-sprint-french.md` |
+| Fuente inglesa | `get-your-shit-together/workflows/foundation-sprint.md` |
 | Commit fuente | `dfd3253580395ea200a0e4780d32ac000ee7ee7b` |
 | Fecha de traducción | 2026-03-08 |
 | Traducido por | Claude (gyst:add-language spanish) |
 
 ## Cómo usar este registro
 
-Cuando se actualice el workflow francés (`foundation-sprint-french.md`), ejecuta:
+Cuando se actualice el workflow inglés (`foundation-sprint.md`), ejecuta:
 
 ```bash
-git diff dfd3253580395ea200a0e4780d32ac000ee7ee7b HEAD -- get-your-shit-together/workflows/foundation-sprint-french.md
+git diff dfd3253580395ea200a0e4780d32ac000ee7ee7b HEAD -- get-your-shit-together/workflows/foundation-sprint.md
 ```
 
 Esto muestra cada modificación realizada a la fuente desde que se creó la traducción al español.
@@ -64,12 +64,11 @@ Aplica los cambios equivalentes a `foundation-sprint-spanish.md`, luego actualiz
 
 ## Notas de traducción (español)
 
-- Registro: "usted" o "tú" — se usa "tú" para el trato directo con el usuario (informal, más natural para emprendedores)
-
+- Registro: "tú" para el trato directo con el usuario (informal, más natural para emprendedores)
 - Marcador de máquina `* MAIN ADVERSARY`: preservado verbatim en write_competitors_md — nunca traducir
 - Sub-agente gyst-researcher: opera en inglés (intencional); el brief Task permanece en inglés
-- Rutas de plantillas: `templates/es/` en lugar de `templates/fr/`
-- Recuento de secciones: 22 secciones `name=` — idéntico a la fuente inglesa y francesa
+- Rutas de plantillas: `templates/es/`
+- Recuento de secciones: 22 secciones `name=` — idéntico a la fuente inglesa
 
 ---
 
@@ -78,17 +77,17 @@ Aplica los cambios equivalentes a `foundation-sprint-spanish.md`, luego actualiz
 | Feld | Wert |
 |------|------|
 | Deutsche Datei | `get-your-shit-together/workflows/foundation-sprint-german.md` |
-| Französische Quelle | `get-your-shit-together/workflows/foundation-sprint-french.md` |
+| Englische Quelle | `get-your-shit-together/workflows/foundation-sprint.md` |
 | Quell-Commit | `71d5893e82aa06e7f1937d606956a4d2d801c8d6` |
 | Übersetzungsdatum | 2026-03-08 |
 | Übersetzt von | Claude (gyst:add-language german) |
 
 ## Verwendung dieses Protokolls
 
-Wenn der französische Workflow (`foundation-sprint-french.md`) aktualisiert wird, führe aus:
+Wenn der englische Workflow (`foundation-sprint.md`) aktualisiert wird, führe aus:
 
 ```bash
-git diff 71d5893e82aa06e7f1937d606956a4d2d801c8d6 HEAD -- get-your-shit-together/workflows/foundation-sprint-french.md
+git diff 71d5893e82aa06e7f1937d606956a4d2d801c8d6 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
 ```
 
 Dadurch werden alle Änderungen an der Quelle seit der Erstellung der deutschen Übersetzung angezeigt.
@@ -99,8 +98,8 @@ Wende entsprechende Änderungen auf `foundation-sprint-german.md` an und aktuali
 - Anrede: „Sie" für die formelle Ansprache des Benutzers (professioneller Kontext)
 - Maschinenmarker `* MAIN ADVERSARY`: in write_competitors_md verbatim erhalten — niemals übersetzen
 - Sub-Agent gyst-researcher: arbeitet auf Englisch (beabsichtigt); Task-Brief bleibt auf Englisch
-- Vorlagenpfade: `templates/de/` anstelle von `templates/fr/`
-- Abschnittszählung: 22 `name=`-Abschnitte — identisch mit englischer und französischer Quelle
+- Vorlagenpfade: `templates/de/`
+- Abschnittszählung: 22 `name=`-Abschnitte — identisch mit der englischen Quelle
 
 ---
 
@@ -109,17 +108,17 @@ Wende entsprechende Änderungen auf `foundation-sprint-german.md` an und aktuali
 | 字段 | 值 |
 |------|-----|
 | 中文文件 | `get-your-shit-together/workflows/foundation-sprint-chinese.md` |
-| 法文来源 | `get-your-shit-together/workflows/foundation-sprint-french.md` |
+| 英文来源 | `get-your-shit-together/workflows/foundation-sprint.md` |
 | 来源提交 | `7d5534cae0f89c96111c9e4cc6e767d744f40861` |
 | 翻译日期 | 2026-03-09 |
 | 翻译者 | Claude (gyst:add-language chinese) |
 
 ## 如何使用此记录
 
-当法文工作流（`foundation-sprint-french.md`）更新时，运行：
+当英文工作流（`foundation-sprint.md`）更新时，运行：
 
 ```bash
-git diff 7d5534cae0f89c96111c9e4cc6e767d744f40861 HEAD -- get-your-shit-together/workflows/foundation-sprint-french.md
+git diff 7d5534cae0f89c96111c9e4cc6e767d744f40861 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
 ```
 
 这将显示自创建中文翻译以来对源文件所做的每项更改。
@@ -130,8 +129,8 @@ git diff 7d5534cae0f89c96111c9e4cc6e767d744f40861 HEAD -- get-your-shit-together
 - 称谓："您"用于对用户的直接称呼（正式，适合商业场景）
 - 机器标记 `* MAIN ADVERSARY`：在 write_competitors_md 中逐字保留——永不翻译
 - 子代理 gyst-researcher：以英文操作（有意为之）；Task 简报保持英文
-- 模板路径：`templates/zh/` 替代 `templates/fr/`
-- 节数统计：22个 `name=` 节——与英文和法文来源相同
+- 模板路径：`templates/zh/`
+- 节数统计：22个 `name=` 节——与英文来源相同
 
 ---
 
