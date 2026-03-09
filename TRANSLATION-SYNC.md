@@ -160,3 +160,34 @@ git diff c8f8c23cabe7a890b1574217ccc5f81224f914bf HEAD -- get-your-shit-together
 - Sub-agente gyst-researcher: opera em inglês (intencional); o briefing Task permanece em inglês
 - Caminhos de templates: `templates/pt/` em vez de `templates/`
 - Contagem de seções: 22 seções `name=` — idêntico à fonte inglesa
+
+---
+
+## 日本語翻訳の記録
+
+| フィールド | 値 |
+|-----------|-----|
+| 日本語ファイル | `get-your-shit-together/workflows/foundation-sprint-japanese.md` |
+| フランス語ソース | `get-your-shit-together/workflows/foundation-sprint-french.md` |
+| ソースコミット | `9ba359e9a94ac7f1c9bf3c2aa731b2e2df3384d0` |
+| 翻訳日 | 2026-03-09 |
+| 翻訳者 | Claude (gyst:add-language japanese) |
+
+## このレコードの使い方
+
+フランス語ワークフロー（`foundation-sprint-french.md`）が更新されたら、以下を実行する：
+
+```bash
+git diff 9ba359e9a94ac7f1c9bf3c2aa731b2e2df3384d0 HEAD -- get-your-shit-together/workflows/foundation-sprint-french.md
+```
+
+これにより、日本語翻訳が作成されてからソースに加えられた変更がすべて表示される。
+`foundation-sprint-japanese.md` に同等の変更を適用し、上記のコミットハッシュを更新する。
+
+## 翻訳メモ（日本語）
+
+- 敬語：「あなた」でユーザーへの直接の呼びかけ（ビジネス文脈に適した丁寧な表現）
+- 機械マーカー `* MAIN ADVERSARY`：write_competitors_md で逐語的に保持 — 翻訳しない
+- サブエージェント gyst-researcher：英語で動作（意図的）；Task ブリーフは英語のまま
+- テンプレートパス：`templates/fr/` の代わりに `templates/ja/`
+- セクション数：22個の `name=` セクション — 英語およびフランス語のソースと同一
