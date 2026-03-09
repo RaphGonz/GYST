@@ -100,3 +100,34 @@ Wende entsprechende Änderungen auf `foundation-sprint-german.md` an und aktuali
 - Sub-Agent gyst-researcher: arbeitet auf Englisch (beabsichtigt); Task-Brief bleibt auf Englisch
 - Vorlagenpfade: `templates/de/` anstelle von `templates/fr/`
 - Abschnittszählung: 22 `name=`-Abschnitte — identisch mit englischer und französischer Quelle
+
+---
+
+## 中文翻译记录
+
+| 字段 | 值 |
+|------|-----|
+| 中文文件 | `get-your-shit-together/workflows/foundation-sprint-chinese.md` |
+| 法文来源 | `get-your-shit-together/workflows/foundation-sprint-french.md` |
+| 来源提交 | `7d5534cae0f89c96111c9e4cc6e767d744f40861` |
+| 翻译日期 | 2026-03-09 |
+| 翻译者 | Claude (gyst:add-language chinese) |
+
+## 如何使用此记录
+
+当法文工作流（`foundation-sprint-french.md`）更新时，运行：
+
+```bash
+git diff 7d5534cae0f89c96111c9e4cc6e767d744f40861 HEAD -- get-your-shit-together/workflows/foundation-sprint-french.md
+```
+
+这将显示自创建中文翻译以来对源文件所做的每项更改。
+将等效更改应用到 `foundation-sprint-chinese.md`，然后更新上方的提交哈希。
+
+## 翻译说明（中文）
+
+- 称谓："您"用于对用户的直接称呼（正式，适合商业场景）
+- 机器标记 `* MAIN ADVERSARY`：在 write_competitors_md 中逐字保留——永不翻译
+- 子代理 gyst-researcher：以英文操作（有意为之）；Task 简报保持英文
+- 模板路径：`templates/zh/` 替代 `templates/fr/`
+- 节数统计：22个 `name=` 节——与英文和法文来源相同
