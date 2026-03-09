@@ -99,13 +99,12 @@ Proceed immediately to Phase C.
 
 **Goal:** Create `get-your-shit-together/workflows/WORKFLOW_FILE` — a complete LANG_TITLE translation of the Foundation Sprint workflow — and update `TRANSLATION-SYNC.md`.
 
-**Source:** The English workflow `get-your-shit-together/workflows/foundation-sprint.md`.
-Translate its content into LANG_TITLE. Use `get-your-shit-together/workflows/foundation-sprint-french.md` as a structural reference only (to see how a language directive, language reinforcement blocks, and translated UI strings are organized) — do NOT copy French content.
+**Source:** The English workflow `get-your-shit-together/workflows/foundation-sprint.md` — this is both the content source and the structural reference.
 
 Steps:
-1. Read `get-your-shit-together/workflows/foundation-sprint.md` in full — this is the source to translate
+1. Read `get-your-shit-together/workflows/foundation-sprint.md` in full — this is the only source
 2. Translate it to LANG_TITLE following these rules:
-   - Add a strong LANG_TITLE-language directive at the top (model the structure on the `<language_directive>` block in foundation-sprint-french.md, but write the content in LANG_TITLE)
+   - Add a strong LANG_TITLE-language directive at the top (same structure as the `<language_directive>` block already in the file, but written in LANG_TITLE)
    - Translate all user-facing content to LANG_TITLE
    - **Preserve exactly** all 22 section `name=` attribute values (do NOT translate them)
    - Replace every `templates/` path with `TEMPLATE_DIR` (e.g., `templates/COMPETITORS.md` → `TEMPLATE_DIR/COMPETITORS.md`)
