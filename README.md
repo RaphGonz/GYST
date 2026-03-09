@@ -4,7 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/get-your-shit-together?style=for-the-badge&logo=npm&logoColor=white&color=CB3837)](https://www.npmjs.com/package/get-your-shit-together)
 [![npm downloads](https://img.shields.io/npm/dm/get-your-shit-together?style=for-the-badge&logo=npm&logoColor=white&color=CB3837)](https://www.npmjs.com/package/get-your-shit-together)
-[![Languages](https://img.shields.io/badge/languages-English%20%7C%20French%20%7C%20Spanish%20%7C%20German%20%7C%20Chinese-4B8BBE?style=for-the-badge)](https://github.com/RaphGonz/GYST)
+[![Languages](https://img.shields.io/badge/languages-English%20%7C%20French%20%7C%20Spanish%20%7C%20German%20%7C%20Chinese%20%7C%20Portuguese-4B8BBE?style=for-the-badge)](https://github.com/RaphGonz/GYST)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Raphael%20Gonzales-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raphael-gonzales-ai-engineer/)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 
@@ -86,6 +86,7 @@ Pass a language flag to run the sprint in your language — all questions, guida
 | `-spanish` | 🇪🇸 Spanish / Español |
 | `-german` | 🇩🇪 German / Deutsch |
 | `-chinese` | 🇨🇳 Chinese / 中文 |
+| `-portuguese` | 🇧🇷 Portuguese / Português |
 
 ```
 /gyst:foundation-sprint -french

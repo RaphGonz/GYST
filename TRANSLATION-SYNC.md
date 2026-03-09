@@ -65,6 +65,7 @@ Aplica los cambios equivalentes a `foundation-sprint-spanish.md`, luego actualiz
 ## Notas de traducción (español)
 
 - Registro: "usted" o "tú" — se usa "tú" para el trato directo con el usuario (informal, más natural para emprendedores)
+
 - Marcador de máquina `* MAIN ADVERSARY`: preservado verbatim en write_competitors_md — nunca traducir
 - Sub-agente gyst-researcher: opera en inglés (intencional); el brief Task permanece en inglés
 - Rutas de plantillas: `templates/es/` en lugar de `templates/fr/`
@@ -131,3 +132,31 @@ git diff 7d5534cae0f89c96111c9e4cc6e767d744f40861 HEAD -- get-your-shit-together
 - 子代理 gyst-researcher：以英文操作（有意为之）；Task 简报保持英文
 - 模板路径：`templates/zh/` 替代 `templates/fr/`
 - 节数统计：22个 `name=` 节——与英文和法文来源相同
+
+---
+
+## Registro da tradução para português
+
+| Campo | Valor |
+|-------|-------|
+| Arquivo português | `get-your-shit-together/workflows/foundation-sprint-portuguese.md` |
+| Fonte inglesa | `get-your-shit-together/workflows/foundation-sprint.md` |
+| Commit fonte | `c8f8c23cabe7a890b1574217ccc5f81224f914bf` |
+| Data de tradução | 2026-03-09 |
+| Traduzido por | Claude (gyst:add-language portuguese) |
+
+## Como usar este registro
+
+Quando o workflow inglês (`foundation-sprint.md`) for atualizado, execute:
+
+```bash
+git diff c8f8c23cabe7a890b1574217ccc5f81224f914bf HEAD -- get-your-shit-together/workflows/foundation-sprint.md
+```
+
+## Notas de tradução (português)
+
+- Registro: "você" para tratamento direto com o usuário (informal, natural para empreendedores)
+- Marcador de máquina `* MAIN ADVERSARY`: preservado verbatim em write_competitors_md — nunca traduzir
+- Sub-agente gyst-researcher: opera em inglês (intencional); o briefing Task permanece em inglês
+- Caminhos de templates: `templates/pt/` em vez de `templates/`
+- Contagem de seções: 22 seções `name=` — idêntico à fonte inglesa
