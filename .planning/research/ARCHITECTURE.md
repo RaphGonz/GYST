@@ -1,275 +1,528 @@
 # Architecture Research
 
-**Domain:** Claude Code slash command with language-flag routing
-**Researched:** 2026-03-08
-**Confidence:** HIGH (verified against official Claude Code skills documentation)
+**Domain:** 5PM framework integration into existing 22-section Foundation Sprint workflow
+**Researched:** 2026-03-22
+**Confidence:** HIGH — based on direct inspection of the live workflow, templates, TRANSLATION-SYNC.md, and the full 5PM framework specification from Rob Walling's Episode 628 / official PDF
 
-## Standard Architecture
+---
 
-### System Overview
+## Context: What Exists vs. What Changes
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     User Invocation Layer                        │
-│                                                                  │
-│   /gyst:foundation-sprint                                        │
-│   /gyst:foundation-sprint, -french                              │
-│   /gyst:foundation-sprint, -spanish  (future)                   │
-└────────────────────────────┬────────────────────────────────────┘
-                             │  $ARGUMENTS = "" | "-french" | ...
-                             ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    Command File (routing layer)                   │
-│         ~/.claude/commands/gyst/foundation-sprint.md             │
-│                                                                  │
-│  <process> block: natural language routing logic                 │
-│  "If $ARGUMENTS contains -french, load foundation-sprint-       │
-│   french.md. If $ARGUMENTS contains -spanish, load             │
-│   foundation-sprint-spanish.md. Otherwise load                  │
-│   foundation-sprint.md. Unknown flags → English + warning."    │
-└────────────────────────────┬────────────────────────────────────┘
-                             │  Read + execute correct workflow
-                             ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                     Workflow Files (execution layer)             │
-│                                                                  │
-│  foundation-sprint.md         (English — existing)              │
-│  foundation-sprint-french.md  (French — new)                    │
-│  foundation-sprint-spanish.md (Spanish — future, not built now) │
-│                                                                  │
-│  Each workflow @-includes its own language's templates           │
-└────────────────────────────┬────────────────────────────────────┘
-                             │  @-include references
-                             ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                     Template Files (output structure layer)      │
-│                                                                  │
-│  templates/                                                      │
-│  ├── COMPETITORS.md      (English)                              │
-│  ├── HYPOTHESIS.md       (English)                              │
-│  ├── SPRINT.md           (English)                              │
-│  ├── POSITIONING.md      (English)                              │
-│  └── fr/                 (French — new subdirectory)            │
-│      ├── COMPETITORS.md                                          │
-│      ├── HYPOTHESIS.md                                           │
-│      ├── SPRINT.md                                               │
-│      └── POSITIONING.md                                          │
-└─────────────────────────────────────────────────────────────────┘
-```
+This document focuses exclusively on how the 5PM Idea Evaluation Framework integrates with the
+existing 22-section architecture. It does not repeat the v1.1 routing or language-switching
+architecture (covered in the 2026-03-08 ARCHITECTURE.md). That architecture is unchanged.
 
-### Component Responsibilities
-
-| Component | Responsibility | Notes |
-|-----------|----------------|-------|
-| `foundation-sprint.md` (command) | Declare tools, route to correct workflow based on `$ARGUMENTS` | One file, never grows with new languages |
-| `foundation-sprint.md` (workflow) | Run the English sprint end-to-end | Unchanged from v1.0 |
-| `foundation-sprint-french.md` (workflow) | Run the full sprint in French — all Claude instructions in French | New file for v1.1 |
-| `templates/` (English) | Provide output structure Claude reads before writing files | Unchanged |
-| `templates/fr/` (French) | Provide French-language output structure | New subdirectory for v1.1 |
-
-## Recommended Project Structure
+### Existing Section Map (22 named sections)
 
 ```
-~/.claude/
-├── commands/
-│   └── gyst/
-│       └── foundation-sprint.md         # MODIFIED — adds routing logic
-│
-└── get-your-shit-together/
-    ├── workflows/
-    │   ├── foundation-sprint.md         # UNCHANGED — English workflow
-    │   └── foundation-sprint-french.md  # NEW — French workflow
-    ├── templates/
-    │   ├── COMPETITORS.md               # UNCHANGED
-    │   ├── HYPOTHESIS.md                # UNCHANGED
-    │   ├── SPRINT.md                    # UNCHANGED
-    │   ├── POSITIONING.md               # UNCHANGED
-    │   └── fr/                          # NEW subdirectory
-    │       ├── COMPETITORS.md
-    │       ├── HYPOTHESIS.md
-    │       ├── SPRINT.md
-    │       └── POSITIONING.md
-    └── agents/
-        └── gyst-researcher.md           # UNCHANGED
+Step 1: The Basics
+  section_customer           — customer segment lock
+  section_problem            — core problem + RESEARCH-03 validation
+  section_advantages         — Capacity / Insight / Motivation
+  section_competitors        — user-named competitors
+  section_competitors_research — gyst-researcher Task invocation
+  section_main_adversary     — main adversary selection
+  write_competitors_md       — COMPETITORS.md written (OUTPUT-04)
+  navigation_controls        — advance / revisit / restart Step 1
+
+Step 2: Differentiation
+  section_axis_rating        — 8-axis dream company rating
+  section_custom_axes        — domain-specific axes (optional)
+  section_axis_selection     — 2 differentiating axes chosen
+  section_competitor_scoring — RESEARCH-02, COMPETITORS.md read-only
+  section_matrix_render      — 2x2 matrix + conflict check
+  section_manifesto          — mini-manifesto (3 phrases)
+  section_step2_navigation   — advance / revisit Step 2
+
+Step 3: Approaches
+  section_context_reload     — Capacity + Insight recap
+  section_approach_generation — A1–A4 generated
+  section_approach_evaluation — 4-matrix evaluation (SPRINT-13)
+  section_approach_recommendation — global pattern recommendation
+
+Step 4: Final Hypothesis
+  section_hypothesis         — hypothesis formulation + lock
+  section_testable_form      — 4 testable components
+  section_write_outputs      — HYPOTHESIS.md + SPRINT.md + POSITIONING.md written
 ```
 
-### Structure Rationale
+---
 
-- **`templates/fr/` subdirectory (not flat):** Keeps English templates at the root path that the existing workflow already references. Adding `fr/` never touches any existing `@~/.claude/.../templates/FILENAME.md` reference. Adding `templates/es/` later is the same pattern.
-- **Workflow per language (not a single parameterized workflow):** A translated workflow must contain Claude instructions in the target language. A single workflow with conditional sections would be harder to maintain and would risk English instructions leaking into a French session. One file per language is explicit and testable in isolation.
-- **Routing in command `<process>` block (not `<execution_context>`):** The `<execution_context>` block uses `@-include` which is resolved statically. Routing must live in the `<process>` block as natural language that Claude reads and acts on.
+## 5PM Framework Dimension Map
 
-## Architectural Patterns
+The 5PM framework has 6 evaluation lenses (5P + Pain to Validate):
 
-### Pattern 1: Natural Language Flag Detection
+| Dimension | Core Questions | Sprint Step |
+|-----------|---------------|-------------|
+| **Problem** | Important? Urgent? (2x2 matrix) | Step 1 — after problem lock |
+| **Purchaser** | Tech adoption? Willingness to pay? B2C/B2A/B2B/B2E? | Step 1 — after customer lock |
+| **Pricing Model** | Subscription? ARPA? Monthly/annual? | Step 1 — standalone section |
+| **Market** | Total reachable size? Growth stage? Reach? | Step 1 — with web research |
+| **Product/Founder Fit** | Background access? Technical chops? Unique advantage? Passion? | Step 3 — confrontation at approach selection |
+| **Pain to Validate** | Conversation validation ease? MVP feasibility? | Step 3 — per-approach at evaluation |
 
-**What:** The command file's `<process>` block tells Claude to inspect the literal string in `$ARGUMENTS` and select the appropriate workflow file to read. Claude, as the executor, reads and follows this instruction before executing any workflow.
+Confidence: HIGH (sourced from official 5PM PDF + Episode 628 transcript)
 
-**When to use:** Any time a single slash command must branch to different content based on a user-supplied flag, without binary tooling.
+---
 
-**Trade-offs:** Works cleanly within the pure-markdown constraint. Claude's comprehension of "check if $ARGUMENTS contains -french" is reliable for simple flag strings. It would not be appropriate for complex argument parsing (e.g., multiple flags, typed values) — use binary tooling for that.
+## Integration Architecture: New vs. Modified Sections
 
-**Minimal diff to command file:**
+### New Sections Required (6 new named sections)
 
-The current `<process>` block reads:
+These sections do not exist in the current workflow. They must be added as `<section name="...">` blocks.
 
-```markdown
-<process>
-Execute the foundation-sprint workflow from
-@~/.claude/get-your-shit-together/workflows/foundation-sprint.md
-end-to-end. Follow all instructions in that workflow precisely.
-</process>
+**1. `section_problem_importance` — Problem: Important/Urgent 2x2**
+
+- Placement: immediately after `section_problem` closes (before `section_advantages`)
+- Step 1, position 2.5 (between problem lock and advantages)
+- What it does: presents the Important × Urgent 2x2 matrix, user places their problem on it, AI confirms placement, result locked to session context
+- New: YES — no equivalent exists
+
+**2. `section_purchaser` — Purchaser Awareness**
+
+- Placement: immediately after `section_customer` closes and before `section_problem`
+- Step 1, position 1.5 (between customer lock and problem)
+- Rationale: purchaser characteristics are tightly coupled to customer segment, not problem. Knowing B2B vs. B2C and tech adoption tier before problem framing informs the problem validation RESEARCH-03 query that already runs in `section_problem`.
+- What it does: 3 sub-questions — (1) tech adoption tendency, (2) willingness and ability to pay, (3) buyer category (B2C/B2A/B2B/B2E). Results locked to session.
+- New: YES — no equivalent exists
+
+**3. `section_pricing_model` — Pricing Model Questions**
+
+- Placement: after `section_problem_importance`, before `section_advantages`
+- Step 1, position 2.75
+- What it does: subscription viability, estimated ARPA, billing cadence preference. Results locked to session.
+- New: YES — no equivalent exists
+
+**4. `section_market_sizing` — Market Sizing and Growth**
+
+- Placement: after `section_pricing_model`, before `section_advantages`
+- Step 1, position 2.9
+- What it does: AI runs inline WebSearch to estimate total reachable market and growth stage, then asks founder for their perception. AI provides a numeric estimate range; founder confirms or corrects. Locked to session.
+- New: YES — no equivalent exists. This is a new web search call within Step 1 (distinct from RESEARCH-03 in `section_problem` and RESEARCH-01/RESEARCH-02 in competitor research).
+
+**5. `section_founder_fit` — Product/Founder Fit Confrontation**
+
+- Placement: after `section_approach_generation`, before `section_approach_evaluation`
+- Step 3, position between approach list finalization and 4-matrix evaluation
+- What it does: for the finalized approach list, confronts the founder on (1) background access to this market, (2) technical or distribution chops, (3) unique advantage or audience, (4) genuine care. Not a disqualifier — surfaces risks the evaluation matrices will reflect.
+- New: YES — `section_context_reload` surfaces Capacity + Insight passively, but does not ask the 4 confrontational Fit questions actively.
+
+**6. `section_pain_to_validate` — Pain to Validate Matrix per Approach**
+
+- Placement: within `section_approach_evaluation`, as a 5th matrix shown after Matrix 4 (Growth Vision)
+- Step 3, position appended to the 4-matrix evaluation sequence
+- What it does: adds a 5th matrix to the existing 4-matrix evaluation loop — Axes: Ease to validate via conversations (Hard → Easy) × MVP feasibility (Complex → Simple). Each approach placed.
+- New: YES as a named sub-section or explicitly labeled Matrix 5 within `section_approach_evaluation`. Implementation choice: add it as a labeled **Matrix 5** block within `section_approach_evaluation` (consistent with existing SPRINT-13 pattern) rather than a separate `<section>` tag. This avoids splitting the evaluation flow mid-loop.
+
+### Modified Sections (4 sections require changes)
+
+**1. `section_write_outputs` — adds 5PM Scorecard**
+
+- Change type: ADD new file write
+- The `section_write_outputs` section is the ONLY location where output files are written (enforced by the "OUTPUT-01/02/03 zero-placeholder rule"). Adding `5PM-SCORECARD.md` must happen here, not earlier.
+- What changes: add step 4 — "Write 5PM-SCORECARD.md" — after the existing 3-file write sequence. Read `@~/.claude/get-your-shit-together/templates/5PM-SCORECARD.md` for structure, then write `./5PM-SCORECARD.md` with all 6 dimension scores populated from session locks.
+- No change to the existing 3-file write sequence.
+
+**2. `section_problem` — banner update**
+
+- Change type: MINOR — banner must include the new Step 1 sections in the DISCARD rule cascade
+- The navigation_controls DISCARD RULE already handles going back to Problem (wipes Advantages + Competitors). With new sections after problem, going back to problem also discards: `section_problem_importance`, `section_purchaser` (if placed before problem — see placement discussion below), `section_pricing_model`, `section_market_sizing`.
+- No change to the problem question/lock logic itself.
+
+**3. `navigation_controls` — DISCARD RULE cascade update**
+
+- Change type: MODIFY — the cascade must include new sections
+- Current cascade:
+  - Back to Customer → wipe Problem, Advantages, Competitors
+  - Back to Problem → wipe Advantages, Competitors
+  - Back to Advantages → wipe Competitors
+  - Back to Competitors → wipe only competitor selection
+- Updated cascade adds 5PM sections as ordered elements:
+  - Back to Customer → wipe Purchaser (new), Problem, Problem Importance (new), Pricing Model (new), Market Sizing (new), Advantages, Competitors
+  - Back to Purchaser (new) → wipe Problem, Problem Importance (new), Pricing Model (new), Market Sizing (new), Advantages, Competitors
+  - Back to Problem → wipe Problem Importance (new), Pricing Model (new), Market Sizing (new), Advantages, Competitors
+  - Back to Advantages → wipe Competitors (unchanged)
+  - Back to Competitors → wipe only competitor selection (unchanged)
+
+**4. `step1_banner` — display update**
+
+- Change type: MODIFY — banner may need a 5PM summary row or the navigation_controls "revisit" menu needs new entries
+- Minimal change: the existing 4-row banner (Customer, Problem, Advantages, Competitors) is not changed. A separate "5PM lens status" block shown after the banner during Step 1 reviews is cleaner than adding 4 new rows to the banner.
+- Alternative: keep banner as-is, show 5PM dimension locks only in navigation_controls revisit summary.
+- Recommendation: do NOT expand the banner. Keep it 4-row (existing behavior preserved). New dimensions are visible in the 5PM Scorecard only, not in the step banner. This avoids banner bloat.
+
+---
+
+## Section Insertion Map
+
+```
+STEP 1: The Basics (revised sequence)
+  section_customer                      [EXISTING — unchanged]
+  section_purchaser                     [NEW — inserted here]
+  section_problem                       [EXISTING — minor cascade update]
+  section_problem_importance            [NEW — inserted here]
+  section_pricing_model                 [NEW — inserted here]
+  section_market_sizing                 [NEW — inserted here]
+  section_advantages                    [EXISTING — unchanged]
+  section_competitors                   [EXISTING — unchanged]
+  section_competitors_research          [EXISTING — unchanged]
+  section_main_adversary                [EXISTING — unchanged]
+  write_competitors_md                  [EXISTING — unchanged]
+  navigation_controls                   [EXISTING — MODIFIED cascade]
+
+STEP 2: Differentiation (unchanged)
+  section_axis_rating                   [EXISTING — unchanged]
+  section_custom_axes                   [EXISTING — unchanged]
+  section_axis_selection                [EXISTING — unchanged]
+  section_competitor_scoring            [EXISTING — unchanged]
+  section_matrix_render                 [EXISTING — unchanged]
+  section_manifesto                     [EXISTING — unchanged]
+  section_step2_navigation              [EXISTING — unchanged]
+
+STEP 3: Approaches (revised sequence)
+  section_context_reload                [EXISTING — unchanged]
+  section_approach_generation           [EXISTING — unchanged]
+  section_founder_fit                   [NEW — inserted here]
+  section_approach_evaluation           [EXISTING — MODIFIED: adds Matrix 5]
+  section_approach_recommendation       [EXISTING — unchanged]
+
+STEP 4: Final Hypothesis (revised)
+  section_hypothesis                    [EXISTING — unchanged]
+  section_testable_form                 [EXISTING — unchanged]
+  section_write_outputs                 [EXISTING — MODIFIED: adds 5PM-SCORECARD.md write]
 ```
 
-The updated `<process>` block becomes:
+Total sections after v1.2: 28 named sections (22 existing + 6 new)
 
-```markdown
-<process>
-Before executing any workflow, check $ARGUMENTS:
+---
 
-- If $ARGUMENTS contains "-french": read and execute
-  ~/.claude/get-your-shit-together/workflows/foundation-sprint-french.md
-- If $ARGUMENTS contains "-spanish": read and execute
-  ~/.claude/get-your-shit-together/workflows/foundation-sprint-spanish.md
-- If $ARGUMENTS is empty or contains no language flag: read and execute
-  ~/.claude/get-your-shit-together/workflows/foundation-sprint.md
-- If $ARGUMENTS contains an unrecognized flag: say "Language '[flag]' is
-  not yet supported. Running the sprint in English." then execute
-  ~/.claude/get-your-shit-together/workflows/foundation-sprint.md
+## Placement Rationale for Each New Section
 
-Follow all instructions in the selected workflow precisely.
-</process>
-```
+### Why `section_purchaser` before `section_problem`
 
-The `<execution_context>` block (the static @-include) is removed entirely — it was pointing to the English workflow unconditionally. With routing logic in `<process>`, Claude reads the correct file dynamically using the `Read` tool (which is already in `allowed-tools`).
+The problem validation search in `section_problem` (RESEARCH-03) queries: `"[customer segment] [problem] pain points"`. Knowing that the purchaser is B2B enterprise vs. B2C consumer changes what evidence counts as valid. A B2B purchaser who is tech-averse invalidates many problem-solution approaches even if the pain is real. Locking Purchaser first means the problem validation can factor in buyer behavior.
 
-### Pattern 2: Language-Scoped Template Subdirectory
+### Why `section_problem_importance` after problem lock (not during)
 
-**What:** Each language's templates live under `templates/<lang-code>/`. The French workflow's @-include references use `@~/.claude/get-your-shit-together/templates/fr/FILENAME.md`. English workflow references stay as `@~/.claude/get-your-shit-together/templates/FILENAME.md`.
+The Important/Urgent matrix requires a locked problem statement to evaluate. It cannot run before the problem is locked. Placing it immediately after the problem lock treats it as a validation lens on the locked problem rather than a pre-condition.
 
-**When to use:** When output templates must be translated but the template reference syntax is a static path in the workflow file.
+### Why `section_pricing_model` before `section_advantages`
 
-**Trade-offs:** Each workflow file is self-contained and correct — there is no runtime path construction. Adding Spanish means adding `templates/es/` and `foundation-sprint-spanish.md` with the right `es/` paths. The trade-off is slight duplication (4 template files per language), which is intentional: template structure may diverge across languages.
+Pricing model questions are market-level (subscription viability, ARPA estimates) rather than founder-level. They do not depend on Capacity/Insight/Motivation and do not need to follow Advantages. They do need a locked problem and customer to estimate ARPA, so they go after problem_importance.
 
-**Example (inside foundation-sprint-french.md):**
+### Why `section_market_sizing` before `section_advantages`
 
-```markdown
-1. Lire le gabarit pour la structure :
-   @~/.claude/get-your-shit-together/templates/fr/COMPETITORS.md
+Market sizing requires an inline WebSearch. Completing all web research (problem validation, market sizing) before the founder advantage conversation keeps the research block contiguous in Step 1 and separates it from the personal/qualitative Advantages section. This mirrors the existing pattern: RESEARCH-03 runs within `section_problem` before Advantages.
 
-2. Écrire ./COMPETITORS.md avec tout le contenu suivant...
-```
+### Why `section_founder_fit` after approach generation and before 4-matrix evaluation
 
-### Pattern 3: One Workflow File Per Language (Full Translation)
+The 5PM framework's Product/Founder Fit confrontation is specifically about whether the founder can execute on a given approach. This requires an approach list (A1–A4) to exist. Placing it after `section_approach_generation` (when approaches are finalized) and before `section_approach_evaluation` means the Fit discussion informs how the founder reads the Pragmatic Vision matrix (which evaluates ease-to-build given Capacity). The `section_context_reload` earlier in Step 3 surfaces Capacity + Insight passively; `section_founder_fit` is the active confrontation.
 
-**What:** `foundation-sprint-french.md` is a complete copy of the English workflow with all Claude-facing instructions translated to French. User-facing content (banners, questions, confirmations) is also in French. The workflow is self-contained and testable independently.
+### Why Pain to Validate is Matrix 5 (not a separate `<section>`)
 
-**When to use:** When Claude's entire interaction must be in the target language — not just the output files, but every question, banner, lock confirmation, and error message.
+The existing 4-matrix evaluation in `section_approach_evaluation` uses a sequential "show one, wait for next" pattern (SPRINT-13). Adding a 5th matrix to this loop is the minimal-diff change. Creating a separate `<section name="section_pain_to_validate">` would introduce a section boundary mid-evaluation-loop and require updating SPRINT.md's Step 3 template to account for the split. Matrix 5 within the existing section is less disruptive and keeps the evaluation as one coherent block.
 
-**Trade-offs:** More content to maintain (one full workflow file per language). This is the correct trade-off for this project because: (1) the workflow is intentionally stable after v1.0, (2) a partial translation would produce mixed-language sessions, and (3) the extensibility requirement (LANG-02) is best served by a pattern where each language is entirely self-contained.
+---
 
-## Data Flow
+## 5PM Scorecard Output File
 
-### Request Flow
+### File: `5PM-SCORECARD.md`
+
+The scorecard is a new output file parallel to HYPOTHESIS.md, SPRINT.md, and POSITIONING.md. It follows the same zero-placeholder rule: no square brackets in the final output.
+
+**Template location:** `~/.claude/get-your-shit-together/templates/5PM-SCORECARD.md` (new)
+
+**Write location:** `section_write_outputs` — step 4 of the output write sequence (after POSITIONING.md)
+
+**Content structure:**
 
 ```
-User types: /gyst:foundation-sprint, -french
-    |
-    | $ARGUMENTS = "-french"
-    v
-Command file renders with "-french" substituted into $ARGUMENTS
-    |
-    | Claude reads <process> block
-    v
-Claude detects "-french" in $ARGUMENTS
-    |
-    | Read tool loads foundation-sprint-french.md
-    v
-French workflow executes end-to-end
-    |
-    | @-include loads templates/fr/COMPETITORS.md etc.
-    v
-Output files written in French to user's current directory:
-  COMPETITORS.md, HYPOTHESIS.md, SPRINT.md, POSITIONING.md
+5PM-SCORECARD.md
+  Sprint date
+  Idea name / hypothesis summary (one line)
+
+  Problem
+    Important? [Yes/No/Maybe + rationale]
+    Urgent? [Yes/No/Maybe + rationale]
+    Matrix placement: [quadrant]
+
+  Purchaser
+    Tech adoption: [early adopter / mainstream / laggard]
+    Willingness to pay: [high / medium / low + rationale]
+    Buyer category: [B2C / B2A / B2B / B2E]
+
+  Pricing Model
+    Subscription viability: [Yes/No + rationale]
+    Estimated ARPA: [$X/month]
+    Billing cadence: [monthly / annual / other]
+
+  Market
+    Estimated reachable market: [$X–$Y range]
+    Growth stage: [early / mid / mature / growing / flat / declining]
+    Founder perception: [quote or paraphrase from session]
+
+  Product/Founder Fit
+    Background access: [Yes/No + detail]
+    Technical/distribution chops: [strong / partial / gap + detail]
+    Unique advantage or audience: [description or "none identified"]
+    Genuine care: [Yes/No + rationale]
+
+  Pain to Validate
+    Conversation validation ease: [easy / moderate / hard]
+    MVP feasibility: [simple / moderate / complex]
+    Fastest validation path: [from section_testable_form]
+
+  Overall assessment (AI-generated, 2-3 sentences synthesizing all 6 dimensions)
 ```
 
-### Extensibility Flow (adding Spanish later)
+### Scorecard Data Flow
+
+Every field in the scorecard is sourced from a locked session value. No new questions are asked at `section_write_outputs` time. The AI synthesizes from context that exists at that point.
 
 ```
-1. Create templates/es/ with 4 translated template files
-2. Create workflows/foundation-sprint-spanish.md
-   (translated copy of English workflow, referencing templates/es/)
-3. Command file already handles "-spanish" → zero command changes
+section_purchaser       → Purchaser block
+section_problem         → Problem block (problem statement)
+section_problem_importance → Problem block (matrix placement)
+section_pricing_model   → Pricing Model block
+section_market_sizing   → Market block
+section_founder_fit     → Product/Founder Fit block
+section_approach_evaluation (Matrix 5) → Pain to Validate block
+section_testable_form   → Pain to Validate "fastest validation path"
+section_hypothesis      → "Idea name / hypothesis summary" header
 ```
 
-No step requires touching the command file, the English workflow, or any existing template.
+No scorecard field requires information that was not locked in an earlier section. The write is pure assembly.
 
-## Integration Points
+---
 
-### Component Chain
+## Market Research Integration Pattern
 
-| Boundary | Communication | Notes |
-|----------|---------------|-------|
-| Command → Workflow | Claude reads the workflow file via `Read` tool (path determined by routing logic) | Not an @-include — dynamic path selection requires Claude to read the file, not static injection |
-| Workflow → Templates | @-include syntax (`@~/.claude/...`) — static path embedded in workflow file | Each language's workflow has hardcoded paths to its own templates |
-| Workflow → gyst-researcher agent | Task tool invocation — unchanged, no language changes needed | Agent returns structured profiles; main workflow writes them in target language |
-| Workflow → Output files | Write tool — Claude writes to `./COMPETITORS.md` etc. in the user's cwd | File names stay the same across languages; content is in target language |
+The `section_market_sizing` section introduces a second inline WebSearch in Step 1. The existing pattern for inline search is established in `section_problem` (RESEARCH-03). The new section follows the same pattern:
 
-### Build Order
+**Existing RESEARCH-03 pattern (in `section_problem`):**
+1. Run WebSearch with constructed query
+2. Evaluate evidence (strong / weak)
+3. Present finding to user with one-sentence summary
+4. Ask user to confirm or override
 
-This order matters because routing must work before translation can be tested:
+**New market sizing pattern (in `section_market_sizing`):**
+1. Run WebSearch with market-scoped query: `"[customer segment] [problem] market size"` or `"[customer segment] software market TAM"`
+2. Synthesize a reachable market estimate range (not TAM — reachable market for a bootstrapped SaaS)
+3. State growth stage based on search evidence (early / growing / mature / declining)
+4. Present to user: "Based on my research, the reachable market appears to be [range]. Market appears to be [stage]. Does this match your sense of it?"
+5. User confirms or corrects — accept their answer unconditionally (founders may have inside knowledge)
+6. Lock: AI estimate range + growth stage + founder perception note
 
-1. **Update command file** (`foundation-sprint.md`) — routing logic must exist before any workflow can be invoked via flag
-2. **Create `templates/fr/`** — French workflow cannot be tested without French templates to @-include
-3. **Create `foundation-sprint-french.md`** — translate and validate against French templates
-4. **Test end-to-end** — run `/gyst:foundation-sprint, -french` and verify French output files
+**Query construction rule:** Use locked customer segment and locked problem statement (available at this point in the flow). Do not construct a query before both are locked.
 
-The English workflow and command are testable independently at each step. Step 1 alone is enough to verify routing (unknown flag → English + warning; no flag → English as before).
+**RESEARCH-02 rule preserved:** `section_competitor_scoring` already has a hard "no web searches" rule. The new `section_market_sizing` search is in Step 1 only and does not affect the Step 2 scoring rule.
 
-## Anti-Patterns
+---
 
-### Anti-Pattern 1: Routing via Multiple Command Files
+## Language Workflow Impact
 
-**What people do:** Create `foundation-sprint-french.md` as a second command file in `~/.claude/commands/gyst/`, invoked as `/gyst:foundation-sprint-french`.
+The 5PM changes affect the English workflow first, then propagate to translations.
 
-**Why it is wrong:** Violates LANG-02 (extensibility through a single command). The user API changes with every new language. Users must remember different command names.
+### Files Touched
 
-**Do this instead:** One command, language determined by flag. `/gyst:foundation-sprint, -french` routes internally.
+| File | Change Type | Notes |
+|------|-------------|-------|
+| `workflows/foundation-sprint.md` | MODIFIED | 6 new sections inserted, 4 existing sections modified |
+| `templates/5PM-SCORECARD.md` | NEW | English scorecard template |
+| `templates/fr/5PM-SCORECARD.md` | NEW | French scorecard template |
+| `templates/ja/5PM-SCORECARD.md` | NEW | Japanese scorecard template |
+| `templates/pt/5PM-SCORECARD.md` | NEW | Portuguese scorecard template |
+| `workflows/foundation-sprint-french.md` | MODIFIED | Mirror all 10 section changes |
+| `workflows/foundation-sprint-japanese.md` | MODIFIED | Mirror all 10 section changes |
+| `workflows/foundation-sprint-portuguese.md` | MODIFIED | Mirror all 10 section changes |
+| `TRANSLATION-SYNC.md` | MODIFIED | Update commit hash for all 3 languages |
 
-### Anti-Pattern 2: Static @-include in `<execution_context>` for Routing
+Files NOT touched: command file, gyst-researcher agent, English non-scorecard templates, Spanish, German, Chinese workflows (these are out of scope per PROJECT.md Active requirements).
 
-**What people do:** Keep `@~/.claude/.../foundation-sprint.md` in `<execution_context>` and add a second include for the French workflow, expecting Claude to choose.
+### Translation Dependency Order
 
-**Why it is wrong:** @-includes in `<execution_context>` are resolved statically and injected unconditionally. Both workflows would load simultaneously, causing conflicting instructions. The routing decision happens before execution and cannot be expressed via dual @-includes.
+```
+1. English workflow updated (all 10 changes)
+2. English 5PM-SCORECARD.md template created
+3. Test English end-to-end
+4. Create templates/fr/5PM-SCORECARD.md, templates/ja/5PM-SCORECARD.md, templates/pt/5PM-SCORECARD.md
+5. Apply all 10 changes to foundation-sprint-french.md
+6. Apply all 10 changes to foundation-sprint-japanese.md
+7. Apply all 10 changes to foundation-sprint-portuguese.md
+8. Update TRANSLATION-SYNC.md with new English source commit hash for all 3 languages
+```
 
-**Do this instead:** Remove `<execution_context>` entirely. Use `<process>` with natural language routing; Claude reads exactly one workflow file using the `Read` tool.
+Step 1 and 2 must complete before steps 3–8 can begin. Steps 4–7 are parallelizable within their own constraint (template before workflow for each language).
 
-### Anti-Pattern 3: French Templates at Template Root (Flat)
+---
 
-**What people do:** Place French templates at `templates/COMPETITORS-fr.md`, `templates/HYPOTHESIS-fr.md`, etc., alongside the English templates.
+## Build Order for v1.2 Integration Phases
 
-**Why it is wrong:** The naming convention breaks the @-include pattern inside workflows. The French workflow would need to reference different filenames (`COMPETITORS-fr.md`) while the English workflow uses `COMPETITORS.md`. Adding Spanish means adding another naming convention. The `fr/` subdirectory approach keeps filenames identical across languages — only the path prefix changes.
+This order is driven by three dependency rules:
+- English workflow must be correct before translations begin
+- Templates must exist before workflows that @-include them
+- `section_write_outputs` writes 5PM-SCORECARD.md, so the template must exist before testing the end-to-end flow
 
-**Do this instead:** `templates/fr/COMPETITORS.md`, `templates/fr/HYPOTHESIS.md`, etc.
+### Phase 1: English Workflow Core (5PM sections in Step 1)
 
-### Anti-Pattern 4: Inline Translated Instructions in a Single Workflow
+Add to `foundation-sprint.md`:
+1. `section_purchaser` — new, after `section_customer`
+2. `section_problem_importance` — new, after `section_problem`
+3. `section_pricing_model` — new, after `section_problem_importance`
+4. `section_market_sizing` — new, after `section_pricing_model`
+5. `navigation_controls` — modify DISCARD RULE cascade
 
-**What people do:** Add conditional blocks inside `foundation-sprint.md` — `<!-- IF FRENCH -->...<!-- END IF -->` — with instructions in both languages.
+These 5 changes are Step 1 only. They can be written, reviewed, and tested before touching Step 3.
 
-**Why it is wrong:** Claude Code has no preprocessor. Claude would read all content and potentially mix languages. The file grows with every language added. The single-workflow-per-language pattern is more reliable and independently testable.
+### Phase 2: English Workflow Core (5PM sections in Step 3 + output)
 
-**Do this instead:** One complete workflow file per language.
+Add to `foundation-sprint.md`:
+6. `section_founder_fit` — new, after `section_approach_generation`
+7. `section_approach_evaluation` — modify to add Matrix 5 (Pain to Validate)
+8. `section_write_outputs` — modify to add `5PM-SCORECARD.md` write step
+
+Create:
+9. `templates/5PM-SCORECARD.md` — new English template
+
+Phases 1 and 2 together complete the English workflow. Phase 2 depends on Phase 1 being complete (the DISCARD RULE in navigation_controls must already include the new Step 1 sections before Step 3 changes are tested in a full run).
+
+### Phase 3: Translation — Scorecard Templates
+
+Create (can run parallel to each other):
+- `templates/fr/5PM-SCORECARD.md`
+- `templates/ja/5PM-SCORECARD.md`
+- `templates/pt/5PM-SCORECARD.md`
+
+These are reference files for workflow @-includes. They must exist before the translated workflows can complete a full end-to-end run.
+
+### Phase 4: Translation — Language Workflows
+
+Apply all 10 section changes to each language workflow. Can run parallel per language:
+- `foundation-sprint-french.md`
+- `foundation-sprint-japanese.md`
+- `foundation-sprint-portuguese.md`
+
+### Phase 5: TRANSLATION-SYNC.md Update
+
+Update commit hash entries for all 3 languages after the English source commit is tagged.
+
+---
+
+## Component Boundaries: What Changes vs. What Does Not
+
+### Unchanged Components
+
+| Component | Why Unchanged |
+|-----------|---------------|
+| Command file routing logic | 5PM is a workflow-level change, not a routing-level change |
+| gyst-researcher agent | Still invoked with same brief (customer + problem + user-named competitors) |
+| COMPETITORS.md template | No new competitor profile fields needed |
+| HYPOTHESIS.md template | Hypothesis structure is unchanged |
+| SPRINT.md template | Step 3 evaluation table may need a Matrix 5 row — see note below |
+| POSITIONING.md template | No change — 2x2 matrix and manifesto are unchanged |
+| `section_competitor_scoring` | No-web-search rule preserved |
+| Step 2 sections (all 7) | 5PM does not touch differentiation |
+| Step 4 hypothesis/testable form sections | 5PM Scorecard written separately from hypothesis |
+
+Note on SPRINT.md template: the 4-matrix evaluation table has a row per matrix. Adding Matrix 5 means adding one row to that table. This is a minor template change, not a structural change to the template.
+
+### New Component: 5PM-SCORECARD.md Template
+
+The template must define all 6 dimension sections with placeholder fields that match what the workflow will populate. It follows the zero-placeholder rule: the workflow replaces every `[...]` before writing. The template itself uses `[...]` as the fill pattern (same as all existing templates).
+
+---
+
+## Anti-Patterns to Avoid in This Integration
+
+### Anti-Pattern 1: Writing Scorecard Data Before `section_write_outputs`
+
+**What would go wrong:** If any 5PM section writes partial scorecard content to a file mid-sprint, it violates the zero-placeholder rule (the file would have unfilled fields because later sections haven't run yet). It would also create partial file corruption if the user backs up and re-runs a section.
+
+**Do this instead:** All 5PM section results are locked to session context only. The scorecard file is assembled and written once, at `section_write_outputs`, from context that is complete at that point.
+
+### Anti-Pattern 2: Expanding the Step 1 Banner to Include 5PM Dimensions
+
+**What would go wrong:** The banner would grow from 4 rows to 8+ rows. Every existing banner render instruction in all 7 language workflows would need updating. The banner would overflow visually at ~42 chars width.
+
+**Do this instead:** Keep the Step 1 banner at 4 rows (unchanged). 5PM dimension status is visible only in the final 5PM-SCORECARD.md output, not in the interactive banner.
+
+### Anti-Pattern 3: Making `section_founder_fit` a Blocking Disqualifier
+
+**What would go wrong:** If the workflow rejects approaches based on low Fit scores, it overrides the founder's judgment. The 5PM framework explicitly states "all criteria are data points — no single factor is an absolute deal-breaker." Blocking would break trust and lose the session value.
+
+**Do this instead:** `section_founder_fit` is a confrontational discussion that surfaces risks. The AI presents what it finds; the user decides to continue. The risks surface again in Matrix 3 (Pragmatic Vision) via the ease-to-build scoring that already references Capacity.
+
+### Anti-Pattern 4: Running Market Sizing Search in `section_competitor_scoring`
+
+**What would go wrong:** `section_competitor_scoring` has a hard "no web searches" rule (RESEARCH-02). Running market sizing there would contaminate the scoring evidence with fresh search data, undermining the rule that competitor scores derive only from COMPETITORS.md profiles.
+
+**Do this instead:** Market sizing search runs exclusively in `section_market_sizing` in Step 1. By the time `section_competitor_scoring` runs in Step 2, market data is already locked.
+
+### Anti-Pattern 5: Separate 5PM Dimension Files Per Dimension
+
+**What would go wrong:** Writing intermediate files (e.g., `PROBLEM-SCORE.md`, `PURCHASER-SCORE.md`) per dimension creates file proliferation in the user's project directory and creates the partial-write problem described in Anti-Pattern 1.
+
+**Do this instead:** One file (`5PM-SCORECARD.md`), written once, at sprint end.
+
+---
+
+## Data Flow: 5PM Through the Sprint
+
+```
+section_customer → [customer segment locked]
+                         |
+                         v
+section_purchaser → [tech adoption, willingness-to-pay, B2C/B2A/B2B/B2E locked]
+                         |
+                         v
+section_problem → [problem locked]
+                         |
+                         | (RESEARCH-03 inline search uses customer + problem)
+                         v
+section_problem_importance → [Important/Urgent quadrant locked]
+                         |
+                         v
+section_pricing_model → [subscription Y/N, ARPA estimate, cadence locked]
+                         |
+                         v
+section_market_sizing → [market size range, growth stage, founder perception locked]
+                         |
+                         | (inline WebSearch: "[customer] [problem] market size")
+                         v
+section_advantages → [Capacity, Insight, Motivation locked — unchanged]
+                         |
+                         ... [Steps 2, 3 approach generation unchanged]
+                         |
+                         v
+section_approach_generation → [A1–A4 finalized]
+                         |
+                         v
+section_founder_fit → [Background access, Chops, Unique advantage, Care — discussed]
+                         |
+                         v
+section_approach_evaluation → [4 matrices + Matrix 5 (Pain to Validate) shown]
+                         |
+                         v
+section_approach_recommendation → [chosen approach locked]
+                         |
+                         ... [Step 4 hypothesis / testable form unchanged]
+                         |
+                         v
+section_write_outputs → [HYPOTHESIS.md, SPRINT.md, POSITIONING.md, 5PM-SCORECARD.md written]
+                         (5PM-SCORECARD.md assembled from all locked 5PM context above)
+```
+
+---
 
 ## Sources
 
-- Official Claude Code skills documentation (verified 2026-03-08): https://code.claude.com/docs/en/slash-commands
-  - `$ARGUMENTS` is a string substitution, not a conditional mechanism — confirmed
-  - `<execution_context>` @-includes are static — confirmed via current command file structure
-  - `Read` tool is available in command-declared `allowed-tools` — confirmed from existing command frontmatter
-- Existing GYST command file: `~/.claude/commands/gyst/foundation-sprint.md` (read directly)
-- Existing GYST workflow: `~/.claude/get-your-shit-together/workflows/foundation-sprint.md` (read directly, confirmed @-include pattern for templates)
-- Project context: `.planning/PROJECT.md` — requirements LANG-01 through LANG-06 and constraints confirmed
+- Existing workflow read directly: `get-your-shit-together/workflows/foundation-sprint.md` (1,268 lines, 22 named sections confirmed)
+- Existing templates read directly: `templates/HYPOTHESIS.md`, `templates/SPRINT.md`
+- TRANSLATION-SYNC.md read directly: confirmed 6 language workflow files, 22-section parity rule, `* MAIN ADVERSARY` preservation rule
+- PROJECT.md read directly: v1.2 target features confirmed (8 active requirements)
+- Rob Walling 5PM Framework: Episode 628 "Startups For The Rest of Us" (May 2024) — https://www.startupsfortherestofus.com/episodes/episode-628-the-5-pm-pre-validation-framework
+- 5PM framework dimension details: sourced from episode transcript via WebFetch (HIGH confidence — official source, current)
 
 ---
-*Architecture research for: GYST multilingual slash command routing*
-*Researched: 2026-03-08*
+*Architecture research for: GYST v1.2 — 5PM Framework Integration*
+*Researched: 2026-03-22*

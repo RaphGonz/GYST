@@ -1,176 +1,154 @@
 # Feature Research
 
-**Domain:** Localization of an AI workflow (Claude markdown + sub-agent + templates)
-**Researched:** 2026-03-08
-**Confidence:** HIGH — based on direct analysis of the 1,268-line source workflow, all 4 templates, and the sub-agent file. No external sources needed; the answer comes from reading the actual artifact.
+**Domain:** 5PM Idea Evaluation Framework integration into an AI-guided single-session sprint workflow
+**Researched:** 2026-03-22
+**Confidence:** HIGH for framework structure (multiple sources including official podcast transcript); MEDIUM for scoring granularity (Rob Walling explicitly states no formal scoring system exists yet); HIGH for integration behavior (derived from direct analysis of existing 1,268-line workflow)
 
 ---
 
-## What Needs to Be Translated vs What Must Stay in English
+## What the 5PM Framework Actually Is
 
-This is the core question for the milestone. The workflow mixes four distinct categories of text with very different localization rules.
+The 5PM framework was introduced by Rob Walling in Episode 628 of "Startups for the Rest of Us" (May 2024) and published as a PDF worksheet at startupsfortherestofus.com. It evaluates SaaS ideas against six dimensions in priority order:
 
----
+1. **Problem** — Is it important? Is it urgent? (Important/Urgent 2x2)
+2. **Purchaser** — Who buys? What's their tech adoption rate and willingness to pay? (B2C / B2A / B2B / B2E)
+3. **Pricing Model** — Can this be a subscription? What's the estimated ARPA?
+4. **Market** — How large is the reachable market? Is it growing?
+5. **Product/Founder Fit** — Does the founder have the background, chops, access, and passion?
+6. **Pain to Validate** — How quickly can this be validated or MVPed?
 
-## Category 1: Translate (User-Facing Text)
-
-These are the words the user reads and speaks during the sprint session. Translating them is the entire point of the milestone.
-
-| Element | Where It Appears | Complexity | Notes |
-|---------|-----------------|------------|-------|
-| Welcome/onboarding block | Lines 27-57 of workflow | LOW | 1 verbatim block; translate in full |
-| Step banners (Steps 1-4) | `step1_banner`, `step2_banner`, `step3_banner`, `step4_banner` | LOW | Labels: "Customer", "Problem", "Advantages", "Competitors", "X-axis", "Y-axis", "Dream company", "Manifesto", "Approaches", "Chosen", "Segment", "Adversary", "Hypothesis", "Approach", "Axes" — 15 distinct labels across 4 banners |
-| Open questions to the user | ~20 questions throughout 20 sections | MEDIUM | Each question is a precise interaction design choice; register matters ("tu" vs "vous" — see French-specific section) |
-| Options presented to user (A/B/C format) | Every option block in sections 1-4 | MEDIUM | Labels A/B/C stay; the prose framing each option translates |
-| AI behavior instructions that produce visible output | Section text like "Say:", "Tell the user:", example dialogue | HIGH | These produce what the user sees; must be idiomatic French |
-| Lock announcements | "Got it — your target customer: [value]", "These work. Locking your manifesto." | LOW | ~8-10 lock announcement patterns |
-| Navigation menus | A/B/C menus after each step completes | LOW | 3 navigation menus in the workflow |
-| Conflict detection message | Lines 774-782 | LOW | 1 block, translate in full |
-| Recommendation output | "Looking across all 4 matrices: [A#] has the strongest pattern..." | LOW | 1 template block |
-| Sprint completion message | Lines 1257-1267 | LOW | Final message after files are written |
-| Output template prose | All 4 templates (HYPOTHESIS.md, SPRINT.md, POSITIONING.md, COMPETITORS.md) | MEDIUM | HTML comments (instructions to Claude), section headers, field labels, example placeholder text |
-
-**Estimated translatable units in the main workflow:** approximately 60-80 distinct prose passages across 20 sections.
+**Critical source note:** Rob explicitly states "there is no conclusion, there is no score out of a hundred — not yet anyway." The framework is a qualitative evaluation lens, not a quantitative calculator. Any scoring system in GYST must be designed, not copied from the original.
 
 ---
 
-## Category 2: Preserve in English (or Language-Neutral)
+## Feature Landscape
 
-These elements must not be translated. Translating them breaks the workflow.
+### Table Stakes (Users Expect These)
 
-| Element | Where It Appears | Why Preserve | Notes |
-|---------|-----------------|-------------|-------|
-| YAML front matter | Lines 1-5 of workflow | Claude metadata — functional, not display | `name:`, `description:`, `version:` keys stay in English |
-| XML section tags | `<section name="...">`, `<objective>`, `<onboarding>`, etc. | Claude parses these structurally | 20+ named sections; tags are invisible to user |
-| Section `name=""` attribute values | `section_customer`, `section_problem`, `section_axis_rating`, etc. | Used as internal references and anchors | Do NOT translate: `write_competitors_md`, `navigation_controls`, `section_write_outputs`, etc. |
-| `@` file path references | `@~/.claude/get-your-shit-together/templates/HYPOTHESIS.md` | File system paths — functional | French workflow still reads from the same install path |
-| Template file paths for French output | New French templates | Path is English, content is French | French workflow reads `HYPOTHESIS-FR.md` (or equivalent) |
-| The 8 standard bipolar axes labels in section_axis_rating | Lines 548-555 | These are the Foundation Sprint methodology — domain-specific jargon | Translate the surrounding prose ("Now we position your dream company on 8 bipolar axes"), but the axis labels themselves (`Slow ←→ Fast`, `Hard ←→ Easy`, etc.) may be kept or translated — see note below |
-| Variable placeholders like `[X]`, `[Y]`, `[Z]`, `[W]`, `[U]`, `[V]` | Throughout | Structural markers referencing locked values | Do not alter these |
-| YAML keys in templates | `**Sprint date:**`, structural markers | Claude reads these as field identifiers | Keep field key names consistent with what the workflow references |
-| `* MAIN ADVERSARY` marker | COMPETITORS.md template | Workflow checks for this exact string when reading back | Must remain verbatim |
-| ASCII grid characters | `←`, `→`, `^`, `|`, `+`, `►` | Language-neutral visual structure | Not text, not translated |
-| gyst-researcher.md | Sub-agent file | Searches the web in English regardless of sprint language; English queries return better results | Do NOT translate; French workflow still invokes English researcher |
-| HTML comment delimiters | `<!--` and `-->` in templates | Structural markdown | Not user-visible; do not translate the delimiters |
-
-**Critical note on the 8 bipolar axes:** The methodology labels (`Slow ←→ Fast`, `Expensive ←→ Free`, etc.) appear in BOTH the interactive session (where the user rates their dream company) AND in the final SPRINT.md output (the table of ratings). If translated in the workflow, the French labels must also be used in the French SPRINT.md template's axis table. This creates a consistency dependency. Recommendation: translate the axis labels in the French workflow since French users will be entering ratings and reading feedback in French, but document that French template's axis table must match exactly.
-
----
-
-## Category 3: Translate with Care (Instructions to Claude)
-
-These are workflow instructions that Claude reads, not the user — but they produce user-visible output. They must be translated because Claude will generate French output based on them.
-
-| Element | Complexity | Notes |
-|---------|------------|-------|
-| INTERNAL FILTER block (section_approach_generation) | LOW | This is a behavior rule; translate the logic description so a French Claude session applies it correctly |
-| DIMENSION A/B/C guidance (Capacity, Insight, Motivation) | MEDIUM | Examples of ACCEPTED vs REJECTED answers are in English; French examples should reference French-language patterns |
-| Acceptance check examples | MEDIUM | Examples like "Solo founders building B2B SaaS, pre-revenue" may stay in English or be Frenchified — the user answers in French, so French framing examples help Claude recognize valid responses |
-| Validation condition logic | LOW | "If validation finds strong evidence... If validation finds little or no evidence..." — translate the condition text, not the WebSearch query strategy |
-| WebSearch query templates | DO NOT TRANSLATE | `"[customer segment] [problem description] pain points"` — search queries work better in English or in the user's language of the target market |
-
----
-
-## Category 4: Template Files — What Translates
-
-The 4 output templates each have two layers: structural markers Claude uses to navigate, and prose the human reads.
-
-| Template | What Translates | What Stays |
-|----------|----------------|------------|
-| HYPOTHESIS.md | HTML comments (instructions), section headers, breakdown table labels (X, Y, Z, W, U, V labels), example placeholder text in comments | The variable labels X/Y/Z/W/U/V (structural) |
-| SPRINT.md | Section headers, sub-section labels, table column names, HTML comments | Field key names if workflow references them by string |
-| POSITIONING.md | Section headers, HTML comments, manifesto phrase starters ("We are...", "We will never...") | ASCII matrix structure |
-| COMPETITORS.md | Field labels (**What they do:**, **Pricing model:**, etc.), HTML comments, summary table column names | `* MAIN ADVERSARY` string (workflow reads this back) |
-
----
-
-## Table Stakes Features for This Localization
-
-Features that must be present for the French workflow to be considered complete. Missing any of these = incomplete localization.
+Features that must exist for the 5PM integration to feel complete. Missing these means users get a partial evaluation that doesn't honor the framework's intent.
 
 | Feature | Why Expected | Complexity | Notes |
 |---------|--------------|------------|-------|
-| Full French welcome/onboarding block | First thing user sees — sets the register for the session | LOW | Must match the formatting intent of the English original (4 steps, 4 files, method description) |
-| All 4 step banners in French | Banners render 20+ times across a session; English labels in a French session break immersion | LOW | 15 banner labels across 4 banners |
-| French open questions for all 20 sections | Every question the AI asks must be in French | MEDIUM | ~20 questions; register choice (tu/vous) must be consistent throughout |
-| French option framing examples | The A/B/C option blocks in Claude's instructions must model French framing | MEDIUM | Examples in English sections guide Claude's output style; French examples improve output quality |
-| French lock announcements | Every lock confirmation reads back to the user | LOW | 8-10 patterns; must feel natural in French |
-| French navigation menus | A/B/C choice menus after each step | LOW | 3 menus |
-| French output templates (all 4) | Sprint output files are in French | MEDIUM | 4 files; translate field labels, comments, structural prose |
-| Consistent register throughout | All user-facing text uses the same register (formal "vous" vs informal "tu") | LOW (decision) / MEDIUM (consistency enforcement) | See French-specific section below |
-| Language flag routing in command | `/gyst:foundation-sprint, -french` invokes the French workflow | LOW | One-line routing addition to the command file |
-| Fallback for unsupported languages | Unknown `-lang` flag returns English with a message | LOW | Error path in command routing |
+| Problem Important/Urgent 2x2 | The framework's first and most important lens; "Vitamin vs. Aspirin" is the most cited concept from the framework | MEDIUM | Must be a 2x2, not just two separate yes/no questions; quadrant placement drives the narrative ("aspirin" = both important AND urgent) |
+| Purchaser type classification | B2C/B2A/B2B/B2E is Rob's specific contribution — it's more nuanced than generic "who buys" questions | MEDIUM | Requires explaining what each tier means for willingness to pay and tech adoption, not just labeling; B2A ("aspirational") is the most counterintuitive tier and needs definition |
+| Willingness-to-pay assessment | Directly tied to Purchaser — the framework treats "can they actually pay?" as a go/no-go signal | LOW | Not a number — a qualitative judgment: does this buyer type have budget authority, and do they use software like this today? |
+| Tech adoption signal | Rob uses "web developers = high adoption, attorneys = low adoption" as reference points | LOW | One question, AI interprets the answer. Feeds into Purchaser section of scorecard. |
+| Subscription viability question | Pricing Model asks specifically: can this be recurring revenue vs one-time? | LOW | Yes/no with justification. Key because bootstrappers need recurring revenue to build toward $1M ARR. |
+| ARPA estimate | The framework distinguishes "can this support a business" by asking what a realistic monthly account value looks like | MEDIUM | Not market sizing — this is per-account revenue. Rob references $400-500/mo minimum for B2B. Needs founder input + AI sanity check against purchaser type. |
+| Market size and reachability | How many reachable customers (not TAM — TRM: Total Reachable Market) | HIGH | Requires AI web research. "Reachable" means: are they findable, do they have online presence, what channels reach them? Must be honest about small markets being acceptable for bootstrappers. |
+| Market growth signal | Growing vs flat vs declining; early vs mature | MEDIUM | AI can research this inline. One question + search. |
+| Product/Founder Fit confrontation | Rob's 4 questions: background, chops (technical or marketing), access/network, passion | MEDIUM | Already partially covered by the existing Founder Advantages section (Capacity/Insight/Motivation). 5PM adds "chops" (technical vs marketing fit for the specific type of product) and "access" (audience or network in the space). |
+| Pain to Validate per approach | In Step 3, each approach gets evaluated on MVP feasibility: how hard to build, how fast to get signal | MEDIUM | In the existing workflow, Matrix 3 (Pragmatic Vision) already scores "Easy to build / Slow to Fast." The 5PM Pain to Validate lens adds: can you validate through conversations before coding? Maps cleanly to Matrix 3 but adds a validation-first framing. |
+| 5PM Scorecard output file | A single file summarizing all 5PM lens results alongside the sprint hypothesis | HIGH | New output file (5PM-SCORECARD.md). Must be written at end of sprint alongside HYPOTHESIS.md, SPRINT.md, POSITIONING.md. |
 
----
-
-## Differentiators (What Makes This Localization High Quality)
+### Differentiators (What Makes This Integration High Quality)
 
 | Feature | Value Proposition | Complexity | Notes |
-|---------|------------------|------------|-------|
-| Pre-translated probing examples | AI-generated A/B/C options will read more naturally in French if the instructional examples inside the workflow are already in French | MEDIUM | The English examples like "Solo B2B SaaS founders, pre-revenue" should be matched with French-idiomatic equivalents |
-| French-idiomatic manifesto prompts | The mini-manifesto section ("Phrase 1", "Phrase 2", "Phrase 3") gives French examples — avoids English-calque output | LOW | One block; French examples make a real difference in output quality |
-| Translated ACCEPTED/REJECTED examples for Capacity/Insight/Motivation | Without these, Claude may accept vague French answers because its validation logic has English reference points | MEDIUM | 3 sections in `section_advantages` each have ACCEPTED/REJECTED lists |
-| French validation research note | The RESEARCH-03 inline WebSearch validation note can acknowledge that pain-point articles may be in French for French-speaking markets | LOW | One paragraph; helps Claude interpret French-language search results correctly |
+|---------|-------------------|------------|-------|
+| AI-generated Important/Urgent placement with evidence | Rather than asking the user to self-score importance and urgency on a scale, the AI places the problem in a quadrant based on the validated pain research from section_problem (RESEARCH-03 already runs) | LOW | The research is already done by the time this section runs. The AI interprets its own search findings to place the problem in the 2x2. |
+| Purchaser type with implication summary | After classifying the buyer tier (B2C/B2A/B2B/B2E), the AI explains what this means for the specific product — not a generic description | LOW | "Your buyer is B2B, which means you can charge more but expect longer sales cycles. For a tool like this, expect $50-300/seat." |
+| ARPA sanity check against purchaser type | If a founder claims B2C pricing on a B2B buyer type (or vice versa), flag the mismatch before locking | MEDIUM | Prevents founders from misclassifying their buyer segment while being overconfident about pricing. |
+| Reachable market AI research | Rather than asking the founder to estimate market size (which is always wrong), the AI searches for reachable audience signals: forum sizes, job board volume, community membership counts | HIGH | More honest than TAM/SAM/SOM. Returns "~50,000 active [segment] communities on LinkedIn" not "$4.2B market." |
+| Pain to Validate matrix integrated into approach evaluation | Instead of being a standalone question, "Pain to Validate" feeds directly into the existing Matrix 3 (Pragmatic Vision) framing — the AI adds a validation-speed lens to the existing Ease/Speed evaluation | MEDIUM | Clean integration: Matrix 3 already exists. Add a third label or note: "Validation path: [conversations / prototype / code-first]" below each approach's quadrant placement. |
+| 5PM Scorecard as a decision artifact | The scorecard is not just a summary — it contains the AI's explicit reasoning for each lens, so the founder can argue with specific conclusions rather than just getting a grade | MEDIUM | Each section has: "What we found," "Interpretation," and "Red flags (if any)." |
+| Lens ordering matches Rob's priority sequence | Problem is assessed in Step 1 (before anything else), Purchaser and Pricing follow, Market requires research, Founder Fit leverages Step 1 Advantages, Pain to Validate comes in Step 3. The workflow order naturally aligns with Rob's priority ranking. | LOW | No re-ordering needed — this is an integration advantage, not additional work. |
 
----
-
-## Anti-Features (Commonly Requested, Often Problematic)
+### Anti-Features (Commonly Requested, Often Problematic)
 
 | Feature | Why Requested | Why Problematic | Alternative |
 |---------|---------------|-----------------|-------------|
-| Translate gyst-researcher.md into French | "The whole thing should be in French" | The researcher runs web searches; English queries + English-language search results are the internet default and return higher-quality competitor data | Keep researcher in English; it returns data that the French workflow then presents to the user in French |
-| Translate XML section name attributes | "Consistency" | Section name values are referenced as internal anchors in instructions ("proceed to section_axis_selection") — translating them breaks cross-references silently | Keep section identifiers in English; only translate displayed content |
-| Single bilingual workflow file (conditionals) | "Fewer files to maintain" | A 1,268-line workflow with language conditionals throughout becomes unmaintainable; no clear ownership of each language variant | Separate files per language: `foundation-sprint.md` (English), `foundation-sprint-french.md` (French) |
-| Auto-detect language from user's first message | "More magical UX" | Claude's language detection is unreliable for short messages; ambiguity causes wrong-language sessions | Explicit flag (`-french`) is unambiguous and matches GSD's established pattern |
-| Translate template field key names | "French output files should look fully French" | The workflow reads back specific strings like `* MAIN ADVERSARY` and field names to populate output — changing these strings breaks the read-back logic | Translate the surrounding prose and labels; preserve functional string markers |
+| Numerical aggregate score (e.g., "your idea scores 72/100") | Feels scientific, gives users a clear verdict | Rob explicitly says there is no scoring system. An aggregate score would misrepresent the framework as pass/fail when it is actually a lens for seeing blind spots. A single number collapses nuance and gives false confidence. | Per-lens signal strength ("strong signal / weak signal / needs investigation") with an overall verdict narrative, not a number |
+| Separate 5PM section or "mini-sprint" within the sprint | "Keep 5PM separate so it doesn't clutter the flow" | Forces the user through a parallel evaluation that feels disconnected from the sprint questions they've already answered. Creates redundancy and increases session length. | Weave each 5PM lens into the step where it belongs — Problem in Step 1 after problem lock, Founder Fit in Step 3 context reload, Pain to Validate in Matrix 3 |
+| Require all 6 lens answers before proceeding | "Completeness" | The framework is a pre-validation filter, not a gate. Some lenses (Market size) are genuinely uncertain at sprint time. Blocking progress on uncertain data punishes honest founders. | Mark uncertain lenses with "low confidence — needs validation" in the scorecard rather than forcing guesses |
+| Ask the user to self-rate their idea across all 6 dimensions | Simpler to implement | Self-rating is the worst possible input for an evaluation framework. Founders are systematically overconfident. The value of the AI is to surface what the founder can't see — not to reflect back what they already think. | AI derives lens conclusions from the research and session data it has already gathered; founder input is context, not scores |
+| Add a "compare two ideas" mode to the scorecard | "I have 3 ideas and want to pick the best one" | This is a different use case (idea selection vs. idea evaluation) that requires a separate session structure. Trying to fold it in makes both worse. | One sprint = one idea; run the sprint twice to compare |
+| Translate 5PM terminology literally for non-English workflows | "Consistency" | "B2A" (aspirational) is already barely understood in English. Literal translation of the B2C/B2A/B2B/B2E taxonomy into French/Japanese/Portuguese creates jargon that doesn't exist in those business cultures. | Translate the underlying meaning ("les acheteurs professionnels avec budget décentralisé") rather than the English abbreviation |
 
 ---
 
 ## Feature Dependencies
 
 ```
-Language flag routing (command file)
-    └──requires──> French workflow file exists (foundation-sprint-french.md)
-                       └──requires──> French output templates exist (all 4)
-                                          └──requires──> Template field keys preserved for workflow read-back
+[Problem Important/Urgent 2x2]
+    └──requires──> Problem locked (section_problem)
+    └──requires──> RESEARCH-03 completed (validation search has run)
+    └──reads──> AI's own search findings from section_problem
 
-French workflow (foundation-sprint-french.md)
-    └──reads──> French templates at write time (HYPOTHESIS-FR, SPRINT-FR, etc.)
-    └──invokes──> English gyst-researcher.md (no translation needed)
+[Purchaser Classification]
+    └──requires──> Customer locked (section_customer)
+    └──requires──> Problem locked (section_problem)
+    └──feeds──> [ARPA Estimate]
+    └──feeds──> [Subscription Viability]
+    └──feeds──> [5PM Scorecard — Purchaser section]
 
-French templates
-    └──must preserve──> * MAIN ADVERSARY string (read back by competitor scoring section)
+[ARPA Estimate]
+    └──requires──> Purchaser Classification locked
+    └──requires──> Pricing Model question answered
+    └──feeds──> [5PM Scorecard — Pricing section]
+
+[Market Size / Reachability]
+    └──requires──> Customer locked (section_customer)
+    └──requires──> Problem locked (section_problem)
+    └──requires──> AI web research (new inline search in Step 1)
+    └──feeds──> [5PM Scorecard — Market section]
+
+[Product/Founder Fit — 5PM layer]
+    └──requires──> Founder Advantages locked (section_advantages — Capacity, Insight, Motivation)
+    └──enhances──> section_context_reload (Step 3 already reads Capacity and Insight)
+    └──adds──> "chops" dimension (tech vs. marketing fit for the product type)
+    └──adds──> "access" dimension (audience, network, distribution advantage)
+    └──feeds──> [5PM Scorecard — Founder Fit section]
+
+[Pain to Validate — per approach]
+    └──requires──> Approaches finalized (section_approach_generation)
+    └──enhances──> Matrix 3 (Pragmatic Vision — already scores Ease to build / Speed)
+    └──adds──> validation path label per approach
+    └──feeds──> [5PM Scorecard — Pain to Validate section]
+
+[5PM Scorecard output]
+    └──requires──> ALL lens data collected across Steps 1-3
+    └──requires──> Hypothesis locked (section_hypothesis)
+    └──written by──> section_write_outputs (alongside HYPOTHESIS.md, SPRINT.md, POSITIONING.md)
+    └──reads template──> templates/5PM-SCORECARD.md (new file needed)
 ```
 
 ### Dependency Notes
 
-- **French workflow requires French templates:** The `section_write_outputs` section reads template files before writing output. If French templates do not exist at the expected paths, the write step fails.
-- **French workflow still invokes English researcher:** The researcher is a separate agent that runs web searches and returns English-language profiles. The French workflow's competitor presentation section takes that English data and presents it in French to the user — this handoff must be preserved.
-- **`* MAIN ADVERSARY` string must not be translated:** The competitor scoring section reads `./COMPETITORS.md` and uses this exact string. If the French COMPETITORS template uses a French marker, the scoring section will fail to detect the main adversary.
+- **Problem 2x2 requires RESEARCH-03:** The AI can only place the problem in the Important/Urgent quadrant if it has already run the validation search. The existing workflow already runs RESEARCH-03 before locking the problem — this is a free dependency.
+- **Purchaser classification must precede ARPA:** It makes no sense to estimate ARPA without knowing the buyer tier. B2C caps are ~$20-50/mo; B2B minimums are $50-500/mo; B2E can be thousands. The ARPA question must come after the buyer type is labeled.
+- **Market research is a new web search:** Unlike the Problem validation (which searches for pain point evidence), market sizing requires a different search strategy: audience size, community scale, job board volume. This is a new inline search in Step 1 — RESEARCH-04.
+- **Founder Fit 5PM adds two questions to section_context_reload:** "Chops" (does the founder have the right type of skills for this product — tech-heavy product needs tech chops; marketing-heavy space needs distribution chops) and "Access" (do they have an audience, network, or distribution channel in this market). These are additive to the existing Capacity/Insight/Motivation read-back.
+- **Pain to Validate integrates into Matrix 3:** The existing Matrix 3 (Pragmatic Vision) already scores "Ease to build" and "Speed to build." Adding a validation-path label per approach ("conversations / prototype / code-first") is an annotation layer on top of existing logic, not a new matrix.
+- **5PM Scorecard requires all prior data:** It must be the last thing assembled before writing. It cannot be written incrementally. The scorecard template must reference locked values from Steps 1, 2, and 3.
 
 ---
 
 ## MVP Definition
 
-### Launch With (v1.1)
+### Launch With (v1.2)
 
-- [ ] French workflow file (`foundation-sprint-french.md`) — all user-facing prose, questions, options, banners, lock announcements, navigation menus in French
-- [ ] Language flag routing (`-french` → French workflow) in command file
-- [ ] Fallback message for unsupported flags (LANG-03)
-- [ ] French COMPETITORS.md template — field labels in French, `* MAIN ADVERSARY` preserved
-- [ ] French HYPOTHESIS.md template — section headers and field labels in French
-- [ ] French SPRINT.md template — section headers, table column names in French
-- [ ] French POSITIONING.md template — section headers, manifesto prompts in French
+These are the features needed for a complete, useful 5PM integration. Every item is required — removing any would produce an incomplete scorecard.
+
+- [ ] **Problem Important/Urgent 2x2** in Step 1 (after problem lock, before advancing to Founder Advantages) — AI places problem in quadrant using its own RESEARCH-03 findings; explains implication
+- [ ] **Purchaser type classification** in Step 1 (after customer lock, before or alongside problem) — user answers one question, AI classifies as B2C/B2A/B2B/B2E with implication summary
+- [ ] **Willingness-to-pay and tech adoption assessment** in Step 1 — 2 questions, AI-interpreted, stored as a signal (high/medium/low) rather than a number
+- [ ] **Pricing Model questions** in Step 1 (subscription viability + ARPA estimate) — after Purchaser is classified; 2-3 questions
+- [ ] **Market sizing via AI research (RESEARCH-04)** in Step 1 — new inline search after problem is locked; AI reports reachable market signals and growth direction
+- [ ] **Product/Founder Fit — chops and access dimensions** in Step 3 section_context_reload — 2 additive questions alongside existing Capacity/Insight read-back
+- [ ] **Pain to Validate label per approach** in Step 3 Matrix 3 — annotation to existing Pragmatic Vision evaluation, not a new matrix
+- [ ] **5PM-SCORECARD.md output template** — new template file at `templates/5PM-SCORECARD.md`
+- [ ] **5PM Scorecard written at sprint end** — added to section_write_outputs alongside existing 4 output files
+- [ ] **Translation to FR/JA/PT workflows** — all new 5PM sections translated to the 3 existing non-English workflows
 
 ### Add After Validation (v1.x)
 
-- [ ] French-idiomatic ACCEPTED/REJECTED examples in Capacity/Insight/Motivation sections — add once users report that AI-generated options feel like English-calques
-- [ ] Spanish workflow (`-spanish`) — only after French workflow is validated through a full sprint session
+- [ ] **ARPA sanity check against purchaser type** — if founder estimates don't match their buyer tier, flag the mismatch. Add once v1.2 is in users' hands and the mismatch case is confirmed to be common.
+- [ ] **Competitor pricing context in ARPA question** — pull competitor pricing from COMPETITORS.md to anchor the ARPA conversation. Add once the ARPA question pattern is stable.
 
 ### Future Consideration (v2+)
 
-- [ ] Dynamic language routing from user preference stored in config — defer until there are 3+ language variants and manual flag selection becomes friction
-- [ ] Translated gyst-researcher with French-language search queries for French markets — only relevant if the sprint is primarily used for French-language market research
+- [ ] **Multi-idea comparison mode using 5PM** — run two scorecard evaluations side by side. Requires multi-session state, which is explicitly out of scope until v2.
+- [ ] **Quantitative scoring system** — if Rob Walling releases an official scoring rubric, integrate it. Not worth inventing one ahead of the source.
 
 ---
 
@@ -178,113 +156,276 @@ French templates
 
 | Feature | User Value | Implementation Cost | Priority |
 |---------|------------|---------------------|----------|
-| French workflow file (all user-facing prose) | HIGH | MEDIUM | P1 |
-| Language flag routing | HIGH | LOW | P1 |
-| French output templates (all 4) | HIGH | LOW | P1 |
-| Unsupported language fallback | MEDIUM | LOW | P1 |
-| French probing examples (A/B/C option models) | MEDIUM | MEDIUM | P2 |
-| French ACCEPTED/REJECTED examples for advantages | MEDIUM | LOW | P2 |
-| Spanish workflow | LOW | HIGH | P3 |
+| Problem Important/Urgent 2x2 | HIGH | MEDIUM | P1 |
+| Purchaser classification (B2C/B2A/B2B/B2E) | HIGH | MEDIUM | P1 |
+| Pricing Model questions (subscription + ARPA) | HIGH | LOW | P1 |
+| Market sizing via AI research (RESEARCH-04) | HIGH | HIGH | P1 |
+| Product/Founder Fit — chops + access additions | MEDIUM | LOW | P1 |
+| Pain to Validate label per approach in Matrix 3 | MEDIUM | LOW | P1 |
+| 5PM Scorecard output file | HIGH | MEDIUM | P1 |
+| Translation to FR/JA/PT workflows | HIGH | HIGH | P1 |
+| ARPA sanity check vs purchaser type | MEDIUM | MEDIUM | P2 |
+| Competitor pricing anchor for ARPA question | LOW | LOW | P2 |
+
+**Priority key:**
+- P1: Must have for v1.2 launch
+- P2: Should have, add when possible
+- P3: Nice to have, future consideration
 
 ---
 
-## French-Specific Considerations
+## Per-Lens Behavior Specification
 
-### Register: "Vous" is the Right Choice
+This section defines the expected interactive behavior for each 5PM lens in a single-session AI-guided workflow. This is what the roadmap phases must implement.
 
-The Foundation Sprint workflow addresses a solo entrepreneur as a thinking partner. The English original uses an informal but professional register ("What have you built?", "Who is this for?"). In French, this maps to **"vous"** (formal singular) rather than "tu" (informal).
+### Lens 1: Problem — Important/Urgent 2x2
 
-Rationale: GYST users are running a business decision-making session, not a casual conversation. Entrepreneurs speaking to a professional AI tool expect "vous." Using "tu" risks feeling presumptuous or inappropriate for a first-time user.
+**Where it lives:** Step 1, immediately after problem is locked (RESEARCH-03 has just run)
 
-**The register decision must be made once, stated explicitly in the French workflow's `<objective>` block, and applied consistently to every user-facing question.** Inconsistency between sections (some "tu", some "vous") is worse than either choice alone.
+**Input:** AI's own search findings from the problem validation search. No new user input required.
 
-### Business French vs Colloquial French
+**Behavior:**
+- AI places the problem in one of four quadrants: "Important + Urgent" / "Important, Not Urgent" / "Urgent, Not Important" / "Neither"
+- AI renders a small ASCII 2x2 showing the placement
+- AI explains the implication in 1-2 sentences ("This is an aspirin problem — people are actively trying to fix it now, which means willingness to pay is high")
+- No user confirmation required — this is an AI assessment, not a user decision. User can push back but cannot "lock" a different placement.
 
-Several English constructs in the workflow have Business French equivalents that differ from colloquial usage:
+**Scoring signal for scorecard:** Strong / Moderate / Weak (based on quadrant)
 
-| English | Avoid (colloquial) | Use (Business French) |
-|---------|-------------------|-----------------------|
-| "Got it" | "Pigé", "Compris" | "Bien noté", "D'accord" |
-| "Lock it" (user trigger phrase) | "Bloquer ça" | "Valider", "Confirmer", "Verrouiller" — the French workflow must define what lock phrases it accepts |
-| "Your target customer" | "Ton client cible" | "Votre client cible" |
-| "Go back" | "Retourner en arrière" | "Revenir à", "Retour à" |
-| "That works" | "Ça marche" | "C'est bon", "Cela convient" |
+**Good scorecard output:** "Problem: Important + Urgent — confirmed by [3 signals from search]. Signal: Strong."
 
-### Lock Phrase Translation is a Logic Dependency
+### Lens 2: Purchaser — B2C / B2A / B2B / B2E Classification
 
-The English workflow has an explicit lock phrase list: "lock it", "locked", "finalize", "done", "that's it", "confirmed". These are checked against user input. The French workflow must define equivalent French lock phrases — and the check must be strict enough to prevent premature locking on casual agreement ("d'accord", "ok", "oui" should NOT trigger a lock, just as "yes" does not in English).
+**Where it lives:** Step 1, after customer segment is locked
 
-Suggested French lock triggers: "valider", "validé", "verrouillé", "verrouiller", "confirmer", "confirmé", "c'est définitif", "on garde ça" — the workflow instruction must list these explicitly.
+**Trigger question:** "Who holds the budget for this? Is this an individual consumer, someone trying to make money from their hobby or audience, a company with a departmental budget, or an enterprise with a formal procurement process?"
 
-### Franglais in Tech Context
+**AI behavior after response:**
+- AI classifies into one of four tiers and explains what that tier means for this specific product
+- AI asks a follow-up: "Do they actively use software like this today, or is this a new behavior for them?" (tech adoption signal)
+- AI asks: "Do they have clear budget authority — can they swipe a card or approve a subscription without approval?" (willingness-to-pay signal)
 
-Many of the sprint's domain terms are already used in French business contexts in their English form: "startup", "SaaS", "pitch", "hypothesis" (though "hypothèse" exists), "sprint", "positioning" (though "positionnement" exists). The French workflow should use the established French business vocabulary where it exists ("hypothèse", "positionnement", "segment cible", "axe de différenciation") and accept English terms where they are industry-standard in the French entrepreneurship ecosystem ("SaaS", "startup", "pitch").
+**B2C/B2A/B2B/B2E definitions as the AI should present them:**
+- **B2C:** Individual consumers; price-sensitive ($5-50/mo ceiling common); slow adoption; churn is high
+- **B2A:** Aspirational buyers — photographers, podcasters, side-hustlers trying to monetize; moderate willingness to pay ($20-100/mo); motivated but budget-constrained
+- **B2B:** Business buyers with departmental budgets; $50-500+/mo acceptable; slower sales cycle; stickier once sold
+- **B2E:** Enterprise; $500-5,000+/mo per contract; long sales cycles; procurement and legal involved; highest ARPA but hardest to close
 
-### The Mini-Manifesto Section
+**Scoring signal for scorecard:** Favorable / Marginal / Difficult (based on tier + tech adoption + WTP)
 
-The English manifesto prompts are:
-- "We are [DIFFERENTIATOR 1]:"
-- "We are [DIFFERENTIATOR 2]:"
-- "We will never [SAFEGUARD]:"
+**Good scorecard output:** "Purchaser: B2B — small business with budget authority and existing software habits. Willingness to pay: medium-high. Tech adoption: high. Signal: Favorable."
 
-French equivalents:
-- "Nous sommes [DIFFÉRENCIATEUR 1] :"
-- "Nous sommes [DIFFÉRENCIATEUR 2] :"
-- "Nous ne ferons jamais [GARDE-FOU] :"
+### Lens 3: Pricing Model — Subscription + ARPA
 
-The POSITIONING.md French template must use these exact French forms so the AI's evaluation logic ("do they read as decision-making tools, not marketing headlines?") applies correctly to French-language manifesto phrases.
+**Where it lives:** Step 1, after Purchaser classification
+
+**Questions (2 total, asked together):**
+1. "Does what you're building lend itself to a monthly or annual subscription — something people would pay for as long as they use it — or is this more of a one-time tool?"
+2. "What would a realistic monthly price per account look like? Give me a range you'd feel comfortable charging."
+
+**AI behavior after responses:**
+- AI confirms subscription viability (yes / probably / unclear / no)
+- AI performs a sanity check: does the estimated ARPA match the buyer tier? (B2C with $500/mo ARPA = mismatch; B2B with $5/mo = mismatch)
+- If mismatch detected, AI flags it: "Your buyer type is B2B, but you estimated $5/month — that's below what's typically viable for a B2B product to cover acquisition costs. Does that framing feel right, or should we revisit?"
+
+**Scoring signal for scorecard:** Viable / Marginal / Problematic
+
+**Good scorecard output:** "Pricing: Subscription — recurring revenue model confirmed. ARPA estimate: $80-120/mo. Consistent with B2B buyer type. Signal: Viable."
+
+### Lens 4: Market — Size + Growth + Reachability
+
+**Where it lives:** Step 1, after problem and customer are locked (a new RESEARCH-04 search)
+
+**Trigger:** After problem lock, before Founder Advantages section. AI runs an inline search.
+
+**Search strategy (AI-driven, no user input needed):**
+- Search for: size signals for the customer segment (LinkedIn group sizes, subreddit subscribers, conference attendance, job board posting volume)
+- Search for: market growth signals (is this segment growing, stable, or shrinking — look for industry reports, news, VC investment patterns)
+- Do NOT calculate TAM/SAM/SOM — find reachable audience signals
+
+**Questions to user (1-2 short questions after research):**
+1. "Based on what you know, is this a growing space — are you seeing more people enter this market, more tools being built, more awareness?" (founder perception check)
+2. (Optional, only if research was inconclusive) "Do you know roughly how many people fit this customer description? Is it hundreds, thousands, or more?"
+
+**AI behavior:**
+- Reports what it found in 2-3 sentences: "[Segment X] shows [signal]. The market appears [early/growing/mature/declining] based on [evidence]."
+- Provides a rough reachable market estimate: "I estimate tens of thousands of potential customers in this segment" — uses order-of-magnitude language, not false precision
+
+**Scoring signal for scorecard:** Large + Growing / Adequate / Small or Declining
+
+**Good scorecard output:** "Market: B2B ops teams at SMBs — estimated 40,000-100,000 reachable customers in English-speaking markets. Market is growing (SaaS operations tooling is a growing spend category). Signal: Adequate."
+
+### Lens 5: Product/Founder Fit — Background, Chops, Access, Passion
+
+**Where it lives:** Step 3, section_context_reload (the existing context reload already reads Capacity and Insight)
+
+**What already exists (do not re-ask):**
+- Capacity = what the founder can build (Step 1)
+- Insight = what they've seen before others (Step 1)
+- Motivation = why this matters to them (Step 1)
+
+**What 5PM adds (2 new questions in section_context_reload):**
+1. "For this specific product — is the biggest challenge building it technically, or finding and convincing customers to buy it? And which of those is more in your wheelhouse?"
+   (Chops dimension: tech-heavy product needs tech chops; go-to-market-heavy space needs marketing/sales chops)
+2. "Do you have a direct path to your first 10 customers — an audience, a community, existing relationships, or a distribution channel you can use?"
+   (Access dimension: distribution is the single biggest predictor of early traction for bootstrappers)
+
+**AI behavior:**
+- Reads Capacity, Insight, Motivation from Step 1 (already in context)
+- Asks both new questions together in one message
+- Evaluates chops fit: does the stated Capacity match the type of challenge this product faces?
+- Evaluates access: is there a concrete distribution path, or is this a "I'll figure it out later" situation?
+
+**Scoring signal for scorecard:** Strong Fit / Partial Fit / Gaps Present
+
+**Good scorecard output:** "Founder Fit: Technical chops confirmed (shipped 3 B2B SaaS products). Marketing chops: unproven. Access: weak — no existing audience in this segment. Main gap: distribution. Signal: Partial Fit."
+
+### Lens 6: Pain to Validate — MVP Feasibility per Approach
+
+**Where it lives:** Step 3, Matrix 3 (Pragmatic Vision — Ease to Build × Speed to Build)
+
+**What already exists (do not replace):**
+- Matrix 3 already plots each approach on "Hard to build / Easy to build" vs "Slow / Fast"
+- This is retained as-is
+
+**What 5PM adds (annotation layer on Matrix 3):**
+After each approach's quadrant placement, the AI adds one line: "Validation path: [conversations before coding / prototype / full build required]"
+
+- **Conversations before coding:** Approach can be validated through customer interviews or a mock demo; no code needed for signal. Best case.
+- **Prototype / wizard-of-oz:** Can be validated with a manual or low-code version that simulates the product. Good case.
+- **Full build required:** Validation requires a working product; hard to fake it. Most expensive to validate.
+
+**Scoring signal for scorecard:** Easy to validate / Medium effort / Hard to validate (one label per approach, rolled up to the chosen approach)
+
+**Good scorecard output (for chosen approach):** "Pain to Validate: A2 (chosen) — prototype path available; wizard-of-oz test feasible in 2-3 weeks. Signal: Medium effort."
 
 ---
 
-## Complexity Assessment by Workflow Section
+## 5PM Scorecard Output File Structure
 
-| Section | Line Range | Translation Complexity | Localization Notes |
-|---------|-----------|------------------------|-------------------|
-| `<objective>` | 7-25 | LOW | AI instructions; translate behavior descriptions |
-| `<onboarding>` | 27-57 | LOW | 1 verbatim block; high-visibility |
-| `<step1_banner>` | 59-84 | LOW | 5 labels; banner format stays |
-| `section_customer` | 86-134 | MEDIUM | Open question + option format example; 1 probing fallback |
-| `section_problem` | 136-207 | MEDIUM | Open question + validation search note + option format |
-| `section_advantages` | 209-333 | HIGH | 3 sub-dimensions each with ACCEPTED/REJECTED examples; most text-dense section |
-| `section_competitors` | 335-352 | LOW | 1 question |
-| `section_competitors_research` | 354-399 | MEDIUM | Research invocation prose + fallback paths |
-| `section_main_adversary` | 401-423 | LOW | 1 question + lock announcement |
-| `write_competitors_md` | 425-454 | LOW | Technical instructions; some confirmation prose |
-| `navigation_controls` | 456-509 | LOW | 3 navigation menus + back logic descriptions |
-| `<step2_banner>` | 511-532 | LOW | 4 labels |
-| `section_axis_rating` | 534-581 | MEDIUM | Rating scale intro + 8 axis labels + confirmation block |
-| `section_custom_axes` | 583-621 | MEDIUM | Proposal format + skip option |
-| `section_axis_selection` | 623-668 | LOW | List display + selection prompt |
-| `section_competitor_scoring` | 671-710 | LOW | Mostly technical rules; score display format |
-| `section_matrix_render` | 712-788 | MEDIUM | Conflict detection block (high-visibility) |
-| `section_manifesto` | 790-837 | HIGH | Manifesto prompts + evaluation criteria + valid/invalid examples |
-| `section_step2_navigation` | 839-887 | LOW | Summary block + navigation menu |
-| `<step3_banner>` | 889-909 | LOW | 3 labels |
-| `section_context_reload` | 911-940 | LOW | Transition message |
-| `section_approach_generation` | 942-998 | HIGH | INTERNAL FILTER + approach framing + 2-phase generation logic |
-| `section_approach_evaluation` | 1000-1086 | MEDIUM | 4 matrix names + axis labels + "Ready for Matrix N?" prompts |
-| `section_approach_recommendation` | 1088-1122 | LOW | Recommendation template block |
-| `<step4_banner>` | 1124-1141 | LOW | 6 labels |
-| `section_hypothesis` | 1143-1172 | MEDIUM | Pre-filled hypothesis template + lock instruction |
-| `section_testable_form` | 1174-1202 | MEDIUM | 4 testable form components + confirmation prompt |
-| `section_write_outputs` | 1204-1268 | LOW | Technical write instructions + final message |
+The 5PM-SCORECARD.md is a new output file written at sprint end. It does not replace any existing output file — it is additive.
 
-**Total sections:** 27 (including 4 banners as sub-elements)
-**HIGH complexity sections:** 3 (`section_advantages`, `section_manifesto`, `section_approach_generation`)
-**MEDIUM complexity sections:** 11
-**LOW complexity sections:** 13
+**Structure:**
+
+```
+# 5PM Evaluation Scorecard
+
+Sprint date: [date]
+Idea: [one-sentence description from hypothesis]
+
+---
+
+## Overall Reading
+
+[2-3 sentence narrative verdict — what the strongest signals are, where the main gaps are, what to watch out for]
+
+---
+
+## Lens-by-Lens
+
+### Problem (Important/Urgent)
+Signal: [Strong / Moderate / Weak]
+Quadrant: [Important + Urgent / Important Not Urgent / Urgent Not Important / Neither]
+Evidence: [what the research found]
+Implication: [what this means for willingness to pay and urgency of purchase]
+
+### Purchaser
+Signal: [Favorable / Marginal / Difficult]
+Buyer type: [B2C / B2A / B2B / B2E]
+Tech adoption: [High / Medium / Low]
+Willingness to pay: [High / Medium / Low]
+Implication: [what this means for pricing, sales cycle, and churn risk]
+
+### Pricing Model
+Signal: [Viable / Marginal / Problematic]
+Model: [Subscription / One-time / Usage-based / Unclear]
+ARPA estimate: [range]
+Consistency check: [consistent with buyer type / flagged mismatch]
+
+### Market
+Signal: [Large + Growing / Adequate / Small or Declining]
+Reachable market: [order-of-magnitude estimate]
+Growth direction: [growing / flat / declining]
+Reachability: [online channels available / hard to reach]
+
+### Product/Founder Fit
+Signal: [Strong Fit / Partial Fit / Gaps Present]
+Technical chops: [strong / adequate / gap]
+Marketing/distribution chops: [strong / adequate / gap]
+Access to first customers: [concrete path / vague / none]
+Main gap: [if any]
+
+### Pain to Validate (chosen approach)
+Signal: [Easy / Medium effort / Hard]
+Validation path: [conversations / prototype / full build]
+Estimated time to first signal: [rough estimate]
+
+---
+
+## Red Flags
+
+[Bulleted list of specific concerns the founder should investigate before building]
+[Or: "No red flags identified" if all signals are favorable]
+
+---
+
+## What to Test First
+
+[One concrete recommendation for the fastest validation action based on the Pain to Validate lens + the weakest scoring lens]
+```
+
+**What makes a good scorecard output:**
+- Specific, not generic. "B2B ops buyer with existing software budget" not "business customers."
+- Honest about gaps. If founder fit has a marketing gap, say so directly.
+- Actionable. Each weak signal should translate to something the founder can test or investigate.
+- Not a grade. No total score. No pass/fail binary. The narrative tells the story.
+
+---
+
+## Complexity Assessment by New Feature
+
+| Feature | Where in Workflow | Complexity | Primary Risk |
+|---------|-------------------|------------|--------------|
+| Problem 2x2 | Step 1, post-problem lock | MEDIUM | AI must correctly interpret its own search findings to place the problem — subjective judgment call |
+| Purchaser classification | Step 1, post-customer lock | MEDIUM | B2A is an unusual tier that many founders won't recognize; needs clear explanation |
+| Willingness-to-pay / tech adoption | Step 1, part of Purchaser | LOW | 2 short questions; straightforward interpretation |
+| Subscription + ARPA questions | Step 1, post-Purchaser | LOW | Simple questions; ARPA mismatch detection is the only edge case |
+| Market research (RESEARCH-04) | Step 1, new search | HIGH | Web search results for market sizing are often garbage (TAM claims, not reachable signals); AI must interpret intelligently |
+| Founder Fit additions (chops + access) | Step 3, context_reload | LOW | 2 additive questions; no structural change to existing section |
+| Pain to Validate label | Step 3, Matrix 3 | LOW | Annotation on existing matrix output; minimal structural change |
+| 5PM Scorecard template | New file | MEDIUM | Template must accommodate AI-narrative fields, not just locked values |
+| Write 5PM Scorecard at end | section_write_outputs | MEDIUM | Fifth output file; section_write_outputs must be extended |
+| Translate to FR/JA/PT | All 3 language workflows | HIGH | Each language workflow must replicate all 5PM additions; 5PM scorecard template needs 4 language variants |
+
+**HIGH complexity features:** Market research (RESEARCH-04), translation to all language workflows
+**MEDIUM complexity features:** Problem 2x2, Purchaser classification, 5PM Scorecard template + write step
+**LOW complexity features:** WTP/adoption questions, Subscription/ARPA questions, Founder Fit additions, Pain to Validate annotation
+
+---
+
+## Integration Points with Existing Workflow
+
+| New 5PM Feature | Hooks Into | Reuses | Avoids |
+|----------------|-----------|--------|--------|
+| Problem 2x2 | After `section_problem` lock | RESEARCH-03 search findings | Running a new search |
+| Purchaser questions | After `section_customer` lock, before `section_problem` | Customer segment locked value | Redundancy with competitor buyer signals in Step 2 |
+| Market research | After `section_problem` lock, before `section_advantages` | Customer + Problem locked values | The separate competitor research (gyst-researcher) |
+| Founder Fit additions | `section_context_reload` (Step 3) | Capacity, Insight, Motivation from Step 1 | Re-asking what's already locked |
+| Pain to Validate | `section_approach_evaluation` Matrix 3 | Existing Matrix 3 quadrant placement logic | Adding a 5th matrix |
+| 5PM Scorecard | `section_write_outputs` | All locked values from Steps 1-3 | Replacing any existing output file |
 
 ---
 
 ## Sources
 
-- Direct analysis of `get-your-shit-together/workflows/foundation-sprint.md` (1,268 lines, 20 named sections)
-- Direct analysis of `get-your-shit-together/agents/gyst-researcher.md`
-- Direct analysis of all 4 templates: HYPOTHESIS.md, SPRINT.md, POSITIONING.md, COMPETITORS.md
-- Direct analysis of `commands/gyst/foundation-sprint.md` (routing entry point)
-- Business French register conventions: training data (MEDIUM confidence) — validate with a native French speaker before final copy
+- Rob Walling, "The 5 PM Pre-Validation Framework," Episode 628, Startups for the Rest of Us (May 2024): https://www.startupsfortherestofus.com/episodes/episode-628-the-5-pm-pre-validation-framework
+- "The 5 P.M. Idea Evaluation Framework" PDF worksheet: https://www.startupsfortherestofus.com/wp-content/uploads/The-5-PM-Idea-Evaluation-Framework.pdf
+- Medium summary by Mica Linscheid: https://medium.com/@micalinscheid/5pm-framework-for-saas-success-from-rob-walling-a-guide-to-building-your-product-ff2a5a65650d
+- Direct analysis of `get-your-shit-together/workflows/foundation-sprint.md` (1,268 lines, 22 sections)
+- Direct analysis of existing output templates: HYPOTHESIS.md, SPRINT.md, POSITIONING.md, COMPETITORS.md
+- B2C/B2A/B2B/B2E tier definitions sourced from podcast transcript (MEDIUM confidence) — verify the B2A tier definition against the original PDF before implementing
 
 ---
 
-*Feature research for: GYST v1.1 French localization*
-*Researched: 2026-03-08*
+*Feature research for: GYST v1.2 — 5PM Idea Evaluation Framework integration*
+*Researched: 2026-03-22*
