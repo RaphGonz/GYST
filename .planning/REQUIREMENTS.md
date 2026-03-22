@@ -25,14 +25,14 @@
 
 ### Problem Validation
 
-- [ ] **PROB-01**: Sprint presents an Important/Urgent 2x2 matrix for the user's problem in Step 1, classifying whether the problem is a vitamin or aspirin
-- [ ] **PROB-02**: Problem classification (important+urgent, important+not urgent, etc.) is captured and carried forward to the 5PM Scorecard
+- [x] **PROB-01**: Sprint presents an Important/Urgent 2x2 matrix for the user's problem in Step 1, classifying whether the problem is a vitamin or aspirin
+- [x] **PROB-02**: Problem classification (important+urgent, important+not urgent, etc.) is captured and carried forward to the 5PM Scorecard
 
 ### Purchaser Analysis
 
-- [ ] **PURC-01**: Sprint asks purchaser sophistication questions in Step 1 — tech adoption readiness, willingness to pay, and B2C/B2A/B2B/B2E classification
-- [ ] **PURC-02**: B2A ("aspirational buyers" — photographers, bloggers, podcasters) is explicitly defined in the workflow so founders recognize the tier
-- [ ] **PURC-03**: Purchaser classification is non-blocking — awareness pass, not a lock cycle
+- [x] **PURC-01**: Sprint asks purchaser sophistication questions in Step 1 — tech adoption readiness, willingness to pay, and B2C/B2A/B2B/B2E classification
+- [x] **PURC-02**: B2A ("aspirational buyers" — photographers, bloggers, podcasters) is explicitly defined in the workflow so founders recognize the tier
+- [x] **PURC-03**: Purchaser classification is non-blocking — awareness pass, not a lock cycle
 
 ### Market Assessment
 
@@ -108,11 +108,11 @@
 | LANG-05 | Phase 7 | Complete |
 | LANG-06 | Phase 7 | Complete |
 | LANG-07 | Phase 7 | Complete |
-| PROB-01 | Phase 8 | Pending |
-| PROB-02 | Phase 8 | Pending |
-| PURC-01 | Phase 8 | Pending |
-| PURC-02 | Phase 8 | Pending |
-| PURC-03 | Phase 8 | Pending |
+| PROB-01 | Phase 8 | Complete |
+| PROB-02 | Phase 8 | Complete |
+| PURC-01 | Phase 8 | Complete |
+| PURC-02 | Phase 8 | Complete |
+| PURC-03 | Phase 8 | Complete |
 | MRKT-01 | Phase 8 | Pending |
 | MRKT-02 | Phase 8 | Pending |
 | MRKT-03 | Phase 8 | Pending |
