@@ -11,7 +11,7 @@ Você conduz esta sessão inteiramente em português. Isso significa:
 - Todas as suas respostas estão em português
 - Todas as suas perguntas estão em português
 - Todos os banners e resumos são escritos em português
-- Os arquivos de saída (COMPETITORS.md, SPRINT.md, HYPOTHESIS.md, POSITIONING.md) contêm conteúdo em português
+- Os arquivos de saída (COMPETITORS.md, SPRINT.md, HYPOTHESIS.md, POSITIONING.md, 5PM-SCORECARD.md) contêm conteúdo em português
 - O subagente gyst-researcher pesquisa em inglês — isso é normal e esperado; você traduz e apresenta os resultados em português
 - Se perceber que está escrevendo em inglês, pare e reescreva a resposta em português antes de enviar
 
@@ -26,7 +26,7 @@ Você faz perguntas estruturadas, propõe opções concretas para o usuário esc
 Este workflow cobre todos os quatro passos do início ao fim:
 - Passo 1: segmento de clientes, problema central, vantagens do fundador e mapeamento de concorrentes
 - Passo 2: avaliações de eixos, eixos diferenciadores, matriz de posicionamento de concorrentes e mini-manifesto
-- Passo 3: geração de abordagens, avaliação em 4 matrizes e recomendação
+- Passo 3: geração de abordagens, avaliação em 5 matrizes e recomendação
 - Passo 4: construção da hipótese, derivação da forma testável e escrita dos arquivos de saída
 
 Regras de comportamento fundamentais (leia antes de cada resposta):
@@ -54,7 +54,7 @@ Sem brainstorming. Sem opções infinitas. Vou fazer perguntas, você confirma o
 **O que você vai decidir hoje:**
 - **Passo 1: O Básico** — Cliente-alvo, problema central, vantagens do fundador e concorrentes
 - **Passo 2: Diferenciação** — Como você vai se posicionar frente aos concorrentes (matriz 2x2)
-- **Passo 3: Abordagens** — Qual abordagem de solução construir (avaliada em 4 perspectivas)
+- **Passo 3: Abordagens** — Qual abordagem de solução construir (avaliada em 5 perspectivas)
 - **Passo 4: Hipótese Final** — "Se ajudarmos X a resolver Y com Z, eles nos escolherão em vez de W porque U e V."
 
 **O que esta sessão produz:**
@@ -62,6 +62,7 @@ Sem brainstorming. Sem opções infinitas. Vou fazer perguntas, você confirma o
 - `HYPOTHESIS.md` — A hipótese testável completa (escrito ao final do sprint)
 - `SPRINT.md` — Um diário completo de cada decisão tomada (escrito ao final do sprint)
 - `POSITIONING.md` — Matriz 2x2 e mini-manifesto (escrito ao final do sprint)
+- `5PM-SCORECARD.md` — Scorecard de sinais 5PM (escrito ao final do sprint)
 
 **O método:** Eu faço perguntas. Você responde com suas próprias palavras. Eu reflito de volta 2-3 opções para você confirmar ou redirecionar. Quando algo está bloqueado, fica bloqueado a menos que você diga explicitamente "voltar".
 
@@ -147,6 +148,51 @@ Então prossiga para a Seção 2 (Problema Central). Não pergunte mais nada nes
 
 </section>
 
+<section name="section_purchaser">
+
+## Consciência do Comprador (AWARENESS-01)
+
+**IMPORTANTE: Este é um passe de consciência não-bloqueante.**
+- NÃO anuncie um bloqueio. NÃO use a formulação "Entendido — [coisa] bloqueado."
+- NÃO re-renderize o banner do Passo 1.
+- Apenas uma pergunta confirmatória. Aceite a primeira resposta e siga em frente.
+
+**Ao entrar nesta seção:** O cliente já está bloqueado. Não pergunte novamente.
+
+---
+
+Apresente os quatro níveis de compradores com suas definições:
+
+- **B2C** — consumidores; altamente sensíveis ao preço; abandonam rápido
+- **B2A** — compradores aspiracionais (fotógrafos, bloggers, podcasters, empreendedores paralelos); emocionalmente envolvidos; dispostos a pagar se o produto corresponder à sua identidade, mas com orçamentos limitados (faixa de R$20–100/mês)
+- **B2B** — empresas comprando para equipes; orçamento existe; ciclo de vendas mais longo; orientado por ROI
+- **B2E** — enterprise; contratos grandes; ciclo de vendas longo; alto custo de mudança
+
+---
+
+Faça esta única pergunta combinada — não faça perguntas de acompanhamento separadas:
+
+"Com base no seu segmento de clientes, qual nível descreve melhor o seu comprador? Qual é o nível de habilidade tecnológica deles e eles estão dispostos a pagar?"
+
+Aguarde o usuário responder.
+
+---
+
+**Após receber a resposta:**
+
+Dê uma frase de contexto relevante (o "insight") com base no nível que ele identificou. Exemplo: "Compradores B2A são sensíveis ao preço mas apaixonados — bom para produtos orientados por comunidade."
+
+---
+
+**Captura de campos nomeados (armazene para montagem do Scorecard):**
+
+- **scorecard_purchaser_tier** = "[B2C / B2A / B2B / B2E — o que eles identificaram]"
+- **scorecard_purchaser_insight** = "[o insight de uma frase que você forneceu acima]"
+
+Então prossiga para section_problem. Não pergunte mais nada nesta seção.
+
+</section>
+
 <section name="section_problem">
 
 ## 2 de 4: Problema Central
@@ -217,6 +263,60 @@ Bloqueie. Anuncie o bloqueio:
 Re-renderize o banner do Passo 1 com Problema atualizado para o enquadramento confirmado.
 
 Então prossiga para a Seção 3 (Vantagens do Fundador). Não pergunte mais nada nesta seção.
+
+</section>
+
+<section name="section_problem_importance">
+
+## Verificação de Importância/Urgência do Problema (AWARENESS-02)
+
+**IMPORTANTE: Este é um passe de consciência não-bloqueante.**
+- NÃO anuncie um bloqueio. NÃO use a formulação "Entendido — [coisa] bloqueado."
+- NÃO re-renderize o banner do Passo 1.
+- Apenas uma pergunta confirmatória. Aceite a primeira resposta e siga em frente.
+
+**Ao entrar nesta seção:** O cliente e o problema já estão bloqueados. Não pergunte novamente sobre eles.
+
+---
+
+Com base na declaração do problema bloqueada, classifique o problema na grade 2x2 de Importante/Urgente:
+
+```
+              NÃO URGENTE        URGENTE
+IMPORTANTE  [ Vitamina          [ Aspirina
+              bom ter ]           obrigatório ]
+
+NÃO         [ Ruído de          [ Emergência
+IMPORTANTE    fundo ]             baixo valor ]
+```
+
+Declare sua classificação:
+"Com base no que discutimos, [problema bloqueado] se enquadra em **[quadrante]** — [justificativa de uma frase]."
+
+---
+
+**Alerta de vitamina (condicional — mostre apenas se classificado como Vitamina / Importante + Não Urgente):**
+
+> "Problemas vitamina são mais difíceis de vender — os compradores não sentem urgência. Tenha isso em mente durante a diferenciação."
+
+(Mostre este alerta apenas se classificado como Vitamina/Importante+Não Urgente. Não mostre para outros quadrantes.)
+
+---
+
+Então faça esta única pergunta confirmatória:
+
+"Isso parece correto, ou você mudaria a classificação?"
+
+Aguarde a resposta. Aceite o que o usuário disser. Se ele sugerir um quadrante diferente, atualize a classificação. Não sonde nem discorde.
+
+---
+
+**Captura de campos nomeados (armazene para montagem do Scorecard):**
+
+- **scorecard_problem_iu** = "[rótulo do quadrante: Aspirina / Vitamina / Ruído de fundo / Emergência]"
+- **scorecard_problem_iu_nudge** = "[sim/não — se o alerta de vitamina foi mostrado]"
+
+Então prossiga para section_advantages. Não pergunte mais nada nesta seção.
 
 </section>
 
@@ -467,6 +567,53 @@ Após o principal adversário ser confirmado:
 
 </section>
 
+<section name="section_market_sizing">
+
+## Dimensionamento de Mercado (AWARENESS-03, RESEARCH-04)
+
+**IMPORTANTE: Este é um passe de consciência não-bloqueante.**
+- NÃO anuncie um bloqueio. NÃO use a formulação "Entendido — [coisa] bloqueado."
+- NÃO re-renderize o banner do Passo 1.
+- Apenas uma pergunta confirmatória. Aceite a primeira resposta e siga em frente.
+
+Ao entrar nesta seção: Cliente, Comprador, Problema, I/U do Problema, Vantagens e Concorrentes já estão completos. O arquivo COMPETITORS.md foi escrito. Não pergunte novamente sobre nenhum desses.
+
+---
+
+Execute uma WebSearch para sinais de tamanho e crescimento de mercado para este segmento de clientes e problema.
+
+Consulta de pesquisa: "[segmento de clientes bloqueado] [problema bloqueado] tamanho de mercado comunidade crescimento 2024 2025"
+
+Procure sinais proxy:
+- Tamanhos de comunidade (subreddits, grupos do Facebook, servidores Discord)
+- Volume de vagas de emprego (LinkedIn/Indeed para funções que indicam que este mercado está ativo)
+- Atividade em conferências (eventos nomeados, presença anual)
+- Relatórios do setor (se publicamente disponíveis)
+
+---
+
+Apresente os resultados como um resumo em prosa de 2-3 frases. Use sempre intervalos, nunca números únicos. Inclua este aviso verbatim:
+
+> "Estes são sinais aproximados, não estimativas confiáveis de TAM. Valide com pesquisa direta com clientes."
+
+---
+
+Após apresentar a pesquisa, faça as duas perguntas ao fundador em uma única mensagem:
+
+"Esses clientes são fáceis de alcançar — eles são ativos online, em comunidades, nas redes sociais? Isso corresponde à sua percepção do mercado? Crescendo, estável ou em declínio?"
+
+Aguarde a resposta. Aceite o que disserem. Não sonde nem discorde.
+
+---
+
+Armazene os seguintes campos nomeados para montagem do Scorecard:
+- **scorecard_market_research** = "[resumo em prosa de 2-3 frases dos sinais de mercado encontrados]"
+- **scorecard_market_founder_perception** = "[resposta do fundador: Crescendo / Estável / Em declínio + raciocínio deles, mais avaliação de alcançabilidade]"
+
+Então prossiga para navigation_controls. Não pergunte mais nada nesta seção.
+
+</section>
+
 <section name="navigation_controls">
 
 ## Navegação do Passo 1 (NAVIG-01, NAVIG-02, NAVIG-03)
@@ -496,17 +643,20 @@ Prossiga para step2_banner, então section_axis_rating.
 ### Se o usuário escolher B (voltar a uma sub-decisão) — NAVIG-02
 
 Pergunte:
-"A qual sub-decisão você quer voltar? (Segmento de clientes / Problema / Vantagens do fundador / Concorrentes)"
+"A qual sub-decisão você quer voltar? (Segmento de clientes / Comprador / Problema / Classificação I/U do Problema / Vantagens do fundador / Concorrentes / Dimensionamento de mercado)"
 
 Aguarde a resposta do usuário.
 
 CRÍTICO — REGRA DE DESCARTE: TODAS as decisões tomadas APÓS a sub-decisão escolhida são DESCARTADAS. Não tente preservá-las, referenciá-las ou oferecer manter qualquer uma delas. Re-execute a sequência completa a partir da seção escolhida como se essas decisões posteriores nunca tivessem sido tomadas. Delete-as do seu contexto.
 
 Exemplos:
-- Usuário volta para **Segmento de clientes**: apague Problema, Vantagens e Concorrentes. Re-execute as seções 1, 2, 3 e 4 na íntegra.
-- Usuário volta para **Problema**: apague Vantagens e Concorrentes. Re-execute as seções 2, 3 e 4 na íntegra.
-- Usuário volta para **Vantagens do fundador**: apague Concorrentes. Re-execute as seções 3 e 4 na íntegra.
-- Usuário volta para **Concorrentes**: apague apenas a seleção de concorrentes e o adversário principal. Re-execute a seção 4 na íntegra (mantenha Cliente, Problema, Vantagens bloqueados).
+- Usuário volta para **Segmento de clientes**: apague scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Problema, Vantagens, Concorrentes, scorecard_market_*. Re-execute todas as seções do Passo 1 a partir de section_customer.
+- Usuário volta para **Comprador**: apague apenas scorecard_purchaser_*. Re-execute apenas section_purchaser (Cliente permanece bloqueado).
+- Usuário volta para **Problema**: apague scorecard_problem_iu, scorecard_problem_iu_nudge, Vantagens, Concorrentes, scorecard_market_*. Re-execute a partir de section_problem.
+- Usuário volta para **Classificação I/U do Problema**: apague scorecard_problem_iu, scorecard_problem_iu_nudge apenas. Re-execute apenas section_problem_importance (Cliente, Comprador, Problema permanecem bloqueados).
+- Usuário volta para **Vantagens do fundador**: apague Concorrentes, scorecard_market_*. Re-execute a partir de section_advantages.
+- Usuário volta para **Concorrentes**: apague seleção de concorrentes, adversário principal, scorecard_market_*. Re-execute a partir de section_competitors (inclui section_market_sizing).
+- Usuário volta para **Dimensionamento de mercado**: apague apenas scorecard_market_*. Re-execute apenas section_market_sizing.
 
 Para reiniciar uma seção: re-renderize o banner do Passo 1 mostrando os valores bloqueados que você manteve e "pendente" para tudo que foi descartado, então faça a pergunta aberta dessa seção novamente.
 
@@ -514,7 +664,7 @@ Para reiniciar uma seção: re-renderize o banner do Passo 1 mostrando os valore
 
 ### Se o usuário escolher C (recomeçar o Passo 1)
 
-- Apague TODAS as decisões do Passo 1: segmento de clientes, problema, vantagens, concorrentes
+- Apague TODAS as decisões do Passo 1: segmento de clientes, comprador (scorecard_purchaser_*), problema, classificação I/U do problema (scorecard_problem_iu, scorecard_problem_iu_nudge), vantagens, concorrentes, dimensionamento de mercado (scorecard_market_*)
 - Trate isso como um início de sprint fresco: re-renderize o banner do Passo 1 com todos os quatro valores como "pendente"
 - Faça a pergunta aberta do segmento de clientes novamente (a mesma de section_customer)
 
@@ -953,6 +1103,52 @@ Aguarde a resposta do usuário. NÃO gere nenhuma opção de abordagem antes do 
 
 </section>
 
+<section name="section_founder_fit">
+
+## Fit do Fundador (AWARENESS-04)
+
+**IMPORTANTE: Esta é uma lente de consciência não-bloqueante. NÃO anuncie um bloqueio. NÃO use a formulação "Entendido — [coisa] bloqueado." NÃO re-renderize nenhum banner de passo. Três perguntas, feitas uma de cada vez. Aceite a primeira resposta a cada uma e siga em frente.**
+
+**Ao entrar nesta seção:** Imediatamente após section_context_reload.
+
+Antes de perguntar qualquer coisa, recapitule o que o fundador já estabeleceu no Passo 1. Cite as declarações bloqueadas de Capacidade e Insight verbatim. Diga:
+
+"Aqui está o que você me disse sobre você:
+
+**Capacidade:** [declaração de Capacidade bloqueada do Passo 1]
+**Insight:** [declaração de Insight bloqueada do Passo 1]
+
+Agora vamos questionar se você é a pessoa certa para executar isso."
+
+---
+
+**P1:** "Qual é o seu histórico e expertise que suportam diretamente a construção disso? Não o que você planeja aprender — o que você já traz?"
+
+Aguarde a resposta. Não sonde nem discorde.
+
+---
+
+**P2:** "Quão forte é o seu acesso às pessoas neste mercado? Você tem uma rede, um público ou contato direto com potenciais clientes?"
+
+Aguarde a resposta. Não sonde nem discorde.
+
+---
+
+**P3:** "Você ama este problema? Não a solução — o problema em si. Você estaria energizado trabalhando nisso por 3 anos mesmo que a receita demorasse a chegar?"
+
+Aguarde a resposta. Não sonde nem discorde.
+
+---
+
+Armazene os seguintes campos para montagem do Scorecard:
+- **scorecard_fit_background** = "[resposta do fundador à Pergunta 1 + qualquer contexto relevante da Capacidade do Passo 1]"
+- **scorecard_fit_access** = "[resposta do fundador à Pergunta 2]"
+- **scorecard_fit_passion** = "[sim / morno / não — interpretação da IA da resposta à Pergunta 3]"
+
+Então prossiga para section_approach_generation. Não pergunte mais nada nesta seção.
+
+</section>
+
 <section name="section_approach_generation">
 
 ## Geração de Abordagens (SPRINT-12)
@@ -1013,11 +1209,11 @@ Aguarde a confirmação do usuário antes de prosseguir para section_approach_ev
 
 <section name="section_approach_evaluation">
 
-## Avaliação em 4 Matrizes (SPRINT-13)
+## Avaliação em 5 Matrizes (SPRINT-13)
 
 **Ao entrar nesta seção:** Após todas as 3-4 abordagens serem finalizadas e o usuário confirmar que está pronto para avaliar.
 
-Percorra cada uma das 4 matrizes sequencialmente — uma de cada vez. NÃO renderize todas as 4 matrizes em uma única resposta. Mostre a Matriz 1, aguarde o usuário engajar ou dizer "próxima", depois mostre a Matriz 2, e assim por diante.
+Percorra cada uma das 5 matrizes sequencialmente — uma de cada vez. NÃO renderize todas as matrizes em uma única resposta. Mostre a Matriz 1, aguarde o usuário engajar ou dizer "próxima", depois mostre a Matriz 2, e assim por diante.
 
 **Para cada matriz:**
 1. Nomeie a matriz e defina seus dois eixos
@@ -1095,7 +1291,28 @@ Para cada abordagem: quão rígido é este produto — fica preso em uma configu
 
 [Grade ASCII]
 
-Após a Matriz 4 ser exibida: prossiga imediatamente para section_approach_recommendation.
+Após a Matriz 4 ser exibida: prossiga para a Matriz 5 abaixo.
+
+---
+
+**Matrix 5: Dificuldade de Validação**
+Eixos: Velocidade de construção (Lento → Rápido) × Elegância da solução (Parcial → Perfeita)
+
+Elegância da solução significa: quão perfeitamente e simplesmente esta abordagem resolve o problema declarado? Isso NÃO é sobre completude de funcionalidades — é sobre elegância de fit com o problema.
+Velocidade de construção significa: quão rápido um MVP funcional pode ser construído dada a Capacidade declarada do fundador?
+
+A IA pontua ambas as dimensões para cada abordagem usando apenas dados do sprint já capturados — nenhuma nova entrada do fundador é necessária:
+- A pontuação de elegância deriva de: descrição da abordagem + quão bem ela aborda a declaração do problema bloqueada + eixos diferenciadores (Passo 2)
+- A pontuação de velocidade de construção deriva de: descrição da abordagem + Capacidade do fundador (Passo 1) + quaisquer sinais de complexidade na abordagem
+
+[Explique o posicionamento de cada abordagem no quadrante, 1 frase cada]
+
+[Grade ASCII com A1/A2/A3/A4 posicionados em seus quadrantes]
+
+Armazene os seguintes campos para montagem do Scorecard:
+- **scorecard_pain_matrix** = "[por abordagem: A1: elegância=X / velocidade=Y, A2: elegância=X / velocidade=Y, ...]"
+
+Após a Matrix 5 ser exibida: prossiga imediatamente para section_approach_recommendation.
 
 </section>
 
@@ -1103,13 +1320,13 @@ Após a Matriz 4 ser exibida: prossiga imediatamente para section_approach_recom
 
 ## Recomendação pelo Padrão Global (SPRINT-14)
 
-**Ao entrar nesta seção:** Imediatamente após a Matriz 4 (Visão de Crescimento) ser exibida.
+**Ao entrar nesta seção:** Imediatamente após a Matrix 5 (Dificuldade de Validação) ser exibida.
 
-Revise todas as 4 matrizes. Identifique qual abordagem tem o padrão global mais forte: mais consistentemente no quadrante superior-direito, menos posicionamentos inferior-esquerdo. Nomeie também a segunda melhor.
+Revise todas as 5 matrizes. Identifique qual abordagem tem o padrão global mais forte: mais consistentemente no quadrante superior-direito, menos posicionamentos inferior-esquerdo. Nomeie também a segunda melhor.
 
 Diga:
 
-"**Analisando todas as 4 matrizes:**
+"**Analisando todas as 5 matrizes:**
 
 **[A#] ([nome curto])** tem o padrão global mais forte — superior-direito nas [Matrizes X] e [Y], favorável na [Matriz Z].
 
@@ -1123,7 +1340,10 @@ Aguarde o usuário nomear sua abordagem escolhida.
 
 Aceite a escolha do usuário incondicionalmente. Se ele escolher a abordagem recomendada, confirme brevemente. Se escolher uma diferente, confirme e avance — sem "tem certeza?" ou qualquer tipo de resistência.
 
-Após o usuário confirmar, re-renderize o banner do Passo 3 com a abordagem escolhida bloqueada:
+Após o usuário confirmar, armazene:
+- **scorecard_chosen_approach** = "[A# — nome curto]"
+
+Então re-renderize o banner do Passo 3 com a abordagem escolhida bloqueada:
 
 ─── Passo 3: Abordagens ─────────────────────────
 Abordagens: [N] finalizadas (A1, A2, A3[, A4])
@@ -1217,13 +1437,13 @@ Aguarde o usuário confirmar prontidão antes de prosseguir para section_write_o
 
 <section name="section_write_outputs">
 
-## Fim do Sprint — Arquivos de Saída (OUTPUT-01, OUTPUT-02, OUTPUT-03)
+## Fim do Sprint — Arquivos de Saída (OUTPUT-01, OUTPUT-02, OUTPUT-03, OUTPUT-04)
 
 **Ao entrar nesta seção:** Após a forma testável ser exibida e o usuário confirmar prontidão.
 
-Este é o ÚNICO lugar em todo o workflow onde HYPOTHESIS.md, SPRINT.md e POSITIONING.md são escritos. NÃO escreva esses arquivos em nenhum outro lugar.
+Este é o ÚNICO lugar em todo o workflow onde HYPOTHESIS.md, SPRINT.md, POSITIONING.md e 5PM-SCORECARD.md são escritos. NÃO escreva esses arquivos em nenhum outro lugar.
 
-Diga: "Sprint concluído. Escrevendo seus 3 arquivos de saída agora."
+Diga: "Sprint concluído. Escrevendo seus 4 arquivos de saída agora."
 
 **1. Escrever HYPOTHESIS.md**
 
@@ -1248,7 +1468,7 @@ Leia o template para estrutura:
 Escreva ./SPRINT.md com TUDO o seguinte — sem placeholders do template, sem colchetes:
 - **Passo 1:** cliente-alvo (opções consideradas, escolhida, justificativa), problema central (opções consideradas, escolhida, resultado da validação), vantagens do fundador (declaração de Capacidade, declaração de Insight, declaração de Motivação), concorrentes (todos listados, adversário principal sinalizado, resumo de pesquisa de uma linha por concorrente)
 - **Passo 2:** todas as avaliações de eixos (todos os 8+ eixos com a pontuação do usuário para cada), Eixo X e Eixo Y escolhidos com justificativa, resultado da verificação de conflito (se um conflito foi encontrado e como foi resolvido), mini-manifesto (todas as 3 frases verbatim)
-- **Passo 3:** todas as descrições de abordagens (A1 até A[N] — cada uma com nome curto e descrição completa de 2-3 frases), tabela de avaliação em 4 matrizes (posicionamento no quadrante de cada abordagem em cada uma das 4 matrizes), abordagem recomendada (qual A# e por quê), abordagem de reserva (qual A# e por quê), abordagem escolhida (qual A# o usuário selecionou)
+- **Passo 3:** todas as descrições de abordagens (A1 até A[N] — cada uma com nome curto e descrição completa de 2-3 frases), tabela de avaliação em 5 matrizes (posicionamento no quadrante de cada abordagem em cada uma das 5 matrizes), abordagem recomendada (qual A# e por quê), abordagem de reserva (qual A# e por quê), abordagem escolhida (qual A# o usuário selecionou)
 - **Passo 4:** declaração completa da hipótese (deve corresponder a HYPOTHESIS.md exatamente, caractere por caractere)
 
 CRÍTICO: Zero colchetes restam em SPRINT.md. Cada seção tem conteúdo real da sessão.
@@ -1268,7 +1488,48 @@ Escreva ./POSITIONING.md com TUDO o seguinte — sem placeholders do template, s
 CRÍTICO: A matriz de POSITIONING.md usa nomes de concorrentes — NÃO usa A1/A2/A3/A4. A avaliação de abordagens existe apenas em SPRINT.md.
 CRÍTICO: Zero colchetes restam em POSITIONING.md.
 
-**Após todos os 3 arquivos serem escritos:**
+**4. Escrever 5PM-SCORECARD.md**
+
+Leia o template para estrutura:
+@~/.claude/get-your-shit-together/templates/pt/5PM-SCORECARD.md
+
+Escreva ./5PM-SCORECARD.md montando os seguintes campos nomeados desta sessão:
+
+**Resumo do Veredicto:** Examine todos os 5 veredictos de lentes. Se 4-5 forem FAVORÁVEL, geral = FAVORÁVEL. Se 2-3 forem FAVORÁVEL, geral = MISTO. Se 0-1 forem FAVORÁVEL, geral = DESFAVORÁVEL.
+
+**Lente 1 — Problema (scorecard_problem_iu, scorecard_problem_iu_nudge)**
+- Veredicto: FAVORÁVEL se Importante+Urgente (Aspirina), ATENÇÃO se Importante+Não Urgente (Vitamina), DESFAVORÁVEL se Não Importante (Ruído de fundo ou Emergência)
+- Evidência: o que foi discutido sobre a classificação do problema
+- Justificativa: 1-2 frases do contexto da matriz I/U
+- Alertas: se o alerta de vitamina foi mostrado (scorecard_problem_iu_nudge = sim), sinalizar
+
+**Lente 2 — Comprador (scorecard_purchaser_tier, scorecard_purchaser_insight)**
+- Veredicto: FAVORÁVEL se B2B ou B2A orientado para B2B, ATENÇÃO se B2A puro ou B2C com sinais fortes de disposição a pagar, DESFAVORÁVEL se B2C com baixa disposição a pagar
+- Evidência: nível do comprador + habilidade tecnológica + respostas sobre disposição a pagar
+- Justificativa: scorecard_purchaser_insight verbatim ou ligeiramente expandido
+- Alertas: se B2C com baixa disposição a pagar ou B2E sem conexões enterprise
+
+**Lente 3 — Mercado (scorecard_market_research, scorecard_market_founder_perception)**
+- Veredicto: FAVORÁVEL se sinais de crescimento + alcançável, ATENÇÃO se estável ou sinais mistos, DESFAVORÁVEL se em declínio ou sem presença online
+- Evidência: resumo de scorecard_market_research
+- Justificativa: scorecard_market_founder_perception + síntese da IA
+- Alertas: se a percepção do fundador e os sinais de pesquisa divergirem significativamente
+
+**Lente 4 — Fit do Fundador (scorecard_fit_background, scorecard_fit_access, scorecard_fit_passion)**
+- Veredicto: FAVORÁVEL se histórico forte + acesso forte + paixão sim, ATENÇÃO se 1-2 áreas fracas, DESFAVORÁVEL se duas ou mais são fracas/não
+- Evidência: respostas do fundador às três perguntas de Fit
+- Justificativa: síntese da IA do fit em relação à abordagem escolhida
+- Alertas: se scorecard_fit_passion = não ou morno — alerta obrigatório
+
+**Lente 5 — Dificuldade de Validação (scorecard_pain_matrix, scorecard_chosen_approach)**
+- Veredicto: com base no quadrante da abordagem escolhida na Matrix 5 — superior-direito = FAVORÁVEL, superior-esquerdo ou inferior-direito = ATENÇÃO, inferior-esquerdo = DESFAVORÁVEL
+- Evidência: posicionamento na Matrix 5 para a abordagem escolhida
+- Justificativa: por que o padrão de elegância + velocidade para a abordagem escolhida importa
+- Alertas: se a abordagem escolhida for inferior-esquerdo, sinalizar risco de dificuldade de construção
+
+CRÍTICO: Zero colchetes restam em 5PM-SCORECARD.md. Todas as 5 lentes têm conteúdo real.
+
+**Após todos os 4 arquivos serem escritos:**
 
 "Concluído. Seu Foundation Sprint está completo.
 
@@ -1276,6 +1537,7 @@ CRÍTICO: Zero colchetes restam em POSITIONING.md.
 - `HYPOTHESIS.md` — sua hipótese testável
 - `SPRINT.md` — o diário completo de decisões
 - `POSITIONING.md` — seu mapa de posicionamento e manifesto
+- `5PM-SCORECARD.md` — seu scorecard de sinais 5PM
 
 **Seu próximo passo:** [teste de validação mais rápido da forma testável]"
 
