@@ -35,7 +35,7 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 
 **Milestone Goal:** Integrate Rob Walling's 5PM Idea Evaluation Framework into the Foundation Sprint as awareness lenses woven into the existing 4-step flow, produce a 5PM Scorecard output file, and translate all changes to French, Japanese, and Portuguese.
 
-- [ ] **Phase 8: English Step 1 — 5PM Lenses** - Add Problem I/U matrix, Purchaser classification, and Market sizing to the English workflow Step 1
+- [x] **Phase 8: English Step 1 — 5PM Lenses** - Add Problem I/U matrix, Purchaser classification, and Market sizing to the English workflow Step 1
 - [ ] **Phase 9: English Step 3 — Fit, Validation, and Scorecard** - Add Founder Fit and Pain to Validate to Step 3, update write_outputs, and create the 5PM-SCORECARD.md template
 - [ ] **Phase 10: Language Scorecard Templates** - Create translated 5PM-SCORECARD.md templates for FR, JA, and PT
 - [ ] **Phase 11: Language Workflow Updates** - Apply all 5PM section changes to the FR, JA, and PT workflow files and update TRANSLATION-SYNC.md
@@ -52,11 +52,11 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
   3. AI performs an inline web search for market size and growth signals and presents the result as an estimate range with a confidence caveat, not a single authoritative figure
   4. User is asked about ease of reaching customers and their own perception of market maturity
   5. Step 1 adds no lock cycles or banner updates for any of these four modules — the flow into Step 2 is uninterrupted
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans executed
 
 Plans:
-- [ ] 08-01-PLAN.md — Add section_purchaser and section_problem_importance awareness sections
-- [ ] 08-02-PLAN.md — Add section_market_sizing and update navigation_controls DISCARD RULE cascade
+- [x] 08-01-PLAN.md — Add section_purchaser and section_problem_importance awareness sections
+- [x] 08-02-PLAN.md — Add section_market_sizing and update navigation_controls DISCARD RULE cascade
 
 ### Phase 9: English Step 3 — Fit, Validation, and Scorecard
 **Goal**: The English Foundation Sprint Step 3 confronts the founder on fit and validates each approach against build pain, and the sprint produces a 5PM-SCORECARD.md output file at session end
@@ -108,7 +108,7 @@ Plans:
 | 5. Language Routing | v1.1 | 1/1 | Complete | 2026-03-08 |
 | 6. French Output Templates | v1.1 | 1/1 | Complete | 2026-03-08 |
 | 7. French Workflow Translation | v1.1 | 2/2 | Complete | 2026-03-08 |
-| 8. English Step 1 — 5PM Lenses | 1/2 | In Progress|  | - |
+| 8. English Step 1 — 5PM Lenses | v1.2 | 2/2 | Complete | 2026-03-22 |
 | 9. English Step 3 — Fit, Validation, and Scorecard | v1.2 | 0/? | Not started | - |
 | 10. Language Scorecard Templates | v1.2 | 0/? | Not started | - |
 | 11. Language Workflow Updates | v1.2 | 0/? | Not started | - |

@@ -8,7 +8,7 @@ progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 0
-  completed_plans: 1
+  completed_plans: 2
 ---
 
 # Project State
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** One command, one session, one testable hypothesis — solo entrepreneurs get the clarity the Foundation Sprint was designed to produce, without needing a team.
-**Current focus:** Phase 8 — English Step 1 5PM Lenses (Plan 01 complete, Plan 02 next)
+**Current focus:** Phase 8 complete — Phase 9 next (English Step 3 — Fit, Validation, Scorecard)
 
 ## Current Position
 
-Phase: 8 of 11 (English Step 1 — 5PM Lenses)
-Plan: 1 of 2 complete
-Status: In progress — Plan 01 complete, Plan 02 pending
-Last activity: 2026-03-22 — Phase 8 Plan 01 executed
+Phase: 8 of 11 (English Step 1 — 5PM Lenses) — COMPLETE
+Plan: 2 of 2 complete
+Status: Phase 8 complete — Phase 9 pending
+Last activity: 2026-03-22 — Phase 8 Plan 02 executed
 
-Progress: [█░░░░░░░░░] 10%
+Progress: [██░░░░░░░░] 20%
 
 ## Performance Metrics
 
@@ -40,7 +40,7 @@ Progress: [█░░░░░░░░░] 10%
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 8. English Step 1 — 5PM Lenses | TBD | - | - |
+| 8. English Step 1 — 5PM Lenses | 2 | 14 min | 7 min |
 | 9. English Step 3 — Fit, Validation, Scorecard | TBD | - | - |
 | 10. Language Scorecard Templates | TBD | - | - |
 | 11. Language Workflow Updates | TBD | - | - |
@@ -59,6 +59,9 @@ Progress: [█░░░░░░░░░] 10%
 - [08-01]: Purchaser tier + tech-savviness + willingness-to-pay combined into one question to enforce non-blocking constraint
 - [08-01]: Non-blocking awareness pass pattern established: no lock phrases, no banner renders, one question, named field capture, transition
 - [08-01]: scorecard_problem_iu_nudge (yes/no) captures whether vitamin nudge was shown — enables scorecard synthesis
+- [08-02]: Market data presented as ranges only, never single figures — enforced by section instruction
+- [08-02]: DISCARD RULE cascade expanded to 7 entries with granular scorecard_* field wipes per sub-decision
+- [08-02]: Reachability and market perception questions combined into one prompt to maintain non-blocking constraint
 
 ### Pending Todos
 
@@ -72,5 +75,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-03-22
-Stopped at: Completed 08-01-PLAN.md — section_purchaser and section_problem_importance added to foundation-sprint.md
+Stopped at: Completed 08-02-PLAN.md — section_market_sizing added, navigation_controls DISCARD RULE expanded to 7 cascade entries; Phase 8 complete
 Resume file: None

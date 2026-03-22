@@ -36,9 +36,9 @@
 
 ### Market Assessment
 
-- [ ] **MRKT-01**: AI performs inline web research for market size and growth signals in Step 1 (proxy signals: community sizes, job board volume, conference activity)
-- [ ] **MRKT-02**: Sprint asks the founder about ease of reaching customers (are they online?) and market maturity perception
-- [ ] **MRKT-03**: Market data is explicitly framed as estimates with ranges, not presented as confirmed facts
+- [x] **MRKT-01**: AI performs inline web research for market size and growth signals in Step 1 (proxy signals: community sizes, job board volume, conference activity)
+- [x] **MRKT-02**: Sprint asks the founder about ease of reaching customers (are they online?) and market maturity perception
+- [x] **MRKT-03**: Market data is explicitly framed as estimates with ranges, not presented as confirmed facts
 
 ### Product/Founder Fit
 
@@ -113,9 +113,9 @@
 | PURC-01 | Phase 8 | Complete |
 | PURC-02 | Phase 8 | Complete |
 | PURC-03 | Phase 8 | Complete |
-| MRKT-01 | Phase 8 | Pending |
-| MRKT-02 | Phase 8 | Pending |
-| MRKT-03 | Phase 8 | Pending |
+| MRKT-01 | Phase 8 | Complete |
+| MRKT-02 | Phase 8 | Complete |
+| MRKT-03 | Phase 8 | Complete |
 | PFIT-01 | Phase 9 | Pending |
 | PFIT-02 | Phase 9 | Pending |
 | PFIT-03 | Phase 9 | Pending |
