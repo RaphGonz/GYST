@@ -10,9 +10,19 @@ The full sprint runs as a single command (`/gyst:foundation-sprint`) across 4 st
 
 One command, one session, one testable hypothesis — solo entrepreneurs get the clarity that the Foundation Sprint was designed to produce, without needing a team.
 
-## Next Milestone Goals
+## Current Milestone: v1.2 Refined Protocol with 5PM Framework
 
-Spanish language support or v2.0 scope TBD. Start with `/gsd:new-milestone`.
+**Goal:** Integrate Rob Walling's 5PM Idea Evaluation Framework into the Foundation Sprint, adding structured validation lenses (Problem, Purchaser, Pricing Model, Market, Product/Founder Fit) and a 5PM Scorecard output file — then translate all changes to existing language versions.
+
+**Target features:**
+- Problem Important/Urgent 2x2 matrix in Step 1
+- Purchaser awareness questions in Step 1 (tech adoption, willingness to pay, B2C/B2A/B2B/B2E sophistication)
+- Pricing Model questions in Step 1 (subscription, ARPA, billing cadence)
+- Market sizing/growth via AI research + founder perception in Step 1
+- Product/Founder Fit confrontation in Step 3 (background, chops, unique advantage, passion)
+- Pain to Validate matrix per approach in Step 3 (MVP feasibility)
+- New output file: 5PM Scorecard
+- Translation of all 5PM changes to French, Japanese, Portuguese workflows
 
 ## Requirements
 
@@ -37,7 +47,14 @@ Spanish language support or v2.0 scope TBD. Start with `/gsd:new-milestone`.
 
 ### Active
 
-- [ ] Spanish language support: `/gyst:foundation-sprint, -spanish` — LANG-08
+- [ ] 5PM Problem Important/Urgent 2x2 matrix in Step 1
+- [ ] 5PM Purchaser awareness questions in Step 1
+- [ ] 5PM Pricing Model questions in Step 1
+- [ ] 5PM Market sizing/growth (AI research + founder questions) in Step 1
+- [ ] 5PM Product/Founder Fit confrontation in Step 3
+- [ ] 5PM Pain to Validate matrix per approach in Step 3
+- [ ] 5PM Scorecard output file
+- [ ] Translate 5PM changes to all existing language workflows (FR, JA, PT)
 
 ### Out of Scope
 
@@ -86,4 +103,4 @@ Spanish language support or v2.0 scope TBD. Start with `/gsd:new-milestone`.
 | TRANSLATION-SYNC.md for diff-based updates (v1.1) | Records source commit hash so future English changes can be selectively synced | ✓ Good — establishes maintenance pattern for v1.2+ language updates |
 
 ---
-*Last updated: 2026-03-08 after v1.1 milestone*
+*Last updated: 2026-03-22 after v1.2 milestone start*
