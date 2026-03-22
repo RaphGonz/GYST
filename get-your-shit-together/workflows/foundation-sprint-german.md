@@ -11,7 +11,7 @@ Sie führen diese Sitzung vollständig auf Deutsch. Das bedeutet:
 - Alle Ihre Antworten sind auf Deutsch
 - Alle Ihre Fragen sind auf Deutsch
 - Alle Banner und Zusammenfassungen werden auf Deutsch verfasst
-- Die Ausgabedateien (COMPETITORS.md, SPRINT.md, HYPOTHESIS.md, POSITIONING.md) enthalten deutschen Inhalt
+- Die Ausgabedateien (COMPETITORS.md, SPRINT.md, HYPOTHESIS.md, POSITIONING.md, 5PM-SCORECARD.md) enthalten deutschen Inhalt
 - Der Unteragent gyst-researcher führt seine Recherchen auf Englisch durch — das ist normal und erwartet; Sie übersetzen und präsentieren seine Ergebnisse auf Deutsch
 - Wenn Sie bemerken, dass Sie auf Englisch schreiben, halten Sie inne und schreiben Sie die Antwort auf Deutsch, bevor Sie sie senden
 
@@ -26,7 +26,7 @@ Sie stellen strukturierte Fragen, schlagen konkrete Optionen vor, die der Benutz
 Dieser Workflow deckt alle vier Schritte von Anfang bis Ende ab:
 - Schritt 1: Kundensegment, Kernproblem, Gründervorteile und Wettbewerbskartierung
 - Schritt 2: Achsenbewertung, differenzierende Achsen, Wettbewerber-Positionierungsmatrix und Mini-Manifest
-- Schritt 3: Ansatzgenerierung, Bewertung in 4 Matrizen und Empfehlung
+- Schritt 3: Ansatzgenerierung, Bewertung in 5 Matrizen und Empfehlung
 - Schritt 4: Hypothesenaufbau, Ableitung der testbaren Form und Erstellung der Ausgabedateien
 
 Wichtige Verhaltensregeln (lesen Sie diese vor jeder Antwort erneut):
@@ -54,7 +54,7 @@ Kein Brainstorming. Keine endlosen Optionen. Ich stelle Fragen, Sie bestätigen,
 **Was Sie heute entscheiden werden:**
 - **Schritt 1: Die Grundlagen** — Zielkunde, Kernproblem, Gründervorteile und Wettbewerber
 - **Schritt 2: Differenzierung** — Wie Sie sich gegenüber Wettbewerbern positionieren werden (2x2-Matrix)
-- **Schritt 3: Ansätze** — Welchen Lösungsansatz Sie umsetzen (bewertet nach 4 Gesichtspunkten)
+- **Schritt 3: Ansätze** — Welchen Lösungsansatz Sie umsetzen (bewertet nach 5 Gesichtspunkten)
 - **Schritt 4: Finale Hypothese** — „Wenn wir X helfen, Y mit Z zu lösen, werden sie uns statt W wählen, weil wir U und V sind."
 
 **Was diese Sitzung produziert:**
@@ -62,6 +62,7 @@ Kein Brainstorming. Keine endlosen Optionen. Ich stelle Fragen, Sie bestätigen,
 - `HYPOTHESIS.md` — Die vollständige testbare Hypothese (verfasst am Ende des Sprints)
 - `SPRINT.md` — Ein vollständiges Protokoll jeder getroffenen Entscheidung (verfasst am Ende des Sprints)
 - `POSITIONING.md` — 2x2-Matrix und Mini-Manifest (verfasst am Ende des Sprints)
+- `5PM-SCORECARD.md` — Auswertungs-Scorecard mit 5 Linsen der 5PM-Analyse (verfasst am Ende des Sprints)
 
 **Die Methode:** Ich stelle Fragen. Sie antworten mit Ihren eigenen Worten. Ich formuliere 2-3 Optionen zur Bestätigung oder Neuausrichtung. Wenn etwas verriegelt ist, bleibt es verriegelt, es sei denn, Sie sagen ausdrücklich „zurückgehen."
 
@@ -147,6 +148,51 @@ Fahren Sie dann mit Abschnitt 2 (Kernproblem) fort. Stellen Sie in diesem Abschn
 
 </section>
 
+<section name="section_purchaser">
+
+## Käufer-Bewusstsein (AWARENESS-01)
+
+**WICHTIG: Dies ist ein nicht-blockierender Bewusstheitsschritt.**
+- Kündigen Sie KEINE Verriegelung an. Verwenden Sie NICHT die Formulierung „Verstanden — [Sache] verriegelt."
+- Zeigen Sie das Banner von Schritt 1 NICHT erneut an.
+- Nur eine bestätigende Frage. Akzeptieren Sie die erste Antwort und fahren Sie fort.
+
+**Beim Eintreten in diesen Abschnitt:** Der Kunde ist bereits verriegelt. Fragen Sie nicht erneut danach.
+
+---
+
+Präsentieren Sie die vier Käuferstufen mit ihren integrierten Definitionen:
+
+- **B2C** — Verbraucher; sehr preissensibel; hohe Abwanderungsrate
+- **B2A** — Aspirational Buyers (Fotografen, Blogger, Podcaster, Nebenerwerbs-Gründer); emotional investiert; bereit zu zahlen, wenn das Produkt zu ihrer Identität passt, aber Budgets sind knapp (20–100 $/Monat)
+- **B2B** — Unternehmen, die für Teams einkaufen; Budget vorhanden; längerer Verkaufszyklus; ROI-orientiert
+- **B2E** — Enterprise; große Verträge; langer Verkaufszyklus; hohe Wechselkosten
+
+---
+
+Stellen Sie diese eine kombinierte Frage — stellen Sie keine separaten Folgefragen:
+
+„Welche Stufe beschreibt Ihren Käufer am besten, basierend auf Ihrem Kundensegment? Wie technikaffin sind sie, und sind sie zahlungsbereit?"
+
+Warten Sie, bis der Benutzer antwortet.
+
+---
+
+**Nachdem Sie seine Antwort erhalten haben:**
+
+Geben Sie einen einzigen Satz mit relevantem Kontext (den „Einblick") basierend auf der identifizierten Stufe. Beispiel: „B2A-Käufer sind preissensibel, aber leidenschaftlich — gut für gemeinschaftsorientierte Produkte."
+
+---
+
+**Benannte Felderfassung (speichern Sie diese für die Scorecard-Zusammenstellung):**
+
+- **scorecard_purchaser_tier** = „[B2C / B2A / B2B / B2E — welche auch immer identifiziert wurde]"
+- **scorecard_purchaser_insight** = „[der einzeilige Einblick, den Sie oben bereitgestellt haben]"
+
+Fahren Sie dann mit section_problem fort. Stellen Sie in diesem Abschnitt keine weiteren Fragen.
+
+</section>
+
 <language_reinforcement>
 Spracherinnerung: Sie führen diese Validierung in einer deutschen Sitzung durch. Präsentieren Sie die Rechercheergebnisse dem Benutzer auf Deutsch.
 </language_reinforcement>
@@ -221,6 +267,60 @@ Verriegeln Sie es. Kündigen Sie die Verriegelung an:
 Zeigen Sie das Banner von Schritt 1 erneut an, mit Problem aktualisiert auf die bestätigte Formulierung.
 
 Fahren Sie dann mit Abschnitt 3 (Gründervorteile) fort. Stellen Sie in diesem Abschnitt keine weiteren Fragen.
+
+</section>
+
+<section name="section_problem_importance">
+
+## Wichtig/Dringend-Überprüfung des Problems (AWARENESS-02)
+
+**WICHTIG: Dies ist ein nicht-blockierender Bewusstheitsschritt.**
+- Kündigen Sie KEINE Verriegelung an. Verwenden Sie NICHT die Formulierung „Verstanden — [Sache] verriegelt."
+- Zeigen Sie das Banner von Schritt 1 NICHT erneut an.
+- Nur eine bestätigende Frage. Akzeptieren Sie die erste Antwort und fahren Sie fort.
+
+**Beim Eintreten in diesen Abschnitt:** Kunde und Problem sind bereits verriegelt. Fragen Sie nicht erneut danach.
+
+---
+
+Klassifizieren Sie das Problem basierend auf der verriegelten Problemaussage im 2x2-Raster Wichtig/Dringend:
+
+```
+              NICHT DRINGEND      DRINGEND
+WICHTIG     [ Vitamin              [ Aspirin
+              nice-to-have ]         unverzichtbar ]
+
+NICHT       [ Hintergrundrauschen  [ Notfall
+WICHTIG       ]                      geringer Wert ]
+```
+
+Geben Sie Ihre Klassifizierung an:
+„Basierend auf dem, was wir besprochen haben, liegt [verriegeltes Problem] im **[Quadrant]** — [einzeilige Begründung]."
+
+---
+
+**Vitamin-Hinweis (bedingt — nur anzeigen, wenn als Vitamin / Wichtig + Nicht Dringend klassifiziert):**
+
+> „Vitamin-Probleme sind schwieriger zu verkaufen — Käufer spüren keine Dringlichkeit. Behalten Sie das bei der Differenzierung im Hinterkopf."
+
+(Zeigen Sie diesen Hinweis nur an, wenn als Vitamin/Wichtig+Nicht Dringend klassifiziert. Zeigen Sie ihn für andere Quadranten nicht an.)
+
+---
+
+Stellen Sie dann diese eine Bestätigungsfrage:
+
+„Erscheint Ihnen das korrekt, oder würden Sie die Klassifizierung anpassen?"
+
+Warten Sie auf die Antwort. Akzeptieren Sie, was der Benutzer sagt. Wenn er einen anderen Quadranten vorschlägt, aktualisieren Sie die Klassifizierung. Fragen Sie nicht nach und drängen Sie nicht.
+
+---
+
+**Benannte Felderfassung (speichern Sie diese für die Scorecard-Zusammenstellung):**
+
+- **scorecard_problem_iu** = „[Quadrant-Bezeichnung: Aspirin / Vitamin / Hintergrundrauschen / Notfall]"
+- **scorecard_problem_iu_nudge** = „[ja/nein — ob der Vitamin-Hinweis angezeigt wurde]"
+
+Fahren Sie dann mit section_advantages fort. Stellen Sie in diesem Abschnitt keine weiteren Fragen.
 
 </section>
 
@@ -476,6 +576,53 @@ Nachdem der Hauptgegner bestätigt ist:
 
 </section>
 
+<section name="section_market_sizing">
+
+## Marktgrößenbestimmung (AWARENESS-03, RESEARCH-04)
+
+**WICHTIG: Dies ist ein nicht-blockierender Bewusstheitsschritt.**
+- Kündigen Sie KEINE Verriegelung an. Verwenden Sie NICHT die Formulierung „Verstanden — [Sache] verriegelt."
+- Zeigen Sie das Banner von Schritt 1 NICHT erneut an.
+- Nur eine bestätigende Frage. Akzeptieren Sie die erste Antwort und fahren Sie fort.
+
+Beim Eintreten in diesen Abschnitt: Kunde, Käufer, Problem, Problem I/U-Klassifizierung, Vorteile und Wettbewerber sind bereits abgeschlossen. COMPETITORS.md wurde verfasst. Fragen Sie keines dieser Elemente erneut ab.
+
+---
+
+Führen Sie eine WebSearch-Online-Recherche nach Marktgröße- und Wachstumssignalen für dieses Kundensegment und dieses Problem durch.
+
+Suchanfrage: „[verriegeltes Kundensegment] [verriegeltes Problem] Marktgröße Wachstum Community 2024 2025"
+
+Suchen Sie nach indirekten Signalen:
+- Community-Größen (Subreddits, Facebook-Gruppen, Discord-Server)
+- Stellenanzeigenvolumen (LinkedIn/Indeed für Rollen, die darauf hinweisen, dass dieser Markt aktiv ist)
+- Konferenzaktivität (benannte Veranstaltungen, jährliche Teilnehmerzahlen)
+- Branchenberichte (sofern öffentlich zugänglich)
+
+---
+
+Präsentieren Sie die Ergebnisse als Prosa-Zusammenfassung von 2-3 Sätzen. Verwenden Sie immer Spannen, nie einzelne Zahlen. Fügen Sie diesen Hinweis wortgetreu ein:
+
+> „Dies sind ungefähre Signale, keine zuverlässigen TAM-Schätzungen. Validieren Sie mit direkter Kundenrecherche."
+
+---
+
+Stellen Sie dem Gründer nach der Präsentation der Recherche beide Fragen in einer einzigen Aufforderung:
+
+„Sind diese Kunden einfach zu erreichen — sind sie online aktiv, in Communities, in sozialen Medien? Entspricht das Ihrer Wahrnehmung des Marktes? Wachsend, stabil oder rückläufig?"
+
+Warten Sie auf ihre Antwort. Akzeptieren Sie, was sie sagen. Fragen Sie nicht nach und drängen Sie nicht.
+
+---
+
+Speichern Sie die folgenden benannten Felder für die Scorecard-Zusammenstellung:
+- **scorecard_market_research** = „[Prosa-Zusammenfassung der 2-3 Sätze der gefundenen Marktsignale]"
+- **scorecard_market_founder_perception** = „[Antwort des Gründers: Wachsend / Stabil / Rückläufig + seine Begründung, plus Erreichbarkeitsbewertung]"
+
+Fahren Sie dann mit navigation_controls fort. Stellen Sie in diesem Abschnitt keine weiteren Fragen.
+
+</section>
+
 <section name="navigation_controls">
 
 ## Navigation von Schritt 1 (NAVIG-01, NAVIG-02, NAVIG-03)
@@ -505,17 +652,20 @@ Fahren Sie mit step2_banner und dann mit section_axis_rating fort.
 ### Wenn der Benutzer B wählt (zu einer Teilentscheidung zurückgehen) — NAVIG-02
 
 Fragen Sie:
-„Zu welcher Teilentscheidung möchten Sie zurückkehren? (Kundensegment / Problem / Gründervorteile / Wettbewerber)"
+„Zu welcher Teilentscheidung möchten Sie zurückkehren? (Kundensegment / Käufer / Problem / Problem I/U-Klassifizierung / Gründervorteile / Wettbewerber / Marktgröße)"
 
 Warten Sie auf die Antwort des Benutzers.
 
 KRITISCH — LÖSCHREGEL: ALLE Entscheidungen, die NACH der gewählten Teilentscheidung getroffen wurden, werden GELÖSCHT. Versuchen Sie nicht, sie zu bewahren, zu referenzieren oder vorzuschlagen, einen Teil davon zu behalten. Führen Sie die vollständige Sequenz ab dem gewählten Abschnitt neu aus, als ob diese nachgelagerten Entscheidungen nie getroffen worden wären. Entfernen Sie sie aus Ihrem Kontext.
 
 Beispiele:
-- Der Benutzer kehrt zum **Kundensegment** zurück: Löschen Sie Problem, Vorteile und Wettbewerber. Führen Sie Abschnitte 1, 2, 3 und 4 vollständig neu aus.
-- Der Benutzer kehrt zum **Problem** zurück: Löschen Sie Vorteile und Wettbewerber. Führen Sie Abschnitte 2, 3 und 4 vollständig neu aus.
-- Der Benutzer kehrt zu **Gründervorteilen** zurück: Löschen Sie Wettbewerber. Führen Sie Abschnitte 3 und 4 vollständig neu aus.
-- Der Benutzer kehrt zu **Wettbewerbern** zurück: Löschen Sie nur die Wettbewerberauswahl und den Hauptgegner. Führen Sie Abschnitt 4 vollständig neu aus (behalten Sie Kunde, Problem, Vorteile verriegelt).
+- Der Benutzer kehrt zum **Kundensegment** zurück: Löschen Sie scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Problem, Vorteile, Wettbewerber, scorecard_market_*. Führen Sie alle Abschnitte von Schritt 1 ab section_customer vollständig neu aus.
+- Der Benutzer kehrt zum **Käufer** zurück: Löschen Sie nur scorecard_purchaser_*. Führen Sie nur section_purchaser neu aus (Kunde bleibt verriegelt).
+- Der Benutzer kehrt zum **Problem** zurück: Löschen Sie scorecard_problem_iu, scorecard_problem_iu_nudge, Vorteile, Wettbewerber, scorecard_market_*. Führen Sie ab section_problem neu aus.
+- Der Benutzer kehrt zur **Problem I/U-Klassifizierung** zurück: Löschen Sie nur scorecard_problem_iu, scorecard_problem_iu_nudge. Führen Sie nur section_problem_importance neu aus (Kunde, Käufer, Problem bleiben verriegelt).
+- Der Benutzer kehrt zu **Gründervorteilen** zurück: Löschen Sie Wettbewerber, scorecard_market_*. Führen Sie ab section_advantages neu aus.
+- Der Benutzer kehrt zu **Wettbewerbern** zurück: Löschen Sie die Wettbewerberauswahl, den Hauptgegner, scorecard_market_*. Führen Sie ab section_competitors neu aus (schließt section_market_sizing ein).
+- Der Benutzer kehrt zur **Marktgröße** zurück: Löschen Sie nur scorecard_market_*. Führen Sie nur section_market_sizing neu aus.
 
 Um einen Abschnitt neu zu starten: Zeigen Sie das Banner von Schritt 1 mit den beibehaltenen verriegelten Werten und „ausstehend" für alles Gelöschte erneut an, dann stellen Sie die offene Frage dieses Abschnitts erneut.
 
@@ -523,7 +673,7 @@ Um einen Abschnitt neu zu starten: Zeigen Sie das Banner von Schritt 1 mit den b
 
 ### Wenn der Benutzer C wählt (Schritt 1 von vorne beginnen)
 
-- Löschen Sie ALLE Entscheidungen von Schritt 1: Kundensegment, Problem, Vorteile, Wettbewerber
+- Löschen Sie ALLE Entscheidungen von Schritt 1: Kundensegment, Käufer (scorecard_purchaser_*), Problem, Problem I/U-Klassifizierung (scorecard_problem_iu, scorecard_problem_iu_nudge), Vorteile, Wettbewerber, Marktgröße (scorecard_market_*)
 - Behandeln Sie dies als einen frischen Sprint-Start: Zeigen Sie das Banner von Schritt 1 mit allen vier Werten als „ausstehend" erneut an
 - Stellen Sie die offene Frage zum Kundensegment erneut (dieselbe wie in section_customer)
 
@@ -584,6 +734,52 @@ Warten Sie auf die Antwort des Benutzers. Generieren Sie KEINE Ansatzoptionen, b
 
 </section>
 
+<section name="section_founder_fit">
+
+## Gründer-Passung (AWARENESS-04)
+
+**WICHTIG: Dies ist ein nicht-blockierender Bewusstheitsprismus. Kündigen Sie KEINE Verriegelung an. Verwenden Sie NICHT die Formulierung „Verstanden — [Sache] verriegelt." Zeigen Sie KEIN Schritt-Banner erneut an. Drei Fragen, eine nach der anderen gestellt. Akzeptieren Sie die erste Antwort auf jede Frage und fahren Sie fort.**
+
+**Beim Eintreten in diesen Abschnitt:** Unmittelbar nach section_context_reload.
+
+Bevor Sie irgendetwas fragen, fassen Sie zusammen, was der Gründer in Schritt 1 festgestellt hat. Zitieren Sie die verriegelten Fähigkeits- und Einblicksaussagen wortgetreu. Sagen Sie:
+
+„Hier ist, was Sie mir über sich selbst gesagt haben:
+
+**Ihre Fähigkeit:** [verriegelte Fähigkeitsaussage aus Schritt 1]
+**Ihr Einblick:** [verriegelte Einblicksaussage aus Schritt 1]
+
+Lassen Sie uns nun prüfen, ob Sie die richtige Person sind, um das umzusetzen."
+
+---
+
+**Frage 1:** „Was ist Ihr Hintergrund und Ihre Expertise, die direkt die Entwicklung davon unterstützen? Nicht was Sie zu lernen planen — was bringen Sie bereits mit?"
+
+Warten Sie auf die Antwort. Fragen Sie nicht nach und drängen Sie nicht.
+
+---
+
+**Frage 2:** „Welchen Zugang haben Sie zu den Personen in diesem Markt? Haben Sie ein Netzwerk, ein Publikum oder eine direkte Verbindung zu potenziellen Kunden?"
+
+Warten Sie auf die Antwort. Fragen Sie nicht nach und drängen Sie nicht.
+
+---
+
+**Frage 3:** „Lieben Sie dieses Problem? Nicht die Lösung — das Problem selbst. Würden Sie drei Jahre daran arbeiten, auch wenn die Einnahmen auf sich warten lassen würden?"
+
+Warten Sie auf die Antwort. Fragen Sie nicht nach und drängen Sie nicht.
+
+---
+
+Speichern Sie folgendes für die Scorecard-Zusammenstellung:
+- **scorecard_fit_background** = „[Antwort des Gründers auf Frage 1 + relevanter Kontext aus der Fähigkeit in Schritt 1]"
+- **scorecard_fit_access** = „[Antwort des Gründers auf Frage 2]"
+- **scorecard_fit_passion** = „[ja / verhalten / nein — KI-Interpretation der Antwort auf Frage 3]"
+
+Fahren Sie dann mit section_approach_generation fort. Stellen Sie in diesem Abschnitt keine weiteren Fragen.
+
+</section>
+
 <section name="section_approach_generation">
 
 ## Ansatzgenerierung (SPRINT-12)
@@ -636,7 +832,7 @@ Nachdem 3-4 Ansätze abgeschlossen sind, zeigen Sie die Liste an:
 - **A3: [Kurzname]** — [einzeiliger Überblick]
 [- **A4: [Kurzname]** — [einzeiliger Überblick] (falls zutreffend)]
 
-Bereit, sie nach 4 Gesichtspunkten zu bewerten?"
+Bereit, sie nach 5 Gesichtspunkten zu bewerten?"
 
 Warten Sie auf die Bestätigung des Benutzers, bevor Sie zu section_approach_evaluation übergehen.
 
@@ -644,11 +840,11 @@ Warten Sie auf die Bestätigung des Benutzers, bevor Sie zu section_approach_eva
 
 <section name="section_approach_evaluation">
 
-## Bewertung in 4 Matrizen (SPRINT-13)
+## Bewertung in 5 Matrizen (SPRINT-13)
 
 **Beim Eintreten in diesen Abschnitt:** Nachdem alle 3-4 Ansätze abgeschlossen sind und der Benutzer bestätigt, bereit zur Bewertung zu sein.
 
-Gehen Sie jede der 4 Matrizen sequenziell durch — eine nach der anderen. Rendern Sie NICHT alle 4 Matrizen in einer einzigen Antwort. Zeigen Sie Matrix 1 an, warten Sie, bis der Benutzer sich einbringt oder „weiter" sagt, dann zeigen Sie Matrix 2 an, und so weiter.
+Gehen Sie jede der 5 Matrizen sequenziell durch — eine nach der anderen. Rendern Sie NICHT alle 5 Matrizen in einer einzigen Antwort. Zeigen Sie Matrix 1 an, warten Sie, bis der Benutzer sich einbringt oder „weiter" sagt, dann zeigen Sie Matrix 2 an, und so weiter.
 
 **Für jede Matrix:**
 1. Benennen Sie die Matrix und definieren Sie ihre beiden Achsen
@@ -726,7 +922,28 @@ Für jeden Ansatz: Ist dieses Produkt starr — sperrt es sich in eine einzige K
 
 [ASCII-Raster]
 
-Nach Anzeige von Matrix 4: Fahren Sie unmittelbar mit section_approach_recommendation fort.
+Nach Anzeige von Matrix 4: Fahren Sie mit Matrix 5 unten fort.
+
+---
+
+**Matrix 5: Validierungsaufwand**
+Achsen: Baugeschwindigkeit (Langsam → Schnell) × Lösungseleganz (Teilweise → Perfekt)
+
+Lösungseleganz bedeutet: Wie gut löst dieser Ansatz das formulierte Problem auf perfekte und einfache Weise? Es geht NICHT um Funktionsvollständigkeit — es geht um die Eleganz der Problem-Lösungs-Passung.
+Baugeschwindigkeit bedeutet: Wie schnell kann ein funktionierender MVP angesichts der deklarierten Fähigkeit des Gründers gebaut werden?
+
+Die KI bewertet beide Dimensionen für jeden Ansatz ausschließlich auf Basis der bereits erfassten Sprint-Daten — keine neuen Eingaben des Gründers sind erforderlich:
+- Der Eleganz-Score ergibt sich aus: der Ansatzbeschreibung + inwieweit sie die verriegelte Problemaussage adressiert + den Differenzierungsachsen (Schritt 2)
+- Der Baugeschwindigkeits-Score ergibt sich aus: der Ansatzbeschreibung + der Fähigkeit des Gründers (Schritt 1) + etwaigen Komplexitätssignalen im Ansatz
+
+[Erklären Sie die Platzierung jedes Ansatzes in seinem Quadranten, je 1 Satz]
+
+[ASCII-Raster mit A1/A2/A3/A4 in ihren Quadranten platziert]
+
+Speichern Sie folgendes für die Scorecard-Zusammenstellung:
+- **scorecard_pain_matrix** = „[pro Ansatz: A1: Eleganz=X / Geschwindigkeit=Y, A2: Eleganz=X / Geschwindigkeit=Y, ...]"
+
+Nach Anzeige von Matrix 5: Fahren Sie unmittelbar mit section_approach_recommendation fort.
 
 </section>
 
@@ -754,7 +971,10 @@ Warten Sie, bis der Benutzer seinen gewählten Ansatz nennt.
 
 Akzeptieren Sie die Wahl des Benutzers bedingungslos. Wenn er den empfohlenen Ansatz wählt, bestätigen Sie kurz. Wenn er einen anderen Ansatz wählt, bestätigen Sie und fahren Sie voran — kein „Sind Sie sicher?" oder Widerstand jeglicher Art.
 
-Nachdem sich der Benutzer festgelegt hat, zeigen Sie das Schritt-3-Banner mit dem verriegelten gewählten Ansatz erneut an:
+Nachdem sich der Benutzer festgelegt hat, speichern Sie:
+- **scorecard_chosen_approach** = „[A# — Kurzname]"
+
+Zeigen Sie das Schritt-3-Banner mit dem verriegelten gewählten Ansatz erneut an:
 
 ─── Schritt 3: Ansätze ──────────────────────────
 Ansätze:  [N] abgeschlossen (A1, A2, A3[, A4])
@@ -848,13 +1068,13 @@ Warten Sie, bis der Benutzer seine Bereitschaft bestätigt, bevor Sie zu section
 
 <section name="section_write_outputs">
 
-## Sprint-Ende — Ausgabedateien (OUTPUT-01, OUTPUT-02, OUTPUT-03)
+## Sprint-Ende — Ausgabedateien (OUTPUT-01, OUTPUT-02, OUTPUT-03, OUTPUT-04)
 
 **Beim Eintreten in diesen Abschnitt:** Nachdem die testbare Form angezeigt wurde und der Benutzer seine Bereitschaft bestätigt.
 
-Dies ist der EINZIGE Ort im gesamten Workflow, an dem HYPOTHESIS.md, SPRINT.md und POSITIONING.md verfasst werden. Verfassen Sie diese Dateien NICHT anderswo.
+Dies ist der EINZIGE Ort im gesamten Workflow, an dem HYPOTHESIS.md, SPRINT.md, POSITIONING.md und 5PM-SCORECARD.md verfasst werden. Verfassen Sie diese Dateien NICHT anderswo.
 
-Sagen Sie: „Sprint abgeschlossen. Ich verfasse jetzt Ihre 3 Ausgabedateien."
+Sagen Sie: „Sprint abgeschlossen. Ich verfasse jetzt Ihre 4 Ausgabedateien."
 
 **1. HYPOTHESIS.md verfassen**
 
@@ -899,7 +1119,48 @@ Verfassen Sie ./POSITIONING.md mit ALLEM Folgenden — ohne Vorlagenplatzhalter,
 KRITISCH: Die Matrix in POSITIONING.md verwendet Wettbewerbernamen — sie verwendet NICHT A1/A2/A3/A4. Die Ansatzbewertung existiert nur in SPRINT.md.
 KRITISCH: Keine Klammern verbleiben in POSITIONING.md.
 
-**Nachdem alle 3 Dateien verfasst wurden:**
+**4. 5PM-SCORECARD.md verfassen**
+
+Lesen Sie die Vorlage als Strukturreferenz:
+@~/.claude/get-your-shit-together/templates/de/5PM-SCORECARD.md
+
+Verfassen Sie ./5PM-SCORECARD.md und assemblieren Sie die folgenden benannten Felder aus dieser Sitzung:
+
+**Zusammenfassung des Urteils:** Betrachten Sie alle 5 Linsen-Urteile. Wenn 4-5 GÜNSTIG sind, ist das Gesamturteil = GÜNSTIG. Wenn 2-3 GÜNSTIG sind, ist das Gesamturteil = GEMISCHT. Wenn 0-1 GÜNSTIG sind, ist das Gesamturteil = UNGÜNSTIG.
+
+**Linse 1 — Problem (scorecard_problem_iu, scorecard_problem_iu_nudge)**
+- Urteil: GÜNSTIG wenn Wichtig+Dringend (Aspirin), VORSICHT wenn Wichtig+Nicht Dringend (Vitamin), UNGÜNSTIG wenn Nicht Wichtig (Hintergrundrauschen oder Notfall)
+- Belege: was über die Problemklassifizierung besprochen wurde
+- Begründung: 1-2 Sätze aus dem Wichtig/Dringend-Matrix-Kontext
+- Warnsignale: wenn der Vitamin-Hinweis angezeigt wurde (scorecard_problem_iu_nudge = ja), kennzeichnen
+
+**Linse 2 — Käufer (scorecard_purchaser_tier, scorecard_purchaser_insight)**
+- Urteil: GÜNSTIG wenn B2B oder B2B-geneigtes B2A, VORSICHT wenn reines B2A oder B2C mit starken WTP-Signalen, UNGÜNSTIG wenn B2C mit niedrigem WTP
+- Belege: Käuferstufe + Technikaffinität + Zahlungsbereitschafts-Antworten
+- Begründung: scorecard_purchaser_insight wortgetreu oder leicht erweitert
+- Warnsignale: wenn B2C mit niedrigem WTP oder B2E ohne Enterprise-Verbindungen
+
+**Linse 3 — Markt (scorecard_market_research, scorecard_market_founder_perception)**
+- Urteil: GÜNSTIG wenn Wachstumssignale + erreichbar, VORSICHT wenn stabil oder gemischte Signale, UNGÜNSTIG wenn rückläufig oder keine Online-Präsenz
+- Belege: scorecard_market_research Zusammenfassung
+- Begründung: scorecard_market_founder_perception + KI-Synthese
+- Warnsignale: wenn die Wahrnehmung des Gründers und die Recherchesignale erheblich abweichen
+
+**Linse 4 — Gründer-Passung (scorecard_fit_background, scorecard_fit_access, scorecard_fit_passion)**
+- Urteil: GÜNSTIG wenn starker Hintergrund + starker Zugang + Leidenschaft ja, VORSICHT wenn 1-2 schwache Bereiche, UNGÜNSTIG wenn zwei oder mehr schwach/nein
+- Belege: Antworten des Gründers auf die drei Passungs-Fragen
+- Begründung: KI-Synthese der Passung gegenüber dem gewählten Ansatz
+- Warnsignale: wenn scorecard_fit_passion = nein oder verhalten — obligatorisches Warnsignal
+
+**Linse 5 — Validierungsaufwand (scorecard_pain_matrix, scorecard_chosen_approach)**
+- Urteil: basierend auf dem Quadranten des gewählten Ansatzes in Matrix 5 — oben rechts = GÜNSTIG, oben links oder unten rechts = VORSICHT, unten links = UNGÜNSTIG
+- Belege: Matrix-5-Platzierung für den gewählten Ansatz
+- Begründung: warum das Eleganz+Geschwindigkeit-Muster für den gewählten Ansatz wichtig ist
+- Warnsignale: wenn der gewählte Ansatz unten links ist, das Bau-Schmerz-Risiko kennzeichnen
+
+KRITISCH: Keine Klammern verbleiben in 5PM-SCORECARD.md. Alle 5 Linsen haben echten Inhalt.
+
+**Nachdem alle 4 Dateien verfasst wurden:**
 
 „Fertig. Ihr Foundation Sprint ist abgeschlossen.
 
@@ -907,6 +1168,7 @@ KRITISCH: Keine Klammern verbleiben in POSITIONING.md.
 - `HYPOTHESIS.md` — Ihre testbare Hypothese
 - `SPRINT.md` — das vollständige Entscheidungsprotokoll
 - `POSITIONING.md` — Ihre Positionierungskarte und Ihr Manifest
+- `5PM-SCORECARD.md` — Ihr 5PM-Auswertungs-Dashboard
 
 **Ihr nächster Schritt:** [schnellster Validierungstest aus der testbaren Form]"
 
