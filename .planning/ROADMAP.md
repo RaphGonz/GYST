@@ -37,7 +37,7 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 
 - [x] **Phase 8: English Step 1 — 5PM Lenses** - Add Problem I/U matrix, Purchaser classification, and Market sizing to the English workflow Step 1
 - [x] **Phase 9: English Step 3 — Fit, Validation, and Scorecard** - Add Founder Fit and Pain to Validate to Step 3, update write_outputs, and create the 5PM-SCORECARD.md template (completed 2026-03-22)
-- [ ] **Phase 10: Language Scorecard Templates** - Create translated 5PM-SCORECARD.md templates for FR, JA, and PT
+- [x] **Phase 10: Language Scorecard Templates** - Create translated 5PM-SCORECARD.md templates for FR, JA, and PT (completed 2026-03-22)
 - [ ] **Phase 11: Language Workflow Updates** - Apply all 5PM section changes to the FR, JA, and PT workflow files and update TRANSLATION-SYNC.md
 
 ## Phase Details
@@ -81,7 +81,7 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. `templates/fr/5PM-SCORECARD.md`, `templates/ja/5PM-SCORECARD.md`, and `templates/pt/5PM-SCORECARD.md` exist with all headers, labels, and structural text in the target language
   2. A 5PM terminology register documents how each framework-specific term (Pain to Validate, Purchaser, Product/Founder Fit, B2C/B2A/B2B/B2E) is handled in each language — loan word, translated concept, or explanatory phrase
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 
 Plans:
 - [ ] 10-01-PLAN.md — Create 5PM terminology register and translated scorecard templates for FR, JA, and PT
@@ -111,5 +111,5 @@ Plans:
 | 7. French Workflow Translation | v1.1 | 2/2 | Complete | 2026-03-08 |
 | 8. English Step 1 — 5PM Lenses | v1.2 | 2/2 | Complete | 2026-03-22 |
 | 9. English Step 3 — Fit, Validation, and Scorecard | 2/2 | Complete   | 2026-03-22 | - |
-| 10. Language Scorecard Templates | v1.2 | 0/1 | Not started | - |
+| 10. Language Scorecard Templates | 1/1 | Complete   | 2026-03-22 | - |
 | 11. Language Workflow Updates | v1.2 | 0/? | Not started | - |
