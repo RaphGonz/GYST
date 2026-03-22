@@ -108,33 +108,33 @@
 | LANG-05 | Phase 7 | Complete |
 | LANG-06 | Phase 7 | Complete |
 | LANG-07 | Phase 7 | Complete |
-| PROB-01 | — | Pending |
-| PROB-02 | — | Pending |
-| PURC-01 | — | Pending |
-| PURC-02 | — | Pending |
-| PURC-03 | — | Pending |
-| MRKT-01 | — | Pending |
-| MRKT-02 | — | Pending |
-| MRKT-03 | — | Pending |
-| PFIT-01 | — | Pending |
-| PFIT-02 | — | Pending |
-| PFIT-03 | — | Pending |
-| PFIT-04 | — | Pending |
-| PAIN-01 | — | Pending |
-| PAIN-02 | — | Pending |
-| SCRD-01 | — | Pending |
-| SCRD-02 | — | Pending |
-| SCRD-03 | — | Pending |
-| SCRD-04 | — | Pending |
-| TRNS-01 | — | Pending |
-| TRNS-02 | — | Pending |
-| TRNS-03 | — | Pending |
+| PROB-01 | Phase 8 | Pending |
+| PROB-02 | Phase 8 | Pending |
+| PURC-01 | Phase 8 | Pending |
+| PURC-02 | Phase 8 | Pending |
+| PURC-03 | Phase 8 | Pending |
+| MRKT-01 | Phase 8 | Pending |
+| MRKT-02 | Phase 8 | Pending |
+| MRKT-03 | Phase 8 | Pending |
+| PFIT-01 | Phase 9 | Pending |
+| PFIT-02 | Phase 9 | Pending |
+| PFIT-03 | Phase 9 | Pending |
+| PFIT-04 | Phase 9 | Pending |
+| PAIN-01 | Phase 9 | Pending |
+| PAIN-02 | Phase 9 | Pending |
+| SCRD-01 | Phase 9 | Pending |
+| SCRD-02 | Phase 9 | Pending |
+| SCRD-03 | Phase 9 | Pending |
+| SCRD-04 | Phase 9 | Pending |
+| TRNS-01 | Phase 10 | Pending |
+| TRNS-02 | Phase 11 | Pending |
+| TRNS-03 | Phase 11 | Pending |
 
 **Coverage:**
 - v1.2 requirements: 20 total
-- Mapped to phases: 0
-- Unmapped: 20 ⚠️
+- Mapped to phases: 20
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-08*
-*Last updated: 2026-03-22 after v1.2 requirements definition*
+*Last updated: 2026-03-22 after v1.2 roadmap creation (Phases 8-11)*

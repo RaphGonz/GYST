@@ -5,7 +5,7 @@ milestone_name: Refined Protocol with 5PM Framework
 status: planning
 last_updated: "2026-03-22"
 progress:
-  total_phases: 0
+  total_phases: 4
   completed_phases: 0
   total_plans: 0
   completed_plans: 0
@@ -18,52 +18,43 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** One command, one session, one testable hypothesis — solo entrepreneurs get the clarity the Foundation Sprint was designed to produce, without needing a team.
-**Current focus:** Defining requirements for v1.2
+**Current focus:** Phase 8 — English Step 1 5PM Lenses (ready to plan)
 
 ## Current Position
 
-Phase: Not started (defining requirements)
+Phase: 8 of 11 (English Step 1 — 5PM Lenses)
 Plan: —
-Status: Defining requirements
-Last activity: 2026-03-22 — Milestone v1.2 started
+Status: Ready to plan
+Last activity: 2026-03-22 — v1.2 roadmap created (Phases 8-11)
+
+Progress: [░░░░░░░░░░] 0%
 
 ## Performance Metrics
 
-**Velocity (v1.0 baseline):**
-- Total plans completed: 8
-- Average duration: ~12 min/plan
-- Total execution time: ~1.6 hours
+**Velocity (v1.1 baseline):**
+- Total plans completed: 12
+- Average duration: ~13 min/plan
+- Total execution time: ~2.6 hours
 
-**By Phase (v1.0):**
-
-| Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| 1. Infrastructure | 2 | ~18 min | ~9 min |
-| 2. The Basics Step 1 | 2 | ~24 min | ~12 min |
-| 3. Differentiation Step 2 | 2 | ~23 min | ~11.5 min |
-| 4. Approaches + Hypothesis | 2 | ~33 min | ~16.5 min |
-
-**v1.1:**
+**By Phase (v1.2 — not started):**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 5. Language Routing | 1 | ~10 min | ~10 min |
-| 6. French Output Templates | 1 | ~18 min | ~18 min |
-| 7. French Workflow (07-01) | 1 | ~14 min | ~14 min |
-| 7. French Workflow (07-02) | 1 | ~16 min | ~16 min |
+| 8. English Step 1 — 5PM Lenses | TBD | - | - |
+| 9. English Step 3 — Fit, Validation, Scorecard | TBD | - | - |
+| 10. Language Scorecard Templates | TBD | - | - |
+| 11. Language Workflow Updates | TBD | - | - |
 
 ## Accumulated Context
 
 ### Decisions
 
-All v1.0 and v1.1 decisions logged in PROJECT.md Key Decisions table and previous STATE.md.
-
-v1.2 decisions:
-- [v1.2 scope]: 5PM framework by Rob Walling integrated into existing 4-step flow, not as a separate step
-- [v1.2 scope]: Problem I/U matrix in Step 1; Purchaser + Pricing Model awareness questions in Step 1 (non-blocking); Market sizing via AI research + founder questions in Step 1
-- [v1.2 scope]: Product/Founder Fit confrontation in Step 3; Pain to Validate matrix per approach in Step 3
-- [v1.2 scope]: New output file: 5PM Scorecard
-- [v1.2 scope]: English workflow first, then dedicated phase to translate all language versions (FR, JA, PT) from English
+- [v1.2 scope]: 5PM framework integrated as awareness lenses into existing 4-step flow — not a separate step
+- [v1.2 scope]: Problem I/U matrix + Purchaser + Market sizing in Step 1 as non-blocking passes (no lock cycles, no banner updates)
+- [v1.2 scope]: Founder Fit + Pain to Validate in Step 3; Pain to Validate uses existing sequential matrix pattern (Matrix 5)
+- [v1.2 scope]: Scorecard fields named at capture time (scorecard_[field]) so section_write_outputs assembles from named references, not memory reconstruction
+- [v1.2 scope]: Pricing Model deferred to v2 — Purchaser + Market cover the financial angle sufficiently
+- [v1.2 scope]: English workflow finalized before any language translation begins
 
 ### Pending Todos
 
@@ -71,10 +62,12 @@ None.
 
 ### Blockers/Concerns
 
-None.
+- [Phase 8]: "Non-blocking awareness" structural definition must be resolved in plan as acceptance criteria before prose is written — key UX framing decision (see research SUMMARY.md Pitfall 1)
+- [Phase 9]: Pain to Validate integration option (absorb into Matrix 3 vs. standalone Matrix 5) must be an explicit plan decision with documented rationale
+- [Phase 10]: 5PM terminology register does not yet exist — required before any translation line is written
 
 ## Session Continuity
 
 Last session: 2026-03-22
-Stopped at: Defining requirements for v1.2
+Stopped at: Roadmap created for v1.2 (Phases 8-11)
 Resume file: None
