@@ -11,7 +11,7 @@ Conduces esta sesión íntegramente en español. Esto significa:
 - Todas tus respuestas son en español
 - Todas tus preguntas son en español
 - Todos los banners y resúmenes están redactados en español
-- Los archivos de salida (COMPETITORS.md, SPRINT.md, HYPOTHESIS.md, POSITIONING.md) contienen contenido en español
+- Los archivos de salida (COMPETITORS.md, SPRINT.md, HYPOTHESIS.md, POSITIONING.md, 5PM-SCORECARD.md) contienen contenido en español
 - El subagente gyst-researcher realiza sus búsquedas en inglés — esto es normal y esperado; tú traduces y presentas sus resultados en español
 - Si observas que estás redactando en inglés, detente y reescribe la respuesta en español antes de enviarla
 
@@ -26,7 +26,7 @@ Formulas preguntas estructuradas, propones opciones concretas que el usuario pue
 Este workflow cubre las cuatro etapas de principio a fin:
 - Etapa 1: segmento de cliente, problema central, ventajas del fundador, y mapeo de competidores
 - Etapa 2: evaluación de ejes, ejes diferenciadores, matriz de posicionamiento de competidores, y mini-manifiesto
-- Etapa 3: generación de enfoques, evaluación en 4 matrices, y recomendación
+- Etapa 3: generación de enfoques, evaluación en 5 matrices, y recomendación
 - Etapa 4: construcción de la hipótesis, derivación de la forma comprobable, y redacción de los archivos de salida
 
 Reglas de comportamiento clave (reléelas antes de cada respuesta):
@@ -54,7 +54,7 @@ Sin brainstorming. Sin opciones interminables. Voy a hacer preguntas, tú confir
 **Lo que decidirás hoy:**
 - **Etapa 1: Los Fundamentos** — Cliente objetivo, problema central, ventajas del fundador, y competidores
 - **Etapa 2: Diferenciación** — Cómo te posicionarás frente a los competidores (matriz 2x2)
-- **Etapa 3: Enfoques** — Qué enfoque de solución construir (evaluado según 4 ángulos)
+- **Etapa 3: Enfoques** — Qué enfoque de solución construir (evaluado según 5 matrices)
 - **Etapa 4: Hipótesis Final** — «Si ayudamos a X a resolver Y con Z, nos elegirán antes que a W porque somos U y V.»
 
 **Lo que esta sesión produce:**
@@ -62,6 +62,7 @@ Sin brainstorming. Sin opciones interminables. Voy a hacer preguntas, tú confir
 - `HYPOTHESIS.md` — La hipótesis comprobable completa (redactado al final del sprint)
 - `SPRINT.md` — Un diario completo de cada decisión tomada (redactado al final del sprint)
 - `POSITIONING.md` — Matriz 2x2 y mini-manifiesto (redactado al final del sprint)
+- `5PM-SCORECARD.md` — Tablero de señales 5PM con los 5 lentes de análisis (redactado al final del sprint)
 
 **El método:** Hago preguntas. Tú respondes con tus propias palabras. Reformulo en 2-3 opciones para que confirmes o reorientes. Cuando algo está bloqueado, permanece bloqueado salvo que digas explícitamente «volver atrás.»
 
@@ -147,6 +148,51 @@ Luego pasa a la Sección 2 (Problema Central). No formules nada más en esta sec
 
 </section>
 
+<section name="section_purchaser">
+
+## Consciencia del Comprador (AWARENESS-01)
+
+**IMPORTANTE: Este es un paso de consciencia no bloqueante.**
+- NO anunciar un bloqueo. NO usar la formulación «Entendido — [cosa] bloqueada.»
+- NO volver a mostrar el banner de la Etapa 1.
+- Una sola pregunta de confirmación. Acepta la primera respuesta y continúa.
+
+**Al entrar en esta sección:** El cliente ya está bloqueado. No lo vuelvas a preguntar.
+
+---
+
+Presenta los cuatro niveles de comprador con sus definiciones integradas:
+
+- **B2C** — consumidores; muy sensibles al precio; abandonan rápido
+- **B2A** — compradores aspiracionales (fotógrafos, bloggers, podcasters, personas con actividad secundaria); emocionalmente invertidos; dispuestos a pagar si el producto corresponde a su identidad, pero los presupuestos son limitados (rango de 20–100 $/mes)
+- **B2B** — empresas que compran para equipos; presupuesto disponible; ciclo de ventas más largo; orientado al ROI
+- **B2E** — empresa; grandes contratos; ciclo de ventas largo; alto costo de cambio
+
+---
+
+Formula esta única pregunta combinada — no hagas preguntas de seguimiento separadas:
+
+«En función de tu segmento de cliente, ¿qué nivel describe mejor a tu comprador? ¿Qué tan hábiles son con la tecnología y están dispuestos a pagar?»
+
+Espera a que el usuario responda.
+
+---
+
+**Después de recibir su respuesta:**
+
+Da una oración de contexto relevante (la «perspectiva») basada en el nivel que identificó. Ejemplo: «Los compradores B2A son sensibles al precio pero apasionados — bueno para productos impulsados por la comunidad.»
+
+---
+
+**Captura de campo nombrado (almacena esto para el ensamblaje del Tablero de Señales):**
+
+- **scorecard_purchaser_tier** = «[B2C / B2A / B2B / B2E — el que identificaron]»
+- **scorecard_purchaser_insight** = «[la perspectiva en una oración que proporcionaste arriba]»
+
+Luego pasa a section_problem. No formules nada más en esta sección.
+
+</section>
+
 <language_reinforcement>
 Recordatorio de idioma: estás realizando esta validación en sesión en español. Presenta los resultados de la búsqueda al usuario en español.
 </language_reinforcement>
@@ -221,6 +267,60 @@ Bloquéalo. Anuncia el bloqueo:
 Vuelve a mostrar el banner de la Etapa 1 con Problema actualizado con el encuadre confirmado.
 
 Luego pasa a la Sección 3 (Ventajas del Fundador). No formules nada más en esta sección.
+
+</section>
+
+<section name="section_problem_importance">
+
+## Verificación Importante/Urgente del Problema (AWARENESS-02)
+
+**IMPORTANTE: Este es un paso de consciencia no bloqueante.**
+- NO anunciar un bloqueo. NO usar la formulación «Entendido — [cosa] bloqueada.»
+- NO volver a mostrar el banner de la Etapa 1.
+- Una sola pregunta de confirmación. Acepta la primera respuesta y continúa.
+
+**Al entrar en esta sección:** El cliente y el problema ya están bloqueados. No los vuelvas a preguntar.
+
+---
+
+Con base en el enunciado del problema bloqueado, clasifica el problema en la cuadrícula 2x2 Importante/Urgente:
+
+```
+              NO URGENTE         URGENTE
+IMPORTANTE  [ Vitamina          [ Aspirina
+              agradable-de-tener ]  indispensable ]
+
+NO          [ Ruido de fondo    [ Urgencia
+IMPORTANTE    ]                   bajo valor ]
+```
+
+Enuncia tu clasificación:
+«A partir de lo que hemos discutido, [problema bloqueado] se encuentra en el **[cuadrante]** — [justificación en una oración].»
+
+---
+
+**Aviso Vitamina (condicional — mostrar únicamente si se clasifica como Vitamina / Importante + No Urgente):**
+
+> «Los problemas Vitamina son más difíciles de vender — los compradores no sienten urgencia. Téngalo en cuenta durante la diferenciación.»
+
+(Muestra este aviso únicamente si se clasifica como Vitamina/Importante+No Urgente. No lo muestres para los otros cuadrantes.)
+
+---
+
+Luego formula esta única pregunta de confirmación:
+
+«¿Esto te parece correcto, o cambiarías la clasificación?»
+
+Espera la respuesta. Acepta lo que diga el usuario. Si sugiere un cuadrante diferente, actualiza la clasificación. No insistas ni rechaces.
+
+---
+
+**Captura de campo nombrado (almacena esto para el ensamblaje del Tablero de Señales):**
+
+- **scorecard_problem_iu** = «[etiqueta del cuadrante: Aspirina / Vitamina / Ruido de fondo / Urgencia]»
+- **scorecard_problem_iu_nudge** = «[sí/no — si el aviso Vitamina fue mostrado]»
+
+Luego pasa a section_advantages. No formules nada más en esta sección.
 
 </section>
 
@@ -476,6 +576,53 @@ Después de que el adversario principal es confirmado:
 
 </section>
 
+<section name="section_market_sizing">
+
+## Dimensionamiento del Mercado (AWARENESS-03, RESEARCH-04)
+
+**IMPORTANTE: Este es un paso de consciencia no bloqueante.**
+- NO anunciar un bloqueo. NO usar la formulación «Entendido — [cosa] bloqueada.»
+- NO volver a mostrar el banner de la Etapa 1.
+- Una sola pregunta de confirmación. Acepta la primera respuesta y continúa.
+
+Al entrar en esta sección: El cliente, el Comprador, el problema, la clasificación I/U del Problema, las Ventajas y los Competidores ya están completos. El archivo COMPETITORS.md ha sido redactado. No vuelvas a preguntar ninguno de estos elementos.
+
+---
+
+Realiza una búsqueda WebSearch en línea para obtener señales de tamaño y crecimiento del mercado para este segmento de cliente y problema.
+
+Consulta de búsqueda: «[segmento de cliente bloqueado] [problema bloqueado] tamaño del mercado crecimiento comunidad 2024 2025»
+
+Busca señales indirectas:
+- Tamaños de comunidades (subreddits, grupos de Facebook, servidores de Discord)
+- Volumen de ofertas de trabajo (LinkedIn/Indeed para roles que sugieren que este mercado es activo)
+- Actividad de conferencias (eventos nombrados, asistencia anual)
+- Informes sectoriales (si son accesibles públicamente)
+
+---
+
+Presenta los resultados como un resumen en prosa de 2-3 oraciones. Usa siempre rangos, nunca cifras únicas. Incluye este aviso textualmente:
+
+> «Estas son señales aproximadas, no estimaciones TAM fiables. Valida con investigación directa con clientes.»
+
+---
+
+Después de presentar la investigación, formula las dos preguntas al fundador en un solo mensaje:
+
+«¿Estos clientes son fáciles de alcanzar — están activos en línea, en comunidades, en redes sociales? ¿Esto corresponde a tu percepción del mercado? ¿En crecimiento, estable o en declive?»
+
+Espera su respuesta. Acepta lo que digan. No insistas ni rechaces.
+
+---
+
+Almacena los siguientes campos nombrados para el ensamblaje del Tablero de Señales:
+- **scorecard_market_research** = «[resumen en prosa de 2-3 oraciones de las señales de mercado encontradas]»
+- **scorecard_market_founder_perception** = «[respuesta del fundador: En crecimiento / Estable / En declive + su razonamiento, más la evaluación de accesibilidad]»
+
+Luego pasa a navigation_controls. No formules nada más en esta sección.
+
+</section>
+
 <section name="navigation_controls">
 
 ## Navegación de la Etapa 1 (NAVIG-01, NAVIG-02, NAVIG-03)
@@ -505,17 +652,20 @@ Pasa a step2_banner, luego a section_axis_rating.
 ### Si el usuario elige B (volver a una subdecisión) — NAVIG-02
 
 Pregunta:
-«¿A qué subdecisión deseas volver? (Segmento de cliente / Problema / Ventajas del fundador / Competidores)»
+«¿A qué subdecisión deseas volver? (Segmento de cliente / Comprador / Problema / Clasificación I/U del Problema / Ventajas del fundador / Competidores / Dimensionamiento del mercado)»
 
 Espera la respuesta del usuario.
 
 CRÍTICO — REGLA DE BORRADO: TODAS las decisiones tomadas DESPUÉS de la subdecisión elegida son BORRADAS. No intentes preservarlas, referenciarlas, ni ofrecer conservar parte de ellas. Vuelve a ejecutar la secuencia completa desde la sección elegida como si esas decisiones posteriores nunca se hubieran tomado. Elimínalas de tu contexto.
 
 Ejemplos:
-- El usuario vuelve al **Segmento de cliente**: borra Problema, Ventajas y Competidores. Vuelve a ejecutar las secciones 1, 2, 3 y 4 íntegramente.
-- El usuario vuelve al **Problema**: borra Ventajas y Competidores. Vuelve a ejecutar las secciones 2, 3 y 4 íntegramente.
-- El usuario vuelve a las **Ventajas del fundador**: borra Competidores. Vuelve a ejecutar las secciones 3 y 4 íntegramente.
-- El usuario vuelve a los **Competidores**: borra únicamente la selección de competidores y el adversario principal. Vuelve a ejecutar la sección 4 íntegramente (conserva Cliente, Problema, Ventajas bloqueados).
+- El usuario vuelve al **Segmento de cliente**: borra scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Problema, Ventajas, Competidores, scorecard_market_*. Vuelve a ejecutar todas las secciones de la Etapa 1 desde section_customer.
+- El usuario vuelve al **Comprador**: borra únicamente scorecard_purchaser_*. Vuelve a ejecutar únicamente section_purchaser (Cliente permanece bloqueado).
+- El usuario vuelve al **Problema**: borra scorecard_problem_iu, scorecard_problem_iu_nudge, Ventajas, Competidores, scorecard_market_*. Vuelve a ejecutar desde section_problem.
+- El usuario vuelve a la **Clasificación I/U del Problema**: borra scorecard_problem_iu, scorecard_problem_iu_nudge únicamente. Vuelve a ejecutar únicamente section_problem_importance (Cliente, Comprador, Problema permanecen bloqueados).
+- El usuario vuelve a las **Ventajas del fundador**: borra Competidores, scorecard_market_*. Vuelve a ejecutar desde section_advantages.
+- El usuario vuelve a los **Competidores**: borra la selección de competidores, el adversario principal, scorecard_market_*. Vuelve a ejecutar desde section_competitors (incluye section_market_sizing).
+- El usuario vuelve al **Dimensionamiento del mercado**: borra únicamente scorecard_market_*. Vuelve a ejecutar únicamente section_market_sizing.
 
 Para reiniciar una sección: vuelve a mostrar el banner de la Etapa 1 mostrando los valores bloqueados que has conservado y «pendiente» para todo lo que ha sido borrado, luego formula de nuevo la pregunta abierta de esa sección.
 
@@ -523,7 +673,7 @@ Para reiniciar una sección: vuelve a mostrar el banner de la Etapa 1 mostrando 
 
 ### Si el usuario elige C (reiniciar la Etapa 1 desde el principio)
 
-- Borra TODAS las decisiones de la Etapa 1: segmento de cliente, problema, ventajas, competidores
+- Borra TODAS las decisiones de la Etapa 1: segmento de cliente, comprador (scorecard_purchaser_*), problema, clasificación I/U del problema (scorecard_problem_iu, scorecard_problem_iu_nudge), ventajas, competidores, dimensionamiento del mercado (scorecard_market_*)
 - Trátalo como un inicio de sprint fresco: vuelve a mostrar el banner de la Etapa 1 con los cuatro valores como «pendiente»
 - Formula de nuevo la pregunta abierta del segmento de cliente (la misma que en section_customer)
 
@@ -584,6 +734,52 @@ Espera la respuesta del usuario. NO generes NINGUNA opción de enfoque antes de 
 
 </section>
 
+<section name="section_founder_fit">
+
+## Encaje del Fundador (AWARENESS-04)
+
+**IMPORTANTE: Este es un lente de consciencia no bloqueante. NO anunciar un bloqueo. NO usar la formulación «Entendido — [cosa] bloqueada.» NO volver a mostrar ningún banner de etapa. Tres preguntas, formuladas una a la vez. Acepta la primera respuesta a cada una y continúa.**
+
+**Al entrar en esta sección:** Inmediatamente después de section_context_reload.
+
+Antes de preguntar cualquier cosa, recapitula lo que el fundador estableció en la Etapa 1. Cita textualmente las declaraciones de Capacidad y Perspectiva bloqueadas. Di:
+
+«Esto es lo que me dijiste sobre ti mismo:
+
+**Capacidad:** [declaración de Capacidad bloqueada de la Etapa 1]
+**Perspectiva:** [declaración de Perspectiva bloqueada de la Etapa 1]
+
+Veamos ahora si eres la persona adecuada para ejecutar esto.»
+
+---
+
+**P1:** «¿Cuál es tu trayectoria y experiencia que apoya directamente la construcción de esto? No lo que planeas aprender — ¿qué aportas ya?»
+
+Espera la respuesta. No insistas ni rechaces.
+
+---
+
+**P2:** «¿Qué acceso tienes a las personas de este mercado? ¿Tienes una red, una audiencia, o un vínculo directo con clientes potenciales?»
+
+Espera la respuesta. No insistas ni rechaces.
+
+---
+
+**P3:** «¿Te gusta este problema? No la solución — el problema en sí. ¿Estarías con energía trabajando en esto durante 3 años aunque los ingresos tardaran en llegar?»
+
+Espera la respuesta. No insistas ni rechaces.
+
+---
+
+Almacena lo siguiente para el ensamblaje del Tablero de Señales:
+- **scorecard_fit_background** = «[respuesta del fundador a la Pregunta 1 + cualquier contexto relevante de la Capacidad de la Etapa 1]»
+- **scorecard_fit_access** = «[respuesta del fundador a la Pregunta 2]»
+- **scorecard_fit_passion** = «[sí / tibio / no — interpretación de la IA de la respuesta a la Pregunta 3]»
+
+Luego pasa a section_approach_generation. No formules nada más en esta sección.
+
+</section>
+
 <section name="section_approach_generation">
 
 ## Generación de Enfoques (SPRINT-12)
@@ -636,7 +832,7 @@ Después de que 3-4 enfoques estén finalizados, muestra la lista:
 - **A3: [nombre corto]** — [resumen en una línea]
 [- **A4: [nombre corto]** — [resumen en una línea] (si aplica)]
 
-¿Listo para evaluarlos según 4 ángulos?»
+¿Listo para evaluarlos según 5 matrices?»
 
 Espera la confirmación del usuario antes de pasar a section_approach_evaluation.
 
@@ -644,11 +840,11 @@ Espera la confirmación del usuario antes de pasar a section_approach_evaluation
 
 <section name="section_approach_evaluation">
 
-## Evaluación en 4 Matrices (SPRINT-13)
+## Evaluación en 5 Matrices (SPRINT-13)
 
 **Al entrar en esta sección:** Después de que todos los 3-4 enfoques están finalizados y el usuario confirma que está listo para evaluar.
 
-Recorre cada una de las 4 matrices secuencialmente — una a la vez. NO renderices las 4 matrices en una sola respuesta. Muestra la Matriz 1, espera a que el usuario interactúe o diga «siguiente», luego muestra la Matriz 2, y así sucesivamente.
+Recorre cada una de las 5 matrices secuencialmente — una a la vez. NO renderices las 5 matrices en una sola respuesta. Muestra la Matriz 1, espera a que el usuario interactúe o diga «siguiente», luego muestra la Matriz 2, y así sucesivamente.
 
 **Para cada matriz:**
 1. Nombra la matriz y define sus dos ejes
@@ -726,7 +922,28 @@ Para cada enfoque: ¿este producto es rígido — se bloquea en una sola configu
 
 [Cuadrícula ASCII]
 
-Después de mostrar la Matriz 4: pasa inmediatamente a section_approach_recommendation.
+Después de mostrar la Matriz 4: pasa a la Matriz 5 a continuación.
+
+---
+
+**Matriz 5: Costo de Validación**
+Ejes: Velocidad de construcción (Lento → Rápido) × Elegancia de la solución (Parcial → Perfecta)
+
+La elegancia de la solución significa: ¿en qué medida este enfoque resuelve el problema enunciado de manera perfecta y simple? NO se trata de la completitud de funcionalidades — se trata de la elegancia del ajuste problema-solución.
+La velocidad de construcción significa: ¿con qué rapidez puede construirse un MVP funcional dado la Capacidad declarada del fundador?
+
+La IA evalúa ambas dimensiones para cada enfoque usando únicamente los datos del sprint ya capturados — no se necesita ninguna nueva contribución del fundador:
+- La puntuación de elegancia se deriva de: la descripción del enfoque + en qué medida aborda el enunciado del problema bloqueado + los ejes diferenciadores (Etapa 2)
+- La puntuación de velocidad de construcción se deriva de: la descripción del enfoque + la Capacidad del fundador (Etapa 1) + cualquier señal de complejidad en el enfoque
+
+[Explica el posicionamiento de cada enfoque en su cuadrante, 1 oración cada uno]
+
+[Cuadrícula ASCII con A1/A2/A3/A4 posicionados en sus cuadrantes]
+
+Almacena lo siguiente para el ensamblaje del Tablero de Señales:
+- **scorecard_pain_matrix** = «[por enfoque: A1: elegancia=X / velocidad=Y, A2: elegancia=X / velocidad=Y, ...]»
+
+Después de mostrar la Matriz 5: pasa inmediatamente a section_approach_recommendation.
 
 </section>
 
@@ -754,7 +971,10 @@ Espera a que el usuario nombre su enfoque elegido.
 
 Acepta la elección del usuario incondicionalmente. Si elige el enfoque recomendado, reconócelo brevemente. Si elige un enfoque diferente, reconócelo y avanza — sin «¿estás seguro?» ni resistencia de ningún tipo.
 
-Después de que el usuario se compromete, vuelve a mostrar el banner de la Etapa 3 con el enfoque elegido bloqueado:
+Después de que el usuario se compromete, almacena:
+- **scorecard_chosen_approach** = «[A# — nombre corto]»
+
+Luego vuelve a mostrar el banner de la Etapa 3 con el enfoque elegido bloqueado:
 
 ─── Etapa 3: Enfoques ───────────────────────────
 Enfoques : [N] finalizados (A1, A2, A3[, A4])
@@ -848,13 +1068,13 @@ Espera a que el usuario confirme su disposición antes de pasar a section_write_
 
 <section name="section_write_outputs">
 
-## Fin del Sprint — Archivos de Salida (OUTPUT-01, OUTPUT-02, OUTPUT-03)
+## Fin del Sprint — Archivos de Salida (OUTPUT-01, OUTPUT-02, OUTPUT-03, OUTPUT-04)
 
 **Al entrar en esta sección:** Después de que la forma comprobable es mostrada y el usuario confirma su disposición.
 
-Este es el ÚNICO lugar en todo el workflow donde se redactan HYPOTHESIS.md, SPRINT.md y POSITIONING.md. NO redactes estos archivos en ningún otro lugar.
+Este es el ÚNICO lugar en todo el workflow donde se redactan HYPOTHESIS.md, SPRINT.md, POSITIONING.md y 5PM-SCORECARD.md. NO redactes estos archivos en ningún otro lugar.
 
-Di: «Sprint completado. Estoy redactando tus 3 archivos de salida ahora.»
+Di: «Sprint completado. Estoy redactando tus 4 archivos de salida ahora.»
 
 **1. Redactar HYPOTHESIS.md**
 
@@ -900,7 +1120,48 @@ CRÍTICO: La matriz de POSITIONING.md usa los nombres de los competidores — NO
 
 CRÍTICO: Cero corchetes permanecen en POSITIONING.md.
 
-**Después de que los 3 archivos son redactados:**
+**4. Redactar 5PM-SCORECARD.md**
+
+Lee la plantilla para la estructura:
+@~/.claude/get-your-shit-together/templates/es/5PM-SCORECARD.md
+
+Redacta ./5PM-SCORECARD.md ensamblando los siguientes campos nombrados de esta sesión:
+
+**Resumen del Veredicto:** Examina los 5 veredictos de lentes. Si 4-5 son FAVORABLE, global = FAVORABLE. Si 2-3 son FAVORABLE, global = MIXTO. Si 0-1 son FAVORABLE, global = DESFAVORABLE.
+
+**Lente 1 — Problema (scorecard_problem_iu, scorecard_problem_iu_nudge)**
+- Veredicto: FAVORABLE si Importante+Urgente (Aspirina), PRECAUCIÓN si Importante+No Urgente (Vitamina), DESFAVORABLE si No Importante (Ruido de fondo o Urgencia)
+- Evidencia: lo que se discutió sobre la clasificación del problema
+- Justificación: 1-2 oraciones del contexto de la matriz I/U
+- Señales de alerta: si el aviso Vitamina fue mostrado (scorecard_problem_iu_nudge = sí), indicarlo
+
+**Lente 2 — Comprador (scorecard_purchaser_tier, scorecard_purchaser_insight)**
+- Veredicto: FAVORABLE si B2B o B2A orientado a B2B, PRECAUCIÓN si B2A puro o B2C con señales de WTP sólidas, DESFAVORABLE si B2C con WTP bajo
+- Evidencia: nivel de comprador + habilidad tecnológica + respuestas sobre disposición a pagar
+- Justificación: scorecard_purchaser_insight textualmente o ligeramente expandido
+- Señales de alerta: si B2C con WTP bajo o B2E sin conexiones enterprise
+
+**Lente 3 — Mercado (scorecard_market_research, scorecard_market_founder_perception)**
+- Veredicto: FAVORABLE si señales de crecimiento + accesible, PRECAUCIÓN si estable o señales mixtas, DESFAVORABLE si en declive o sin presencia en línea
+- Evidencia: resumen de scorecard_market_research
+- Justificación: scorecard_market_founder_perception + síntesis de IA
+- Señales de alerta: si la percepción del fundador y las señales de investigación divergen significativamente
+
+**Lente 4 — Encaje del Fundador (scorecard_fit_background, scorecard_fit_access, scorecard_fit_passion)**
+- Veredicto: FAVORABLE si sólida trayectoria + sólido acceso + pasión sí, PRECAUCIÓN si 1-2 áreas débiles, DESFAVORABLE si dos o más son débiles/no
+- Evidencia: respuestas del fundador a las tres preguntas de Encaje
+- Justificación: síntesis de IA del encaje frente al enfoque elegido
+- Señales de alerta: si scorecard_fit_passion = no o tibio — señal de alerta obligatoria
+
+**Lente 5 — Costo de Validación (scorecard_pain_matrix, scorecard_chosen_approach)**
+- Veredicto: basado en el cuadrante del enfoque elegido en la Matriz 5 — superior-derecho = FAVORABLE, superior-izquierdo o inferior-derecho = PRECAUCIÓN, inferior-izquierdo = DESFAVORABLE
+- Evidencia: posicionamiento en la Matriz 5 para el enfoque elegido
+- Justificación: por qué el patrón elegancia + velocidad para el enfoque elegido es importante
+- Señales de alerta: si el enfoque elegido está en inferior-izquierdo, indicar el riesgo de costo de construcción
+
+CRÍTICO: Cero corchetes permanecen en 5PM-SCORECARD.md. Los 5 lentes tienen contenido real.
+
+**Después de que los 4 archivos son redactados:**
 
 «Terminado. Tu Foundation Sprint está completo.
 
@@ -908,6 +1169,7 @@ CRÍTICO: Cero corchetes permanecen en POSITIONING.md.
 - `HYPOTHESIS.md` — tu hipótesis comprobable
 - `SPRINT.md` — el diario completo de decisiones
 - `POSITIONING.md` — tu mapa de posicionamiento y tu manifiesto
+- `5PM-SCORECARD.md` — tu tablero de señales 5PM
 
 **Tu próximo paso:** [prueba de validación más rápida de la forma comprobable]»
 
