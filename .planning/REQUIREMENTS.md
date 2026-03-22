@@ -42,15 +42,15 @@
 
 ### Product/Founder Fit
 
-- [ ] **PFIT-01**: Sprint confronts the founder in Step 3 on background, market access, and why they are the right person to build this
-- [ ] **PFIT-02**: Sprint probes for Founder's Unique Advantage — audience, network, domain expertise
-- [ ] **PFIT-03**: Sprint asks "Do you love this problem?" as a direct founder-passion check
-- [ ] **PFIT-04**: Founder Fit is a delta check against existing advantages already captured in Step 1, not a duplicate elicitation
+- [x] **PFIT-01**: Sprint confronts the founder in Step 3 on background, market access, and why they are the right person to build this
+- [x] **PFIT-02**: Sprint probes for Founder's Unique Advantage — audience, network, domain expertise
+- [x] **PFIT-03**: Sprint asks "Do you love this problem?" as a direct founder-passion check
+- [x] **PFIT-04**: Founder Fit is a delta check against existing advantages already captured in Step 1, not a duplicate elicitation
 
 ### Pain to Validate
 
-- [ ] **PAIN-01**: Sprint presents a Pain to Validate assessment per approach in Step 3 — time to MVP and pain of building
-- [ ] **PAIN-02**: Pain to Validate uses the existing sequential matrix pattern (Matrix 5 in approach evaluation)
+- [x] **PAIN-01**: Sprint presents a Pain to Validate assessment per approach in Step 3 — time to MVP and pain of building
+- [x] **PAIN-02**: Pain to Validate uses the existing sequential matrix pattern (Matrix 5 in approach evaluation)
 
 ### 5PM Scorecard Output
 
@@ -116,12 +116,12 @@
 | MRKT-01 | Phase 8 | Complete |
 | MRKT-02 | Phase 8 | Complete |
 | MRKT-03 | Phase 8 | Complete |
-| PFIT-01 | Phase 9 | Pending |
-| PFIT-02 | Phase 9 | Pending |
-| PFIT-03 | Phase 9 | Pending |
-| PFIT-04 | Phase 9 | Pending |
-| PAIN-01 | Phase 9 | Pending |
-| PAIN-02 | Phase 9 | Pending |
+| PFIT-01 | Phase 9 | Complete |
+| PFIT-02 | Phase 9 | Complete |
+| PFIT-03 | Phase 9 | Complete |
+| PFIT-04 | Phase 9 | Complete |
+| PAIN-01 | Phase 9 | Complete |
+| PAIN-02 | Phase 9 | Complete |
 | SCRD-01 | Phase 9 | Pending |
 | SCRD-02 | Phase 9 | Pending |
 | SCRD-03 | Phase 9 | Pending |

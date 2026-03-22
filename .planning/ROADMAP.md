@@ -68,7 +68,7 @@ Plans:
   3. Each approach evaluation includes a Pain to Validate label using the existing sequential matrix pattern
   4. Sprint produces a 5PM-SCORECARD.md file with a FAVORABLE/CAUTION/UNFAVORABLE verdict per lens, evidence from the sprint, rationale, and red flags
   5. The Scorecard is written only in section_write_outputs — no partial Scorecard appears earlier in the session
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 
 Plans:
 - [ ] 09-01-PLAN.md — Add section_founder_fit, Matrix 5 (Pain to Validate), and scorecard_chosen_approach capture
@@ -110,6 +110,6 @@ Plans:
 | 6. French Output Templates | v1.1 | 1/1 | Complete | 2026-03-08 |
 | 7. French Workflow Translation | v1.1 | 2/2 | Complete | 2026-03-08 |
 | 8. English Step 1 — 5PM Lenses | v1.2 | 2/2 | Complete | 2026-03-22 |
-| 9. English Step 3 — Fit, Validation, and Scorecard | v1.2 | 0/2 | Not started | - |
+| 9. English Step 3 — Fit, Validation, and Scorecard | 1/2 | In Progress|  | - |
 | 10. Language Scorecard Templates | v1.2 | 0/? | Not started | - |
 | 11. Language Workflow Updates | v1.2 | 0/? | Not started | - |

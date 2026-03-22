@@ -18,14 +18,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** One command, one session, one testable hypothesis — solo entrepreneurs get the clarity the Foundation Sprint was designed to produce, without needing a team.
-**Current focus:** Phase 8 complete — Phase 9 next (English Step 3 — Fit, Validation, Scorecard)
+**Current focus:** Phase 9 in progress — Plan 01 complete, Plan 02 next (Scorecard write)
 
 ## Current Position
 
-Phase: 8 of 11 (English Step 1 — 5PM Lenses) — COMPLETE
-Plan: 2 of 2 complete
-Status: Phase 8 complete — Phase 9 pending
-Last activity: 2026-03-22 — Phase 8 Plan 02 executed
+Phase: 9 of 11 (English Step 3 — Fit, Validation, Scorecard) — IN PROGRESS
+Plan: 1 of 2 complete
+Status: Phase 9 Plan 01 complete — Plan 02 pending
+Last activity: 2026-03-22 — Phase 9 Plan 01 executed
 
 Progress: [██░░░░░░░░] 20%
 
@@ -41,7 +41,7 @@ Progress: [██░░░░░░░░] 20%
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 8. English Step 1 — 5PM Lenses | 2 | 14 min | 7 min |
-| 9. English Step 3 — Fit, Validation, Scorecard | TBD | - | - |
+| 9. English Step 3 — Fit, Validation, Scorecard | 1/2 | 8 min | 8 min |
 | 10. Language Scorecard Templates | TBD | - | - |
 | 11. Language Workflow Updates | TBD | - | - |
 
@@ -62,6 +62,10 @@ Progress: [██░░░░░░░░] 20%
 - [08-02]: Market data presented as ranges only, never single figures — enforced by section instruction
 - [08-02]: DISCARD RULE cascade expanded to 7 entries with granular scorecard_* field wipes per sub-decision
 - [08-02]: Reachability and market perception questions combined into one prompt to maintain non-blocking constraint
+- [09-01]: section_founder_fit placed before section_approach_generation so Fit data is available for Pain to Validate AI scoring in Matrix 5
+- [09-01]: Matrix 5 Y-axis is Solution elegance (Partial-Perfect) — distinct from Matrix 3's Ease to build — pain-fit elegance is about problem-solution fit quality, not technical simplicity
+- [09-01]: Pain to Validate resolved as standalone Matrix 5 (not absorbed into Matrix 3) — capstone position after Matrix 4 reinforces its summary role
+- [09-01]: scorecard_chosen_approach captured before banner re-render at commit point
 
 ### Pending Todos
 
@@ -69,11 +73,10 @@ None.
 
 ### Blockers/Concerns
 
-- [Phase 9]: Pain to Validate integration option (absorb into Matrix 3 vs. standalone Matrix 5) must be an explicit plan decision with documented rationale
 - [Phase 10]: 5PM terminology register does not yet exist — required before any translation line is written
 
 ## Session Continuity
 
 Last session: 2026-03-22
-Stopped at: Completed 08-02-PLAN.md — section_market_sizing added, navigation_controls DISCARD RULE expanded to 7 cascade entries; Phase 8 complete
+Stopped at: Completed 09-01-PLAN.md — section_founder_fit (AWARENESS-04), Matrix 5 (Pain to Validate), scorecard_chosen_approach capture; 5 new scorecard fields ready for Plan 02
 Resume file: None
