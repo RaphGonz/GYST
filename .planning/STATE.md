@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** One command, one session, one testable hypothesis — solo entrepreneurs get the clarity the Foundation Sprint was designed to produce, without needing a team.
-**Current focus:** Phase 10 Plan 01 complete — Phase 11 (Language Workflow Updates) next
+**Current focus:** Phase 11 Plan 02 complete — Japanese Foundation Sprint synced to Phase 8-9 English changes
 
 ## Current Position
 
-Phase: 10 of 11 (Language Scorecard Templates) — COMPLETE
-Plan: 1 of 1 complete
-Status: Phase 10 complete — Phase 11 pending
-Last activity: 2026-03-22 — Phase 10 Plan 01 executed
+Phase: 11 of 11 (Language Workflow Updates)
+Plan: 2 of 3 complete
+Status: Phase 11 in progress — Plan 02 complete
+Last activity: 2026-03-22 — Phase 11 Plan 02 executed
 
-Progress: [████░░░░░░] 40%
+Progress: [█████░░░░░] 50%
 
 ## Performance Metrics
 
@@ -72,6 +72,9 @@ Progress: [████░░░░░░] 40%
 - [Phase 10-01]: 懸念あり chosen over 不利 for Japanese UNFAVORABLE — more natural in Japanese business communication without sounding legal
 - [Phase 10-01]: FAVORABLE kept as-is in French — direct cognate; POSITIF rejected as too colloquial for verdict labels
 - [Phase 10-01]: 5PM-TERMINOLOGY-REGISTER.md placed at templates root as standalone file — single authority for Phase 11 term translations
+- [11-02]: All section name= identifiers and scorecard_* field names stay English in Japanese file — only user-facing text translated to 丁寧語
+- [11-02]: B2A tier pricing adapted to Japanese context (月額2,000〜10,000円 range) rather than literal dollar conversion
+- [11-02]: scorecard_fit_passion uses はい/消極的/いいえ as natural Japanese equivalents of yes/lukewarm/no
 
 ### Pending Todos
 
@@ -84,5 +87,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-03-22
-Stopped at: Completed 10-01-PLAN.md — 3 translated 5PM-SCORECARD.md templates (FR, JA, PT) and 5PM-TERMINOLOGY-REGISTER.md created; Phase 10 complete
+Stopped at: Completed 11-02-PLAN.md — Japanese Foundation Sprint synced to Phase 8-9 English changes; 26 sections, Matrix 5, 5PM-SCORECARD.md output added
 Resume file: None
