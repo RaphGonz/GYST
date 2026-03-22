@@ -54,10 +54,10 @@
 
 ### 5PM Scorecard Output
 
-- [ ] **SCRD-01**: Sprint produces a new output file `5PM-SCORECARD.md` with signal verdicts (FAVORABLE/CAUTION/UNFAVORABLE) per lens
-- [ ] **SCRD-02**: Each lens block includes: signal label, evidence from the sprint, rationale, and red flags (if any)
-- [ ] **SCRD-03**: Scorecard is written exclusively in `section_write_outputs` (zero-placeholder rule — no partial writes earlier)
-- [ ] **SCRD-04**: Scorecard template exists at `templates/5PM-SCORECARD.md`
+- [x] **SCRD-01**: Sprint produces a new output file `5PM-SCORECARD.md` with signal verdicts (FAVORABLE/CAUTION/UNFAVORABLE) per lens
+- [x] **SCRD-02**: Each lens block includes: signal label, evidence from the sprint, rationale, and red flags (if any)
+- [x] **SCRD-03**: Scorecard is written exclusively in `section_write_outputs` (zero-placeholder rule — no partial writes earlier)
+- [x] **SCRD-04**: Scorecard template exists at `templates/5PM-SCORECARD.md`
 
 ### Translation
 
@@ -122,10 +122,10 @@
 | PFIT-04 | Phase 9 | Complete |
 | PAIN-01 | Phase 9 | Complete |
 | PAIN-02 | Phase 9 | Complete |
-| SCRD-01 | Phase 9 | Pending |
-| SCRD-02 | Phase 9 | Pending |
-| SCRD-03 | Phase 9 | Pending |
-| SCRD-04 | Phase 9 | Pending |
+| SCRD-01 | Phase 9 | Complete |
+| SCRD-02 | Phase 9 | Complete |
+| SCRD-03 | Phase 9 | Complete |
+| SCRD-04 | Phase 9 | Complete |
 | TRNS-01 | Phase 10 | Pending |
 | TRNS-02 | Phase 11 | Pending |
 | TRNS-03 | Phase 11 | Pending |

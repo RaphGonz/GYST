@@ -36,7 +36,7 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 **Milestone Goal:** Integrate Rob Walling's 5PM Idea Evaluation Framework into the Foundation Sprint as awareness lenses woven into the existing 4-step flow, produce a 5PM Scorecard output file, and translate all changes to French, Japanese, and Portuguese.
 
 - [x] **Phase 8: English Step 1 — 5PM Lenses** - Add Problem I/U matrix, Purchaser classification, and Market sizing to the English workflow Step 1
-- [ ] **Phase 9: English Step 3 — Fit, Validation, and Scorecard** - Add Founder Fit and Pain to Validate to Step 3, update write_outputs, and create the 5PM-SCORECARD.md template
+- [x] **Phase 9: English Step 3 — Fit, Validation, and Scorecard** - Add Founder Fit and Pain to Validate to Step 3, update write_outputs, and create the 5PM-SCORECARD.md template (completed 2026-03-22)
 - [ ] **Phase 10: Language Scorecard Templates** - Create translated 5PM-SCORECARD.md templates for FR, JA, and PT
 - [ ] **Phase 11: Language Workflow Updates** - Apply all 5PM section changes to the FR, JA, and PT workflow files and update TRANSLATION-SYNC.md
 
@@ -68,7 +68,7 @@ Plans:
   3. Each approach evaluation includes a Pain to Validate label using the existing sequential matrix pattern
   4. Sprint produces a 5PM-SCORECARD.md file with a FAVORABLE/CAUTION/UNFAVORABLE verdict per lens, evidence from the sprint, rationale, and red flags
   5. The Scorecard is written only in section_write_outputs — no partial Scorecard appears earlier in the session
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 
 Plans:
 - [ ] 09-01-PLAN.md — Add section_founder_fit, Matrix 5 (Pain to Validate), and scorecard_chosen_approach capture
@@ -110,6 +110,6 @@ Plans:
 | 6. French Output Templates | v1.1 | 1/1 | Complete | 2026-03-08 |
 | 7. French Workflow Translation | v1.1 | 2/2 | Complete | 2026-03-08 |
 | 8. English Step 1 — 5PM Lenses | v1.2 | 2/2 | Complete | 2026-03-22 |
-| 9. English Step 3 — Fit, Validation, and Scorecard | 1/2 | In Progress|  | - |
+| 9. English Step 3 — Fit, Validation, and Scorecard | 2/2 | Complete   | 2026-03-22 | - |
 | 10. Language Scorecard Templates | v1.2 | 0/? | Not started | - |
 | 11. Language Workflow Updates | v1.2 | 0/? | Not started | - |
