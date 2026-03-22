@@ -251,6 +251,60 @@ Then proceed to Section 3 (Founder Advantages). Do not ask anything else in this
 
 </section>
 
+<section name="section_problem_importance">
+
+## Problem Important/Urgent Check (AWARENESS-02)
+
+**IMPORTANT: This is a non-blocking awareness pass.**
+- Do NOT announce a lock. Do NOT use "Got it — [thing] locked." phrasing.
+- Do NOT re-render the Step 1 banner.
+- One confirmatory question only. Accept first response and move on.
+
+**When entering this section:** Customer and Problem are already locked. Do not re-ask for them.
+
+---
+
+Based on the locked problem statement, classify the problem on the Important/Urgent 2x2 grid:
+
+```
+              NOT URGENT         URGENT
+IMPORTANT   [ Vitamin          [ Aspirin
+              nice-to-have ]     must-have ]
+
+NOT         [ Background        [ Emergency
+IMPORTANT     noise ]             low value ]
+```
+
+State your classification:
+"Based on what we discussed, [locked problem] sits in the **[quadrant]** — [one-sentence rationale]."
+
+---
+
+**Vitamin nudge (conditional — show only if classified as Vitamin / Important + Not Urgent):**
+
+> "Vitamin problems are harder to sell — buyers don't feel urgency. Keep this in mind during differentiation."
+
+(Only show this nudge if classified as Vitamin/Important+Not Urgent. Do not show for other quadrants.)
+
+---
+
+Then ask this single confirmatory question:
+
+"Does this feel right, or would you shift the classification?"
+
+Wait for response. Accept whatever the user says. If they suggest a different quadrant, update the classification. Do not probe or push back.
+
+---
+
+**Named field capture (store these for Scorecard assembly):**
+
+- **scorecard_problem_iu** = "[quadrant label: Aspirin / Vitamin / Background noise / Emergency]"
+- **scorecard_problem_iu_nudge** = "[yes/no — whether the vitamin nudge was shown]"
+
+Then proceed to section_advantages. Do not ask anything else in this section.
+
+</section>
+
 <section name="section_advantages">
 
 ## 3 of 4: Founder Advantages
