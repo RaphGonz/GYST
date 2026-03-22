@@ -628,17 +628,20 @@ Proceed to step2_banner, then section_axis_rating.
 ### If user picks B (go back to a sub-decision) — NAVIG-02
 
 Ask:
-"Which sub-decision do you want to revisit? (Customer segment / Problem / Founder advantages / Competitors)"
+"Which sub-decision do you want to revisit? (Customer segment / Purchaser / Problem / Problem I/U classification / Founder advantages / Competitors / Market sizing)"
 
 Wait for user response.
 
 CRITICAL — DISCARD RULE: ALL decisions made AFTER the chosen sub-decision are DISCARDED. Do not try to preserve them, reference them, or offer to keep any of them. Re-run the full sequence from the chosen section forward as if those downstream decisions were never made. Delete them from your context.
 
 Examples:
-- User goes back to **Customer segment**: wipe Problem, Advantages, and Competitors. Re-run sections 1, 2, 3, and 4 in full.
-- User goes back to **Problem**: wipe Advantages and Competitors. Re-run sections 2, 3, and 4 in full.
-- User goes back to **Founder advantages**: wipe Competitors. Re-run sections 3 and 4 in full.
-- User goes back to **Competitors**: wipe only the competitor selection and main adversary. Re-run section 4 in full (keep Customer, Problem, Advantages locked).
+- User goes back to **Customer segment**: wipe scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Problem, Advantages, Competitors, scorecard_market_*. Re-run all Step 1 sections from section_customer forward.
+- User goes back to **Purchaser**: wipe scorecard_purchaser_* only. Re-run section_purchaser only (Customer stays locked).
+- User goes back to **Problem**: wipe scorecard_problem_iu, scorecard_problem_iu_nudge, Advantages, Competitors, scorecard_market_*. Re-run from section_problem forward.
+- User goes back to **Problem I/U classification**: wipe scorecard_problem_iu, scorecard_problem_iu_nudge only. Re-run section_problem_importance only (Customer, Purchaser, Problem stay locked).
+- User goes back to **Founder advantages**: wipe Competitors, scorecard_market_*. Re-run from section_advantages forward.
+- User goes back to **Competitors**: wipe competitor selection, main adversary, scorecard_market_*. Re-run from section_competitors forward (includes section_market_sizing).
+- User goes back to **Market sizing**: wipe scorecard_market_* only. Re-run section_market_sizing only.
 
 To restart a section: re-render the Step 1 banner showing the locked values you kept and "pending" for everything that was discarded, then ask that section's open question again.
 
@@ -646,7 +649,7 @@ To restart a section: re-render the Step 1 banner showing the locked values you 
 
 ### If user picks C (start Step 1 over)
 
-- Wipe ALL Step 1 decisions: customer segment, problem, advantages, competitors
+- Wipe ALL Step 1 decisions: customer segment, purchaser (scorecard_purchaser_*), problem, problem I/U classification (scorecard_problem_iu, scorecard_problem_iu_nudge), advantages, competitors, market sizing (scorecard_market_*)
 - Treat this as a fresh sprint start: re-render the Step 1 banner with all four values as "pending"
 - Ask the customer segment open question again (the same one from section_customer)
 
