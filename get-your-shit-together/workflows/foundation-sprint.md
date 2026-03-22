@@ -133,6 +133,51 @@ Then proceed to Section 2 (Core Problem). Do not ask anything else in this secti
 
 </section>
 
+<section name="section_purchaser">
+
+## Purchaser Awareness (AWARENESS-01)
+
+**IMPORTANT: This is a non-blocking awareness pass.**
+- Do NOT announce a lock. Do NOT use "Got it — [thing] locked." phrasing.
+- Do NOT re-render the Step 1 banner.
+- One confirmatory question only. Accept first response and move on.
+
+**When entering this section:** Customer is already locked. Do not re-ask for it.
+
+---
+
+Present the four buyer tiers with their inline definitions:
+
+- **B2C** — consumers; highly price-sensitive; churn fast
+- **B2A** — aspirational buyers (photographers, bloggers, podcasters, side-hustlers); emotionally invested; willing to pay if product matches their identity, but budgets are tight ($20–100/mo range)
+- **B2B** — businesses buying for teams; budget exists; longer sales cycle; ROI-driven
+- **B2E** — enterprise; large contracts; long sales cycle; high switching cost
+
+---
+
+Ask this single combined question — do not ask separate follow-ups:
+
+"Based on your customer segment, which tier best describes your buyer? How tech-savvy are they, and are they willing to pay?"
+
+Wait for the user to respond.
+
+---
+
+**After receiving their response:**
+
+Give one sentence of relevant context (the "insight") based on the tier they identified. Example: "B2A buyers are price-sensitive but passionate — good for community-driven products."
+
+---
+
+**Named field capture (store these for Scorecard assembly):**
+
+- **scorecard_purchaser_tier** = "[B2C / B2A / B2B / B2E — whichever they identified]"
+- **scorecard_purchaser_insight** = "[the one-sentence insight you provided above]"
+
+Then proceed to section_problem. Do not ask anything else in this section.
+
+</section>
+
 <section name="section_problem">
 
 ## 2 of 4: Core Problem
