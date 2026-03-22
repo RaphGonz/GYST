@@ -1325,7 +1325,10 @@ Wait for user to name their chosen approach.
 
 Accept the user's choice unconditionally. If they pick the recommended approach, acknowledge briefly. If they pick a different approach, acknowledge and move forward — no "are you sure?" or pushback of any kind.
 
-After user commits, re-render the Step 3 banner with the chosen approach locked:
+After user commits, store:
+- **scorecard_chosen_approach** = "[A# — short name]"
+
+Then re-render the Step 3 banner with the chosen approach locked:
 
 ─── Step 3: Approaches ──────────────────────────
 Approaches: [N] finalized (A1, A2, A3[, A4])
