@@ -552,6 +552,53 @@ After main adversary is confirmed:
 
 </section>
 
+<section name="section_market_sizing">
+
+## Market Sizing (AWARENESS-03, RESEARCH-04)
+
+**IMPORTANT: This is a non-blocking awareness pass.**
+- Do NOT announce a lock. Do NOT use "Got it — [thing] locked." phrasing.
+- Do NOT re-render the Step 1 banner.
+- One confirmatory question only. Accept first response and move on.
+
+When entering this section: Customer, Purchaser, Problem, Problem I/U, Advantages, and Competitors are already complete. The COMPETITORS.md file has been written. Do not re-ask for any of these.
+
+---
+
+Run an inline WebSearch for market size and growth signals for this customer segment and problem.
+
+Search query: "[locked customer segment] [locked problem] market size community growth 2024 2025"
+
+Look for proxy signals:
+- Community sizes (subreddits, Facebook groups, Discord servers)
+- Job board volume (LinkedIn/Indeed for roles that suggest this market is active)
+- Conference activity (named events, annual attendance)
+- Industry reports (if publicly surfaced)
+
+---
+
+Present findings as a 2-3 sentence prose summary. Always use ranges, never single figures. Include this caveat verbatim:
+
+> "These are rough signals, not reliable TAM estimates. Validate with direct customer research."
+
+---
+
+After showing the research, ask the founder both questions in a single prompt:
+
+"Are these customers easy to reach — are they active online, in communities, on social media? Does this match your sense of the market? Growing, flat, or declining?"
+
+Wait for their response. Accept whatever they say. Do not probe or push back.
+
+---
+
+Store the following named fields for Scorecard assembly:
+- **scorecard_market_research** = "[2-3 sentence prose summary of market signals found]"
+- **scorecard_market_founder_perception** = "[founder's response: Growing / Flat / Declining + their reasoning, plus reachability assessment]"
+
+Then proceed to navigation_controls. Do not ask anything else in this section.
+
+</section>
+
 <section name="navigation_controls">
 
 ## Step 1 navigation (NAVIG-01, NAVIG-02, NAVIG-03)
