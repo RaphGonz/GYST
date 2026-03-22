@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Refined Protocol with 5PM Framework
 status: unknown
-last_updated: "2026-03-22T19:45:55.154Z"
+last_updated: "2026-03-22T20:59:23.648Z"
 progress:
-  total_phases: 6
-  completed_phases: 6
-  total_plans: 9
-  completed_plans: 9
+  total_phases: 7
+  completed_phases: 7
+  total_plans: 12
+  completed_plans: 12
 ---
 
 # Project State
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** One command, one session, one testable hypothesis — solo entrepreneurs get the clarity the Foundation Sprint was designed to produce, without needing a team.
-**Current focus:** Phase 11 Plan 02 complete — Japanese Foundation Sprint synced to Phase 8-9 English changes
+**Current focus:** Phase 11 Plans 01, 02, 03 complete — French, Japanese, Portuguese Foundation Sprints synced to Phase 8-9 English changes
 
 ## Current Position
 
 Phase: 11 of 11 (Language Workflow Updates)
-Plan: 2 of 3 complete
-Status: Phase 11 in progress — Plan 02 complete
-Last activity: 2026-03-22 — Phase 11 Plan 02 executed
+Plan: 3 of 3 complete
+Status: Phase 11 complete
+Last activity: 2026-03-22 — Phase 11 Plan 03 executed (Portuguese workflow sync)
 
-Progress: [█████░░░░░] 50%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -43,7 +43,10 @@ Progress: [█████░░░░░] 50%
 | 8. English Step 1 — 5PM Lenses | 2 | 14 min | 7 min |
 | 9. English Step 3 — Fit, Validation, Scorecard | 2/2 | 17 min | 8.5 min |
 | 10. Language Scorecard Templates | 1/1 | 10 min | 10 min |
-| 11. Language Workflow Updates | TBD | - | - |
+| 11. Language Workflow Updates (FR, JA, PT) | 3/3 | ~61 min | ~20 min |
+| Phase 11 P01 (French) | 16 min | 1 task | 1 file |
+| Phase 11 P02 (Japanese) | TBD | - | - |
+| Phase 11 P03 (Portuguese) | 30 min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -75,6 +78,10 @@ Progress: [█████░░░░░] 50%
 - [11-02]: All section name= identifiers and scorecard_* field names stay English in Japanese file — only user-facing text translated to 丁寧語
 - [11-02]: B2A tier pricing adapted to Japanese context (月額2,000〜10,000円 range) rather than literal dollar conversion
 - [11-02]: scorecard_fit_passion uses はい/消極的/いいえ as natural Japanese equivalents of yes/lukewarm/no
+- [Phase 11-01]: [11-01]: section_purchaser inserted before language_reinforcement block per research guidance
+- [Phase 11-01]: [11-01]: scorecard_* field names kept in English in all new French sections — system identifiers not user-facing text
+- [Phase 11-01]: [11-01]: Examinez les 4 matrices kept at 4 in section_approach_recommendation — Matrix 5 is AI-scored, recommendation based on Matrices 1-4
+- [Phase 11-03]: [11-03]: Portuguese uses voce register; Dificuldade de Validacao for Pain to Validate; Matrix 5 kept as proper noun; FAVORAVEL/ATENCAO/DESFAVORAVEL verdict labels per 5PM-TERMINOLOGY-REGISTER.md
 
 ### Pending Todos
 
@@ -87,5 +94,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-03-22
-Stopped at: Completed 11-02-PLAN.md — Japanese Foundation Sprint synced to Phase 8-9 English changes; 26 sections, Matrix 5, 5PM-SCORECARD.md output added
+Stopped at: Completed 11-03-PLAN.md — Portuguese Foundation Sprint synced to Phase 8-9 English changes; 26 sections (4 new awareness passes, Matrix 5, 5PM-SCORECARD.md 4th output file); TRANSLATION-SYNC.md updated for FR, JA, PT to commit b4c1af63
 Resume file: None

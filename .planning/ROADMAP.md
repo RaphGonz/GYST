@@ -38,7 +38,7 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 - [x] **Phase 8: English Step 1 — 5PM Lenses** - Add Problem I/U matrix, Purchaser classification, and Market sizing to the English workflow Step 1
 - [x] **Phase 9: English Step 3 — Fit, Validation, and Scorecard** - Add Founder Fit and Pain to Validate to Step 3, update write_outputs, and create the 5PM-SCORECARD.md template (completed 2026-03-22)
 - [x] **Phase 10: Language Scorecard Templates** - Create translated 5PM-SCORECARD.md templates for FR, JA, and PT (completed 2026-03-22)
-- [ ] **Phase 11: Language Workflow Updates** - Apply all 5PM section changes to the FR, JA, and PT workflow files and update TRANSLATION-SYNC.md
+- [x] **Phase 11: Language Workflow Updates** - Apply all 5PM section changes to the FR, JA, and PT workflow files and update TRANSLATION-SYNC.md (completed 2026-03-22)
 
 ## Phase Details
 
@@ -93,7 +93,7 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. All new and modified sections from Phases 8 and 9 are present in foundation-sprint-french.md, foundation-sprint-japanese.md, and foundation-sprint-portuguese.md, using the terminology register from Phase 10
   2. TRANSLATION-SYNC.md records the English source commit hash that all three language workflows were synced against
-**Plans:** 1/3 plans executed
+**Plans:** 3/3 plans complete
 
 Plans:
 - [ ] 11-01-PLAN.md — Sync French workflow with all Phase 8-9 English changes
@@ -114,4 +114,4 @@ Plans:
 | 8. English Step 1 — 5PM Lenses | v1.2 | 2/2 | Complete | 2026-03-22 |
 | 9. English Step 3 — Fit, Validation, and Scorecard | v1.2 | 2/2 | Complete | 2026-03-22 |
 | 10. Language Scorecard Templates | v1.2 | 1/1 | Complete | 2026-03-22 |
-| 11. Language Workflow Updates | 1/3 | In Progress|  | - |
+| 11. Language Workflow Updates | 3/3 | Complete   | 2026-03-22 | - |
