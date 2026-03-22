@@ -1422,13 +1422,13 @@ Wait for user to confirm readiness before proceeding to section_write_outputs.
 
 <section name="section_write_outputs">
 
-## Sprint End — Output Files (OUTPUT-01, OUTPUT-02, OUTPUT-03)
+## Sprint End — Output Files (OUTPUT-01, OUTPUT-02, OUTPUT-03, OUTPUT-04)
 
 **When entering this section:** After testable form is displayed and user confirms readiness.
 
-This is the ONLY place in the entire workflow where HYPOTHESIS.md, SPRINT.md, and POSITIONING.md are written. Do NOT write these files anywhere else.
+This is the ONLY place in the entire workflow where HYPOTHESIS.md, SPRINT.md, POSITIONING.md, and 5PM-SCORECARD.md are written. Do NOT write these files anywhere else.
 
-Say: "Sprint complete. Writing your 3 output files now."
+Say: "Sprint complete. Writing your 4 output files now."
 
 **1. Write HYPOTHESIS.md**
 
@@ -1473,7 +1473,48 @@ Write ./POSITIONING.md with ALL of the following — no template placeholders, n
 CRITICAL: POSITIONING.md's matrix uses competitor names — it does NOT use A1/A2/A3/A4. The approach evaluation exists only in SPRINT.md.
 CRITICAL: Zero square brackets remain in POSITIONING.md.
 
-**After all 3 files are written:**
+**4. Write 5PM-SCORECARD.md**
+
+Read template for structure:
+@~/.claude/get-your-shit-together/templates/5PM-SCORECARD.md
+
+Write ./5PM-SCORECARD.md assembling the following named fields from this session:
+
+**Verdict Summary:** Look across all 5 lens verdicts. If 4-5 are FAVORABLE, overall = FAVORABLE. If 2-3 are FAVORABLE, overall = MIXED. If 0-1 are FAVORABLE, overall = UNFAVORABLE.
+
+**Lens 1 — Problem (scorecard_problem_iu, scorecard_problem_iu_nudge)**
+- Verdict: FAVORABLE if Important+Urgent (Aspirin), CAUTION if Important+Not Urgent (Vitamin), UNFAVORABLE if Not Important (Background noise or Emergency)
+- Evidence: what was discussed about the problem classification
+- Rationale: 1-2 sentences from the I/U matrix context
+- Red flags: if Vitamin nudge was shown (scorecard_problem_iu_nudge = yes), flag it
+
+**Lens 2 — Purchaser (scorecard_purchaser_tier, scorecard_purchaser_insight)**
+- Verdict: FAVORABLE if B2B or B2B-leaning B2A, CAUTION if pure B2A or B2C with strong WTP signals, UNFAVORABLE if B2C with low WTP
+- Evidence: purchaser tier + tech-savviness + willingness to pay answers
+- Rationale: scorecard_purchaser_insight verbatim or slightly expanded
+- Red flags: if B2C with low WTP or B2E with no enterprise connections
+
+**Lens 3 — Market (scorecard_market_research, scorecard_market_founder_perception)**
+- Verdict: FAVORABLE if growing signals + reachable, CAUTION if flat or mixed signals, UNFAVORABLE if declining or no online presence
+- Evidence: scorecard_market_research summary
+- Rationale: scorecard_market_founder_perception + AI synthesis
+- Red flags: if founder perception and research signals diverge significantly
+
+**Lens 4 — Founder Fit (scorecard_fit_background, scorecard_fit_access, scorecard_fit_passion)**
+- Verdict: FAVORABLE if strong background + strong access + yes passion, CAUTION if 1-2 weak areas, UNFAVORABLE if two or more are weak/no
+- Evidence: founder's answers to the three Fit questions
+- Rationale: AI synthesis of fit against the chosen approach
+- Red flags: if scorecard_fit_passion = no or lukewarm — mandatory red flag
+
+**Lens 5 — Pain to Validate (scorecard_pain_matrix, scorecard_chosen_approach)**
+- Verdict: based on the chosen approach's quadrant in Matrix 5 — top-right = FAVORABLE, top-left or bottom-right = CAUTION, bottom-left = UNFAVORABLE
+- Evidence: Matrix 5 placement for the chosen approach
+- Rationale: why elegance + speed pattern for the chosen approach matters
+- Red flags: if chosen approach is bottom-left, flag build pain risk
+
+CRITICAL: Zero square brackets remain in 5PM-SCORECARD.md. All 5 lenses have real content.
+
+**After all 4 files are written:**
 
 "Done. Your Foundation Sprint is complete.
 
@@ -1481,6 +1522,7 @@ CRITICAL: Zero square brackets remain in POSITIONING.md.
 - `HYPOTHESIS.md` — your testable hypothesis
 - `SPRINT.md` — the complete decision journal
 - `POSITIONING.md` — your positioning map and manifesto
+- `5PM-SCORECARD.md` — your 5PM signal scorecard
 
 **Your next move:** [fastest validation test from the testable form]"
 
