@@ -63,7 +63,7 @@
 
 - [x] **TRNS-01**: 5PM Scorecard template translated to all existing languages (FR, JA, PT) at `templates/{lang}/5PM-SCORECARD.md`
 - [x] **TRNS-02**: All new/modified workflow sections translated into French, Japanese, and Portuguese workflow files
-- [ ] **TRNS-03**: TRANSLATION-SYNC.md updated with new English source commit hash after all translations complete
+- [x] **TRNS-03**: TRANSLATION-SYNC.md updated with new English source commit hash after all translations complete
 
 ## v2 Requirements
 
@@ -128,7 +128,7 @@
 | SCRD-04 | Phase 9 | Complete |
 | TRNS-01 | Phase 10 | Complete |
 | TRNS-02 | Phase 11 | Complete |
-| TRNS-03 | Phase 11 | Pending |
+| TRNS-03 | Phase 11 | Complete |
 
 **Coverage:**
 - v1.2 requirements: 20 total

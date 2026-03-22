@@ -114,4 +114,4 @@ Plans:
 | 8. English Step 1 — 5PM Lenses | v1.2 | 2/2 | Complete | 2026-03-22 |
 | 9. English Step 3 — Fit, Validation, and Scorecard | v1.2 | 2/2 | Complete | 2026-03-22 |
 | 10. Language Scorecard Templates | v1.2 | 1/1 | Complete | 2026-03-22 |
-| 11. Language Workflow Updates | 3/3 | Complete   | 2026-03-22 | - |
+| 11. Language Workflow Updates | 3/3 | Complete    | 2026-03-22 | - |
