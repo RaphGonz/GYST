@@ -41,8 +41,8 @@ Solo entrepreneurs, existing companies but also artists or game-designers that w
 - Runs the full 4-step Foundation Sprint interactively inside Claude Code
 - Researches competitors and validates your target customer's pain using web search
 - Guides you through positioning (2x2 matrix) and differentiator selection
-- Evaluates multiple solution approaches using four business lenses
-- Produces four output files in your project directory: competitor profiles, positioning map, decision journal, and a falsifiable hypothesis
+- Evaluates multiple solution approaches using five business lenses (the 5PM framework)
+- Produces five output files in your project directory: competitor profiles, positioning map, decision journal, falsifiable hypothesis, and a 5PM Scorecard
 
 ## Requirements
 
@@ -93,18 +93,19 @@ Pass a language flag to run the sprint in your language — all questions, guida
 /gyst:foundation-sprint -french
 ```
 
-Claude switches to a fully pre-translated workflow and writes `COMPETITORS.md`, `HYPOTHESIS.md`, `SPRINT.md`, and `POSITIONING.md` in the chosen language.
+Claude switches to a fully pre-translated workflow and writes `COMPETITORS.md`, `HYPOTHESIS.md`, `SPRINT.md`, `POSITIONING.md`, and `5PM-SCORECARD.md` in the chosen language.
 
 > Unsupported flags fall back to English with a message.
 
 ## What You Get
 
-Four output files written to your project directory:
+Five output files written to your project directory:
 
 - `COMPETITORS.md` — competitor research profiles (written after Step 1)
 - `HYPOTHESIS.md` — your testable hypothesis (X/Y/Z/W/U/V format)
 - `SPRINT.md` — full decision journal
 - `POSITIONING.md` — 2x2 matrix and mini-manifesto
+- `5PM-SCORECARD.md` — 5PM framework scorecard with verdicts across all five lenses
 
 ## Install Location
 
