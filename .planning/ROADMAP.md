@@ -184,6 +184,6 @@ Plans:
 | 10. Language Scorecard Templates | v1.2 | 1/1 | Complete | 2026-03-22 |
 | 11. Language Workflow Updates | v1.2 | 3/3 | Complete | 2026-03-22 |
 | 12. README Documentation | v1.3 | 1/1 | Complete | 2026-05-16 |
-| 13. English Need Intensity Workflow | 2/2 | Complete   | 2026-05-16 | - |
+| 13. English Need Intensity Workflow | 2/2 | Complete    | 2026-05-16 | - |
 | 14. Language Translations | v1.3 | 0/3 | Not started | - |
 | 15. Translation Sync Record | v1.3 | 0/1 | Not started | - |
