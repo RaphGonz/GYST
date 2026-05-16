@@ -156,32 +156,31 @@
 | TRNS-01 | Phase 10 | Complete |
 | TRNS-02 | Phase 11 | Complete |
 | TRNS-03 | Phase 11 | Complete |
-
-| DOC-01 | Phase TBD | Pending |
-| DOC-02 | Phase TBD | Pending |
-| NEED-01 | Phase TBD | Pending |
-| NEED-02 | Phase TBD | Pending |
-| NEED-03 | Phase TBD | Pending |
-| NEED-04 | Phase TBD | Pending |
-| NEED-05 | Phase TBD | Pending |
-| NEED-06 | Phase TBD | Pending |
-| NEED-07 | Phase TBD | Pending |
-| TRNS-04 | Phase TBD | Pending |
-| TRNS-05 | Phase TBD | Pending |
-| TRNS-06 | Phase TBD | Pending |
-| TRNS-07 | Phase TBD | Pending |
-| TRNS-08 | Phase TBD | Pending |
-| TRNS-09 | Phase TBD | Pending |
-| TRNS-10 | Phase TBD | Pending |
+| DOC-01 | Phase 12 | Pending |
+| DOC-02 | Phase 12 | Pending |
+| NEED-01 | Phase 13 | Pending |
+| NEED-02 | Phase 13 | Pending |
+| NEED-03 | Phase 13 | Pending |
+| NEED-04 | Phase 13 | Pending |
+| NEED-05 | Phase 13 | Pending |
+| NEED-06 | Phase 13 | Pending |
+| NEED-07 | Phase 13 | Pending |
+| TRNS-04 | Phase 14 | Pending |
+| TRNS-05 | Phase 14 | Pending |
+| TRNS-06 | Phase 14 | Pending |
+| TRNS-07 | Phase 14 | Pending |
+| TRNS-08 | Phase 14 | Pending |
+| TRNS-09 | Phase 14 | Pending |
+| TRNS-10 | Phase 15 | Pending |
 
 **Coverage:**
 - v1.2 requirements: 20 total
 - Mapped to phases: 20
 - Unmapped: 0 ✓
 - v1.3 requirements: 16 total
-- Mapped to phases: 0 (roadmap pending)
-- Unmapped: 16 ⚠️
+- Mapped to phases: 16
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-08*
-*Last updated: 2026-05-16 after v1.3 milestone start*
+*Last updated: 2026-05-16 after v1.3 roadmap created*
