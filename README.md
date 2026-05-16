@@ -44,6 +44,18 @@ Solo entrepreneurs, existing companies but also artists or game-designers that w
 - Evaluates multiple solution approaches using five business lenses (the 5PM framework)
 - Produces five output files in your project directory: competitor profiles, positioning map, decision journal, falsifiable hypothesis, and a 5PM Scorecard
 
+## The 5PM Framework
+
+The sprint evaluates your idea across five lenses to surface signal before you build.
+
+- **Problem** — Is this problem important AND urgent for the target customer? Vitamin vs. aspirin classification drives the whole sprint. A true aspirin solves something people are already actively trying to fix; a vitamin is nice to have but rarely purchased.
+- **Purchaser** — Who actually pays? This lens looks at tech adoption readiness, willingness to pay, and whether the buyer is B2C, B2A (aspirational — photographers, podcasters), B2B, or B2E. The buyer shapes every pricing and distribution decision downstream.
+- **Pricing Model** — What revenue shape does this business naturally take? Assessed qualitatively — subscription dynamics, ARPA range, and billing cadence signals tell you whether the unit economics make sense before you write a line of code.
+- **Market** — Is the market reachable and growing? AI performs a live web search for community size, job board volume, and conference activity to ground your estimate in current evidence rather than assumptions.
+- **Product/Founder Fit** — Are you the right person to build this? Background, network, market access, and the passion check ("Do you love this problem?") determine whether you have an unfair advantage or are starting from scratch in a market you barely know.
+
+At sprint end the AI writes a `5PM-SCORECARD.md` with a FAVORABLE / CAUTION / UNFAVORABLE verdict per lens, with evidence and rationale.
+
 ## Requirements
 
 - Node.js >= 16.7.0
