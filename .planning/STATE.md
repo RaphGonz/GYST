@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Need Intensity Framework
 status: unknown
-last_updated: "2026-05-16T15:15:23Z"
+last_updated: "2026-05-16T15:25:11Z"
 progress:
   total_phases: 10
   completed_phases: 9
   total_plans: 18
-  completed_plans: 17
+  completed_plans: 18
 ---
 
 # Project State
@@ -22,12 +22,12 @@ See: .planning/PROJECT.md (updated 2026-05-16)
 
 ## Current Position
 
-Phase: 14 of 15 (Language Translations) — In progress
-Plan: 02 of 03 complete
+Phase: 14 of 15 (Language Translations) — Complete
+Plan: 03 of 03 complete
 Status: In progress
-Last activity: 2026-05-16 — Phase 14 Plan 02 complete (DE and ZH NEED-INTENSITY.md templates + section_need_intensity in both DE/ZH workflows; TRNS-06, TRNS-07 satisfied)
+Last activity: 2026-05-16 — Phase 14 Plan 03 complete (PT and JA NEED-INTENSITY.md templates confirmed + section_need_intensity in both PT/JA workflows; TRNS-08, TRNS-09 satisfied; Phase 14 complete)
 
-Progress: [###░░░░░░] 33%
+Progress: [#########] 94%
 
 ## Performance Metrics
 
@@ -42,7 +42,7 @@ Progress: [###░░░░░░] 33%
 |-------|-------|-------|----------|
 | 12. README Documentation | 1/1 | 8 min | 8 min |
 | 13. English Need Intensity Workflow | 2/2 | 19 min | 9.5 min |
-| 14. Language Translations | 1/3 | 25 min | 25 min |
+| 14. Language Translations | 3/3 | 91 min | 30 min |
 | 15. Translation Sync Record | 0/1 | - | - |
 
 ## Accumulated Context
@@ -69,6 +69,10 @@ Progress: [###░░░░░░] 33%
 - [Phase 14-02]: Chinese tier labels: 迫切需求 / 坚实需求 / 适中需求 / 弱需求 / 极弱需求
 - [Phase 14-02]: German formula: Vernachlässigt × (Kritisch + Bewusstsein) × (Dringend + Auferlegt + Real)
 - [Phase 14-02]: Chinese formula: 被忽视 × (关键 + 意识) × (紧迫 + 强制 + 真实)
+- [Phase 14-03]: Portuguese tier labels: Necessidade urgente / Necessidade sólida / Necessidade moderada / Necessidade fraca / Necessidade mínima
+- [Phase 14-03]: Japanese tier labels: 緊急ニーズ / 堅実なニーズ / 中程度のニーズ / 弱いニーズ / 最小限のニーズ
+- [Phase 14-03]: Portuguese formula: Negligenciado × (Crítico + Consciência) × (Urgente + Imposto + Real)
+- [Phase 14-03]: Japanese formula: 未対応 × (重大性 + 意識) × (緊急性 + 強制性 + リアル)
 
 ### Pending Todos
 
@@ -81,5 +85,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-05-16
-Stopped at: Phase 14 Plan 02 complete — DE and ZH NEED-INTENSITY.md templates + section_need_intensity in DE/ZH workflows (TRNS-06, TRNS-07 satisfied)
+Stopped at: Phase 14 Plan 03 complete — PT and JA NEED-INTENSITY.md templates confirmed + section_need_intensity in PT/JA workflows (TRNS-08, TRNS-09 satisfied; Phase 14 complete)
 Resume file: None

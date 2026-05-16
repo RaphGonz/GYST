@@ -88,8 +88,8 @@
 - [x] **TRNS-05**: Need Intensity section translated to Spanish workflow + NEED-INTENSITY.md template at `templates/es/`
 - [x] **TRNS-06**: Need Intensity section translated to German workflow + NEED-INTENSITY.md template at `templates/de/`
 - [x] **TRNS-07**: Need Intensity section translated to Chinese workflow + NEED-INTENSITY.md template at `templates/zh/`
-- [ ] **TRNS-08**: Need Intensity section translated to Portuguese workflow + NEED-INTENSITY.md template at `templates/pt/`
-- [ ] **TRNS-09**: Need Intensity section translated to Japanese workflow + NEED-INTENSITY.md template at `templates/ja/`
+- [x] **TRNS-08**: Need Intensity section translated to Portuguese workflow + NEED-INTENSITY.md template at `templates/pt/`
+- [x] **TRNS-09**: Need Intensity section translated to Japanese workflow + NEED-INTENSITY.md template at `templates/ja/`
 - [ ] **TRNS-10**: TRANSLATION-SYNC.md updated with English source commit hash for all 6 languages
 
 ## v2 Requirements
@@ -169,8 +169,8 @@
 | TRNS-05 | Phase 14 | Complete |
 | TRNS-06 | Phase 14 | Complete |
 | TRNS-07 | Phase 14 | Complete |
-| TRNS-08 | Phase 14 | Pending |
-| TRNS-09 | Phase 14 | Pending |
+| TRNS-08 | Phase 14 | Complete |
+| TRNS-09 | Phase 14 | Complete |
 | TRNS-10 | Phase 15 | Pending |
 
 **Coverage:**
