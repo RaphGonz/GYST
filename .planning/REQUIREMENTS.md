@@ -80,7 +80,7 @@
 - [x] **NEED-04**: Formula is computed and displayed: `Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real)`, 0-6000, with the matching business threshold label
 - [x] **NEED-05**: When score is below 1000, AI suggests one or two more precise client segments or problem reframings that could improve the score; user decides whether to re-rate or proceed (advisory, not blocking)
 - [x] **NEED-06**: Competitor data found during the Need Intensity web search is reused for COMPETITORS.md later in Step 1 — no duplicate search
-- [ ] **NEED-07**: NEED-INTENSITY.md written at session end — all 6 calibrated scores, formula calculation, final score, verdict tier, AI rationale per dimension, and final problem/client statement used
+- [x] **NEED-07**: NEED-INTENSITY.md written at session end — all 6 calibrated scores, formula calculation, final score, verdict tier, AI rationale per dimension, and final problem/client statement used
 
 ### Translation (6 languages)
 
@@ -164,7 +164,7 @@
 | NEED-04 | Phase 13 | Complete |
 | NEED-05 | Phase 13 | Complete |
 | NEED-06 | Phase 13 | Complete |
-| NEED-07 | Phase 13 | Pending |
+| NEED-07 | Phase 13 | Complete |
 | TRNS-04 | Phase 14 | Pending |
 | TRNS-05 | Phase 14 | Pending |
 | TRNS-06 | Phase 14 | Pending |

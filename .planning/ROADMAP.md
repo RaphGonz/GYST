@@ -49,7 +49,7 @@ Full details in Phase Details section below.
 **Milestone Goal:** Add the Need Intensity scoring framework to Step 1 of the Foundation Sprint, translate all changes to all 6 language versions, and document both 5PM and Need Intensity in the README.
 
 - [x] **Phase 12: README Documentation** - Add dedicated 5PM and Need Intensity sections to README.md (completed 2026-05-16)
-- [ ] **Phase 13: English Need Intensity Workflow** - Add the Need Intensity scoring section to Step 1 of foundation-sprint.md and produce NEED-INTENSITY.md output
+- [x] **Phase 13: English Need Intensity Workflow** - Add the Need Intensity scoring section to Step 1 of foundation-sprint.md and produce NEED-INTENSITY.md output (completed 2026-05-16)
 - [ ] **Phase 14: Language Translations** - Translate the Need Intensity section into all 6 language workflows and create NEED-INTENSITY.md templates in all 6 language template directories
 - [ ] **Phase 15: Translation Sync Record** - Update TRANSLATION-SYNC.md with the English source commit hash for all 6 languages
 
@@ -136,7 +136,7 @@ Plans:
   4. When the score is below 1000, the AI suggests one or two more precise client segments or problem reframings; the user can re-rate or proceed — the flow is advisory, not blocking
   5. Competitor names found during the Need Intensity web search are stored and reused for COMPETITORS.md later in Step 1 — the competitor search does not run a second time
   6. The sprint produces NEED-INTENSITY.md at session end containing all 6 calibrated scores, the formula calculation, final score, verdict tier, AI rationale per dimension, and the final problem/client statement
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 
 Plans:
 - [ ] 13-01-PLAN.md — Add section_need_intensity to foundation-sprint.md (dimensions, web search, calibration, formula, advisory loop, competitor data handoff)
@@ -184,6 +184,6 @@ Plans:
 | 10. Language Scorecard Templates | v1.2 | 1/1 | Complete | 2026-03-22 |
 | 11. Language Workflow Updates | v1.2 | 3/3 | Complete | 2026-03-22 |
 | 12. README Documentation | v1.3 | 1/1 | Complete | 2026-05-16 |
-| 13. English Need Intensity Workflow | 1/2 | In Progress|  | - |
+| 13. English Need Intensity Workflow | 2/2 | Complete   | 2026-05-16 | - |
 | 14. Language Translations | v1.3 | 0/3 | Not started | - |
 | 15. Translation Sync Record | v1.3 | 0/1 | Not started | - |

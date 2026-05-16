@@ -22,12 +22,12 @@ See: .planning/PROJECT.md (updated 2026-05-16)
 
 ## Current Position
 
-Phase: 13 of 15 (English Need Intensity Workflow) — In progress
-Plan: 01 of 02 complete
+Phase: 13 of 15 (English Need Intensity Workflow) — Complete
+Plan: 02 of 02 complete
 Status: In progress
-Last activity: 2026-05-16 — Phase 13 Plan 01 complete (section_need_intensity inserted into foundation-sprint.md)
+Last activity: 2026-05-16 — Phase 13 Plan 02 complete (NEED-INTENSITY.md template + write block added to section_write_outputs)
 
-Progress: [#░░░░░░░░░] 14%
+Progress: [##░░░░░░░] 28%
 
 ## Performance Metrics
 
@@ -41,7 +41,7 @@ Progress: [#░░░░░░░░░] 14%
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 12. README Documentation | 1/1 | 8 min | 8 min |
-| 13. English Need Intensity Workflow | 1/2 | 10 min | 10 min |
+| 13. English Need Intensity Workflow | 2/2 | 19 min | 9.5 min |
 | 14. Language Translations | 0/3 | - | - |
 | 15. Translation Sync Record | 0/1 | - | - |
 
@@ -60,6 +60,9 @@ Progress: [#░░░░░░░░░] 14%
 - [13-01]: section_need_intensity inserted after section_problem locks, before section_problem_importance — satisfies NEED-01 through NEED-06
 - [13-01]: need_intensity_competitors stored during Need Intensity web search and passed to section_competitors_research brief — no duplicate competitor search
 - [13-01]: Below-1000 advisory loop: AI re-rates all 6 dimensions on re-rate (user only picks reframe direction), max 5 loops, never blocking
+- [13-02]: NEED-INTENSITY.md template is scaffold only — zero assembly logic; all assembly rules live in section_write_outputs
+- [13-02]: Formula displayed in 3 explicit lines: symbolic / numeric substitution / result — consistent with Step 4 display in section_need_intensity
+- [13-02]: Notes section in template always written; canonical sentence "Score was above 1,000 — no advisory loop ran." used when loop did not run
 
 ### Pending Todos
 
@@ -72,5 +75,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-05-16
-Stopped at: Phase 13 Plan 01 complete — section_need_intensity inserted into foundation-sprint.md (NEED-01 through NEED-06 satisfied)
+Stopped at: Phase 13 Plan 02 complete — NEED-INTENSITY.md template + write block in section_write_outputs (NEED-07 satisfied; Phase 13 complete)
 Resume file: None
