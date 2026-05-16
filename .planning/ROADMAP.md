@@ -120,7 +120,7 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. README.md contains a section on the 5PM framework that names all 5 lenses (Problem, Purchaser, Pricing Model, Market, Product/Founder Fit), explains what each measures, and states why it matters for idea evaluation
   2. README.md contains a section on Need Intensity that names all 6 dimensions (Real, Urgent, Critical, Imposed, Neglected, Consciousness), shows the formula `Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real)`, states the 0-6000 scale, and lists all 5 business threshold tiers with their labels
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
 - [ ] 12-01-PLAN.md — Add 5PM framework section and Need Intensity section to README.md
