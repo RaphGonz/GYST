@@ -123,7 +123,7 @@ Plans:
 **Plans:** 1/1 plans complete
 
 Plans:
-- [ ] 12-01-PLAN.md — Add 5PM framework section and Need Intensity section to README.md
+- [x] 12-01-PLAN.md — Add 5PM framework section and Need Intensity section to README.md
 
 ### Phase 13: English Need Intensity Workflow
 **Goal**: The English Foundation Sprint Step 1 includes a Need Intensity scoring section immediately after the user states their client and problem, and the sprint produces a NEED-INTENSITY.md output file at session end
@@ -136,7 +136,7 @@ Plans:
   4. When the score is below 1000, the AI suggests one or two more precise client segments or problem reframings; the user can re-rate or proceed — the flow is advisory, not blocking
   5. Competitor names found during the Need Intensity web search are stored and reused for COMPETITORS.md later in Step 1 — the competitor search does not run a second time
   6. The sprint produces NEED-INTENSITY.md at session end containing all 6 calibrated scores, the formula calculation, final score, verdict tier, AI rationale per dimension, and the final problem/client statement
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
 - [ ] 13-01-PLAN.md — Add section_need_intensity to foundation-sprint.md (dimensions, web search, calibration, formula, advisory loop, competitor data handoff)
@@ -183,7 +183,7 @@ Plans:
 | 9. English Step 3 — Fit, Validation, and Scorecard | v1.2 | 2/2 | Complete | 2026-03-22 |
 | 10. Language Scorecard Templates | v1.2 | 1/1 | Complete | 2026-03-22 |
 | 11. Language Workflow Updates | v1.2 | 3/3 | Complete | 2026-03-22 |
-| 12. README Documentation | 1/1 | Complete    | 2026-05-16 | - |
+| 12. README Documentation | v1.3 | 1/1 | Complete | 2026-05-16 |
 | 13. English Need Intensity Workflow | v1.3 | 0/2 | Not started | - |
 | 14. Language Translations | v1.3 | 0/3 | Not started | - |
 | 15. Translation Sync Record | v1.3 | 0/1 | Not started | - |
