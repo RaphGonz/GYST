@@ -150,7 +150,7 @@ Plans:
   1. `templates/fr/NEED-INTENSITY.md`, `templates/es/NEED-INTENSITY.md`, `templates/de/NEED-INTENSITY.md`, `templates/zh/NEED-INTENSITY.md`, `templates/pt/NEED-INTENSITY.md`, and `templates/ja/NEED-INTENSITY.md` all exist with all headers, labels, and structural text in the target language
   2. The Need Intensity section appears in foundation-sprint-french.md, foundation-sprint-spanish.md, foundation-sprint-german.md, foundation-sprint-chinese.md, foundation-sprint-portuguese.md, and foundation-sprint-japanese.md — positioned immediately after the problem statement, before the competitor search, matching the English section structure
   3. Each language workflow references its language-specific NEED-INTENSITY.md template path in section_write_outputs
-**Plans:** 1/3 plans executed
+**Plans:** 2/3 plans executed
 
 Plans:
 - [ ] 14-01-PLAN.md — Translate Need Intensity section and create NEED-INTENSITY.md template for FR and ES
@@ -185,5 +185,5 @@ Plans:
 | 11. Language Workflow Updates | v1.2 | 3/3 | Complete | 2026-03-22 |
 | 12. README Documentation | v1.3 | 1/1 | Complete | 2026-05-16 |
 | 13. English Need Intensity Workflow | v1.3 | 2/2 | Complete | 2026-05-16 |
-| 14. Language Translations | 1/3 | In Progress|  | - |
+| 14. Language Translations | 2/3 | In Progress|  | - |
 | 15. Translation Sync Record | v1.3 | 0/1 | Not started | - |

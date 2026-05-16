@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Need Intensity Framework
 status: unknown
-last_updated: "2026-05-16T15:10:38.739Z"
+last_updated: "2026-05-16T15:15:23Z"
 progress:
   total_phases: 10
   completed_phases: 9
   total_plans: 18
-  completed_plans: 16
+  completed_plans: 17
 ---
 
 # Project State
@@ -23,9 +23,9 @@ See: .planning/PROJECT.md (updated 2026-05-16)
 ## Current Position
 
 Phase: 14 of 15 (Language Translations) — In progress
-Plan: 01 of 03 complete
+Plan: 02 of 03 complete
 Status: In progress
-Last activity: 2026-05-16 — Phase 14 Plan 01 complete (FR and ES NEED-INTENSITY.md templates + section_need_intensity in both FR/ES workflows; TRNS-04, TRNS-05 satisfied)
+Last activity: 2026-05-16 — Phase 14 Plan 02 complete (DE and ZH NEED-INTENSITY.md templates + section_need_intensity in both DE/ZH workflows; TRNS-06, TRNS-07 satisfied)
 
 Progress: [###░░░░░░] 33%
 
@@ -65,6 +65,10 @@ Progress: [###░░░░░░] 33%
 - [13-02]: Notes section in template always written; canonical sentence "Score was above 1,000 — no advisory loop ran." used when loop did not run
 - [Phase 14-01]: Tier label translations for FR/ES established verbatim as specified in plan interfaces and applied to both templates and workflows
 - [Phase 14-01]: need_intensity_competitors pre-identified field added to gyst-researcher brief in FR and ES workflows — no duplicate web search for competitors
+- [Phase 14-02]: German tier labels: Brennender Bedarf / Solider Bedarf / Moderater Bedarf / Schwacher Bedarf / Minimaler Bedarf
+- [Phase 14-02]: Chinese tier labels: 迫切需求 / 坚实需求 / 适中需求 / 弱需求 / 极弱需求
+- [Phase 14-02]: German formula: Vernachlässigt × (Kritisch + Bewusstsein) × (Dringend + Auferlegt + Real)
+- [Phase 14-02]: Chinese formula: 被忽视 × (关键 + 意识) × (紧迫 + 强制 + 真实)
 
 ### Pending Todos
 
@@ -77,5 +81,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-05-16
-Stopped at: Phase 14 Plan 01 complete — FR and ES NEED-INTENSITY.md templates + section_need_intensity in FR/ES workflows (TRNS-04, TRNS-05 satisfied)
+Stopped at: Phase 14 Plan 02 complete — DE and ZH NEED-INTENSITY.md templates + section_need_intensity in DE/ZH workflows (TRNS-06, TRNS-07 satisfied)
 Resume file: None
