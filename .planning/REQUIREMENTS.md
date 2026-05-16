@@ -65,6 +65,33 @@
 - [x] **TRNS-02**: All new/modified workflow sections translated into French, Japanese, and Portuguese workflow files
 - [x] **TRNS-03**: TRANSLATION-SYNC.md updated with new English source commit hash after all translations complete
 
+## v1.3 Requirements
+
+### Documentation
+
+- [ ] **DOC-01**: README has a dedicated section on the 5PM framework — all 5 lenses (Problem, Purchaser, Pricing Model, Market, Product/Founder Fit) explained with what each measures and why it matters
+- [ ] **DOC-02**: README has a dedicated section on Need Intensity — the 6 dimensions (Real, Urgent, Critical, Imposed, Neglected, Consciousness), the formula `Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real)`, the 0-6000 scale, and all 5 business threshold tiers
+
+### Need Intensity (English)
+
+- [ ] **NEED-01**: Immediately after user states their client and problem, AI presents the 6 Need Intensity dimensions with a plain-language description of each and asks user to rate 0-10
+- [ ] **NEED-02**: AI performs a web search to assess who is trying to solve the problem (feeds Real score) and whether any solution is dominant or well-regarded in the field (feeds Neglected score)
+- [ ] **NEED-03**: AI calibrates user's self-reported scores based on web findings, reasoning out loud per dimension — systematically correcting overestimates (users always over-evaluate)
+- [ ] **NEED-04**: Formula is computed and displayed: `Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real)`, 0-6000, with the matching business threshold label
+- [ ] **NEED-05**: When score is below 1000, AI suggests one or two more precise client segments or problem reframings that could improve the score; user decides whether to re-rate or proceed (advisory, not blocking)
+- [ ] **NEED-06**: Competitor data found during the Need Intensity web search is reused for COMPETITORS.md later in Step 1 — no duplicate search
+- [ ] **NEED-07**: NEED-INTENSITY.md written at session end — all 6 calibrated scores, formula calculation, final score, verdict tier, AI rationale per dimension, and final problem/client statement used
+
+### Translation (6 languages)
+
+- [ ] **TRNS-04**: Need Intensity section translated to French workflow + NEED-INTENSITY.md template at `templates/fr/`
+- [ ] **TRNS-05**: Need Intensity section translated to Spanish workflow + NEED-INTENSITY.md template at `templates/es/`
+- [ ] **TRNS-06**: Need Intensity section translated to German workflow + NEED-INTENSITY.md template at `templates/de/`
+- [ ] **TRNS-07**: Need Intensity section translated to Chinese workflow + NEED-INTENSITY.md template at `templates/zh/`
+- [ ] **TRNS-08**: Need Intensity section translated to Portuguese workflow + NEED-INTENSITY.md template at `templates/pt/`
+- [ ] **TRNS-09**: Need Intensity section translated to Japanese workflow + NEED-INTENSITY.md template at `templates/ja/`
+- [ ] **TRNS-10**: TRANSLATION-SYNC.md updated with English source commit hash for all 6 languages
+
 ## v2 Requirements
 
 ### Session Persistence
@@ -130,11 +157,31 @@
 | TRNS-02 | Phase 11 | Complete |
 | TRNS-03 | Phase 11 | Complete |
 
+| DOC-01 | Phase TBD | Pending |
+| DOC-02 | Phase TBD | Pending |
+| NEED-01 | Phase TBD | Pending |
+| NEED-02 | Phase TBD | Pending |
+| NEED-03 | Phase TBD | Pending |
+| NEED-04 | Phase TBD | Pending |
+| NEED-05 | Phase TBD | Pending |
+| NEED-06 | Phase TBD | Pending |
+| NEED-07 | Phase TBD | Pending |
+| TRNS-04 | Phase TBD | Pending |
+| TRNS-05 | Phase TBD | Pending |
+| TRNS-06 | Phase TBD | Pending |
+| TRNS-07 | Phase TBD | Pending |
+| TRNS-08 | Phase TBD | Pending |
+| TRNS-09 | Phase TBD | Pending |
+| TRNS-10 | Phase TBD | Pending |
+
 **Coverage:**
 - v1.2 requirements: 20 total
 - Mapped to phases: 20
 - Unmapped: 0 ✓
+- v1.3 requirements: 16 total
+- Mapped to phases: 0 (roadmap pending)
+- Unmapped: 16 ⚠️
 
 ---
 *Requirements defined: 2026-03-08*
-*Last updated: 2026-03-22 after v1.2 roadmap creation (Phases 8-11)*
+*Last updated: 2026-05-16 after v1.3 milestone start*
