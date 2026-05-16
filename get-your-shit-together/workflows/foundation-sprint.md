@@ -247,7 +247,188 @@ Lock it. Announce the lock:
 
 Re-render the Step 1 banner with Problem updated to the confirmed framing.
 
-Then proceed to Section 3 (Founder Advantages). Do not ask anything else in this section.
+Then proceed to section_need_intensity. Do not ask anything else in this section.
+
+</section>
+
+<section name="section_need_intensity">
+
+## Need Intensity Scoring (NEED-01 through NEED-06)
+
+**When entering this section:** Customer and Problem are already locked. Do not re-ask for them.
+
+---
+
+### Step 1 — Introduce Need Intensity
+
+Before showing the dimensions, present this introduction exactly:
+
+"Before we map your advantages and competitors, let's score how intensely this market actually needs a solution. Need Intensity measures whether the pain is deep enough to drive purchasing behavior — not whether your idea is clever.
+
+I'll show you 6 dimensions. Rate each one 0–10. After that, I'll run a web search to calibrate your scores."
+
+---
+
+### Step 2 — Show all 6 dimensions and collect user ratings
+
+Present all 6 dimensions in a single block. The user rates all 6 in one response — not one at a time.
+
+Use this format:
+
+---
+
+Rate each dimension 0–10. Both extremes are defined to anchor your rating. Reply with 6 numbers in order (e.g., "7, 4, 8, 3, 6, 5"):
+
+**1. Real** — Is there documented evidence people are actively trying to solve this?
+- 0 = No communities, no tools, no job postings — problem may not exist at scale
+- 10 = Large communities, dedicated tools, active job market all confirm this problem
+
+**2. Urgent** — Do people need a solution now, not eventually?
+- 0 = "Would be nice someday" — no time pressure, low willingness to pay today
+- 10 = People are losing money or missing deadlines right now — they will pay immediately
+
+**3. Critical** — How severe is the consequence of NOT solving it?
+- 0 = Minor inconvenience — forgotten by next week
+- 10 = Loss of income, health risk, or regulatory exposure — catastrophic to ignore
+
+**4. Imposed** — Is the need externally mandated (by law, employer, or market standard)?
+- 0 = Entirely optional — buyer can choose to ignore it
+- 10 = Legally required or employer-mandated — buyer has no choice
+
+**5. Neglected** — How thin is the existing solution landscape?
+- 0 = Crowded market with dominant, well-regarded tools — no whitespace
+- 10 = No serious solutions exist — buyers are improvising with spreadsheets or nothing
+
+**6. Consciousness** — Does the target customer already know they have this problem?
+- 0 = Buyers don't recognize this as a distinct problem — you'd need to educate heavily
+- 10 = Buyers actively search for solutions — they know exactly what they need
+
+---
+
+Wait for the user to respond with 6 ratings. Accept any readable format (comma-separated, numbered list, etc.). Parse the 6 values and store them as user_ni_real, user_ni_urgent, user_ni_critical, user_ni_imposed, user_ni_neglected, user_ni_consciousness.
+
+---
+
+### Step 3 — Web search and per-dimension calibration
+
+Say:
+"Got it. Searching now to calibrate your scores."
+
+Run an inline WebSearch:
+- Query 1: "[locked customer segment] [locked problem] solutions tools alternatives 2024 2025"
+- Query 2: "[locked customer segment] [locked problem] community forum discussion dominant solution"
+
+The goal: identify who is trying to solve this problem (feeds Real and Neglected scores) and whether any solution is well-regarded or dominant (feeds Neglected score). Store competitor names found as `need_intensity_competitors` — this list will be reused for COMPETITORS.md so the competitor search does not run again.
+
+**After the search, calibrate each dimension in sequence. For each dimension:**
+
+Show the specific evidence you found, propose a revised score (downward only — never higher than the user's rating), and ask if the user agrees. Use this pattern:
+
+For Real: "I [found / didn't find] [specific evidence — e.g., 'a 45,000-member subreddit and 3 dedicated tools']. Based on this, I'd rate Real at [proposed score], [lower than / the same as] your [user score]. [Agree, or does your inside knowledge suggest otherwise?]"
+
+For Urgent: "The evidence [shows / doesn't show] [urgency signal — e.g., 'time-sensitive job postings and SLA requirements']. I'd rate Urgent at [proposed score]. [Agree?]"
+
+...and so on for each dimension.
+
+Rules:
+- If you found no strong evidence for a dimension: keep the user's original rating and say: "I didn't find strong signals on [Dimension] — keeping your rating of [score]."
+- If the user disagrees with your proposed score: take their original rating. Do not push back.
+- Store final calibrated score (user's or AI's, whichever was accepted) for each dimension.
+
+Store named fields:
+- **need_intensity_real** = "[final calibrated score 0-10]"
+- **need_intensity_urgent** = "[final calibrated score 0-10]"
+- **need_intensity_critical** = "[final calibrated score 0-10]"
+- **need_intensity_imposed** = "[final calibrated score 0-10]"
+- **need_intensity_neglected** = "[final calibrated score 0-10]"
+- **need_intensity_consciousness** = "[final calibrated score 0-10]"
+- **need_intensity_rationale** = "[per-dimension reasoning summary: what you found and why you proposed the score you did — 1-2 sentences per dimension, stored for NEED-INTENSITY.md assembly]"
+- **need_intensity_competitors** = "[list of competitor/solution names found during web search — stored for reuse in section_competitors_research]"
+
+---
+
+### Step 4 — Compute formula and display result
+
+After all 6 scores are calibrated and accepted:
+
+Compute:
+Score = need_intensity_neglected × (need_intensity_critical + need_intensity_consciousness) × (need_intensity_urgent + need_intensity_imposed + need_intensity_real)
+
+Display the calculation explicitly:
+
+"Need Intensity score:
+
+Neglected ([score]) × (Critical ([score]) + Consciousness ([score])) × (Urgent ([score]) + Imposed ([score]) + Real ([score]))
+= [neglected] × [critical + consciousness] × [urgent + imposed + real]
+= **[final score]** / 6,000
+
+Verdict: **[tier label]**"
+
+Use the exact tier labels:
+- 4,000–6,000: "Burning need — strong market signal"
+- 2,500–3,999: "Solid need — viable if execution is sharp"
+- 1,000–2,499: "Moderate need — segment or reframe before building"
+- 500–999: "Weak need — advisory: consider a tighter client definition"
+- 0–499: "Minimal need — significant risk, revisit problem statement"
+
+Store:
+- **need_intensity_score** = "[computed score]"
+- **need_intensity_tier** = "[exact tier label]"
+
+---
+
+### Step 5 — Below-1000 advisory loop (conditional)
+
+**Only run this if need_intensity_score < 1,000. If score ≥ 1,000, skip directly to Step 6.**
+
+Initialize: loop_count = 0, best_score = need_intensity_score, best_attempt = [current framing: customer + problem + all 6 scores]
+
+**Advisory loop (repeat up to 5 times while score < 1,000 AND loop_count < 5):**
+
+loop_count = loop_count + 1
+
+Say:
+"Your score of [score] is below 1,000 — this suggests the need may not be strong enough to drive reliable purchasing. Here are two directions that could improve it:
+
+**Tighter client segment:** [specific narrower segment suggestion — e.g., 'Instead of "solo founders", consider "solo founders building B2B SaaS with ≥1 paying customer"']
+
+**Problem reframe:** [specific reframe suggestion — e.g., 'Instead of "onboarding complexity", consider "churn in the first 30 days caused by failed onboarding" — more urgent and critical framing']
+
+This is advisory — you can re-rate with one of these directions, or proceed as-is. Which would you prefer?
+
+**A)** Re-rate with tighter client segment
+**B)** Re-rate with problem reframe
+**C)** Proceed anyway with current score of [score]"
+
+Wait for user response. If C: exit the loop and proceed to Step 6 with current scores.
+
+**If user picks A or B (re-rate):**
+- Apply the chosen reframe to the client+problem framing
+- Re-run the full 6-dimension scoring (AI rates all 6 dimensions directly based on the reframed context — user does NOT re-rate; user only chose the direction)
+- Recompute the formula
+- Display the new score and tier
+- If new score > best_score: update best_score and best_attempt
+- If new score ≥ 1,000: exit loop, proceed to Step 6 with new scores
+- If new score < 1,000 AND loop_count < 5: repeat loop
+
+**After 5 loops without crossing 1,000:**
+
+Display:
+"After [5] reframe attempts, your highest-scoring framing was [best_attempt framing] at [best_score]. Here's why it's worth considering as your starting point: [1-2 sentence rationale for why that framing has the most signal].
+
+You can proceed with this framing, or continue the sprint with your original framing. Your call — this advisory loop never blocks progress."
+
+Wait for user response. Accept their decision. Then proceed to Step 6 with whichever scores the user chose.
+
+---
+
+### Step 6 — Transition
+
+After Step 4 (or after the advisory loop if it ran):
+
+Do NOT re-render the Step 1 banner (Need Intensity is not a banner field).
+
+Then proceed to section_problem_importance. Do not ask anything else in this section.
 
 </section>
 
@@ -459,12 +640,15 @@ After the user provides competitor names (or says "none"):
 1. Say exactly:
    > "Got it. Researching now — I'll find both tools and how people solve this today."
 
-2. Invoke gyst-researcher as a sub-agent via the Task tool with this brief:
+2. IMPORTANT: need_intensity_competitors are already known from the Need Intensity web search. Pass them to gyst-researcher as pre-identified solutions so the researcher does not spend search capacity finding them again.
+
+   Invoke gyst-researcher as a sub-agent via the Task tool with this brief:
 
    ```
    Customer segment: [locked customer segment from section_customer]
    Problem: [locked problem from section_problem]
    User-named competitors: [what the user said in section_competitors, or "none"]
+   Pre-identified solutions: [need_intensity_competitors — names found during Need Intensity web search; include these in the competitor list without re-searching for them]
 
    Task: Find up to 7 competitors — both direct products and status-quo alternatives for this exact problem.
    ```
@@ -628,16 +812,17 @@ Proceed to step2_banner, then section_axis_rating.
 ### If user picks B (go back to a sub-decision) — NAVIG-02
 
 Ask:
-"Which sub-decision do you want to revisit? (Customer segment / Purchaser / Problem / Problem I/U classification / Founder advantages / Competitors / Market sizing)"
+"Which sub-decision do you want to revisit? (Customer segment / Purchaser / Problem / Need Intensity / Problem I/U classification / Founder advantages / Competitors / Market sizing)"
 
 Wait for user response.
 
 CRITICAL — DISCARD RULE: ALL decisions made AFTER the chosen sub-decision are DISCARDED. Do not try to preserve them, reference them, or offer to keep any of them. Re-run the full sequence from the chosen section forward as if those downstream decisions were never made. Delete them from your context.
 
 Examples:
-- User goes back to **Customer segment**: wipe scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Problem, Advantages, Competitors, scorecard_market_*. Re-run all Step 1 sections from section_customer forward.
+- User goes back to **Customer segment**: wipe scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, need_intensity_*, Problem, Advantages, Competitors, scorecard_market_*. Re-run all Step 1 sections from section_customer forward.
 - User goes back to **Purchaser**: wipe scorecard_purchaser_* only. Re-run section_purchaser only (Customer stays locked).
-- User goes back to **Problem**: wipe scorecard_problem_iu, scorecard_problem_iu_nudge, Advantages, Competitors, scorecard_market_*. Re-run from section_problem forward.
+- User goes back to **Problem**: wipe need_intensity_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Advantages, Competitors, scorecard_market_*. Re-run from section_problem forward.
+- User goes back to **Need Intensity**: wipe need_intensity_* only. Re-run section_need_intensity only (Customer, Purchaser, Problem stay locked).
 - User goes back to **Problem I/U classification**: wipe scorecard_problem_iu, scorecard_problem_iu_nudge only. Re-run section_problem_importance only (Customer, Purchaser, Problem stay locked).
 - User goes back to **Founder advantages**: wipe Competitors, scorecard_market_*. Re-run from section_advantages forward.
 - User goes back to **Competitors**: wipe competitor selection, main adversary, scorecard_market_*. Re-run from section_competitors forward (includes section_market_sizing).
@@ -649,7 +834,7 @@ To restart a section: re-render the Step 1 banner showing the locked values you 
 
 ### If user picks C (start Step 1 over)
 
-- Wipe ALL Step 1 decisions: customer segment, purchaser (scorecard_purchaser_*), problem, problem I/U classification (scorecard_problem_iu, scorecard_problem_iu_nudge), advantages, competitors, market sizing (scorecard_market_*)
+- Wipe ALL Step 1 decisions: customer segment, purchaser (scorecard_purchaser_*), problem, need intensity (need_intensity_*), problem I/U classification (scorecard_problem_iu, scorecard_problem_iu_nudge), advantages, competitors, market sizing (scorecard_market_*)
 - Treat this as a fresh sprint start: re-render the Step 1 banner with all four values as "pending"
 - Ask the customer segment open question again (the same one from section_customer)
 
