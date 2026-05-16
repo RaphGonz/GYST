@@ -56,6 +56,35 @@ The sprint evaluates your idea across five lenses to surface signal before you b
 
 At sprint end the AI writes a `5PM-SCORECARD.md` with a FAVORABLE / CAUTION / UNFAVORABLE verdict per lens, with evidence and rationale.
 
+## Need Intensity
+
+Need Intensity measures how strongly a market actually needs a solution — not whether your idea is clever, but whether the pain is deep enough to drive purchasing behavior.
+
+- **Real** — Is there documented evidence that people are actively trying to solve this? Are there communities, job postings, conferences, or tools dedicated to this problem?
+- **Urgent** — Do people need a solution now, not eventually? Time pressure signals willingness to pay today.
+- **Critical** — How severe is the consequence of NOT solving it? Loss of income, health risk, and regulatory exposure score higher than inconvenience.
+- **Imposed** — Is the need externally mandated — by law, employer, or market standard? External mandate removes the "nice to have" objection.
+- **Neglected** — How thin is the existing solution landscape? A crowded market with dominant players scores low; whitespace scores high.
+- **Consciousness** — Does the target customer already know they have this problem? Aware buyers need less education before they convert.
+
+The score is calculated as:
+
+```
+Score = Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real)
+```
+
+Each dimension is rated 0–10 (calibrated by AI web search). Maximum score: 6,000.
+
+| Score | Label |
+|-------|-------|
+| 4,000 – 6,000 | Burning need — strong market signal |
+| 2,500 – 3,999 | Solid need — viable if execution is sharp |
+| 1,000 – 2,499 | Moderate need — segment or reframe before building |
+| 500 – 999 | Weak need — advisory: consider a tighter client definition |
+| 0 – 499 | Minimal need — significant risk, revisit problem statement |
+
+When the score falls below 1,000, the AI suggests two more precise client segments or problem reframings — you decide whether to re-rate or proceed.
+
 ## Requirements
 
 - Node.js >= 16.7.0
