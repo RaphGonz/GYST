@@ -266,7 +266,188 @@ Verriegeln Sie es. Kündigen Sie die Verriegelung an:
 
 Zeigen Sie das Banner von Schritt 1 erneut an, mit Problem aktualisiert auf die bestätigte Formulierung.
 
-Fahren Sie dann mit Abschnitt 3 (Gründervorteile) fort. Stellen Sie in diesem Abschnitt keine weiteren Fragen.
+Gehen Sie dann zu section_need_intensity über. Stellen Sie in diesem Abschnitt keine weiteren Fragen.
+
+</section>
+
+<section name="section_need_intensity">
+
+## Bedarfsintensitäts-Bewertung (NEED-01 bis NEED-06)
+
+**Beim Eintreten in diesen Abschnitt:** Kunde und Problem sind bereits verriegelt. Fragen Sie nicht erneut danach.
+
+---
+
+### Schritt 1 — Bedarfsintensität einführen
+
+Präsentieren Sie vor den Dimensionen diese Einführung wortgetreu:
+
+„Bevor wir Ihre Vorteile und Wettbewerber kartieren, bewerten wir, wie stark der Markt tatsächlich eine Lösung benötigt. Die Bedarfsintensität misst, ob der Schmerz tief genug ist, um Kaufverhalten auszulösen — nicht ob Ihre Idee clever ist.
+
+Ich zeige Ihnen 6 Dimensionen. Bewerten Sie jede auf einer Skala von 0 bis 10. Danach führe ich eine Websuche durch, um Ihre Punktzahlen zu kalibrieren."
+
+---
+
+### Schritt 2 — Alle 6 Dimensionen anzeigen und Benutzerbewertungen erfassen
+
+Präsentieren Sie alle 6 Dimensionen in einem einzigen Block. Der Benutzer bewertet alle 6 in einer Antwort — nicht einzeln nacheinander.
+
+Verwenden Sie dieses Format:
+
+---
+
+Bewerten Sie jede Dimension von 0 bis 10. Beide Extreme sind definiert, um Ihre Bewertung zu verankern. Antworten Sie mit 6 Zahlen der Reihe nach (z.B. „7, 4, 8, 3, 6, 5"):
+
+**1. Real** — Gibt es dokumentierte Belege, dass Menschen aktiv versuchen, dieses Problem zu lösen?
+- 0 = Keine Communities, keine Tools, keine Stellenanzeigen — das Problem existiert möglicherweise nicht in größerem Maßstab
+- 10 = Große Communities, dedizierte Tools, aktiver Stellenmarkt bestätigen dieses Problem
+
+**2. Dringend** — Benötigen die Menschen jetzt eine Lösung, nicht irgendwann?
+- 0 = „Wäre irgendwann schön" — kein Zeitdruck, geringe Zahlungsbereitschaft heute
+- 10 = Menschen verlieren gerade Geld oder verpassen Deadlines — sie zahlen sofort
+
+**3. Kritisch** — Wie schwerwiegend sind die Folgen, wenn das Problem NICHT gelöst wird?
+- 0 = Kleinere Unannehmlichkeit — nächste Woche vergessen
+- 10 = Einkommensverlust, Gesundheitsrisiko oder behördliche Anforderungen — katastrophal, es zu ignorieren
+
+**4. Auferlegt** — Wird der Bedarf extern vorgeschrieben (durch Gesetz, Arbeitgeber oder Marktstandard)?
+- 0 = Vollständig optional — der Käufer kann es ignorieren
+- 10 = Gesetzlich vorgeschrieben oder vom Arbeitgeber verlangt — der Käufer hat keine Wahl
+
+**5. Vernachlässigt** — Wie dünn ist die bestehende Lösungslandschaft?
+- 0 = Überfüllter Markt mit dominierenden, angesehenen Tools — kein Freiraum
+- 10 = Keine ernsthaften Lösungen existieren — Käufer improvisieren mit Tabellenkalkulationen oder nichts
+
+**6. Bewusstsein** — Weiß der Zielkunde bereits, dass er dieses Problem hat?
+- 0 = Käufer erkennen dies nicht als eigenständiges Problem — Sie müssten stark aufklären
+- 10 = Käufer suchen aktiv nach Lösungen — sie wissen genau, was sie brauchen
+
+---
+
+Warten Sie, bis der Benutzer mit 6 Bewertungen antwortet. Akzeptieren Sie jedes lesbare Format (kommagetrennt, nummerierte Liste usw.). Analysieren Sie die 6 Werte und speichern Sie sie als user_ni_real, user_ni_urgent, user_ni_critical, user_ni_imposed, user_ni_neglected, user_ni_consciousness.
+
+---
+
+### Schritt 3 — Websuche und dimensionsweise Kalibrierung
+
+Sagen Sie:
+„Verstanden. Ich suche jetzt, um Ihre Punktzahlen zu kalibrieren."
+
+Führen Sie eine WebSearch durch:
+- Suchanfrage 1: „[verriegeltes Kundensegment] [verriegeltes Problem] solutions tools alternatives 2024 2025"
+- Suchanfrage 2: „[verriegeltes Kundensegment] [verriegeltes Problem] community forum discussion dominant solution"
+
+Ziel: Identifizieren Sie, wer versucht, dieses Problem zu lösen (fließt in die Werte Real und Vernachlässigt ein) und ob eine Lösung angesehen oder dominant ist (fließt in den Wert Vernachlässigt ein). Speichern Sie gefundene Wettbewerbernamen als `need_intensity_competitors` — diese Liste wird für COMPETITORS.md wiederverwendet, sodass die Wettbewerbersuche nicht erneut durchgeführt wird.
+
+**Kalibrieren Sie nach der Suche jede Dimension der Reihe nach. Für jede Dimension:**
+
+Zeigen Sie die gefundenen spezifischen Belege, schlagen Sie eine überarbeitete Punktzahl vor (nur nach unten — niemals höher als die Bewertung des Benutzers), und fragen Sie, ob der Benutzer zustimmt. Verwenden Sie dieses Muster:
+
+Für Real: „Ich habe [gefunden / nicht gefunden] [spezifische Belege — z.B. ‚ein Subreddit mit 45.000 Mitgliedern und 3 dedizierte Tools']. Basierend darauf würde ich Real mit [vorgeschlagene Punktzahl] bewerten, [niedriger als / gleich wie] Ihr [Benutzerscore]. [Stimmen Sie zu, oder legt Ihr Insiderwissen etwas anderes nahe?]"
+
+Für Dringend: „Die Belege [zeigen / zeigen nicht] [Dringlichkeitssignal — z.B. ‚zeitkritische Stellenanzeigen und SLA-Anforderungen']. Ich würde Dringend mit [vorgeschlagene Punktzahl] bewerten. [Zustimmung?]"
+
+... und so weiter für jede Dimension.
+
+Regeln:
+- Wenn Sie keine starken Belege für eine Dimension gefunden haben: behalten Sie die ursprüngliche Bewertung des Benutzers bei und sagen Sie: „Ich habe keine starken Signale für [Dimension] gefunden — ich behalte Ihre Bewertung von [Punktzahl] bei."
+- Wenn der Benutzer Ihrer vorgeschlagenen Punktzahl widerspricht: nehmen Sie seine ursprüngliche Bewertung. Drängen Sie nicht.
+- Speichern Sie die endgültig kalibrierte Punktzahl (des Benutzers oder der KI, je nachdem, was akzeptiert wurde) für jede Dimension.
+
+Speichern Sie die benannten Felder:
+- **need_intensity_real** = „[endgültig kalibrierte Punktzahl 0-10]"
+- **need_intensity_urgent** = „[endgültig kalibrierte Punktzahl 0-10]"
+- **need_intensity_critical** = „[endgültig kalibrierte Punktzahl 0-10]"
+- **need_intensity_imposed** = „[endgültig kalibrierte Punktzahl 0-10]"
+- **need_intensity_neglected** = „[endgültig kalibrierte Punktzahl 0-10]"
+- **need_intensity_consciousness** = „[endgültig kalibrierte Punktzahl 0-10]"
+- **need_intensity_rationale** = „[Begründungszusammenfassung pro Dimension: was Sie gefunden haben und warum Sie die vorgeschlagene Punktzahl vorgeschlagen haben — 1-2 Sätze pro Dimension, gespeichert für die NEED-INTENSITY.md-Zusammenstellung]"
+- **need_intensity_competitors** = „[Liste der Wettbewerber-/Lösungsnamen aus der Websuche — gespeichert zur Wiederverwendung in section_competitors_research]"
+
+---
+
+### Schritt 4 — Formel berechnen und Ergebnis anzeigen
+
+Nachdem alle 6 Punktzahlen kalibriert und akzeptiert sind:
+
+Berechnen Sie:
+Punktzahl = need_intensity_neglected × (need_intensity_critical + need_intensity_consciousness) × (need_intensity_urgent + need_intensity_imposed + need_intensity_real)
+
+Zeigen Sie die Berechnung explizit an:
+
+„Bedarfsintensitäts-Punktzahl:
+
+Vernachlässigt ([Punktzahl]) × (Kritisch ([Punktzahl]) + Bewusstsein ([Punktzahl])) × (Dringend ([Punktzahl]) + Auferlegt ([Punktzahl]) + Real ([Punktzahl]))
+= [vernachlässigt] × [kritisch + bewusstsein] × [dringend + auferlegt + real]
+= **[Endergebnis]** / 6.000
+
+Urteil: **[Stufenbezeichnung]**"
+
+Verwenden Sie die genauen Stufenbezeichnungen:
+- 4.000–6.000: „Brennender Bedarf — starkes Marktsignal"
+- 2.500–3.999: „Solider Bedarf — tragfähig bei präziser Umsetzung"
+- 1.000–2.499: „Moderater Bedarf — Segment schärfen oder Problemstellung neu formulieren"
+- 500–999: „Schwacher Bedarf — Empfehlung: engere Kundendefinition prüfen"
+- 0–499: „Minimaler Bedarf — erhebliches Risiko, Problemstellung überarbeiten"
+
+Speichern Sie:
+- **need_intensity_score** = „[berechnete Punktzahl]"
+- **need_intensity_tier** = „[genaue Stufenbezeichnung]"
+
+---
+
+### Schritt 5 — Beratungsschleife bei Punktzahl unter 1.000 (bedingt)
+
+**Führen Sie dies NUR aus, wenn need_intensity_score < 1.000. Wenn die Punktzahl ≥ 1.000 ist, fahren Sie direkt mit Schritt 6 fort.**
+
+Initialisieren Sie: loop_count = 0, best_score = need_intensity_score, best_attempt = [aktuelle Formulierung: Kunde + Problem + alle 6 Punktzahlen]
+
+**Beratungsschleife (bis zu 5 Mal wiederholen, solange Punktzahl < 1.000 UND loop_count < 5):**
+
+loop_count = loop_count + 1
+
+Sagen Sie:
+„Ihre Punktzahl von [Punktzahl] liegt unter 1.000 — dies deutet darauf hin, dass der Bedarf möglicherweise nicht stark genug ist, um zuverlässiges Kaufverhalten auszulösen. Hier sind zwei Richtungen, die ihn verbessern könnten:
+
+**Engeres Kundensegment:** [spezifischer engerer Segmentvorschlag — z.B. ‚Statt „Solo-Gründer" überlegen Sie „Solo-Gründer, die B2B-SaaS aufbauen, mit ≥1 zahlenden Kunden"']
+
+**Problemumformulierung:** [spezifischer Umformulierungsvorschlag — z.B. ‚Statt „Onboarding-Komplexität" überlegen Sie „Abwanderung in den ersten 30 Tagen durch fehlgeschlagenes Onboarding" — dringendere und kritischere Formulierung']
+
+Dies ist ein Beratungshinweis — Sie können mit einer dieser Richtungen neu bewerten oder wie besprochen fortfahren. Was würden Sie bevorzugen?
+
+**A)** Mit engerem Kundensegment neu bewerten
+**B)** Mit Problemumformulierung neu bewerten
+**C)** Trotzdem mit der aktuellen Punktzahl von [Punktzahl] fortfahren"
+
+Warten Sie auf die Antwort des Benutzers. Wenn C: beenden Sie die Schleife und fahren Sie mit Schritt 6 mit den aktuellen Punktzahlen fort.
+
+**Wenn der Benutzer A oder B wählt (Neubewertung):**
+- Wenden Sie die gewählte Neuformulierung auf die Kunden-+Problem-Formulierung an
+- Führen Sie die vollständige 6-Dimensionen-Bewertung erneut durch (die KI bewertet alle 6 Dimensionen direkt basierend auf dem neu formulierten Kontext — der Benutzer bewertet NICHT erneut; der Benutzer hat nur die Richtung gewählt)
+- Berechnen Sie die Formel neu
+- Zeigen Sie die neue Punktzahl und Stufe an
+- Wenn neue Punktzahl > best_score: aktualisieren Sie best_score und best_attempt
+- Wenn neue Punktzahl ≥ 1.000: beenden Sie die Schleife, fahren Sie mit Schritt 6 mit neuen Punktzahlen fort
+- Wenn neue Punktzahl < 1.000 UND loop_count < 5: Schleife wiederholen
+
+**Nach 5 Schleifen ohne Überschreitung von 1.000:**
+
+Zeigen Sie an:
+„Nach [5] Neuformulierungsversuchen war Ihre höchstbewertete Formulierung [best_attempt Formulierung] mit [best_score]. Hier ist, warum sie als Ausgangspunkt in Betracht gezogen werden sollte: [1-2-Satz-Begründung, warum diese Formulierung das stärkste Signal hat].
+
+Sie können mit dieser Formulierung fortfahren oder den Sprint mit Ihrer ursprünglichen Formulierung abschließen. Ihre Entscheidung — diese Beratungsschleife blockiert den Fortschritt niemals."
+
+Warten Sie auf die Antwort des Benutzers. Akzeptieren Sie seine Entscheidung. Fahren Sie dann mit Schritt 6 mit den vom Benutzer gewählten Punktzahlen fort.
+
+---
+
+### Schritt 6 — Übergang
+
+Nach Schritt 4 (oder nach der Beratungsschleife, falls sie ausgeführt wurde):
+
+Rendern Sie das Schritt-1-Banner NICHT erneut (Bedarfsintensität ist kein Banner-Feld).
+
+Gehen Sie dann zu section_problem_importance über. Stellen Sie in diesem Abschnitt keine weiteren Fragen.
 
 </section>
 
@@ -483,12 +664,15 @@ Nachdem der Benutzer Wettbewerbernamen angegeben hat (oder „keine" gesagt hat)
 1. Sagen Sie genau:
    > „Verstanden. Ich recherchiere jetzt — ich werde sowohl Tools als auch die Wege finden, auf denen Menschen dieses Problem heute lösen."
 
-2. Rufen Sie gyst-researcher als Unteragent über das Task-Tool mit diesem Brief auf:
+2. WICHTIG: need_intensity_competitors sind aus der Bedarfsintensitäts-Websuche bereits bekannt. Übergeben Sie diese als voridentifizierte Lösungen an gyst-researcher, damit der Recherche-Agent keine Suchkapazität damit verschwendet, sie erneut zu finden.
+
+   Rufen Sie gyst-researcher als Unteragent über das Task-Tool mit diesem Brief auf:
 
    ```
    Customer segment: [locked customer segment from section_customer]
    Problem: [locked problem from section_problem]
    User-named competitors: [what the user said in section_competitors, or "none"]
+   Pre-identified solutions: [need_intensity_competitors — names found during Need Intensity web search; include these in the competitor list without re-searching for them]
 
    Task: Find up to 7 competitors — both direct products and status-quo alternatives for this exact problem.
    ```
@@ -652,16 +836,17 @@ Fahren Sie mit step2_banner und dann mit section_axis_rating fort.
 ### Wenn der Benutzer B wählt (zu einer Teilentscheidung zurückgehen) — NAVIG-02
 
 Fragen Sie:
-„Zu welcher Teilentscheidung möchten Sie zurückkehren? (Kundensegment / Käufer / Problem / Problem I/U-Klassifizierung / Gründervorteile / Wettbewerber / Marktgröße)"
+„Zu welcher Teilentscheidung möchten Sie zurückkehren? (Kundensegment / Käufer / Problem / Bedarfsintensität / Problem I/U-Klassifizierung / Gründervorteile / Wettbewerber / Marktgröße)"
 
 Warten Sie auf die Antwort des Benutzers.
 
 KRITISCH — LÖSCHREGEL: ALLE Entscheidungen, die NACH der gewählten Teilentscheidung getroffen wurden, werden GELÖSCHT. Versuchen Sie nicht, sie zu bewahren, zu referenzieren oder vorzuschlagen, einen Teil davon zu behalten. Führen Sie die vollständige Sequenz ab dem gewählten Abschnitt neu aus, als ob diese nachgelagerten Entscheidungen nie getroffen worden wären. Entfernen Sie sie aus Ihrem Kontext.
 
 Beispiele:
-- Der Benutzer kehrt zum **Kundensegment** zurück: Löschen Sie scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Problem, Vorteile, Wettbewerber, scorecard_market_*. Führen Sie alle Abschnitte von Schritt 1 ab section_customer vollständig neu aus.
+- Der Benutzer kehrt zum **Kundensegment** zurück: Löschen Sie scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, need_intensity_*, Problem, Vorteile, Wettbewerber, scorecard_market_*. Führen Sie alle Abschnitte von Schritt 1 ab section_customer vollständig neu aus.
 - Der Benutzer kehrt zum **Käufer** zurück: Löschen Sie nur scorecard_purchaser_*. Führen Sie nur section_purchaser neu aus (Kunde bleibt verriegelt).
-- Der Benutzer kehrt zum **Problem** zurück: Löschen Sie scorecard_problem_iu, scorecard_problem_iu_nudge, Vorteile, Wettbewerber, scorecard_market_*. Führen Sie ab section_problem neu aus.
+- Der Benutzer kehrt zum **Problem** zurück: Löschen Sie scorecard_problem_iu, scorecard_problem_iu_nudge, need_intensity_*, Vorteile, Wettbewerber, scorecard_market_*. Führen Sie ab section_problem neu aus.
+- Der Benutzer kehrt zur **Bedarfsintensität** zurück: Löschen Sie nur need_intensity_*. Führen Sie nur section_need_intensity erneut aus (Kunde, Käufer, Problem bleiben gesperrt).
 - Der Benutzer kehrt zur **Problem I/U-Klassifizierung** zurück: Löschen Sie nur scorecard_problem_iu, scorecard_problem_iu_nudge. Führen Sie nur section_problem_importance neu aus (Kunde, Käufer, Problem bleiben verriegelt).
 - Der Benutzer kehrt zu **Gründervorteilen** zurück: Löschen Sie Wettbewerber, scorecard_market_*. Führen Sie ab section_advantages neu aus.
 - Der Benutzer kehrt zu **Wettbewerbern** zurück: Löschen Sie die Wettbewerberauswahl, den Hauptgegner, scorecard_market_*. Führen Sie ab section_competitors neu aus (schließt section_market_sizing ein).
@@ -1068,13 +1253,13 @@ Warten Sie, bis der Benutzer seine Bereitschaft bestätigt, bevor Sie zu section
 
 <section name="section_write_outputs">
 
-## Sprint-Ende — Ausgabedateien (OUTPUT-01, OUTPUT-02, OUTPUT-03, OUTPUT-04)
+## Sprint-Ende — Ausgabedateien (OUTPUT-01, OUTPUT-02, OUTPUT-03, OUTPUT-04, OUTPUT-05)
 
 **Beim Eintreten in diesen Abschnitt:** Nachdem die testbare Form angezeigt wurde und der Benutzer seine Bereitschaft bestätigt.
 
-Dies ist der EINZIGE Ort im gesamten Workflow, an dem HYPOTHESIS.md, SPRINT.md, POSITIONING.md und 5PM-SCORECARD.md verfasst werden. Verfassen Sie diese Dateien NICHT anderswo.
+Dies ist der EINZIGE Ort im gesamten Workflow, an dem HYPOTHESIS.md, SPRINT.md, POSITIONING.md, 5PM-SCORECARD.md und NEED-INTENSITY.md verfasst werden. Verfassen Sie diese Dateien NICHT anderswo.
 
-Sagen Sie: „Sprint abgeschlossen. Ich verfasse jetzt Ihre 4 Ausgabedateien."
+Sagen Sie: „Sprint abgeschlossen. Ich verfasse jetzt Ihre 5 Ausgabedateien."
 
 **1. HYPOTHESIS.md verfassen**
 
@@ -1160,7 +1345,40 @@ Verfassen Sie ./5PM-SCORECARD.md und assemblieren Sie die folgenden benannten Fe
 
 KRITISCH: Keine Klammern verbleiben in 5PM-SCORECARD.md. Alle 5 Linsen haben echten Inhalt.
 
-**Nachdem alle 4 Dateien verfasst wurden:**
+**5. NEED-INTENSITY.md schreiben**
+
+@~/.claude/get-your-shit-together/templates/de/NEED-INTENSITY.md
+
+Schreiben Sie ./NEED-INTENSITY.md und assemblieren Sie die folgenden benannten Felder aus dieser Session:
+
+- Sprint-Datum: heutiges Datum
+- Kunde / Kundensegment: gesperrtes Kundensegment
+- Problemstellung: die endgültige Problem-/Kundenformulierung (falls in der Beratungsschleife eine Neuformulierung akzeptiert wurde, verwenden Sie die neuformulierte Version; andernfalls die ursprüngliche gesperrte Formulierung aus section_problem)
+
+**Punktzahl-Zusammenfassung:**
+- Real: need_intensity_real
+- Dringend: need_intensity_urgent
+- Kritisch: need_intensity_critical
+- Auferlegt: need_intensity_imposed
+- Vernachlässigt: need_intensity_neglected
+- Bewusstsein: need_intensity_consciousness
+
+**Formel:**
+Zeile 1: `Vernachlässigt × (Kritisch + Bewusstsein) × (Dringend + Auferlegt + Real)`
+Zeile 2: `[need_intensity_neglected] × ([need_intensity_critical] + [need_intensity_consciousness]) × ([need_intensity_urgent] + [need_intensity_imposed] + [need_intensity_real])`
+Zeile 3: `= [need_intensity_score] / 6.000`
+
+**Urteil:** need_intensity_tier (genaue Stufenbezeichnung — nicht paraphrasieren)
+
+**Begründung nach Dimension:** need_intensity_rationale — einen Absatz pro Dimension schreiben (Real, Dringend, Kritisch, Auferlegt, Vernachlässigt, Bewusstsein) aus der gespeicherten Begründung
+
+**Identifizierte Wettbewerber:** need_intensity_competitors — Namen auflisten, die während der Bedarfsintensitäts-Websuche gefunden wurden
+
+**Hinweise:** Falls die Beratungsschleife ausgeführt wurde (need_intensity_score war zu einem Zeitpunkt unter 1.000), fassen Sie die Neuformulierungsversuche und die letztendlich gewählte Formulierung zusammen. Falls keine Beratungsschleife ausgeführt wurde, schreiben Sie: "Punktzahl über 1.000 — kein Beratungsschleife wurde ausgeführt."
+
+KRITISCH: Keine eckigen Klammern verbleiben in NEED-INTENSITY.md. Alle Felder enthalten echte Inhalte aus der Session.
+
+**Nachdem alle 5 Dateien verfasst wurden:**
 
 „Fertig. Ihr Foundation Sprint ist abgeschlossen.
 
@@ -1169,6 +1387,7 @@ KRITISCH: Keine Klammern verbleiben in 5PM-SCORECARD.md. Alle 5 Linsen haben ech
 - `SPRINT.md` — das vollständige Entscheidungsprotokoll
 - `POSITIONING.md` — Ihre Positionierungskarte und Ihr Manifest
 - `5PM-SCORECARD.md` — Ihr 5PM-Auswertungs-Dashboard
+- `NEED-INTENSITY.md` — Ihre Bedarfsintensitäts-Bewertung
 
 **Ihr nächster Schritt:** [schnellster Validierungstest aus der testbaren Form]"
 
