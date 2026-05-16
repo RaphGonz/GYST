@@ -266,7 +266,188 @@ version: 1.0.0
 
 重新显示第1步状态栏，更新问题为已确认的表述。
 
-然后进入第3节（创始人优势）。在本节不再提其他问题。
+然后继续执行 section_need_intensity。在本节中不要提出其他任何问题。
+
+</section>
+
+<section name="section_need_intensity">
+
+## 需求强度评估（NEED-01 至 NEED-06）
+
+**进入本节时：** 客户和问题均已锁定。请勿重新询问。
+
+---
+
+### 第1步 — 介绍需求强度
+
+在展示各维度之前，请逐字呈现以下介绍：
+
+"在我们梳理您的优势和竞争对手之前，让我们先评估一下市场对解决方案的迫切程度。需求强度衡量的是痛点是否深刻到足以驱动购买行为——而不是您的想法是否聪明。
+
+我将向您展示6个维度。请对每个维度打0到10分。之后，我将进行网络搜索以校准您的分数。"
+
+---
+
+### 第2步 — 展示全部6个维度并收集用户评分
+
+在一个块中展示全部6个维度。用户在一次回复中对所有6个维度评分——而不是逐一评分。
+
+使用以下格式：
+
+---
+
+请对每个维度打0到10分。两端极值已定义，以帮助您确定评分。请按顺序回复6个数字（例如："7, 4, 8, 3, 6, 5"）：
+
+**1. 真实** — 是否有文献证据表明人们正在积极尝试解决这个问题？
+- 0 = 没有社区、没有工具、没有招聘信息——问题可能在规模上并不存在
+- 10 = 大型社区、专用工具、活跃的招聘市场，均证实了这个问题
+
+**2. 紧迫** — 人们现在就需要解决方案，而不是将来某天？
+- 0 = "某天会很好"——没有时间压力，今天支付意愿低
+- 10 = 人们现在正在损失金钱或错过截止日期——他们会立即付费
+
+**3. 关键** — 不解决这个问题会有多严重的后果？
+- 0 = 小麻烦——下周就忘了
+- 10 = 收入损失、健康风险或监管风险——忽视它将是灾难性的
+
+**4. 强制** — 需求是否受到外部强制（法律、雇主或市场标准）？
+- 0 = 完全可选——买家可以选择忽视它
+- 10 = 法律要求或雇主规定——买家别无选择
+
+**5. 被忽视** — 现有解决方案的覆盖有多稀薄？
+- 0 = 拥挤的市场，有主导性的、口碑良好的工具——没有空白
+- 10 = 没有严肃的解决方案——买家在用电子表格或其他替代品凑合
+
+**6. 意识** — 目标客户是否已经知道自己有这个问题？
+- 0 = 买家不认为这是一个独立的问题——您需要大力教育
+- 10 = 买家正在主动寻找解决方案——他们确切知道自己需要什么
+
+---
+
+等待用户回复6个评分。接受任何可读格式（逗号分隔、编号列表等）。解析6个值并存储为 user_ni_real、user_ni_urgent、user_ni_critical、user_ni_imposed、user_ni_neglected、user_ni_consciousness。
+
+---
+
+### 第3步 — 网络搜索和逐维度校准
+
+说：
+"好的。我现在搜索以校准您的分数。"
+
+进行内联 WebSearch：
+- 查询1："[锁定的客户细分] [锁定的问题] solutions tools alternatives 2024 2025"
+- 查询2："[锁定的客户细分] [锁定的问题] community forum discussion dominant solution"
+
+目标：识别谁在尝试解决这个问题（有助于真实和被忽视的分数），以及是否有解决方案被认可或占主导地位（有助于被忽视的分数）。将找到的竞争者名称存储为 `need_intensity_competitors` ——此列表将在 section_competitors_research 中被重复使用，从而无需再次进行竞争者搜索。
+
+**搜索后，按顺序校准每个维度。对于每个维度：**
+
+展示您找到的具体证据，提出修订后的分数（只能向下——永远不高于用户的评分），并询问用户是否同意。使用以下模式：
+
+对于真实："我[找到了/没有找到][具体证据——例如'一个有45,000名成员的subreddit和3个专用工具']。基于此，我将真实评为[建议分数]，[低于/与]您的[用户分数][相同]。[是否同意，还是您的内部知识表明有所不同？]"
+
+对于紧迫："证据[显示/未显示][紧迫信号——例如'时间敏感的招聘信息和SLA要求']。我将紧迫评为[建议分数]。[同意？]"
+
+……以此类推，涵盖每个维度。
+
+规则：
+- 如果您未找到某个维度的强有力证据：保留用户的原始评分，并说："我未找到[维度]的强烈信号——保留您的评分[分数]。"
+- 如果用户不同意您建议的分数：采用他们的原始评分。不要反驳。
+- 存储每个维度的最终校准分数（用户的或AI的，以被接受的为准）。
+
+存储命名字段：
+- **need_intensity_real** = "[最终校准分数 0-10]"
+- **need_intensity_urgent** = "[最终校准分数 0-10]"
+- **need_intensity_critical** = "[最终校准分数 0-10]"
+- **need_intensity_imposed** = "[最终校准分数 0-10]"
+- **need_intensity_neglected** = "[最终校准分数 0-10]"
+- **need_intensity_consciousness** = "[最终校准分数 0-10]"
+- **need_intensity_rationale** = "[逐维度推理摘要：找到了什么以及为何建议该分数——每个维度1-2句话，存储用于 NEED-INTENSITY.md 组装]"
+- **need_intensity_competitors** = "[网络搜索中找到的竞争者/解决方案名称列表——存储以便在 section_competitors_research 中重复使用]"
+
+---
+
+### 第4步 — 计算公式并展示结果
+
+所有6个分数校准并接受后：
+
+计算：
+得分 = need_intensity_neglected × (need_intensity_critical + need_intensity_consciousness) × (need_intensity_urgent + need_intensity_imposed + need_intensity_real)
+
+明确展示计算过程：
+
+"需求强度得分：
+
+被忽视([得分]) × (关键([得分]) + 意识([得分])) × (紧迫([得分]) + 强制([得分]) + 真实([得分]))
+= [被忽视] × [关键 + 意识] × [紧迫 + 强制 + 真实]
+= **[最终得分]** / 6,000
+
+结论：**[等级标签]**"
+
+使用精确的等级标签：
+- 4,000–6,000："迫切需求 — 强烈市场信号"
+- 2,500–3,999："坚实需求 — 执行精准则可行"
+- 1,000–2,499："适中需求 — 建立前请细化细分市场或重新定义问题"
+- 500–999："弱需求 — 建议：考虑更精准的客户定义"
+- 0–499："极弱需求 — 风险显著，请重新审视问题陈述"
+
+存储：
+- **need_intensity_score** = "[计算得分]"
+- **need_intensity_tier** = "[精确等级标签]"
+
+---
+
+### 第5步 — 低于1,000分的咨询循环（有条件）
+
+**仅在 need_intensity_score < 1,000 时执行此步骤。如果得分 ≥ 1,000，直接跳至第6步。**
+
+初始化：loop_count = 0，best_score = need_intensity_score，best_attempt = [当前表述：客户 + 问题 + 所有6个分数]
+
+**咨询循环（在得分 < 1,000 且 loop_count < 5 时最多重复5次）：**
+
+loop_count = loop_count + 1
+
+说：
+"您的得分[得分]低于1,000——这表明需求可能不够强劲，无法可靠地驱动购买行为。以下是两个可能改善它的方向：
+
+**更精准的客户细分：**[具体的更窄细分建议——例如'将"独立创始人"改为"构建B2B SaaS且已有≥1个付费客户的独立创始人"']
+
+**问题重新表述：**[具体的重新表述建议——例如'将"入职复杂性"改为"入职失败导致的前30天客户流失"——更紧迫、更关键的表述']
+
+这是建议性的——您可以按照其中一个方向重新评分，或者按原样继续。您希望如何？
+
+**A)** 使用更精准的客户细分重新评分
+**B)** 使用问题重新表述重新评分
+**C)** 无论如何以当前得分[得分]继续"
+
+等待用户回复。如果C：退出循环，以当前分数继续执行第6步。
+
+**如果用户选择A或B（重新评分）：**
+- 将所选的重新表述应用于客户+问题的表述
+- 重新运行完整的6维度评分（AI根据重新表述的背景直接对所有6个维度评分——用户不重新评分；用户只选择了方向）
+- 重新计算公式
+- 展示新得分和等级
+- 如果新得分 > best_score：更新 best_score 和 best_attempt
+- 如果新得分 ≥ 1,000：退出循环，以新分数继续执行第6步
+- 如果新得分 < 1,000 且 loop_count < 5：重复循环
+
+**5次循环后仍未超过1,000：**
+
+展示：
+"经过[5]次重新表述尝试，您得分最高的表述是[best_attempt 表述]，得分为[best_score]。以下是为什么值得将其作为起点考虑的原因：[1-2句理由，说明该表述为何具有最强的信号]。
+
+您可以使用此表述继续，或以您的原始表述完成冲刺。由您决定——此咨询循环永远不会阻碍进展。"
+
+等待用户回复。接受其决定。然后以用户选择的分数继续执行第6步。
+
+---
+
+### 第6步 — 过渡
+
+在第4步之后（或在咨询循环执行后，如果已执行）：
+
+请勿重新渲染第1步横幅（需求强度不是横幅字段）。
+
+然后继续执行 section_problem_importance。在本节中不要提出其他任何问题。
 
 </section>
 
@@ -483,12 +664,15 @@ gyst-researcher 以英文进行研究——这是正常且预期的行为。请�
 1. 精确说：
    > "明白了。我现在进行研究——我将同时寻找工具和人们今天解决这个问题的方式。"
 
-2. 通过 Task 工具以子代理方式调用 gyst-researcher，使用以下英文任务简报：
+2. 重要提示：need_intensity_competitors 在需求强度网络搜索中已知。将其作为预先识别的解决方案传递给 gyst-researcher，以便研究代理无需再次搜索即可找到它们。
+
+   通过 Task 工具以子代理方式调用 gyst-researcher，使用以下英文任务简报：
 
    ```
    Customer segment: [locked customer segment from section_customer]
    Problem: [locked problem from section_problem]
    User-named competitors: [what the user said in section_competitors, or "none"]
+   Pre-identified solutions: [need_intensity_competitors — names found during Need Intensity web search; include these in the competitor list without re-searching for them]
 
    Task: Find up to 7 competitors — both direct products and status-quo alternatives for this exact problem.
    ```
@@ -652,16 +836,17 @@ COMPETITORS.md 撰写完成后，精确呈现以下内容：
 ### 如果用户选择B（返回子决策）——NAVIG-02
 
 询问：
-"您想返回到哪个子决策？（客户细分 / 购买者 / 问题 / 问题I/U分类 / 创始人优势 / 竞争对手 / 市场规模）"
+"您想返回到哪个子决策？（客户细分 / 购买者 / 问题 / 需求强度 / 问题I/U分类 / 创始人优势 / 竞争对手 / 市场规模）"
 
 等待用户回答。
 
 关键——清除规则：所选子决策之后做出的所有决策都将被清除。不要尝试保留它们、引用它们或提议保留其中一部分。从所选部分重新运行完整序列，就像这些下游决策从未做出过一样。将其从您的上下文中删除。
 
 示例：
-- 用户返回**客户细分**：清除 scorecard_purchaser_*、scorecard_problem_iu、scorecard_problem_iu_nudge、问题、优势、竞争对手、scorecard_market_*。从 section_customer 起完整重新运行第1步所有节。
+- 用户返回**客户细分**：清除 scorecard_purchaser_*、scorecard_problem_iu、scorecard_problem_iu_nudge、need_intensity_*、问题、优势、竞争对手、scorecard_market_*。从 section_customer 起完整重新运行第1步所有节。
 - 用户返回**购买者**：仅清除 scorecard_purchaser_*。仅重新运行 section_purchaser（客户保持锁定）。
-- 用户返回**问题**：清除 scorecard_problem_iu、scorecard_problem_iu_nudge、优势、竞争对手、scorecard_market_*。从 section_problem 起重新运行。
+- 用户返回**问题**：清除 scorecard_problem_iu、scorecard_problem_iu_nudge、need_intensity_*、优势、竞争对手、scorecard_market_*。从 section_problem 起重新运行。
+- 用户返回**需求强度**：仅清除 need_intensity_*。仅重新执行 section_need_intensity（客户、购买者、问题保持锁定）。
 - 用户返回**问题I/U分类**：仅清除 scorecard_problem_iu、scorecard_problem_iu_nudge。仅重新运行 section_problem_importance（客户、购买者、问题保持锁定）。
 - 用户返回**创始人优势**：清除竞争对手、scorecard_market_*。从 section_advantages 起重新运行。
 - 用户返回**竞争对手**：清除竞争对手选择、主要对手、scorecard_market_*。从 section_competitors 起重新运行（包含 section_market_sizing）。
@@ -1067,13 +1252,13 @@ AI根据冲刺中已捕获的数据为每个方案对两个维度进行评分—
 
 <section name="section_write_outputs">
 
-## 冲刺结束——输出文件（OUTPUT-01、OUTPUT-02、OUTPUT-03、OUTPUT-04）
+## 冲刺结束——输出文件（OUTPUT-01、OUTPUT-02、OUTPUT-03、OUTPUT-04、OUTPUT-05）
 
 **进入本节时：** 显示可测试形式后，用户确认准备就绪。
 
-这是整个工作流中唯一撰写 HYPOTHESIS.md、SPRINT.md、POSITIONING.md 和 5PM-SCORECARD.md 的地方。不要在其他地方撰写这些文件。
+这是整个工作流中唯一撰写 HYPOTHESIS.md、SPRINT.md、POSITIONING.md、5PM-SCORECARD.md 和 NEED-INTENSITY.md 的地方。不要在其他地方撰写这些文件。
 
-说："冲刺完成。我现在撰写您的4个输出文件。"
+说："冲刺完成。我现在撰写您的5个输出文件。"
 
 **1. 撰写 HYPOTHESIS.md**
 
@@ -1159,7 +1344,40 @@ AI根据冲刺中已捕获的数据为每个方案对两个维度进行评分—
 
 关键提示：5PM-SCORECARD.md中不保留任何方括号。全部5个视角均包含真实内容。
 
-**4个文件撰写完成后：**
+**5. 写入 NEED-INTENSITY.md**
+
+@~/.claude/get-your-shit-together/templates/zh/NEED-INTENSITY.md
+
+写入 ./NEED-INTENSITY.md，从本次会话中汇总以下命名字段：
+
+- Sprint日期：今日日期
+- 客户/客户细分：已锁定的客户细分
+- 问题陈述：最终锁定并使用的问题/客户陈述（如果在咨询循环中接受了重新表述，使用重新表述的版本；否则使用 section_problem 中原始锁定的问题）
+
+**得分摘要：**
+- 真实：need_intensity_real
+- 紧迫：need_intensity_urgent
+- 关键：need_intensity_critical
+- 强制：need_intensity_imposed
+- 被忽视：need_intensity_neglected
+- 意识：need_intensity_consciousness
+
+**公式：**
+第1行：`被忽视 × (关键 + 意识) × (紧迫 + 强制 + 真实)`
+第2行：`[need_intensity_neglected] × ([need_intensity_critical] + [need_intensity_consciousness]) × ([need_intensity_urgent] + [need_intensity_imposed] + [need_intensity_real])`
+第3行：`= [need_intensity_score] / 6,000`
+
+**结论：** need_intensity_tier（使用精确的等级标签 — 不要转述）
+
+**各维度理由：** need_intensity_rationale — 根据存储的理由，为每个维度（真实、紧迫、关键、强制、被忽视、意识）写一段话
+
+**已识别竞争者：** need_intensity_competitors — 列出需求强度网络搜索中找到的名称
+
+**备注：** 如果咨询循环已执行（need_intensity_score 在某时刻低于1,000），请总结重新表述的尝试以及最终选择的表述。如果未执行咨询循环，请写："得分高于1,000 — 未执行咨询循环。"
+
+关键提示：NEED-INTENSITY.md 中不得残留任何方括号。所有字段均包含本次会话的真实内容。
+
+**5个文件撰写完成后：**
 
 "完成。您的基础冲刺已完成。
 
@@ -1168,6 +1386,7 @@ AI根据冲刺中已捕获的数据为每个方案对两个维度进行评分—
 - `SPRINT.md` — 完整的决策日志
 - `POSITIONING.md` — 您的定位图和宣言
 - `5PM-SCORECARD.md` — 您的5PM信号评分卡
+- `NEED-INTENSITY.md` — 您的需求强度评估
 
 **您的下一步：** [来自可测试形式的最快验证测试]"
 
