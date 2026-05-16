@@ -2,27 +2,13 @@
 
 ## What This Is
 
-A Claude slash-command package that guides solo entrepreneurs through the Foundation Sprint from Jake Knapp's "Click." It replaces the group dynamic of the original sprint with an AI thinking partner: the AI asks questions, helps generate options, researches competitors and markets, and leads the user from a fuzzy idea to a testable hypothesis in one focused session.
+A Claude slash-command package that guides solo entrepreneurs through the Foundation Sprint from Jake Knapp's "Click." It replaces the group dynamic of the original sprint with an AI thinking partner: the AI asks questions, helps generate options, researches competitors and markets, evaluates the need intensity and strategic signals around the problem, and leads the user from a fuzzy idea to a testable hypothesis in one focused session.
 
-The full sprint runs as a single command (`/gyst:foundation-sprint`) across 4 steps in one Claude Code session, producing three structured output files: HYPOTHESIS.md, SPRINT.md, and POSITIONING.md. As of v1.1, the sprint supports multiple languages — French is available via `/gyst:foundation-sprint, -french`, with a fully pre-translated workflow and output templates. The architecture is extensible: adding a new language requires only a translated workflow file and templates.
+The sprint runs as a single command (`/gyst:foundation-sprint`) across 4 steps in one Claude Code session, producing 5 structured output files: HYPOTHESIS.md, SPRINT.md, POSITIONING.md, 5PM-SCORECARD.md, and NEED-INTENSITY.md. Step 1 includes Need Intensity scoring (6 dimensions, 0-6000 scale with AI-calibrated scores and advisory refinement) and 5PM Framework awareness lenses (Problem, Purchaser, Market). Step 3 adds Product/Founder Fit and Pain to Validate evaluation. The sprint is available in 7 languages (EN, FR, ES, DE, ZH, PT, JA) — pass a language flag (`-french`, `-spanish`, `-german`, `-chinese`, `-portuguese`, `-japanese`) to run in a fully pre-translated workflow. The architecture is extensible: adding a new language requires only a translated workflow file and templates.
 
 ## Core Value
 
 One command, one session, one testable hypothesis — solo entrepreneurs get the clarity that the Foundation Sprint was designed to produce, without needing a team.
-
-## Current Milestone: v1.3 Need Intensity Framework
-
-**Goal:** Add the Need Intensity scoring framework to Step 1 of the Foundation Sprint — a 6-dimension need evaluation (Real, Urgent, Critical, Imposed, Neglected, Consciousness) with a formula scoring 0-6000 that guides users toward sharper problem/client targeting before the sprint begins — then translate all changes to all 6 language versions and document both 5PM and Need Intensity in the README.
-
-**Target features:**
-- Need Intensity scoring immediately after problem statement (before anything else in Step 1)
-- 6 dimensions rated by user, calibrated by AI via web search
-- Formula display: Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real) with business threshold labels
-- Advisory refinement loop when score < 1000 (AI suggests narrower problem/client)
-- Competitor data from Need Intensity search reused for COMPETITORS.md (no duplicate search)
-- New output file: NEED-INTENSITY.md (all 6 scores, formula, verdict, AI rationale per dimension)
-- Translation to all 6 language workflows (FR, ES, DE, ZH, PT, JA) + NEED-INTENSITY.md templates
-- README: dedicated sections for 5PM framework and Need Intensity framework
 
 ## Requirements
 
@@ -51,17 +37,17 @@ One command, one session, one testable hypothesis — solo entrepreneurs get the
 - ✓ 5PM Pain to Validate matrix (Matrix 5) per approach in Step 3 — v1.2
 - ✓ Produces 5PM-SCORECARD.md (5th output file) with per-lens verdict, evidence, rationale — v1.2
 - ✓ 5PM changes translated to all 6 language workflows (FR, ES, DE, ZH, PT, JA) — v1.2
+- ✓ README: dedicated 5PM section (all 5 lenses) + dedicated Need Intensity section (formula, dimensions, thresholds) — v1.3
+- ✓ Need Intensity scoring immediately after problem statement — 6 dimensions (Real, Urgent, Critical, Imposed, Neglected, Consciousness) rated 0-10, calibrated by AI web search, formula displayed with 5 business threshold tier labels — v1.3
+- ✓ Advisory refinement loop when score < 1000: AI suggests narrower client/problem; non-blocking, max 5 loops — v1.3
+- ✓ Competitor data from Need Intensity web search reused for COMPETITORS.md — no duplicate search — v1.3
+- ✓ NEED-INTENSITY.md output file (5th output) — all 6 calibrated scores, formula calculation, verdict tier, AI rationale per dimension, final problem/client statement — v1.3
+- ✓ Need Intensity translated to all 6 language workflows (FR, ES, DE, ZH, PT, JA) + NEED-INTENSITY.md template per language — v1.3
+- ✓ TRANSLATION-SYNC.md updated with v1.3 English source commit hash for all 6 languages — v1.3
 
 ### Active
 
-- [ ] Need Intensity scoring immediately after problem statement (before anything else in Step 1)
-- [ ] 6 dimensions (Real, Urgent, Critical, Imposed, Neglected, Consciousness) rated by user, calibrated by AI via web search
-- [ ] Formula computed and displayed: Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real), 0-6000, with business threshold labels
-- [ ] Advisory refinement when score < 1000: AI suggests narrower client/problem; user decides whether to re-rate or proceed
-- [ ] Competitor search data from Need Intensity reused for COMPETITORS.md — no duplicate search
-- [ ] NEED-INTENSITY.md output file: all 6 scores, formula, verdict, AI rationale per dimension, final problem/client statement
-- [ ] Need Intensity translated to all 6 language workflows (FR, ES, DE, ZH, PT, JA) + NEED-INTENSITY.md template per language
-- [ ] README: dedicated 5PM section (all 5 lenses) + dedicated Need Intensity section (formula, dimensions, thresholds)
+(None — planning next milestone)
 
 ### Out of Scope
 
@@ -80,6 +66,8 @@ One command, one session, one testable hypothesis — solo entrepreneurs get the
 - The `references/` folder contains: Click (Jake Knapp).pdf, Sprint (Jake Knapp).pdf, and Foundation Sprint.docx (structured summary with AI intervention points already mapped out).
 - **v1.0 shipped 2026-02-28:** 1,268-line workflow with 22 named sections; 4 phases, 8 plans.
 - **v1.1 shipped 2026-03-08:** French language support — `$ARGUMENTS`-based routing, 4 French templates (371 lines), 1,291-line French workflow, TRANSLATION-SYNC.md; 3 phases, 4 plans.
+- **v1.2 shipped 2026-03-22:** 5PM Framework added — Problem I/U matrix, Purchaser classification, Market sizing (Step 1), Founder Fit, Pain to Validate (Step 3), 5PM-SCORECARD.md output; translated to FR, JA, PT; 4 phases, 7 plans.
+- **v1.3 shipped 2026-05-17:** Need Intensity framework added — 6-dimension scoring with AI calibration, formula, advisory loop, NEED-INTENSITY.md output (5th write-block output); translated to all 6 language workflows (FR, ES, DE, ZH, PT, JA); README documentation for both frameworks; 4 phases, 7 plans, 36 files changed.
 
 ## Constraints
 
@@ -108,6 +96,11 @@ One command, one session, one testable hypothesis — solo entrepreneurs get the
 | `* MAIN ADVERSARY` preserved verbatim (v1.1) | Machine-readable marker; translating it would break competitor lookup | ✓ Good — documented in STATE.md as hard rule; Phase 6 human checkpoint enforced it |
 | gyst-researcher Task brief stays English-only (v1.1) | Sub-agent is English-only by design; surrounding workflow prose translated | ✓ Good — language reinforcement block before section ensures French output despite English Task |
 | TRANSLATION-SYNC.md for diff-based updates (v1.1) | Records source commit hash so future English changes can be selectively synced | ✓ Good — establishes maintenance pattern for v1.2+ language updates |
+| README-first terminology lock (v1.3) | Settled 5PM and Need Intensity labels in README (Phase 12) before implementing in workflow (Phase 13) | ✓ Good — Phase 13 matched README exactly; zero terminology drift |
+| section_need_intensity position (v1.3) | Placed immediately after section_problem locks, before section_problem_importance — gives the AI calibration data before strategic classification | ✓ Good — consistent sequence across all 6 language translations |
+| Competitor data handoff via need_intensity_competitors (v1.3) | Need Intensity web search stores competitor names; passed to section_competitors_research brief — no duplicate search | ✓ Good — satisfies NEED-06 with zero duplication across all languages |
+| Advisory loop as non-blocking with AI re-rating (v1.3) | Below-1000 loop: AI proposes reframe, user picks direction, AI re-rates all 6 dimensions; max 5 loops, never blocking | ✓ Good — preserves sprint momentum while guiding toward sharper targeting |
+| Scaffold-only templates (v1.3) | NEED-INTENSITY.md templates are structural scaffolds only; all assembly logic lives in section_write_outputs | ✓ Good — consistent with 5PM-SCORECARD.md pattern; zero template-level logic |
 
 ---
-*Last updated: 2026-05-16 after v1.3 milestone start*
+*Last updated: 2026-05-17 after v1.3 milestone*

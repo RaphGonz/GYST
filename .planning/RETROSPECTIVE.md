@@ -106,6 +106,53 @@
 
 ---
 
+## Milestone: v1.3 — Need Intensity Framework
+
+**Shipped:** 2026-05-17
+**Phases:** 4 (12-15) | **Plans:** 7 | **Timeline:** 2 days (2026-05-16 → 2026-05-17)
+
+### What Was Built
+
+- README.md: dedicated 5PM Framework and Need Intensity sections — settled all tier labels, formula, and dimension terminology before workflow implementation (Phase 12)
+- `section_need_intensity` in English workflow: 6-dimension 0-10 rating block, downward-only AI calibration via web search, formula computation with 5 business threshold tier labels, below-1000 advisory loop (max 5 iterations, AI re-rates all 6 dimensions, user picks reframe direction, never blocking) (Phase 13)
+- `NEED-INTENSITY.md` scaffold template and OUTPUT-05 write block in `section_write_outputs` — competitor names from Need Intensity web search stored and passed to `section_competitors_research` with no duplicate search (Phase 13)
+- All 6 language Foundation Sprint workflows (FR, ES, DE, ZH, PT, JA) translated with `section_need_intensity`, language-specific `NEED-INTENSITY.md` templates, OUTPUT-05 write blocks, and `navigation_controls` DISCARD RULE updates — 3 plans covering paired languages (FR+ES, DE+ZH, PT+JA) (Phase 14)
+- `TRANSLATION-SYNC.md` updated with v1.3 English source commit hash `8d3861c3` for all 6 languages (Phase 15)
+
+### What Worked
+
+- **README-first terminology lock** — writing the Need Intensity section in README (Phase 12) before implementing in the workflow (Phase 13) eliminated terminology drift entirely; Phase 13 matched README exactly with zero corrections
+- **Competitor data handoff via named field** — `need_intensity_competitors` stored during Need Intensity web search and passed directly to `section_competitors_research` brief; the COMPETITORS.md search did not re-run across any of the 7 language workflows
+- **Paired-language plan structure for Phase 14** — covering 2 languages per plan (FR+ES, DE+ZH, PT+JA) kept context manageable while maximizing efficiency; each pair was structurally identical so one plan-check covered both
+- **Scaffold-only template pattern** — NEED-INTENSITY.md templates contain zero assembly logic; consistent with 5PM-SCORECARD.md pattern established in v1.2; makes template creation a pure content task
+
+### What Was Inefficient
+
+- **Phase 15 not complete before running complete-milestone** — milestone completion was triggered before Phase 15 (TRANSLATION-SYNC.md update) was executed; required inline execution during the complete-milestone workflow; a simple readiness check would have caught this
+- **ROADMAP Phase 13/14 plan checkboxes not updated** — plan rows in Phase Details section showed `[ ]` despite SUMMARY.md files existing for all plans; checkpoint disconnect between executor and roadmap
+- **No milestone audit run** — proceeded directly to complete-milestone without `/gsd:audit-milestone`; acceptable for a documentation/translation milestone but not a pattern to repeat for logic-heavy milestones
+
+### Patterns Established
+
+- **README-first for framework additions** — when adding a scoring framework to a workflow, document it in README first (locking terminology), then implement; the README serves as the spec the workflow implementation must match
+- **Advisory loop pattern** — non-blocking guidance loop with iteration guard, AI-owns re-rating, user-owns-direction, best-attempt fallback; reusable for any scoring section where the raw score may need refinement
+- **All-languages-in-one-phase with paired plans** — for mature translation pipelines (where the pattern is established), covering all languages in one phase with 2-per-plan pairing is efficient and produces consistent quality
+
+### Key Lessons
+
+1. **Check all phases are complete before running complete-milestone** — Phase 15 was open; a simple pre-flight against SUMMARY.md existence for all phases would have surfaced this immediately
+2. **Terminology-in-documentation-first is the correct dependency order** — "README (terminology lock) → workflow implementation" prevents all terminology drift with near-zero overhead
+3. **Paired-language plans work when the translation pattern is mature** — FR+ES, DE+ZH, PT+JA each took ~25-33 min per plan; acceptable for a milestone where all 6 languages share identical structure
+4. **Roadmap checkboxes need atomic maintenance** — plan completion and roadmap checkbox update should be one commit; deferred maintenance creates false incompleteness signals
+
+### Cost Observations
+
+- Model mix: ~100% sonnet (balanced profile throughout)
+- Sessions: 2 sessions (2026-05-16 → 2026-05-17)
+- Notable: Phase 14 translation plans averaged 30 min each (2 languages per plan) vs. 13 min avg for single-language plans in v1.1; the additional scope is roughly linear
+
+---
+
 ## Cross-Milestone Trends
 
 ### Process Evolution
@@ -114,6 +161,8 @@
 |-----------|--------|-------|-------------------|
 | v1.0 | 4 | 8 | Initial build — established seam-based integration pattern |
 | v1.1 | 3 | 4 | Translation milestone — established pre-translated workflow pattern and TRANSLATION-SYNC.md |
+| v1.2 | 4 | 7 | Framework additions — 5PM lenses woven into existing workflow; introduced scaffold-only template pattern |
+| v1.3 | 4 | 7 | Framework scoring — Need Intensity with calibration loop; README-first terminology lock; all-6-languages in one phase |
 
 ### Top Lessons (Verified Across Milestones)
 
@@ -121,3 +170,5 @@
 2. Write enforcement as prose in workflow text, not code comments
 3. Requirements that reference implementation counts go stale — verify counts at planning time
 4. Research-produced string catalogues make translation tasks nearly error-free at execution
+5. README-first terminology lock eliminates terminology drift when adding scoring frameworks
+6. Verify all phases complete (SUMMARY.md exists) before running complete-milestone
