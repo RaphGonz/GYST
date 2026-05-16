@@ -6,16 +6,16 @@
 |-------|--------|
 | Fichier français | `get-your-shit-together/workflows/foundation-sprint-french.md` |
 | Source anglaise | `get-your-shit-together/workflows/foundation-sprint.md` |
-| Commit source anglais | `b4c1af63a1f4fb6976a640ec8f97401ca3e57293` |
-| Date de traduction | 2026-03-22 |
-| Traduit par | Claude (Phase 7) |
+| Commit source anglais | `8d3861c3decbd67e766bf3c9f631d5b0eccc5a80` |
+| Date de traduction | 2026-05-16 |
+| Traduit par | Claude (Phase 14 — v1.3) |
 
 ## Comment utiliser cet enregistrement
 
 Quand le workflow anglais (`foundation-sprint.md`) est mis à jour, exécutez :
 
 ```bash
-git diff b4c1af63a1f4fb6976a640ec8f97401ca3e57293 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
+git diff 8d3861c3decbd67e766bf3c9f631d5b0eccc5a80 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
 ```
 
 Cela affiche chaque modification apportée à la source anglaise depuis la création de la traduction française.
@@ -47,16 +47,16 @@ Les sections suivantes comportent des traductions complexes et devraient être r
 |-------|-------|
 | Archivo español | `get-your-shit-together/workflows/foundation-sprint-spanish.md` |
 | Fuente inglesa | `get-your-shit-together/workflows/foundation-sprint.md` |
-| Commit fuente | `693e2a58e948fca96d6dd108eaeadad9007b40b5` |
-| Fecha de traducción | 2026-03-22 |
-| Traducido por | Claude (gyst:add-language spanish) |
+| Commit fuente | `8d3861c3decbd67e766bf3c9f631d5b0eccc5a80` |
+| Fecha de traducción | 2026-05-16 |
+| Traducido por | Claude (Phase 14 — v1.3) |
 
 ## Cómo usar este registro
 
 Cuando se actualice el workflow inglés (`foundation-sprint.md`), ejecuta:
 
 ```bash
-git diff 693e2a58e948fca96d6dd108eaeadad9007b40b5 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
+git diff 8d3861c3decbd67e766bf3c9f631d5b0eccc5a80 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
 ```
 
 Esto muestra cada modificación realizada a la fuente desde que se creó la traducción al español.
@@ -78,16 +78,16 @@ Aplica los cambios equivalentes a `foundation-sprint-spanish.md`, luego actualiz
 |------|------|
 | Deutsche Datei | `get-your-shit-together/workflows/foundation-sprint-german.md` |
 | Englische Quelle | `get-your-shit-together/workflows/foundation-sprint.md` |
-| Quell-Commit | `693e2a58e948fca96d6dd108eaeadad9007b40b5` |
-| Übersetzungsdatum | 2026-03-22 |
-| Übersetzt von | Claude (gyst:add-language german) |
+| Quell-Commit | `8d3861c3decbd67e766bf3c9f631d5b0eccc5a80` |
+| Übersetzungsdatum | 2026-05-16 |
+| Übersetzt von | Claude (Phase 14 — v1.3) |
 
 ## Verwendung dieses Protokolls
 
 Wenn der englische Workflow (`foundation-sprint.md`) aktualisiert wird, führe aus:
 
 ```bash
-git diff 693e2a58e948fca96d6dd108eaeadad9007b40b5 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
+git diff 8d3861c3decbd67e766bf3c9f631d5b0eccc5a80 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
 ```
 
 Dadurch werden alle Änderungen an der Quelle seit der Erstellung der deutschen Übersetzung angezeigt.
@@ -109,16 +109,16 @@ Wende entsprechende Änderungen auf `foundation-sprint-german.md` an und aktuali
 |------|-----|
 | 中文文件 | `get-your-shit-together/workflows/foundation-sprint-chinese.md` |
 | 英文来源 | `get-your-shit-together/workflows/foundation-sprint.md` |
-| 来源提交 | `693e2a58e948fca96d6dd108eaeadad9007b40b5` |
-| 翻译日期 | 2026-03-22 |
-| 翻译者 | Claude (gyst:add-language chinese) |
+| 来源提交 | `8d3861c3decbd67e766bf3c9f631d5b0eccc5a80` |
+| 翻译日期 | 2026-05-16 |
+| 翻译者 | Claude (Phase 14 — v1.3) |
 
 ## 如何使用此记录
 
 当英文工作流（`foundation-sprint.md`）更新时，运行：
 
 ```bash
-git diff 693e2a58e948fca96d6dd108eaeadad9007b40b5 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
+git diff 8d3861c3decbd67e766bf3c9f631d5b0eccc5a80 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
 ```
 
 这将显示自创建中文翻译以来对源文件所做的每项更改。
@@ -140,16 +140,16 @@ git diff 693e2a58e948fca96d6dd108eaeadad9007b40b5 HEAD -- get-your-shit-together
 |-------|-------|
 | Arquivo português | `get-your-shit-together/workflows/foundation-sprint-portuguese.md` |
 | Fonte inglesa | `get-your-shit-together/workflows/foundation-sprint.md` |
-| Commit fonte | `b4c1af63a1f4fb6976a640ec8f97401ca3e57293` |
-| Data de tradução | 2026-03-22 |
-| Traduzido por | Claude (gyst:add-language portuguese) |
+| Commit fonte | `8d3861c3decbd67e766bf3c9f631d5b0eccc5a80` |
+| Data de tradução | 2026-05-16 |
+| Traduzido por | Claude (Phase 14 — v1.3) |
 
 ## Como usar este registro
 
 Quando o workflow inglês (`foundation-sprint.md`) for atualizado, execute:
 
 ```bash
-git diff b4c1af63a1f4fb6976a640ec8f97401ca3e57293 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
+git diff 8d3861c3decbd67e766bf3c9f631d5b0eccc5a80 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
 ```
 
 ## Notas de tradução (português)
@@ -168,16 +168,16 @@ git diff b4c1af63a1f4fb6976a640ec8f97401ca3e57293 HEAD -- get-your-shit-together
 |-----------|-----|
 | 日本語ファイル | `get-your-shit-together/workflows/foundation-sprint-japanese.md` |
 | 英語ソース | `get-your-shit-together/workflows/foundation-sprint.md` |
-| ソースコミット | `b4c1af63a1f4fb6976a640ec8f97401ca3e57293` |
-| 翻訳日 | 2026-03-22 |
-| 翻訳者 | Claude (gyst:add-language japanese) |
+| ソースコミット | `8d3861c3decbd67e766bf3c9f631d5b0eccc5a80` |
+| 翻訳日 | 2026-05-16 |
+| 翻訳者 | Claude (Phase 14 — v1.3) |
 
 ## このレコードの使い方
 
 英語ワークフロー（`foundation-sprint.md`）が更新されたら、以下を実行する：
 
 ```bash
-git diff b4c1af63a1f4fb6976a640ec8f97401ca3e57293 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
+git diff 8d3861c3decbd67e766bf3c9f631d5b0eccc5a80 HEAD -- get-your-shit-together/workflows/foundation-sprint.md
 ```
 
 これにより、日本語翻訳が作成されてからソースに加えられた変更がすべて表示される。
