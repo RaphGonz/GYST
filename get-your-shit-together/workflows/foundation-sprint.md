@@ -1607,13 +1607,13 @@ Wait for user to confirm readiness before proceeding to section_write_outputs.
 
 <section name="section_write_outputs">
 
-## Sprint End — Output Files (OUTPUT-01, OUTPUT-02, OUTPUT-03, OUTPUT-04)
+## Sprint End — Output Files (OUTPUT-01, OUTPUT-02, OUTPUT-03, OUTPUT-04, OUTPUT-05)
 
 **When entering this section:** After testable form is displayed and user confirms readiness.
 
 This is the ONLY place in the entire workflow where HYPOTHESIS.md, SPRINT.md, POSITIONING.md, and 5PM-SCORECARD.md are written. Do NOT write these files anywhere else.
 
-Say: "Sprint complete. Writing your 4 output files now."
+Say: "Sprint complete. Writing your 5 output files now."
 
 **1. Write HYPOTHESIS.md**
 
@@ -1699,7 +1699,42 @@ Write ./5PM-SCORECARD.md assembling the following named fields from this session
 
 CRITICAL: Zero square brackets remain in 5PM-SCORECARD.md. All 5 lenses have real content.
 
-**After all 4 files are written:**
+**5. Write NEED-INTENSITY.md**
+
+Read template for structure:
+@~/.claude/get-your-shit-together/templates/NEED-INTENSITY.md
+
+Write ./NEED-INTENSITY.md assembling the following named fields from this session:
+
+**Header fields:**
+- Sprint date: today's date in YYYY-MM-DD format
+- Client / Customer segment: locked customer segment from section_customer
+- Problem statement: the final problem/client statement as locked and used (if a reframe was accepted in the advisory loop, use the reframed version; otherwise use the original locked problem from section_problem)
+
+**Score Summary table:**
+- Real: need_intensity_real
+- Urgent: need_intensity_urgent
+- Critical: need_intensity_critical
+- Imposed: need_intensity_imposed
+- Neglected: need_intensity_neglected
+- Consciousness: need_intensity_consciousness
+
+**Formula calculation (show all three lines explicitly):**
+Line 1: `Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real)`
+Line 2: `[need_intensity_neglected] × ([need_intensity_critical] + [need_intensity_consciousness]) × ([need_intensity_urgent] + [need_intensity_imposed] + [need_intensity_real])`
+Line 3: `= [need_intensity_score] / 6,000`
+
+**Verdict:** need_intensity_tier (exact tier label — do not paraphrase)
+
+**Dimension Rationale:** need_intensity_rationale — write one paragraph per dimension (Real, Urgent, Critical, Imposed, Neglected, Consciousness) from the stored rationale
+
+**Competitors Identified:** need_intensity_competitors — list the names found during the Need Intensity web search
+
+**Notes:** If the advisory loop ran (need_intensity_score was below 1,000 at any point), summarize the reframe attempts and which framing was ultimately chosen. If no advisory loop ran, write: "Score was above 1,000 — no advisory loop ran."
+
+CRITICAL: Zero square brackets remain in NEED-INTENSITY.md. All fields have real content from the session.
+
+**After all 5 files are written:**
 
 "Done. Your Foundation Sprint is complete.
 
@@ -1708,6 +1743,7 @@ CRITICAL: Zero square brackets remain in 5PM-SCORECARD.md. All 5 lenses have rea
 - `SPRINT.md` — the complete decision journal
 - `POSITIONING.md` — your positioning map and manifesto
 - `5PM-SCORECARD.md` — your 5PM signal scorecard
+- `NEED-INTENSITY.md` — your Need Intensity score and rationale
 
 **Your next move:** [fastest validation test from the testable form]"
 
