@@ -262,7 +262,188 @@ Bloqueie. Anuncie o bloqueio:
 
 Re-renderize o banner do Passo 1 com Problema atualizado para o enquadramento confirmado.
 
-Então prossiga para a Seção 3 (Vantagens do Fundador). Não pergunte mais nada nesta seção.
+Em seguida, passe para section_need_intensity. Não faça mais nada nesta seção.
+
+</section>
+
+<section name="section_need_intensity">
+
+## Pontuação de Intensidade de Necessidade (NEED-01 a NEED-06)
+
+**Ao entrar nesta seção:** Cliente e Problema já estão bloqueados. Não os pergunte novamente.
+
+---
+
+### Passo 1 — Introduzir a Intensidade de Necessidade
+
+Antes de mostrar as dimensões, apresente esta introdução exatamente:
+
+"Antes de mapear suas vantagens e concorrentes, vamos avaliar com que intensidade este mercado realmente precisa de uma solução. A Intensidade de Necessidade mede se a dor é profunda o suficiente para impulsionar comportamento de compra — não se sua ideia é inteligente.
+
+Vou mostrar 6 dimensões. Avalie cada uma de 0 a 10. Depois disso, vou fazer uma pesquisa na web para calibrar suas pontuações."
+
+---
+
+### Passo 2 — Mostrar as 6 dimensões e coletar avaliações do usuário
+
+Apresente todas as 6 dimensões em um único bloco. O usuário avalia todas as 6 em uma única resposta — não uma de cada vez.
+
+Use este formato:
+
+---
+
+Avalie cada dimensão de 0 a 10. Os dois extremos são definidos para ancorar sua avaliação. Responda com 6 números em ordem (ex.: "7, 4, 8, 3, 6, 5"):
+
+**1. Real** — Há evidências documentadas de que pessoas estão ativamente tentando resolver isso?
+- 0 = Nenhuma comunidade, nenhuma ferramenta, nenhuma vaga de emprego — o problema pode não existir em escala
+- 10 = Grandes comunidades, ferramentas dedicadas, mercado de trabalho ativo — tudo confirma este problema
+
+**2. Urgente** — As pessoas precisam de uma solução agora, não eventualmente?
+- 0 = "Seria bom algum dia" — nenhuma pressão de tempo, baixa disposição para pagar hoje
+- 10 = As pessoas estão perdendo dinheiro ou perdendo prazos agora — elas pagarão imediatamente
+
+**3. Crítico** — Qual é a gravidade da consequência de NÃO resolver isso?
+- 0 = Inconveniência menor — esquecida na próxima semana
+- 10 = Perda de renda, risco de saúde ou exposição regulatória — catastrófico ignorar
+
+**4. Imposto** — A necessidade é imposta externamente (por lei, empregador ou padrão de mercado)?
+- 0 = Totalmente opcional — o comprador pode escolher ignorá-lo
+- 10 = Legalmente exigido ou imposto pelo empregador — o comprador não tem escolha
+
+**5. Negligenciado** — Quão escasso é o cenário de soluções existentes?
+- 0 = Mercado saturado com ferramentas dominantes e bem consideradas — sem espaço em branco
+- 10 = Nenhuma solução séria existe — os compradores estão improvisando com planilhas ou nada
+
+**6. Consciência** — O cliente-alvo já sabe que tem este problema?
+- 0 = Os compradores não reconhecem isso como um problema distinto — você precisaria educar muito
+- 10 = Os compradores buscam ativamente soluções — eles sabem exatamente o que precisam
+
+---
+
+Aguarde o usuário responder com 6 avaliações. Aceite qualquer formato legível (separado por vírgulas, lista numerada, etc.). Analise os 6 valores e armazene-os como user_ni_real, user_ni_urgent, user_ni_critical, user_ni_imposed, user_ni_neglected, user_ni_consciousness.
+
+---
+
+### Passo 3 — Pesquisa na web e calibração por dimensão
+
+Diga:
+"Entendido. Pesquisando agora para calibrar suas pontuações."
+
+Execute uma WebSearch inline:
+- Consulta 1: "[locked customer segment] [locked problem] solutions tools alternatives 2024 2025"
+- Consulta 2: "[locked customer segment] [locked problem] community forum discussion dominant solution"
+
+O objetivo: identificar quem está tentando resolver este problema (alimenta as pontuações de Real e Negligenciado) e se alguma solução é bem considerada ou dominante (alimenta a pontuação de Negligenciado). Armazene os nomes de concorrentes encontrados como `need_intensity_competitors` — esta lista será reutilizada para COMPETITORS.md para que a pesquisa de concorrentes não seja executada novamente.
+
+**Após a pesquisa, calibre cada dimensão em sequência. Para cada dimensão:**
+
+Mostre as evidências específicas que você encontrou, proponha uma pontuação revisada (apenas para baixo — nunca mais alta que a avaliação do usuário), e pergunte se o usuário concorda. Use este padrão:
+
+Para Real: "Eu [encontrei / não encontrei] [evidência específica — ex.: 'um subreddit de 45.000 membros e 3 ferramentas dedicadas']. Com base nisso, eu avaliaria Real em [pontuação proposta], [menor que / igual a] sua [pontuação do usuário]. [Concorda, ou seu conhecimento interno sugere algo diferente?]"
+
+Para Urgente: "As evidências [mostram / não mostram] [sinal de urgência — ex.: 'vagas de emprego urgentes e requisitos de SLA']. Eu avaliaria Urgente em [pontuação proposta]. [Concorda?]"
+
+...e assim por diante para cada dimensão.
+
+Regras:
+- Se você não encontrar sinais fortes para uma dimensão: mantenha a avaliação original do usuário e diga: "Não encontrei sinais fortes em [Dimensão] — mantendo sua avaliação de [pontuação]."
+- Se o usuário não concordar com a sua pontuação proposta: use a avaliação original dele. Não insista.
+- Armazene a pontuação calibrada final (do usuário ou da IA, o que foi aceito) para cada dimensão.
+
+Armazene os campos nomeados:
+- **need_intensity_real** = "[pontuação calibrada final 0-10]"
+- **need_intensity_urgent** = "[pontuação calibrada final 0-10]"
+- **need_intensity_critical** = "[pontuação calibrada final 0-10]"
+- **need_intensity_imposed** = "[pontuação calibrada final 0-10]"
+- **need_intensity_neglected** = "[pontuação calibrada final 0-10]"
+- **need_intensity_consciousness** = "[pontuação calibrada final 0-10]"
+- **need_intensity_rationale** = "[resumo do raciocínio por dimensão: o que você encontrou e por que propôs a pontuação que propôs — 1-2 frases por dimensão, armazenado para montagem do NEED-INTENSITY.md]"
+- **need_intensity_competitors** = "[lista de nomes de concorrentes/soluções encontrados durante a pesquisa na web — armazenado para reutilização em section_competitors_research]"
+
+---
+
+### Passo 4 — Calcular fórmula e exibir resultado
+
+Após todas as 6 pontuações serem calibradas e aceitas:
+
+Calcule:
+Pontuação = need_intensity_neglected × (need_intensity_critical + need_intensity_consciousness) × (need_intensity_urgent + need_intensity_imposed + need_intensity_real)
+
+Exiba o cálculo explicitamente:
+
+"Pontuação de Intensidade de Necessidade:
+
+Negligenciado ([pontuação]) × (Crítico ([pontuação]) + Consciência ([pontuação])) × (Urgente ([pontuação]) + Imposto ([pontuação]) + Real ([pontuação]))
+= [negligenciado] × [crítico + consciência] × [urgente + imposto + real]
+= **[pontuação final]** / 6.000
+
+Veredicto: **[rótulo do nível]**"
+
+Use os rótulos de nível exatos:
+- 4.000–6.000: "Necessidade urgente — sinal de mercado forte"
+- 2.500–3.999: "Necessidade sólida — viável com execução precisa"
+- 1.000–2.499: "Necessidade moderada — refine o segmento ou reformule antes de construir"
+- 500–999: "Necessidade fraca — recomendação: considere uma definição de cliente mais precisa"
+- 0–499: "Necessidade mínima — risco significativo, revise o enunciado do problema"
+
+Armazene:
+- **need_intensity_score** = "[pontuação calculada]"
+- **need_intensity_tier** = "[rótulo exato do nível]"
+
+---
+
+### Passo 5 — Ciclo de aconselhamento abaixo de 1.000 (condicional)
+
+**Execute isso apenas se need_intensity_score < 1.000. Se a pontuação ≥ 1.000, vá diretamente para o Passo 6.**
+
+Inicialize: loop_count = 0, best_score = need_intensity_score, best_attempt = [enquadramento atual: cliente + problema + todas as 6 pontuações]
+
+**Ciclo de aconselhamento (repita até 5 vezes enquanto pontuação < 1.000 E loop_count < 5):**
+
+loop_count = loop_count + 1
+
+Diga:
+"Sua pontuação de [pontuação] está abaixo de 1.000 — isso sugere que a necessidade pode não ser forte o suficiente para impulsionar comportamento de compra confiável. Aqui estão duas direções que podem melhorá-la:
+
+**Segmento de cliente mais preciso:** [sugestão específica de segmento mais restrito — ex.: 'Em vez de "fundadores solo", considere "fundadores solo construindo SaaS B2B com ≥1 cliente pagante"']
+
+**Reformulação do problema:** [sugestão específica de reformulação — ex.: 'Em vez de "complexidade de onboarding", considere "churn nos primeiros 30 dias causado por onboarding falho" — enquadramento mais urgente e crítico']
+
+Isto é um conselho — você pode reavaliá-lo com uma dessas direções ou prosseguir como está. O que você prefere?
+
+**A)** Reavaliar com segmento de cliente mais preciso
+**B)** Reavaliar com reformulação do problema
+**C)** Prosseguir mesmo assim com a pontuação atual de [pontuação]"
+
+Aguarde a resposta do usuário. Se C: saia do ciclo e prossiga para o Passo 6 com as pontuações atuais.
+
+**Se o usuário escolher A ou B (reavaliação):**
+- Aplique o reframing escolhido ao enquadramento cliente+problema
+- Execute novamente a pontuação completa das 6 dimensões (a IA avalia todas as 6 dimensões diretamente com base no contexto reformulado — o usuário NÃO reavalia; o usuário apenas escolheu a direção)
+- Recalcule a fórmula
+- Exiba a nova pontuação e o nível
+- Se nova pontuação > best_score: atualize best_score e best_attempt
+- Se nova pontuação ≥ 1.000: saia do ciclo, prossiga para o Passo 6 com as novas pontuações
+- Se nova pontuação < 1.000 E loop_count < 5: repita o ciclo
+
+**Após 5 ciclos sem cruzar 1.000:**
+
+Exiba:
+"Após [5] tentativas de reformulação, seu enquadramento de maior pontuação foi [enquadramento de best_attempt] com [best_score]. Aqui está por que vale a pena considerá-lo como ponto de partida: [justificativa de 1-2 frases sobre por que esse enquadramento tem mais sinal].
+
+Você pode prosseguir com este enquadramento, ou continuar o sprint com seu enquadramento original. Sua decisão — este ciclo de aconselhamento nunca bloqueia o progresso."
+
+Aguarde a resposta do usuário. Aceite a decisão dele. Em seguida, prossiga para o Passo 6 com as pontuações que o usuário escolheu.
+
+---
+
+### Passo 6 — Transição
+
+Após o Passo 4 (ou após o ciclo de aconselhamento se ele foi executado):
+
+NÃO re-renderize o banner do Passo 1 (Intensidade de Necessidade não é um campo do banner).
+
+Em seguida, passe para section_problem_importance. Não faça mais nada nesta seção.
 
 </section>
 
@@ -474,12 +655,15 @@ Após o usuário fornecer nomes de concorrentes (ou dizer "nenhum"):
 1. Diga exatamente:
    > "Entendido. Pesquisando agora — vou encontrar tanto ferramentas quanto como as pessoas resolvem isso hoje."
 
-2. Invoque gyst-researcher como subagente via a ferramenta Task com este briefing em inglês:
+2. IMPORTANTE: need_intensity_competitors já são conhecidos desde a pesquisa web de Intensidade de Necessidade. Passe-os para gyst-researcher como soluções pré-identificadas para que o pesquisador não gaste capacidade de pesquisa para encontrá-los novamente.
+
+   Invoque gyst-researcher como subagente via a ferramenta Task com este briefing em inglês:
 
    ```
    Customer segment: [locked customer segment from section_customer]
    Problem: [locked problem from section_problem]
    User-named competitors: [what the user said in section_competitors, or "none"]
+   Pre-identified solutions: [need_intensity_competitors — nomes encontrados durante a pesquisa web de Intensidade de Necessidade; incluir na lista de concorrentes sem repetir a pesquisa]
 
    Task: Find up to 7 competitors — both direct products and status-quo alternatives for this exact problem.
    ```
@@ -643,16 +827,17 @@ Prossiga para step2_banner, então section_axis_rating.
 ### Se o usuário escolher B (voltar a uma sub-decisão) — NAVIG-02
 
 Pergunte:
-"A qual sub-decisão você quer voltar? (Segmento de clientes / Comprador / Problema / Classificação I/U do Problema / Vantagens do fundador / Concorrentes / Dimensionamento de mercado)"
+"A qual sub-decisão você quer voltar? (Segmento de clientes / Comprador / Problema / Intensidade de Necessidade / Classificação I/U do Problema / Vantagens do fundador / Concorrentes / Dimensionamento de mercado)"
 
 Aguarde a resposta do usuário.
 
 CRÍTICO — REGRA DE DESCARTE: TODAS as decisões tomadas APÓS a sub-decisão escolhida são DESCARTADAS. Não tente preservá-las, referenciá-las ou oferecer manter qualquer uma delas. Re-execute a sequência completa a partir da seção escolhida como se essas decisões posteriores nunca tivessem sido tomadas. Delete-as do seu contexto.
 
 Exemplos:
-- Usuário volta para **Segmento de clientes**: apague scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Problema, Vantagens, Concorrentes, scorecard_market_*. Re-execute todas as seções do Passo 1 a partir de section_customer.
+- Usuário volta para **Segmento de clientes**: apague need_intensity_*, scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Problema, Vantagens, Concorrentes, scorecard_market_*. Re-execute todas as seções do Passo 1 a partir de section_customer.
 - Usuário volta para **Comprador**: apague apenas scorecard_purchaser_*. Re-execute apenas section_purchaser (Cliente permanece bloqueado).
-- Usuário volta para **Problema**: apague scorecard_problem_iu, scorecard_problem_iu_nudge, Vantagens, Concorrentes, scorecard_market_*. Re-execute a partir de section_problem.
+- Usuário volta para **Problema**: apague need_intensity_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Vantagens, Concorrentes, scorecard_market_*. Re-execute a partir de section_problem.
+- Usuário volta para **Intensidade de Necessidade**: apague need_intensity_* apenas. Re-execute apenas section_need_intensity (Cliente, Comprador, Problema permanecem bloqueados).
 - Usuário volta para **Classificação I/U do Problema**: apague scorecard_problem_iu, scorecard_problem_iu_nudge apenas. Re-execute apenas section_problem_importance (Cliente, Comprador, Problema permanecem bloqueados).
 - Usuário volta para **Vantagens do fundador**: apague Concorrentes, scorecard_market_*. Re-execute a partir de section_advantages.
 - Usuário volta para **Concorrentes**: apague seleção de concorrentes, adversário principal, scorecard_market_*. Re-execute a partir de section_competitors (inclui section_market_sizing).
@@ -664,7 +849,7 @@ Para reiniciar uma seção: re-renderize o banner do Passo 1 mostrando os valore
 
 ### Se o usuário escolher C (recomeçar o Passo 1)
 
-- Apague TODAS as decisões do Passo 1: segmento de clientes, comprador (scorecard_purchaser_*), problema, classificação I/U do problema (scorecard_problem_iu, scorecard_problem_iu_nudge), vantagens, concorrentes, dimensionamento de mercado (scorecard_market_*)
+- Apague TODAS as decisões do Passo 1: segmento de clientes, comprador (scorecard_purchaser_*), problema, intensidade de necessidade (need_intensity_*), classificação I/U do problema (scorecard_problem_iu, scorecard_problem_iu_nudge), vantagens, concorrentes, dimensionamento de mercado (scorecard_market_*)
 - Trate isso como um início de sprint fresco: re-renderize o banner do Passo 1 com todos os quatro valores como "pendente"
 - Faça a pergunta aberta do segmento de clientes novamente (a mesma de section_customer)
 
@@ -1437,13 +1622,13 @@ Aguarde o usuário confirmar prontidão antes de prosseguir para section_write_o
 
 <section name="section_write_outputs">
 
-## Fim do Sprint — Arquivos de Saída (OUTPUT-01, OUTPUT-02, OUTPUT-03, OUTPUT-04)
+## Fim do Sprint — Arquivos de Saída (OUTPUT-01, OUTPUT-02, OUTPUT-03, OUTPUT-04, OUTPUT-05)
 
 **Ao entrar nesta seção:** Após a forma testável ser exibida e o usuário confirmar prontidão.
 
-Este é o ÚNICO lugar em todo o workflow onde HYPOTHESIS.md, SPRINT.md, POSITIONING.md e 5PM-SCORECARD.md são escritos. NÃO escreva esses arquivos em nenhum outro lugar.
+Este é o ÚNICO lugar em todo o workflow onde HYPOTHESIS.md, SPRINT.md, POSITIONING.md, 5PM-SCORECARD.md e NEED-INTENSITY.md são escritos. NÃO escreva esses arquivos em nenhum outro lugar.
 
-Diga: "Sprint concluído. Escrevendo seus 4 arquivos de saída agora."
+Diga: "Sprint concluído. Escrevendo seus 5 arquivos de saída agora."
 
 **1. Escrever HYPOTHESIS.md**
 
@@ -1529,7 +1714,40 @@ Escreva ./5PM-SCORECARD.md montando os seguintes campos nomeados desta sessão:
 
 CRÍTICO: Zero colchetes restam em 5PM-SCORECARD.md. Todas as 5 lentes têm conteúdo real.
 
-**Após todos os 4 arquivos serem escritos:**
+**5. Escrever NEED-INTENSITY.md**
+
+@~/.claude/get-your-shit-together/templates/pt/NEED-INTENSITY.md
+
+Escreva ./NEED-INTENSITY.md montando os seguintes campos nomeados desta sessão:
+
+- Data do sprint: data de hoje
+- Cliente / Segmento de cliente: segmento de cliente bloqueado
+- Enunciado do problema: o enunciado final do problema/cliente conforme bloqueado e utilizado (se um reframing foi aceito no ciclo de aconselhamento, use a versão reformulada; caso contrário, use o problema original bloqueado de section_problem)
+
+**Resumo das Pontuações:**
+- Real: need_intensity_real
+- Urgente: need_intensity_urgent
+- Crítico: need_intensity_critical
+- Imposto: need_intensity_imposed
+- Negligenciado: need_intensity_neglected
+- Consciência: need_intensity_consciousness
+
+**Fórmula:**
+Linha 1: `Negligenciado × (Crítico + Consciência) × (Urgente + Imposto + Real)`
+Linha 2: `[need_intensity_neglected] × ([need_intensity_critical] + [need_intensity_consciousness]) × ([need_intensity_urgent] + [need_intensity_imposed] + [need_intensity_real])`
+Linha 3: `= [need_intensity_score] / 6.000`
+
+**Veredicto:** need_intensity_tier (rótulo exato do nível — não parafrasear)
+
+**Justificativa por Dimensão:** need_intensity_rationale — escrever um parágrafo por dimensão (Real, Urgente, Crítico, Imposto, Negligenciado, Consciência) a partir da justificativa armazenada
+
+**Concorrentes Identificados:** need_intensity_competitors — listar os nomes encontrados durante a pesquisa web de Intensidade de Necessidade
+
+**Notas:** Se o ciclo de aconselhamento foi executado (need_intensity_score esteve abaixo de 1.000 em algum momento), resuma as tentativas de reformulação e qual formulação foi escolhida. Se nenhum ciclo de aconselhamento foi executado, escreva: "Pontuação acima de 1.000 — nenhum ciclo de aconselhamento foi executado."
+
+CRÍTICO: Nenhum colchete permanece em NEED-INTENSITY.md. Todos os campos têm conteúdo real da sessão.
+
+**Após todos os 5 arquivos serem escritos:**
 
 "Concluído. Seu Foundation Sprint está completo.
 
@@ -1538,6 +1756,7 @@ CRÍTICO: Zero colchetes restam em 5PM-SCORECARD.md. Todas as 5 lentes têm cont
 - `SPRINT.md` — o diário completo de decisões
 - `POSITIONING.md` — seu mapa de posicionamento e manifesto
 - `5PM-SCORECARD.md` — seu scorecard de sinais 5PM
+- `NEED-INTENSITY.md` — sua avaliação de Intensidade de Necessidade
 
 **Seu próximo passo:** [teste de validação mais rápido da forma testável]"
 
