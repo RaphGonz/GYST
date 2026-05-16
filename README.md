@@ -42,7 +42,8 @@ Solo entrepreneurs, existing companies but also artists or game-designers that w
 - Researches competitors and validates your target customer's pain using web search
 - Guides you through positioning (2x2 matrix) and differentiator selection
 - Evaluates multiple solution approaches using five business lenses (the 5PM framework)
-- Produces five output files in your project directory: competitor profiles, positioning map, decision journal, falsifiable hypothesis, and a 5PM Scorecard
+- Scores how deeply the market needs a solution using the Need Intensity framework (6 dimensions, 0–6,000 scale)
+- Produces six output files in your project directory: competitor profiles, positioning map, decision journal, falsifiable hypothesis, a 5PM Scorecard, and a Need Intensity report
 
 ## The 5PM Framework
 
@@ -134,15 +135,16 @@ Pass a language flag to run the sprint in your language — all questions, guida
 /gyst:foundation-sprint -french
 ```
 
-Claude switches to a fully pre-translated workflow and writes `COMPETITORS.md`, `HYPOTHESIS.md`, `SPRINT.md`, `POSITIONING.md`, and `5PM-SCORECARD.md` in the chosen language.
+Claude switches to a fully pre-translated workflow and writes all six output files — `COMPETITORS.md`, `HYPOTHESIS.md`, `SPRINT.md`, `POSITIONING.md`, `5PM-SCORECARD.md`, and `NEED-INTENSITY.md` — in the chosen language.
 
 > Unsupported flags fall back to English with a message.
 
 ## What You Get
 
-Five output files written to your project directory:
+Six output files written to your project directory:
 
 - `COMPETITORS.md` — competitor research profiles (written after Step 1)
+- `NEED-INTENSITY.md` — Need Intensity scores, formula, verdict tier, and AI rationale per dimension
 - `HYPOTHESIS.md` — your testable hypothesis (X/Y/Z/W/U/V format)
 - `SPRINT.md` — full decision journal
 - `POSITIONING.md` — 2x2 matrix and mini-manifesto
