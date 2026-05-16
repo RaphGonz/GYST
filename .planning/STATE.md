@@ -22,10 +22,10 @@ See: .planning/PROJECT.md (updated 2026-05-16)
 
 ## Current Position
 
-Phase: 12 of 15 (README Documentation) — COMPLETE
-Plan: 01 of 01 complete
+Phase: 13 of 15 (English Need Intensity Workflow) — In progress
+Plan: 01 of 02 complete
 Status: In progress
-Last activity: 2026-05-16 — Phase 12 Plan 01 complete (5PM Framework + Need Intensity sections added to README)
+Last activity: 2026-05-16 — Phase 13 Plan 01 complete (section_need_intensity inserted into foundation-sprint.md)
 
 Progress: [#░░░░░░░░░] 14%
 
@@ -41,7 +41,7 @@ Progress: [#░░░░░░░░░] 14%
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 12. README Documentation | 1/1 | 8 min | 8 min |
-| 13. English Need Intensity Workflow | 0/2 | - | - |
+| 13. English Need Intensity Workflow | 1/2 | 10 min | 10 min |
 | 14. Language Translations | 0/3 | - | - |
 | 15. Translation Sync Record | 0/1 | - | - |
 
@@ -57,6 +57,9 @@ Progress: [#░░░░░░░░░] 14%
 - [v1.3 scope]: Phase 15 is a single TRANSLATION-SYNC.md update, dependent on all Phase 14 work being complete
 - [12-01]: Need Intensity formula displayed as code block in README — settled exact terminology before Phase 13 workflow implementation
 - [12-01]: 5PM lens and Need Intensity tier labels in README are the canonical names Phase 13 must match exactly
+- [13-01]: section_need_intensity inserted after section_problem locks, before section_problem_importance — satisfies NEED-01 through NEED-06
+- [13-01]: need_intensity_competitors stored during Need Intensity web search and passed to section_competitors_research brief — no duplicate competitor search
+- [13-01]: Below-1000 advisory loop: AI re-rates all 6 dimensions on re-rate (user only picks reframe direction), max 5 loops, never blocking
 
 ### Pending Todos
 
@@ -69,5 +72,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-05-16
-Stopped at: Phase 12 Plan 01 complete — 5PM Framework and Need Intensity sections added to README.md
+Stopped at: Phase 13 Plan 01 complete — section_need_intensity inserted into foundation-sprint.md (NEED-01 through NEED-06 satisfied)
 Resume file: None

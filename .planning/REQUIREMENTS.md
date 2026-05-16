@@ -74,12 +74,12 @@
 
 ### Need Intensity (English)
 
-- [ ] **NEED-01**: Immediately after user states their client and problem, AI presents the 6 Need Intensity dimensions with a plain-language description of each and asks user to rate 0-10
-- [ ] **NEED-02**: AI performs a web search to assess who is trying to solve the problem (feeds Real score) and whether any solution is dominant or well-regarded in the field (feeds Neglected score)
-- [ ] **NEED-03**: AI calibrates user's self-reported scores based on web findings, reasoning out loud per dimension — systematically correcting overestimates (users always over-evaluate)
-- [ ] **NEED-04**: Formula is computed and displayed: `Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real)`, 0-6000, with the matching business threshold label
-- [ ] **NEED-05**: When score is below 1000, AI suggests one or two more precise client segments or problem reframings that could improve the score; user decides whether to re-rate or proceed (advisory, not blocking)
-- [ ] **NEED-06**: Competitor data found during the Need Intensity web search is reused for COMPETITORS.md later in Step 1 — no duplicate search
+- [x] **NEED-01**: Immediately after user states their client and problem, AI presents the 6 Need Intensity dimensions with a plain-language description of each and asks user to rate 0-10
+- [x] **NEED-02**: AI performs a web search to assess who is trying to solve the problem (feeds Real score) and whether any solution is dominant or well-regarded in the field (feeds Neglected score)
+- [x] **NEED-03**: AI calibrates user's self-reported scores based on web findings, reasoning out loud per dimension — systematically correcting overestimates (users always over-evaluate)
+- [x] **NEED-04**: Formula is computed and displayed: `Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real)`, 0-6000, with the matching business threshold label
+- [x] **NEED-05**: When score is below 1000, AI suggests one or two more precise client segments or problem reframings that could improve the score; user decides whether to re-rate or proceed (advisory, not blocking)
+- [x] **NEED-06**: Competitor data found during the Need Intensity web search is reused for COMPETITORS.md later in Step 1 — no duplicate search
 - [ ] **NEED-07**: NEED-INTENSITY.md written at session end — all 6 calibrated scores, formula calculation, final score, verdict tier, AI rationale per dimension, and final problem/client statement used
 
 ### Translation (6 languages)
@@ -158,12 +158,12 @@
 | TRNS-03 | Phase 11 | Complete |
 | DOC-01 | Phase 12 | Complete |
 | DOC-02 | Phase 12 | Complete |
-| NEED-01 | Phase 13 | Pending |
-| NEED-02 | Phase 13 | Pending |
-| NEED-03 | Phase 13 | Pending |
-| NEED-04 | Phase 13 | Pending |
-| NEED-05 | Phase 13 | Pending |
-| NEED-06 | Phase 13 | Pending |
+| NEED-01 | Phase 13 | Complete |
+| NEED-02 | Phase 13 | Complete |
+| NEED-03 | Phase 13 | Complete |
+| NEED-04 | Phase 13 | Complete |
+| NEED-05 | Phase 13 | Complete |
+| NEED-06 | Phase 13 | Complete |
 | NEED-07 | Phase 13 | Pending |
 | TRNS-04 | Phase 14 | Pending |
 | TRNS-05 | Phase 14 | Pending |
