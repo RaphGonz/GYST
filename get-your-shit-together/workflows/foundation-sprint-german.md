@@ -384,11 +384,11 @@ Vernachlässigt ([Punktzahl]) × (Kritisch ([Punktzahl]) + Bewusstsein ([Punktza
 Urteil: **[Stufenbezeichnung]**"
 
 Verwenden Sie die genauen Stufenbezeichnungen:
-- 4.000–6.000: „Brennender Bedarf — starkes Marktsignal"
-- 2.500–3.999: „Solider Bedarf — tragfähig bei präziser Umsetzung"
-- 1.000–2.499: „Moderater Bedarf — Segment schärfen oder Problemstellung neu formulieren"
-- 500–999: „Schwacher Bedarf — Empfehlung: engere Kundendefinition prüfen"
-- 0–499: „Minimaler Bedarf — erhebliches Risiko, Problemstellung überarbeiten"
+- Über 2.000: „Sehr gut — starkes Signal, Potenzial für Hyperwachstum"
+- 1.500–2.000: „Tragfähig — langsames Wachstum, solide Grundlage"
+- 1.000–1.499: „Stabiles Geschäft — tragfähig, aber schwierig"
+- 500–999: „Segment schärfen — Kunden oder Problemstellung neu definieren vor dem Aufbau"
+- 0–499: „Nicht tragfähig — Problemstellung vollständig überarbeiten"
 
 Speichern Sie:
 - **need_intensity_score** = „[berechnete Punktzahl]"

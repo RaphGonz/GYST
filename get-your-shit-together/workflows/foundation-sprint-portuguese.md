@@ -380,11 +380,11 @@ Negligenciado ([pontuação]) × (Crítico ([pontuação]) + Consciência ([pont
 Veredicto: **[rótulo do nível]**"
 
 Use os rótulos de nível exatos:
-- 4.000–6.000: "Necessidade urgente — sinal de mercado forte"
-- 2.500–3.999: "Necessidade sólida — viável com execução precisa"
-- 1.000–2.499: "Necessidade moderada — refine o segmento ou reformule antes de construir"
-- 500–999: "Necessidade fraca — recomendação: considere uma definição de cliente mais precisa"
-- 0–499: "Necessidade mínima — risco significativo, revise o enunciado do problema"
+- Acima de 2.000: "Muito bom — sinal forte, potencial de hipercrescimento"
+- 1.500–2.000: "Viável — crescimento lento, base sólida"
+- 1.000–1.499: "Negócio estável — viável mas difícil"
+- 500–999: "Refinar segmento — reformule o cliente ou o problema antes de construir"
+- 0–499: "Não viável — revise inteiramente o enunciado do problema"
 
 Armazene:
 - **need_intensity_score** = "[pontuação calculada]"

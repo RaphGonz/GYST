@@ -365,11 +365,11 @@ Neglected ([score]) × (Critical ([score]) + Consciousness ([score])) × (Urgent
 Verdict: **[tier label]**"
 
 Use the exact tier labels:
-- 4,000–6,000: "Burning need — strong market signal"
-- 2,500–3,999: "Solid need — viable if execution is sharp"
-- 1,000–2,499: "Moderate need — segment or reframe before building"
-- 500–999: "Weak need — advisory: consider a tighter client definition"
-- 0–499: "Minimal need — significant risk, revisit problem statement"
+- Above 2,000: "Very good — strong signal, potential for hypergrowth"
+- 1,500–2,000: "Viable — growing slowly, solid foundation to build on"
+- 1,000–1,499: "Stable business — viable but difficult"
+- 500–999: "Segment better — reframe your client or problem before building"
+- 0–499: "Not viable — revisit the problem statement entirely"
 
 Store:
 - **need_intensity_score** = "[computed score]"

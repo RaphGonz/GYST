@@ -384,11 +384,11 @@ Descuidado ([puntuación]) × (Crítico ([puntuación]) + Conciencia ([puntuaci�
 Veredicto: **[etiqueta de nivel]**»
 
 Usa las etiquetas de nivel exactas:
-- 4.000–6.000: «Necesidad urgente — señal de mercado sólida»
-- 2.500–3.999: «Necesidad sólida — viable si la ejecución es precisa»
-- 1.000–2.499: «Necesidad moderada — afinar segmento o replantear antes de construir»
-- 500–999: «Necesidad débil — consejo: considera una definición de cliente más precisa»
-- 0–499: «Necesidad mínima — riesgo significativo, revisar el enunciado del problema»
+- Por encima de 2.000: «Muy bueno — señal fuerte, potencial de hipercrecimiento»
+- 1.500–2.000: «Viable — crecimiento lento, base sólida»
+- 1.000–1.499: «Negocio estable — viable pero difícil»
+- 500–999: «Refinar el segmento — redefinir el cliente o el problema antes de construir»
+- 0–499: «No viable — revisar el enunciado del problema por completo»
 
 Guarda:
 - **need_intensity_score** = «[puntuación calculada]»

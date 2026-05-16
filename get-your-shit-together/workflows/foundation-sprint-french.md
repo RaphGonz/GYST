@@ -384,11 +384,11 @@ Négligé ([score]) × (Critique ([score]) + Conscience ([score])) × (Urgent ([
 Verdict : **[étiquette de niveau]** »
 
 Utilisez les étiquettes de niveau exactes :
-- 4 000–6 000 : « Besoin brûlant — signal de marché fort »
-- 2 500–3 999 : « Besoin solide — viable si l'exécution est rigoureuse »
-- 1 000–2 499 : « Besoin modéré — affiner le segment ou reformuler avant de construire »
-- 500–999 : « Besoin faible — conseil : envisager une définition client plus précise »
-- 0–499 : « Besoin minimal — risque significatif, revoir l'énoncé du problème »
+- Au-dessus de 2 000 : « Très bon — signal fort, potentiel d'hypercroissance »
+- 1 500–2 000 : « Viable — croissance lente, base solide »
+- 1 000–1 499 : « Business stable — viable mais difficile »
+- 500–999 : « Affiner le segment — reformuler le client ou le problème avant de construire »
+- 0–499 : « Non viable — revoir entièrement l'énoncé du problème »
 
 Stockez :
 - **need_intensity_score** = « [score calculé] »
