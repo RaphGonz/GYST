@@ -69,8 +69,8 @@
 
 ### Documentation
 
-- [ ] **DOC-01**: README has a dedicated section on the 5PM framework — all 5 lenses (Problem, Purchaser, Pricing Model, Market, Product/Founder Fit) explained with what each measures and why it matters
-- [ ] **DOC-02**: README has a dedicated section on Need Intensity — the 6 dimensions (Real, Urgent, Critical, Imposed, Neglected, Consciousness), the formula `Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real)`, the 0-6000 scale, and all 5 business threshold tiers
+- [x] **DOC-01**: README has a dedicated section on the 5PM framework — all 5 lenses (Problem, Purchaser, Pricing Model, Market, Product/Founder Fit) explained with what each measures and why it matters
+- [x] **DOC-02**: README has a dedicated section on Need Intensity — the 6 dimensions (Real, Urgent, Critical, Imposed, Neglected, Consciousness), the formula `Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real)`, the 0-6000 scale, and all 5 business threshold tiers
 
 ### Need Intensity (English)
 
@@ -156,8 +156,8 @@
 | TRNS-01 | Phase 10 | Complete |
 | TRNS-02 | Phase 11 | Complete |
 | TRNS-03 | Phase 11 | Complete |
-| DOC-01 | Phase 12 | Pending |
-| DOC-02 | Phase 12 | Pending |
+| DOC-01 | Phase 12 | Complete |
+| DOC-02 | Phase 12 | Complete |
 | NEED-01 | Phase 13 | Pending |
 | NEED-02 | Phase 13 | Pending |
 | NEED-03 | Phase 13 | Pending |

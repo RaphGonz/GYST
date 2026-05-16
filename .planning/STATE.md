@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.3
 milestone_name: Need Intensity Framework
-status: roadmap_created
-last_updated: "2026-05-16T00:00:00.000Z"
+status: in_progress
+last_updated: "2026-05-16T08:31:19Z"
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 7
-  completed_plans: 0
+  completed_plans: 1
 ---
 
 # Project State
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-16)
 
 **Core value:** One command, one session, one testable hypothesis — solo entrepreneurs get the clarity the Foundation Sprint was designed to produce, without needing a team.
-**Current focus:** Milestone v1.3 — Phase 12: README Documentation
+**Current focus:** Milestone v1.3 — Phase 13: English Need Intensity Workflow
 
 ## Current Position
 
-Phase: 12 of 15 (README Documentation)
-Plan: —
-Status: Ready to plan
-Last activity: 2026-05-16 — v1.3 roadmap created (Phases 12-15, 16 requirements mapped)
+Phase: 12 of 15 (README Documentation) — COMPLETE
+Plan: 01 of 01 complete
+Status: In progress
+Last activity: 2026-05-16 — Phase 12 Plan 01 complete (5PM Framework + Need Intensity sections added to README)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [#░░░░░░░░░] 14%
 
 ## Performance Metrics
 
@@ -40,7 +40,7 @@ Progress: [░░░░░░░░░░] 0%
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 12. README Documentation | 0/1 | - | - |
+| 12. README Documentation | 1/1 | 8 min | 8 min |
 | 13. English Need Intensity Workflow | 0/2 | - | - |
 | 14. Language Translations | 0/3 | - | - |
 | 15. Translation Sync Record | 0/1 | - | - |
@@ -55,6 +55,8 @@ Progress: [░░░░░░░░░░] 0%
 - [v1.3 scope]: Advisory refinement loop when score < 1000 — non-blocking, user decides whether to re-rate or proceed
 - [v1.3 scope]: Phase 14 covers all 6 languages in parallel (FR, ES, DE, ZH, PT, JA) — templates + workflow sections together
 - [v1.3 scope]: Phase 15 is a single TRANSLATION-SYNC.md update, dependent on all Phase 14 work being complete
+- [12-01]: Need Intensity formula displayed as code block in README — settled exact terminology before Phase 13 workflow implementation
+- [12-01]: 5PM lens and Need Intensity tier labels in README are the canonical names Phase 13 must match exactly
 
 ### Pending Todos
 
@@ -67,5 +69,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-05-16
-Stopped at: v1.3 roadmap created — Phases 12-15 defined, 16/16 requirements mapped, files written
+Stopped at: Phase 12 Plan 01 complete — 5PM Framework and Need Intensity sections added to README.md
 Resume file: None
