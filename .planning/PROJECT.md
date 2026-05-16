@@ -10,19 +10,19 @@ The full sprint runs as a single command (`/gyst:foundation-sprint`) across 4 st
 
 One command, one session, one testable hypothesis — solo entrepreneurs get the clarity that the Foundation Sprint was designed to produce, without needing a team.
 
-## Current Milestone: v1.2 Refined Protocol with 5PM Framework
+## Current Milestone: v1.3 Need Intensity Framework
 
-**Goal:** Integrate Rob Walling's 5PM Idea Evaluation Framework into the Foundation Sprint, adding structured validation lenses (Problem, Purchaser, Pricing Model, Market, Product/Founder Fit) and a 5PM Scorecard output file — then translate all changes to existing language versions.
+**Goal:** Add the Need Intensity scoring framework to Step 1 of the Foundation Sprint — a 6-dimension need evaluation (Real, Urgent, Critical, Imposed, Neglected, Consciousness) with a formula scoring 0-6000 that guides users toward sharper problem/client targeting before the sprint begins — then translate all changes to all 6 language versions and document both 5PM and Need Intensity in the README.
 
 **Target features:**
-- Problem Important/Urgent 2x2 matrix in Step 1
-- Purchaser awareness questions in Step 1 (tech adoption, willingness to pay, B2C/B2A/B2B/B2E sophistication)
-- Pricing Model questions in Step 1 (subscription, ARPA, billing cadence)
-- Market sizing/growth via AI research + founder perception in Step 1
-- Product/Founder Fit confrontation in Step 3 (background, chops, unique advantage, passion)
-- Pain to Validate matrix per approach in Step 3 (MVP feasibility)
-- New output file: 5PM Scorecard
-- Translation of all 5PM changes to French, Japanese, Portuguese workflows
+- Need Intensity scoring immediately after problem statement (before anything else in Step 1)
+- 6 dimensions rated by user, calibrated by AI via web search
+- Formula display: Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real) with business threshold labels
+- Advisory refinement loop when score < 1000 (AI suggests narrower problem/client)
+- Competitor data from Need Intensity search reused for COMPETITORS.md (no duplicate search)
+- New output file: NEED-INTENSITY.md (all 6 scores, formula, verdict, AI rationale per dimension)
+- Translation to all 6 language workflows (FR, ES, DE, ZH, PT, JA) + NEED-INTENSITY.md templates
+- README: dedicated sections for 5PM framework and Need Intensity framework
 
 ## Requirements
 
@@ -44,17 +44,24 @@ One command, one session, one testable hypothesis — solo entrepreneurs get the
 - ✓ Complete pre-translated French workflow (`foundation-sprint-french.md`) with 22 named sections, `vous` register, language directive, per-section reinforcements — v1.1
 - ✓ French workflow produces French output files via `templates/fr/` paths — v1.1
 - ✓ `TRANSLATION-SYNC.md` records English source commit hash for future updates — v1.1
+- ✓ 5PM Problem Important/Urgent 2x2 matrix woven into Step 1 as non-blocking awareness lens — v1.2
+- ✓ 5PM Purchaser classification (B2C/B2A/B2B/B2E, tech adoption, willingness to pay) in Step 1 — v1.2
+- ✓ 5PM Market sizing/growth (AI search + founder perception) in Step 1 — v1.2
+- ✓ 5PM Product/Founder Fit confrontation in Step 3 — v1.2
+- ✓ 5PM Pain to Validate matrix (Matrix 5) per approach in Step 3 — v1.2
+- ✓ Produces 5PM-SCORECARD.md (5th output file) with per-lens verdict, evidence, rationale — v1.2
+- ✓ 5PM changes translated to all 6 language workflows (FR, ES, DE, ZH, PT, JA) — v1.2
 
 ### Active
 
-- [ ] 5PM Problem Important/Urgent 2x2 matrix in Step 1
-- [ ] 5PM Purchaser awareness questions in Step 1
-- [ ] 5PM Pricing Model questions in Step 1
-- [ ] 5PM Market sizing/growth (AI research + founder questions) in Step 1
-- [ ] 5PM Product/Founder Fit confrontation in Step 3
-- [ ] 5PM Pain to Validate matrix per approach in Step 3
-- [ ] 5PM Scorecard output file
-- [ ] Translate 5PM changes to all existing language workflows (FR, JA, PT)
+- [ ] Need Intensity scoring immediately after problem statement (before anything else in Step 1)
+- [ ] 6 dimensions (Real, Urgent, Critical, Imposed, Neglected, Consciousness) rated by user, calibrated by AI via web search
+- [ ] Formula computed and displayed: Neglected × (Critical + Consciousness) × (Urgent + Imposed + Real), 0-6000, with business threshold labels
+- [ ] Advisory refinement when score < 1000: AI suggests narrower client/problem; user decides whether to re-rate or proceed
+- [ ] Competitor search data from Need Intensity reused for COMPETITORS.md — no duplicate search
+- [ ] NEED-INTENSITY.md output file: all 6 scores, formula, verdict, AI rationale per dimension, final problem/client statement
+- [ ] Need Intensity translated to all 6 language workflows (FR, ES, DE, ZH, PT, JA) + NEED-INTENSITY.md template per language
+- [ ] README: dedicated 5PM section (all 5 lenses) + dedicated Need Intensity section (formula, dimensions, thresholds)
 
 ### Out of Scope
 
@@ -103,4 +110,4 @@ One command, one session, one testable hypothesis — solo entrepreneurs get the
 | TRANSLATION-SYNC.md for diff-based updates (v1.1) | Records source commit hash so future English changes can be selectively synced | ✓ Good — establishes maintenance pattern for v1.2+ language updates |
 
 ---
-*Last updated: 2026-03-22 after v1.2 milestone start*
+*Last updated: 2026-05-16 after v1.3 milestone start*
