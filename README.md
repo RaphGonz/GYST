@@ -42,6 +42,7 @@ Solo entrepreneurs, existing companies but also artists or game-designers that w
 - Guides you through positioning (2x2 matrix) and differentiator selection
 - Evaluates multiple solution approaches using five business lenses (the 5PM framework)
 - Scores how deeply the market needs a solution using the Need Intensity framework (6 dimensions, 0–6,000 scale)
+- Runs five reality gates that can stop the sprint outright when the idea doesn't survive an honest look (English workflow)
 - Produces six output files in your project directory: competitor profiles, positioning map, decision journal, falsifiable hypothesis, a 5PM Scorecard, and a Need Intensity report
 
 ## The 5PM Framework
@@ -55,6 +56,30 @@ The sprint evaluates your idea across five lenses to surface signal before you b
 - **Product/Founder Fit** — Are you the right person to build this? Background, network, market access, and the passion check ("Do you love this problem?") determine whether you have an unfair advantage or are starting from scratch in a market you barely know.
 
 At sprint end the AI writes a `5PM-SCORECARD.md` with a FAVORABLE / CAUTION / UNFAVORABLE verdict per lens, with evidence and rationale.
+
+## The Five Reality Gates
+
+The sprint is a facilitator: it helps you decide. The gates are the opposite — five points where the AI stops facilitating and gives you a verdict, and where the sprint can stop for good.
+
+They're interleaved, not bolted onto the front. Each one runs where the sprint has just produced what that gate needs in order to judge:
+
+| Gate | Question | Runs after | What it catches |
+|------|----------|-----------|-----------------|
+| **1 — Explain it plainly** | Can the idea be said in four sentences a twelve-year-old would follow? | the welcome, before Step 1 | jargon standing in for a missing thought |
+| **2 — How is this solved today?** | What do people do now, and what specifically is bad about it? | Need Intensity | "there isn't much wrong with the current solution" |
+| **3 — Name the person** | Is there a real, findable person with this problem? | Gate 2 | a persona assembled from plausibility — "Sarah, 34, a busy marketing manager" |
+| **4 — What has to go right** | Everything that must go right, ranked most-likely-to-fail first. Is the top risk testable in twelve weeks? | the approach is chosen | a bet dressed up as a risk |
+| **5 — The midterm and the final** | A week-4 and a week-12 test. Can they fail? | the testable form | a plan that cannot be proven wrong |
+
+Gates 2 and 3 are evidence, not reasoning. The AI searches the customer's own vocabulary ("how do you quote scanned PDFs fast", not "workflow automation for legal translation") and ranks what it finds: someone already paying for a bad version beats a two-star review, which beats a forum post naming the workaround, which beats anything five-star. Gates 1, 4 and 5 are thinking, and are deliberately not researched.
+
+A STOP never ends the session behind your back. You get three choices: revise the idea and re-run that gate, proceed anyway (the override is recorded in your output files as an open risk), or end the sprint there with nothing written.
+
+Every claim the AI asserts without a source lands in a **Still unverified** ledger that follows the sprint to the end and is written into `SPRINT.md` and `HYPOTHESIS.md`. A sprint that reaches Gate 5 carrying nine unverified claims tells you more than a clean verdict does.
+
+> Most ideas stop at one of the first three gates. That's the point of having them.
+
+> The gates currently run in the English workflow only — the six translated workflows are unchanged.
 
 ## Need Intensity
 

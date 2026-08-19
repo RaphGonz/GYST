@@ -1,5 +1,13 @@
 # TRANSLATION-SYNC.md
 
+## English-only features (not yet translated)
+
+| Feature | Sections | Added |
+|---------|----------|-------|
+| Reality Gates (GATE-00 through GATE-05) | `section_gate_plain`, `section_gate_today`, `section_gate_person`, `section_gate_risks`, `section_gate_tests` + the Gate Protocol block | 2026-08-19 |
+
+These sections exist only in `foundation-sprint.md`. The six translated workflows run without them and their `SPRINT.md` / `HYPOTHESIS.md` templates have no Reality Gates or Still Unverified sections. Translating them means porting the five gate sections, the Gate Protocol, the NAVIG-02 discard-rule updates, and the two template sections together — a partial port leaves dangling `proceed to section_gate_*` references.
+
 ## Enregistrement de la traduction française
 
 | Champ | Valeur |

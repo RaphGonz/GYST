@@ -48,9 +48,41 @@
 ### Main Risk
 
 <!-- The single biggest assumption that, if wrong, kills this. -->
-[e.g., "The target customer actually tolerates the current manual process and won't pay to automate it"]
+[the #1 risk from Gate 4, verbatim — e.g., "The target customer actually tolerates the current manual process and won't pay to automate it"]
 
 ### Fastest Validation Test
 
 <!-- The cheapest, fastest experiment that could confirm or kill this hypothesis. -->
 [e.g., "10 cold outreach messages to ideal prospects offering a free 30-min demo in exchange for honest feedback — if 3+ say they'd pay, proceed"]
+
+
+## The Midterm and the Final
+
+<!--
+  The two dated tests from Gate 5. Each needs a number, a deadline, and a
+  threshold that could genuinely land below the line. Point them at what
+  research could not settle: the invented parts of the Gate 3 person, and
+  whether anyone pays.
+-->
+
+### Week 4
+
+[e.g., "By March 14, 8 of 25 contacted freelance translators have sent me a scanned PDF to quote, unprompted. Below 5, the pain is not what I claimed."]
+
+### Week 12
+
+[e.g., "By April 25, 3 of those 8 have paid at least $40. Zero paying at week 12 falsifies willingness to pay — not the messaging."]
+
+## Still Unverified
+
+<!--
+  Every claim asserted during this sprint without a source behind it.
+  Not summarised, not trimmed to the three that look best. If a sprint
+  reaches the end carrying nine of these, that is the most important
+  thing on this page.
+-->
+
+- [claim asserted without a source]
+- [claim asserted without a source]
+
+[If nothing is listed here, write: "Nothing — every claim above is sourced."]

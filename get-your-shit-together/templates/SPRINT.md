@@ -12,6 +12,38 @@
 
 ---
 
+## Reality Gates
+
+<!--
+  The five gate verdicts, in order, exactly as they were given during the
+  sprint. A gate the user overrode after a STOP is recorded as
+  STOP-OVERRIDDEN with the reason it stopped — never softened to CONTINUE.
+  A gate the sprint never reached is "not reached".
+-->
+
+**Gates overridden:** [list every gate the user chose to proceed past after a STOP, or "none"]
+
+| Gate | Verdict | Finding |
+|------|---------|---------|
+| 1 — Plain language | [CONTINUE / STOP-OVERRIDDEN / not reached] | [the plain-language version, or the part that was missing] |
+| 2 — How it's solved today | [verdict] | [incumbents named + the specific badness found, with sources] |
+| 3 — Name the person | [verdict] | [who was found, where, and which parts were filled in] |
+| 4 — What has to go right | [verdict] | [the #1 risk] |
+| 5 — The midterm and the final | [verdict] | [whether both tests could fail as first written] |
+
+**Ranked risks (Gate 4) — most likely to go wrong first:**
+
+1. [risk]
+2. [risk]
+3. [risk]
+
+**Still unverified:**
+
+- [claim asserted without a source]
+- [claim asserted without a source]
+
+---
+
 ## Step 1: The Basics
 
 <!--
