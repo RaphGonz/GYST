@@ -1,12 +1,26 @@
 # TRANSLATION-SYNC.md
 
-## English-only features (not yet translated)
+## Reality Gates (GATE-00 through GATE-05)
 
-| Feature | Sections | Added |
-|---------|----------|-------|
-| Reality Gates (GATE-00 through GATE-05) | `section_gate_plain`, `section_gate_today`, `section_gate_person`, `section_gate_risks`, `section_gate_tests` + the Gate Protocol block | 2026-08-19 |
+| Feature | Sections | Added | Languages |
+|---------|----------|-------|-----------|
+| Reality Gates | `section_gate_plain`, `section_gate_today`, `section_gate_person`, `section_gate_risks`, `section_gate_tests` + the Gate Protocol block | 2026-08-19 | all 7 |
 
-These sections exist only in `foundation-sprint.md`. The six translated workflows run without them and their `SPRINT.md` / `HYPOTHESIS.md` templates have no Reality Gates or Still Unverified sections. Translating them means porting the five gate sections, the Gate Protocol, the NAVIG-02 discard-rule updates, and the two template sections together — a partial port leaves dangling `proceed to section_gate_*` references.
+Ported to every workflow on 2026-08-19, together with the NAVIG-02 discard-rule updates and the two new template sections (Reality Gates in `SPRINT.md`, the Midterm/Final and Still Unverified sections in `HYPOTHESIS.md`). All seven workflows carry 32 `<section name=…>` blocks, five of them gates.
+
+Terminology per language — keep it consistent if you edit these sections:
+
+| Language | Gate | CONTINUE | STOP override |
+|----------|------|----------|---------------|
+| English | Gate | CONTINUE | STOP-OVERRIDDEN |
+| Français | Porte | CONTINUER | STOP-OUTREPASSÉ |
+| Español | Puerta | CONTINUAR | STOP-IGNORADO |
+| Deutsch | Tor | WEITER | STOP-ÜBERGANGEN |
+| Português | Portão | CONTINUAR | STOP-IGNORADO |
+| 中文 | 关卡 | 继续 | STOP-已越过 |
+| 日本語 | ゲート | 続行 | STOP-迂回 |
+
+Field names (`gate1_plain_statement`, `gate2_incumbents`, `gate3_assumed`, `gate4_top_risk`, `gate5_week4`, `gate_unverified`, `gate_overrides`) stay in English in every language — same convention as `need_intensity_*` and `scorecard_*`.
 
 ## Enregistrement de la traduction française
 

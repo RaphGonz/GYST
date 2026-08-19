@@ -54,3 +54,34 @@
 
 <!-- O experimento mais barato e rápido que poderia confirmar ou eliminar esta hipótese. -->
 [ex.: "10 mensagens de abordagem fria para clientes ideais oferecendo uma demo gratuita de 30 min em troca de feedback honesto — se 3+ disserem que pagariam, prosseguir"]
+
+
+## A Parcial e a Final
+
+<!--
+  Os dois testes datados do Portão 5. Cada um precisa de um número, um prazo e
+  um limiar que realmente pudesse ficar abaixo da linha. Aponte-os para o que a
+  pesquisa não conseguiu resolver: as partes da pessoa do Portão 3 que você
+  preencheu, e se alguém paga.
+-->
+
+### Semana 4
+
+[ex.: "Até 14 de março, 8 de 25 tradutores freelancers contatados me enviaram um PDF escaneado para orçar, sem eu pedir. Abaixo de 5, a dor não é a que afirmei."]
+
+### Semana 12
+
+[ex.: "Até 25 de abril, 3 desses 8 pagaram pelo menos R$ 200. Zero pagantes na semana 12 falsifica a disposição a pagar — não a mensagem."]
+
+## Ainda Não Verificado
+
+<!--
+  Cada afirmação feita durante este sprint sem fonte por trás.
+  Não resumida, não cortada para as três linhas mais bonitas. Se um sprint chega
+  ao fim carregando nove destas, isso é o mais importante desta página.
+-->
+
+- [afirmação feita sem fonte]
+- [afirmação feita sem fonte]
+
+[Se nada estiver listado aqui, escreva: "Nada — cada afirmação acima tem fonte."]

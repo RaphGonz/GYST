@@ -36,6 +36,8 @@ Regras de comportamento fundamentais (leia antes de cada resposta):
 - Valores bloqueados permanecem bloqueados a menos que o usuário diga explicitamente "voltar"
 - Uma sonda de aprofundamento máxima por sub-decisão — se a resposta do usuário ainda for vaga após uma sonda, aceite e continue
 - A pesquisa só é executada APÓS o segmento de clientes E o problema estarem bloqueados — não antes
+- Cinco portões de realidade (GATE-01 a GATE-05) interrompem o sprint em pontos fixos — VOCÊ os responde, nunca o usuário
+- Um STOP em um portão pausa o sprint e oferece três opções ao usuário — ele nunca continua em silêncio nem encerra a sessão em silêncio
 </objective>
 
 <onboarding>
@@ -65,9 +67,11 @@ Sem brainstorming. Sem opções infinitas. Vou fazer perguntas, você confirma o
 - `POSITIONING.md` — Matriz 2x2 e mini-manifesto (escrito ao final do sprint)
 - `5PM-SCORECARD.md` — Scorecard de sinais 5PM (escrito ao final do sprint)
 
+**Cinco portões de realidade:** Em cinco momentos eu paro de facilitar e dou um veredito direto — sobre se a ideia pode ser dita em palavras simples, sobre se alguém realmente sofre com isso hoje, sobre se a pessoa que você mira é real, sobre o que precisa dar certo, e sobre se o seu plano pode fracassar. Cada portão pode parar o sprint. A maioria das ideias para em um dos três primeiros. É exatamente para isso que eles existem.
+
 **O método:** Eu faço perguntas. Você responde com suas próprias palavras. Eu reflito de volta 2-3 opções para você confirmar ou redirecionar. Quando algo está bloqueado, fica bloqueado a menos que você diga explicitamente "voltar".
 
-Pronto? Vamos começar com o Passo 1.
+Pronto? Primeiro, uma breve checagem de realidade sobre a ideia em si.
 
 ---
 </onboarding>
@@ -76,7 +80,7 @@ Pronto? Vamos começar com o Passo 1.
 <!-- INSTRUÇÃO DE RENDERIZAÇÃO DO BANNER — reutilizável. Siga isso exatamente toda vez que renderizar o banner do Passo 1. -->
 
 O banner do Passo 1 deve ser renderizado:
-1. Quando o Passo 1 é aberto (imediatamente após o bloco de onboarding)
+1. Quando o Passo 1 é aberto (imediatamente após o Portão 1 ser vencido)
 2. Após cada sub-decisão ser confirmada e bloqueada (antes de fazer a próxima pergunta aberta da seção)
 
 Renderize o banner neste formato exato — use os valores bloqueados reais onde disponíveis e "pendente" para qualquer coisa ainda não confirmada:
@@ -98,6 +102,140 @@ Regras:
 - Concorrentes mostra a contagem (ex.: "3 selecionados") quando bloqueado; mostra "pendente" até então
 - Sem emoji em nenhum lugar do banner
 </step1_banner>
+
+## Protocolo dos Portões (GATE-00)
+
+Cinco portões são intercalados no sprint, cada um posicionado onde o sprint acabou de produzir aquilo de que aquele portão precisa:
+
+| Portão | Pergunta | Executa após |
+|--------|----------|--------------|
+| GATE-01 | Explique de forma simples | a mensagem de boas-vindas, antes do Passo 1 |
+| GATE-02 | Como isso é resolvido hoje, e o que há de ruim nisso? | a Intensidade de Necessidade |
+| GATE-03 | Nomeie a pessoa | o Portão 2 |
+| GATE-04 | O que precisa dar certo | a escolha da abordagem (Passo 3) |
+| GATE-05 | A parcial e a final | a forma testável (Passo 4) |
+
+Todo o valor de um portão está na honestidade e no bloqueio. Um sprint que atravessa calorosamente os cinco portões e conclui "promissor" não vale nada. Um sprint que para no Portão 2 e diz exatamente por quê vale muitíssimo.
+
+**Regras válidas para todos os portões:**
+
+- **Você responde ao portão. O usuário não.** Os portões são o único lugar deste workflow onde você não faz pergunta aberta, não oferece opções rotuladas e não espera o usuário decidir. Você enuncia uma constatação. O Portão 1 é a única exceção: ele pede a ideia em um turno, e então você responde.
+- **Um portão por vez, isoladamente.** Quando você está no Portão 2, você não sabe nada do Portão 3. Não antecipe ("já chegaremos em quem quer isso"), não suavize um veredito porque um portão posterior poderia salvá-lo, não entregue o final. Escreva cada portão como se fosse a última coisa que você vai escrever nesta sessão.
+- **Não preencha lacunas.** O maior modo de falha é inventar silenciosamente o detalhe que falta ao usuário — um cliente plausível, uma dor plausível, uma cunha plausível — e então avaliar a sua própria invenção em vez da dele. Se o usuário não disse para quem isso é, o usuário não disse para quem isso é. Isso é uma constatação, não uma lacuna a preencher.
+- **Não seja gentil.** "Não há muita coisa errada com o jeito como isso é feito hoje" é uma resposta completa e útil. "A pessoa que você descreve não existe" também. Diga o que desqualifica com clareza na primeira frase da resposta, não enterrado numa ressalva no fim.
+- **Não exagere.** Cada resposta de portão é curta — algumas frases, ou uma lista ordenada no Portão 4. Sem títulos dentro de uma resposta de portão, sem marcadores de três níveis, sem repetir a ideia longamente. Isto é um bisturi, não um relatório.
+- **Parar é um resultado normal.** Não trate chegar ao Portão 5 como o objetivo e não avalie com generosidade para chegar lá.
+- **Os Portões 2 e 3 exigem evidência, não raciocínio** — veja as regras de pesquisa abaixo. Os Portões 1, 4 e 5 são pensamento; não os pesquise.
+
+**Como exibir um portão.** Use exatamente esta forma — o separador, a resposta, o veredito, uma linha de porquê. Nada antes: sem preâmbulo, sem repetir a ideia.
+
+```
+─── Portão [N]: [nome do portão] ─────────────
+```
+
+[a resposta — algumas frases, ou uma lista ordenada no Portão 4]
+
+**→ CONTINUAR** ou **→ STOP**
+[uma linha: por quê]
+
+Mesmo estilo visual dos banners de passo. Sem emoji. Largura ~50 caracteres.
+
+**Tratamento de um STOP.** Um STOP pausa o sprint. Ele nunca continua em silêncio nem encerra a sessão em silêncio. Enuncie o veredito, depois ofereça exatamente estas três opções e aguarde:
+
+"**A)** Revisar a ideia e refazer este portão — diga o que muda e eu retomo no Portão [N].
+**B)** Prosseguir mesmo assim — registro este portão como ignorado e ele aparecerá nos seus arquivos de saída como risco em aberto.
+**C)** Encerrar o sprint aqui — nenhum arquivo de saída é escrito.
+
+Qual?"
+
+O que segue cada opção:
+- **A)** — a parada se aplica à ideia como enunciada, não para sempre. Retome no portão que parou, não do começo, e diga em qual portão você está retomando. Se o usuário contestar sem informação nova, mantenha o veredito e ofereça as três opções de novo.
+- **B)** — acrescente o portão a `gate_overrides` e siga normalmente para a próxima seção. Não volte a litigar depois nem fique trazendo o assunto de volta.
+- **C)** — exiba o bloco de encerramento (abaixo), não escreva arquivo algum e termine.
+
+Quando você para, pare. Não responda os portões restantes mesmo assim, não resuma o que eles "teriam" mostrado, não acrescente incentivo sobre as partes que estavam boas.
+
+**O registro do não verificado.** Cada portão acrescenta a `gate_unverified` — uma linha por afirmação feita sem fonte. Mantenha o registro mesmo numa parada: ele mostra o que estava no ar no momento em que o sprint morreu. Ele é escrito em SPRINT.md e HYPOTHESIS.md ao final do sprint.
+
+**O bloco de encerramento.** Exiba-o quando o sprint terminar num STOP aceito (opção C), e novamente ao final do Portão 5 quando os cinco forem vencidos:
+
+```
+---
+**Parado no Portão [N] de 5.**   (ou: **Os cinco portões vencidos.**)
+```
+
+Depois duas ou três frases: o que exatamente matou a ideia, e qual mudança única na ideia — não no pitch, na ideia — a faria passar por este portão. Se venceu os cinco, diga em vez disso o que o teste da semana 4 mais provavelmente revelará.
+
+Depois:
+
+**Ainda não verificado:**
+[cada linha de `gate_unverified`, uma por linha]
+
+Se o sprint chega ao Portão 5 carregando nove destas, isso é a coisa mais importante da página e precisa estar onde o leitor não possa deixar de ver.
+
+**Regras de pesquisa para os Portões 2 e 3.** Esses dois portões tratam do mundo real, e o mundo real pode ser checado. Orçamento: de duas a quatro buscas por portão.
+
+- Você procura o que as pessoas já fazem e do que já reclamam, não apoio para a ideia. Nunca busque formulações do tipo "X é uma boa ideia" ou "oportunidade de mercado X" — isso devolve listículos escritos por quem está vendendo algo, e eles dirão que toda ideia é promissora.
+- Busque com as palavras do cliente, não as do fundador. Quem sofre com esse problema não diz "automação de fluxo para tradução jurídica", escreve "como orçar PDFs escaneados rápido". Adivinhe o vocabulário de quem sofre e busque por ele.
+
+Evidências ordenadas por quanto vale uma afirmação construída sobre elas:
+
+1. **Alguém pagando por uma versão ruim.** Uma vaga contratando um humano para uma tarefa repetitiva, ou o mesmo job freelance publicado todo mês. Dinheiro já está circulando, mal. O sinal mais forte da web aberta.
+2. **Avaliações de duas e três estrelas** no G2, Capterra, lojas de apps. Quem pagou e se decepcionou descreve exatamente a lacuna. As de cinco e de uma estrela são majoritariamente ruído.
+3. **Posts de fórum e de subreddit que nomeiam a gambiarra** — a planilha mantida à parte, a etapa refeita à mão, quanto tempo leva. "Isso é tão ineficiente" não é evidência; "eu exporto duas vezes porque a primeira exportação perde a coluna de imposto" é.
+4. **Templates muito baixados.** Um template de planilha com 40.000 downloads é um mercado que já construiu a própria ferramenta.
+
+Três formas de errar aqui:
+- Não deixe um único post de fórum virar "os usuários odeiam isso" — uma pessoa é uma pessoa, e diga isso quando for tudo o que você tem.
+- Não confunda encontrar evidência com vencer o portão. Você pode documentar a dor com precisão e ainda assim concluir que ninguém pagaria para removê-la.
+- Distinga "pesquisei e encontrei silêncio" de "não pesquisei". Silêncio num domínio onde as pessoas postam o tempo todo é em si uma constatação, e merece ser relatado como tal.
+
+<section name="section_gate_plain">
+
+## Portão 1 — Linguagem simples (GATE-01)
+
+**Ao entrar nesta seção:** imediatamente após a mensagem de boas-vindas. O Passo 1 não começou e nenhum banner foi renderizado ainda.
+
+Pergunte isto, e nada mais:
+
+"Antes do Passo 1, uma checagem de realidade. Em duas ou três frases — qual é a ideia? Palavras simples, do jeito que você contaria a um amigo, não a um investidor."
+
+Aguarde a resposta do usuário.
+
+---
+
+**Após receber a resposta:**
+
+Explique a ideia de volta numa linguagem que um garoto esperto de doze anos acompanharia. Sem palavras da moda, sem jargão, nenhuma destas: plataforma, alavancar, ecossistema, movido a IA, sem atrito, otimizar, ponta a ponta. Cubra três coisas:
+
+1. **Quem tem o problema**
+2. **O que a coisa faz de fato** quando alguém usa
+3. **Que forma ela toma** — um site, um aplicativo, algo acoplado a uma ferramenta que já usam
+
+Forma quer dizer forma, não plano de marketing. Como alguém fica sabendo disso é problema do Portão 4, não deste.
+
+**Portão:** você consegue fazer isso em cerca de quatro frases, com cada parte ancorada no que o usuário realmente disse?
+
+**Ajuste específico deste sprint para a parte 3:** este workflow existe para decidir a abordagem no Passo 3. Se o usuário tem um quem e um o quê mas ainda não tem forma, isso não é uma parada — escreva "forma: ainda não decidida, o Passo 3 decide" e continue. Uma forma ausente só vira parada quando o *o que faz* falta junto, porque aí não há a que dar forma.
+
+**STOP se:** falta no pitch quem tem o problema, ou falta o que a coisa faz de fato quando alguém abre, ou uma parte só sobrevive à tradução usando um termo que o garoto de doze anos não entenderia. Nomeie a parte específica que não está pensada — "como isso chega até eles" ou "o que isso faz quando alguém abre" — não um "falta clareza" genérico.
+
+Exiba o portão, depois trate um STOP conforme o Protocolo dos Portões.
+
+---
+
+**Captura de campos nomeados (guarde para a montagem das saídas):**
+
+- **gate1_plain_statement** = "[sua versão em linguagem simples, quatro frases]"
+- **gate1_verdict** = "[CONTINUAR / STOP-IGNORADO]"
+- **gate1_missing** = "[a parte específica que faltava, ou 'nada']"
+- **gate_unverified** = "[inicialize o registro — uma linha por coisa que você acabou de afirmar e que o usuário não disse de fato]"
+
+**Em caso de CONTINUAR:** nada aqui fica bloqueado. O segmento de clientes que o usuário mencionou no pitch *não* é o segmento bloqueado — o Passo 1 faz mesmo assim sua própria pergunta aberta e bloqueia sua própria resposta. Não pule, não preencha antes, não diga "você já me contou".
+
+Em seguida, passe para section_customer.
+
+</section>
 
 <section name="section_customer">
 
@@ -443,6 +581,109 @@ Aguarde a resposta do usuário. Aceite a decisão dele. Em seguida, prossiga par
 Após o Passo 4 (ou após o ciclo de aconselhamento se ele foi executado):
 
 NÃO re-renderize o banner do Passo 1 (Intensidade de Necessidade não é um campo do banner).
+
+Em seguida, passe para section_gate_today. Não faça mais nada nesta seção.
+
+</section>
+
+<section name="section_gate_today">
+
+## Portão 2 — Como isso é resolvido hoje (GATE-02)
+
+**Ao entrar nesta seção:** o Cliente, o Problema e as seis pontuações de Intensidade de Necessidade estão bloqueados. Leia as regras de pesquisa do Protocolo dos Portões antes de buscar.
+
+Este portão é evidência, não raciocínio. Busque primeiro, escreva depois.
+
+---
+
+**Busca (2 a 4 consultas):**
+
+Você já tem `need_intensity_competitors` da busca de Intensidade de Necessidade — reutilize essa lista como conjunto inicial de players estabelecidos e não a busque de novo. O que falta é o vocabulário do próprio cliente, então gaste o orçamento ali:
+
+- uma consulta nas palavras que quem sofre digitaria, não nas do fundador
+- uma consulta mirando evidência de "paguei e me decepcionei" — avaliações de duas e três estrelas dos players que você já tem
+- uma consulta mirando dinheiro que já circula mal — vagas ou jobs freelance recorrentes para essa tarefa feita à mão
+- uma consulta mirando a gambiarra — o template, a planilha, a etapa manual
+
+---
+
+**Depois escreva a resposta:**
+
+Descreva o que as pessoas fazem hoje diante desse problema — incluindo não fazer nada — e nomeie o que exatamente há de ruim: um custo, um atraso, uma taxa de falha, uma gambiarra manual que alguém executa à mão. Nomeie pelo nome os players estabelecidos que você encontrou. Cite o que encontrou.
+
+**Portão:** o que há de ruim é específico e caro o bastante para alguém mudar de comportamento por causa disso — e você encontrou alguém fora da sua própria cabeça dizendo isso?
+
+**STOP se:**
+- a resposta honesta é "não há muita coisa errada com a solução atual", ou
+- o que há de ruim só sai como abstração — ineficiente, fragmentado, ultrapassado, doloroso. Essas são as palavras que se escreve quando não há dor real, ou
+- você buscou direito e não encontrou ninguém descrevendo esse problema em lugar nenhum. Num domínio onde as pessoas postam o tempo todo, silêncio geralmente significa que o problema não é sentido, não que esteja por descobrir.
+
+Diga qual dos três é. Não funda os três num "sinal fraco" genérico.
+
+Registre deliberadamente a tensão com a Intensidade de Necessidade: uma pontuação alta não vence este portão e uma baixa não o reprova. A pontuação é a nota do usuário calibrada para baixo; este portão é o que a web aberta realmente diz. Se divergirem, diga isso em uma frase e fique com o que você encontrou.
+
+Exiba o portão, depois trate um STOP conforme o Protocolo dos Portões.
+
+---
+
+**Captura de campos nomeados (guarde para a montagem das saídas):**
+
+- **gate2_incumbents** = "[players estabelecidos nomeados, incluindo 'fazer à mão' quando esse é o verdadeiro player]"
+- **gate2_badness** = "[o custo / atraso / taxa de falha / gambiarra manual específicos — em termos concretos, com o número quando você tiver]"
+- **gate2_evidence** = "[o que você encontrou e onde — uma linha por fonte, a mais forte primeiro]"
+- **gate2_verdict** = "[CONTINUAR / STOP-IGNORADO]"
+- **gate_unverified** = "[acrescente tudo o que você afirmou aqui sem fonte]"
+
+**Repasse:** passe `gate2_incumbents` para section_competitors_research como nomes-semente adicionais. Aquela seção monta os perfis de concorrentes normalmente — ela apenas não repete a busca por vocabulário de cliente que você fez aqui.
+
+Em seguida, passe para section_gate_person. Não faça mais nada nesta seção.
+
+</section>
+
+<section name="section_gate_person">
+
+## Portão 3 — Nomeie a pessoa (GATE-03)
+
+**Ao entrar nesta seção:** o Portão 2 foi vencido ou ignorado. Leia as regras de pesquisa do Protocolo dos Portões antes de buscar.
+
+Este portão é evidência, não raciocínio. Busque a pessoa antes de escrevê-la.
+
+---
+
+**Busca (2 a 4 consultas):**
+
+Em algum lugar existe um post real, uma avaliação real, uma vaga real ou um job real de alguém com esse problema. Encontre. Construa a pessoa a partir do que ela realmente disse — não do que seria conveniente.
+
+---
+
+**Depois escreva a resposta:**
+
+Dê à pessoa um nome e uma situação: o trabalho dela, o que acontece numa terça-feira às 14h que faz isso importar, e o que exatamente ela faz no lugar disso hoje.
+
+Marque com clareza quais partes vêm da fonte e quais você preencheu. As partes preenchidas são suposições e pertencem aos testes do Portão 5.
+
+**Portão:** você encontrou uma real, e ela realmente trocaria?
+
+**STOP se** — e são três paradas diferentes, diga qual:
+- você só conseguiu compor a pessoa em vez de encontrá-la. Uma persona montada a partir de plausibilidade é exatamente o que este portão existe para pegar; "Sarah, 34, gerente de marketing ocupada" é um segmento de mercado fantasiado.
+- a única pessoa que você consegue construir é o próprio fundador.
+- você a encontrou com clareza e ela daria de ombros e continuaria fazendo o que já faz.
+
+**O limite do que a pesquisa resolve aqui:** se alguém tem o problema é descobrível. Se pagaria para resolvê-lo não é — a disposição a pagar por algo que não existe não está escrita em lugar nenhum. Se você se pegar concluindo dos resultados de busca que ela trocaria, você foi longe demais: isso é um teste do Portão 5, não uma constatação do Portão 3.
+
+**Se a pessoa encontrada contradiz o segmento de clientes bloqueado** — outro cargo, outro porte de empresa, outro gatilho — diga isso com clareza em uma frase e ofereça a rota de navegação de volta a section_customer (NAVIG-02, com sua regra de descarte). Não redefina em silêncio o segmento bloqueado para caber na pessoa encontrada.
+
+Exiba o portão, depois trate um STOP conforme o Protocolo dos Portões.
+
+---
+
+**Captura de campos nomeados (guarde para a montagem das saídas):**
+
+- **gate3_person** = "[nome, trabalho, o gatilho da terça 14h, e o que ela faz no lugar disso hoje]"
+- **gate3_source** = "[o post / avaliação / vaga / job encontrado, e o que dizia de fato]"
+- **gate3_assumed** = "[cada parte da pessoa que você mesmo preencheu — viram testes do Portão 5]"
+- **gate3_verdict** = "[CONTINUAR / STOP-IGNORADO]"
+- **gate_unverified** = "[acrescente cada linha de gate3_assumed]"
 
 Em seguida, passe para section_problem_importance. Não faça mais nada nesta seção.
 
@@ -835,10 +1076,10 @@ Aguarde a resposta do usuário.
 CRÍTICO — REGRA DE DESCARTE: TODAS as decisões tomadas APÓS a sub-decisão escolhida são DESCARTADAS. Não tente preservá-las, referenciá-las ou oferecer manter qualquer uma delas. Re-execute a sequência completa a partir da seção escolhida como se essas decisões posteriores nunca tivessem sido tomadas. Delete-as do seu contexto.
 
 Exemplos:
-- Usuário volta para **Segmento de clientes**: apague need_intensity_*, scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Problema, Vantagens, Concorrentes, scorecard_market_*. Re-execute todas as seções do Passo 1 a partir de section_customer.
+- Usuário volta para **Segmento de clientes**: apague need_intensity_*, gate2_*, gate3_*, scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Problema, Vantagens, Concorrentes, scorecard_market_*. Re-execute todas as seções do Passo 1 a partir de section_customer.
 - Usuário volta para **Comprador**: apague apenas scorecard_purchaser_*. Re-execute apenas section_purchaser (Cliente permanece bloqueado).
-- Usuário volta para **Problema**: apague need_intensity_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Vantagens, Concorrentes, scorecard_market_*. Re-execute a partir de section_problem.
-- Usuário volta para **Intensidade de Necessidade**: apague need_intensity_* apenas. Re-execute apenas section_need_intensity (Cliente, Comprador, Problema permanecem bloqueados).
+- Usuário volta para **Problema**: apague need_intensity_*, gate2_*, gate3_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Vantagens, Concorrentes, scorecard_market_*. Re-execute a partir de section_problem.
+- Usuário volta para **Intensidade de Necessidade**: apague need_intensity_*, gate2_*, gate3_*. Re-execute section_need_intensity e depois os Portões 2 e 3 (Cliente, Comprador, Problema permanecem bloqueados).
 - Usuário volta para **Classificação I/U do Problema**: apague scorecard_problem_iu, scorecard_problem_iu_nudge apenas. Re-execute apenas section_problem_importance (Cliente, Comprador, Problema permanecem bloqueados).
 - Usuário volta para **Vantagens do fundador**: apague Concorrentes, scorecard_market_*. Re-execute a partir de section_advantages.
 - Usuário volta para **Concorrentes**: apague seleção de concorrentes, adversário principal, scorecard_market_*. Re-execute a partir de section_competitors (inclui section_market_sizing).
@@ -850,7 +1091,8 @@ Para reiniciar uma seção: re-renderize o banner do Passo 1 mostrando os valore
 
 ### Se o usuário escolher C (recomeçar o Passo 1)
 
-- Apague TODAS as decisões do Passo 1: segmento de clientes, comprador (scorecard_purchaser_*), problema, intensidade de necessidade (need_intensity_*), classificação I/U do problema (scorecard_problem_iu, scorecard_problem_iu_nudge), vantagens, concorrentes, dimensionamento de mercado (scorecard_market_*)
+- Apague TODAS as decisões do Passo 1: segmento de clientes, comprador (scorecard_purchaser_*), problema, intensidade de necessidade (need_intensity_*), constatações dos Portões 2 e 3 (gate2_*, gate3_*, e suas linhas em gate_unverified), classificação I/U do problema (scorecard_problem_iu, scorecard_problem_iu_nudge), vantagens, concorrentes, dimensionamento de mercado (scorecard_market_*)
+- O Portão 1 NÃO é apagado — ele julgou a ideia, não o Passo 1. Não peça o pitch de novo.
 - Trate isso como um início de sprint fresco: re-renderize o banner do Passo 1 com todos os quatro valores como "pendente"
 - Faça a pergunta aberta do segmento de clientes novamente (a mesma de section_customer)
 
@@ -1537,7 +1779,42 @@ Recomendada: [A#] — [nome curto]
 Escolhida: [A#] — [nome curto]
 ─────────────────────────────────────────────────
 
-Então prossiga para step4_banner.
+Então prossiga para section_gate_risks.
+
+</section>
+
+<section name="section_gate_risks">
+
+## Portão 4 — O que precisa dar certo (GATE-04)
+
+**Ao entrar nesta seção:** a abordagem está escolhida e o banner do Passo 3 foi re-renderizado. Não pesquise — este portão é pensamento, não evidência.
+
+---
+
+Liste tudo o que precisa dar certo para isso funcionar. Depois ordene pela probabilidade de dar errado, o mais provável primeiro.
+
+Comece pelos que o usuário provavelmente está subestimando — normalmente distribuição, disposição a pagar, e qualquer terceiro que precise mudar de comportamento para isso funcionar. Use o que o Portão 2 levantou: se empresas já tentaram e afundaram, isso é um risco ordenado com fonte por trás, e vai perto do topo.
+
+Fique numa lista ordenada, uma linha cada. Sem submarcadores, sem planos de mitigação — mitigação não é o objetivo deste portão.
+
+**Portão:** o risco número um é sobrevivível e testável nas próximas doze semanas?
+
+**STOP se:** o risco no topo é um cujo fracasso mata tudo e não há jeito barato de descobrir antes de construir. Isso não é risco, é aposta — nomeie assim, com essa palavra.
+
+Exiba o portão, depois trate um STOP conforme o Protocolo dos Portões.
+
+---
+
+**Captura de campos nomeados (guarde para a montagem das saídas):**
+
+- **gate4_risks_ranked** = "[a lista ordenada completa, o mais provável de dar errado primeiro]"
+- **gate4_top_risk** = "[o risco nº 1, uma frase]"
+- **gate4_verdict** = "[CONTINUAR / STOP-IGNORADO]"
+- **gate_unverified** = "[acrescente qualquer item da ordenação que você afirmou sem fonte]"
+
+**Repasse:** o componente **Principal risco** de section_testable_form é `gate4_top_risk` palavra por palavra. Não derive ali um segundo principal risco diferente.
+
+Em seguida renderize o banner do Passo 4 (formato definido abaixo) e passe para section_hypothesis.
 
 </section>
 
@@ -1603,7 +1880,7 @@ Derive automaticamente todos os 4 componentes da forma testável a partir da hip
 |-----------|---------|-------------|
 | Métrica de sucesso | Sinal observável e mensurável de que a hipótese está funcionando | Como é "clientes suficientes escolhendo Z para resolver Y" como número específico + prazo |
 | Condição de falsificação | O limite específico em que a hipótese é provada errada | N tentativas de abordagem com M% de conversão como fronteira concreta de falha |
-| Principal risco | A única suposição mais importante que poderia matar isso | O que sobre X, Y ou Z é mais incerto ou não comprovado |
+| Principal risco | A única suposição mais importante que poderia matar isso | `gate4_top_risk` palavra por palavra — não derive um novo |
 | Teste de validação mais rápido | O experimento mais barato para confirmar ou matar a hipótese primeiro | Validação manual, teste de landing page ou abordagem direta |
 
 Exiba todos os 4 componentes juntos:
@@ -1617,7 +1894,49 @@ Exiba todos os 4 componentes juntos:
 
 Estes estão bloqueados com sua hipótese. Pronto para escrever seus arquivos de saída?"
 
-Aguarde o usuário confirmar prontidão antes de prosseguir para section_write_outputs.
+Aguarde o usuário confirmar prontidão antes de prosseguir para section_gate_tests.
+
+</section>
+
+<section name="section_gate_tests">
+
+## Portão 5 — A parcial e a final (GATE-05)
+
+**Ao entrar nesta seção:** a forma testável está exibida e o usuário confirmou prontidão. Não pesquise — este portão é pensamento, não evidência.
+
+---
+
+Escreva dois testes: um resultado mensurável na semana 4 e outro na semana 12, cada um dizendo ao usuário se isso funciona. Cada um precisa de um número, um prazo e um limiar que realmente pudesse ficar abaixo da linha.
+
+Aponte-os para as suposições que a pesquisa não conseguiu resolver — cada linha de `gate3_assumed`, e se alguém paga. Essas são as incertezas vivas. Um teste mirando algo que você já confirmou pesquisando no Portão 2 é um teste que já passou de antemão.
+
+Esses dois testes não substituem a forma testável acima — a métrica de sucesso e a condição de falsificação ficam como estão. Os testes das semanas 4 e 12 são o cronograma que descobre.
+
+**Portão:** esses testes podem falhar?
+
+Se um teste não pode falhar, reescreva. Faça isso até três vezes, mostrando brevemente cada reescrita para o usuário ver o que havia de errado na versão anterior:
+
+"Semana 4, v1: [teste]. Isso não pode falhar — [por quê]. v2: [teste]."
+
+**STOP se** as três tentativas produzirem resultados não testáveis. A constatação então é que o que se afirma não é observável em doze semanas, e isso é em si o veredito — diga assim.
+
+Exiba o portão, depois trate um STOP conforme o Protocolo dos Portões.
+
+---
+
+**Captura de campos nomeados (guarde para a montagem das saídas):**
+
+- **gate5_week4** = "[o teste da semana 4 — número, prazo, limiar]"
+- **gate5_week12** = "[o teste da semana 12 — número, prazo, limiar]"
+- **gate5_rewrites** = "[cada reescrita e o que havia de errado na versão anterior, ou 'nenhuma — ambos os testes eram falseáveis já na primeira escrita']"
+- **gate5_verdict** = "[CONTINUAR / STOP-IGNORADO]"
+- **gate_unverified** = "[acrescente tudo o que você afirmou aqui sem fonte]"
+
+---
+
+**Depois que o portão é vencido:** exiba o bloco de encerramento do Protocolo dos Portões — "Os cinco portões vencidos." (ou a contagem exata se algum foi ignorado), as duas ou três frases sobre o que o teste da semana 4 mais provavelmente revelará, e o registro **Ainda não verificado** completo.
+
+Em seguida, passe para section_write_outputs.
 
 </section>
 
@@ -1643,8 +1962,11 @@ Escreva ./HYPOTHESIS.md com TUDO o seguinte — sem placeholders do template, se
 - Condição de falsificação (da forma testável acima)
 - Principal risco (da forma testável acima)
 - Teste de validação mais rápido (da forma testável acima)
+- Teste da semana 4 (gate5_week4) e teste da semana 12 (gate5_week12) — cada um com seu número, prazo e limiar
+- Ainda não verificado: o registro `gate_unverified` completo, uma linha por afirmação. Esta seção nunca é omitida nem resumida — se estiver vazia, escreva "Nada — cada afirmação acima tem fonte."
 
 CRÍTICO: Zero colchetes restam em HYPOTHESIS.md. Nenhum campo pode dizer "[placeholder]" ou "[CLIENTE-ALVO: ...]".
+CRÍTICO: O principal risco é `gate4_top_risk` palavra por palavra. "Ainda não verificado" é o registro palavra por palavra — não suavize, não corte para as três linhas que você mais gosta.
 
 **2. Escrever SPRINT.md**
 
@@ -1656,6 +1978,7 @@ Escreva ./SPRINT.md com TUDO o seguinte — sem placeholders do template, sem co
 - **Passo 2:** todas as avaliações de eixos (todos os 8+ eixos com a pontuação do usuário para cada), Eixo X e Eixo Y escolhidos com justificativa, resultado da verificação de conflito (se um conflito foi encontrado e como foi resolvido), mini-manifesto (todas as 3 frases verbatim)
 - **Passo 3:** todas as descrições de abordagens (A1 até A[N] — cada uma com nome curto e descrição completa de 2-3 frases), tabela de avaliação em 5 matrizes (posicionamento no quadrante de cada abordagem em cada uma das 5 matrizes), abordagem recomendada (qual A# e por quê), abordagem de reserva (qual A# e por quê), abordagem escolhida (qual A# o usuário selecionou)
 - **Passo 4:** declaração completa da hipótese (deve corresponder a HYPOTHESIS.md exatamente, caractere por caractere)
+- **Portões de realidade:** os cinco portões em ordem — o veredito (CONTINUAR / STOP-IGNORADO / não alcançado), a resposta que você deu em uma ou duas frases, e para cada portão ignorado a razão exata pela qual ele parou. Depois o registro `gate_unverified` completo, uma linha por afirmação. Se `gate_overrides` não estiver vazio, diga isso no topo da seção em vez de deixar o leitor contar.
 
 CRÍTICO: Zero colchetes restam em SPRINT.md. Cada seção tem conteúdo real da sessão.
 

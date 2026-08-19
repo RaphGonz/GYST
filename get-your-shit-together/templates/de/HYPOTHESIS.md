@@ -55,3 +55,34 @@
 
 <!-- Das günstigste und schnellste Experiment, das diese Hypothese bestätigen oder widerlegen könnte. -->
 [z.B. "10 Kaltakquise-Nachrichten an ideale Interessenten mit Angebot einer kostenlosen 30-Min-Demo im Austausch für ehrliches Feedback — wenn 3+ sagen, dass sie zahlen würden, machen wir weiter"]
+
+
+## Zwischenprüfung und Abschlussprüfung
+
+<!--
+  Die beiden datierten Tests aus Tor 5. Jeder braucht eine Zahl, eine Frist und
+  eine Schwelle, die tatsächlich unterschritten werden könnte. Richten Sie sie
+  auf das, was die Recherche nicht klären konnte: die selbst ergänzten Teile der
+  Person aus Tor 3 und die Frage, ob überhaupt jemand zahlt.
+-->
+
+### Woche 4
+
+[z.B. „Bis zum 14. März haben 8 von 25 kontaktierten freiberuflichen Übersetzern mir unaufgefordert ein gescanntes PDF zur Kalkulation geschickt. Unter 5 ist der Schmerz nicht der, den ich behauptet habe."]
+
+### Woche 12
+
+[z.B. „Bis zum 25. April haben 3 dieser 8 mindestens 40 € gezahlt. Null Zahlende in Woche 12 falsifiziert die Zahlungsbereitschaft — nicht die Botschaft."]
+
+## Weiterhin Unbelegt
+
+<!--
+  Jede Behauptung, die in diesem Sprint ohne Quelle aufgestellt wurde.
+  Nicht zusammengefasst, nicht auf die drei schönsten Zeilen gekürzt. Erreicht
+  ein Sprint das Ende mit neun davon, ist das das Wichtigste auf dieser Seite.
+-->
+
+- [ohne Quelle aufgestellte Behauptung]
+- [ohne Quelle aufgestellte Behauptung]
+
+[Steht hier nichts, schreiben Sie: „Nichts — jede Behauptung oben ist belegt."]

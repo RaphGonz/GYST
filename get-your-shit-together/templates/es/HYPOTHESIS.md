@@ -55,3 +55,34 @@
 
 <!-- El experimento más barato y rápido que podría confirmar o invalidar esta hipótesis. -->
 [ej.: "10 mensajes de prospección en frío a prospectos ideales ofreciendo una demo gratuita de 30 min a cambio de comentarios honestos — si 3+ dicen que pagarían, seguimos adelante"]
+
+
+## El Parcial y el Final
+
+<!--
+  Las dos pruebas con fecha de la Puerta 5. Cada una necesita una cifra, una
+  fecha límite y un umbral que realmente pudiera quedar por debajo de la línea.
+  Apúntalas a lo que la búsqueda no pudo resolver: las partes de la persona de
+  la Puerta 3 que inventaste, y si alguien paga.
+-->
+
+### Semana 4
+
+[ej.: «Al 14 de marzo, 8 de 25 traductores autónomos contactados me han enviado un PDF escaneado para cotizar, sin que yo lo pidiera. Por debajo de 5, el dolor no es el que afirmé.»]
+
+### Semana 12
+
+[ej.: «Al 25 de abril, 3 de esos 8 han pagado al menos 40 €. Cero pagos en la semana 12 falsa la disposición a pagar — no el mensaje.»]
+
+## Aún Sin Verificar
+
+<!--
+  Cada afirmación hecha durante este sprint sin una fuente detrás.
+  Ni resumida, ni recortada a las tres líneas que mejor quedan. Si un sprint
+  llega al final cargando nueve de estas, eso es lo más importante de la página.
+-->
+
+- [afirmación hecha sin fuente]
+- [afirmación hecha sin fuente]
+
+[Si aquí no hay nada, escribe: «Nada — cada afirmación anterior tiene fuente.»]

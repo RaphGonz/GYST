@@ -12,6 +12,38 @@
 
 ---
 
+## Realitätstore
+
+<!--
+  Die fünf Tor-Urteile, in der Reihenfolge, genau so wie sie im Sprint gefallen
+  sind. Ein Tor, das der Benutzer nach einem STOP übergangen hat, wird als
+  STOP-ÜBERGANGEN mit dem Grund des Stopps festgehalten — niemals zu WEITER
+  abgemildert. Ein Tor, das der Sprint nie erreicht hat: „nicht erreicht".
+-->
+
+**Übergangene Tore:** [jedes trotz STOP passierte Tor auflisten, oder „keine"]
+
+| Tor | Urteil | Befund |
+|-----|--------|--------|
+| 1 — Schlichte Sprache | [WEITER / STOP-ÜBERGANGEN / nicht erreicht] | [die schlichte Fassung, oder der fehlende Teil] |
+| 2 — Wie es heute gelöst wird | [Urteil] | [genannte Anbieter + das konkret Schlechte, mit Quellen] |
+| 3 — Nennen Sie die Person | [Urteil] | [wer gefunden wurde, wo, und welche Teile ergänzt wurden] |
+| 4 — Was alles gut gehen muss | [Urteil] | [das Risiko Nr. 1] |
+| 5 — Zwischen- und Abschlussprüfung | [Urteil] | [ob beide Tests schon in der ersten Fassung scheitern konnten] |
+
+**Eingeordnete Risiken (Tor 4) — das Wahrscheinlichste zuerst:**
+
+1. [Risiko]
+2. [Risiko]
+3. [Risiko]
+
+**Weiterhin unbelegt:**
+
+- [ohne Quelle aufgestellte Behauptung]
+- [ohne Quelle aufgestellte Behauptung]
+
+---
+
 ## Schritt 1: Die Grundlagen
 
 <!--

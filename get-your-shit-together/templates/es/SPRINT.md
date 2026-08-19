@@ -12,6 +12,38 @@
 
 ---
 
+## Puertas de Realidad
+
+<!--
+  Los cinco veredictos de puerta, en orden, tal como se dieron durante el
+  sprint. Una puerta que el usuario ignoró tras un STOP se registra como
+  STOP-IGNORADO con la razón por la que se detuvo — nunca suavizada a CONTINUAR.
+  Una puerta que el sprint nunca alcanzó: «no alcanzada».
+-->
+
+**Puertas ignoradas:** [lista cada puerta superada pese a un STOP, o «ninguna»]
+
+| Puerta | Veredicto | Hallazgo |
+|--------|-----------|----------|
+| 1 — Lenguaje simple | [CONTINUAR / STOP-IGNORADO / no alcanzada] | [la versión en lenguaje simple, o la parte que faltaba] |
+| 2 — Cómo se resuelve hoy | [veredicto] | [actores nombrados + lo malo concreto encontrado, con fuentes] |
+| 3 — Nombra a la persona | [veredicto] | [a quién se encontró, dónde, y qué partes se rellenaron] |
+| 4 — Qué tiene que salir bien | [veredicto] | [el riesgo n.º 1] |
+| 5 — El parcial y el final | [veredicto] | [si ambas pruebas podían fallar tal como se escribieron primero] |
+
+**Riesgos ordenados (Puerta 4) — lo más probable de salir mal primero:**
+
+1. [riesgo]
+2. [riesgo]
+3. [riesgo]
+
+**Aún sin verificar:**
+
+- [afirmación hecha sin fuente]
+- [afirmación hecha sin fuente]
+
+---
+
 ## Paso 1: Los Fundamentos
 
 <!--

@@ -12,6 +12,38 @@
 
 ---
 
+## Portes de Réalité
+
+<!--
+  Les cinq verdicts de porte, dans l'ordre, exactement tels qu'ils ont été
+  donnés pendant le sprint. Une porte outrepassée par l'utilisateur après un
+  STOP est enregistrée comme STOP-OUTREPASSÉ avec la raison de l'arrêt — jamais
+  adoucie en CONTINUER. Une porte que le sprint n'a jamais atteinte : « non atteinte ».
+-->
+
+**Portes outrepassées :** [listez chaque porte franchie malgré un STOP, ou « aucune »]
+
+| Porte | Verdict | Constat |
+|-------|---------|---------|
+| 1 — Langage clair | [CONTINUER / STOP-OUTREPASSÉ / non atteinte] | [la version en langage clair, ou la partie qui manquait] |
+| 2 — Comment cela se résout aujourd'hui | [verdict] | [acteurs nommés + le défaut précis trouvé, avec les sources] |
+| 3 — Nommez la personne | [verdict] | [qui a été trouvé, où, et quelles parties ont été comblées] |
+| 4 — Ce qui doit se passer correctement | [verdict] | [le risque n° 1] |
+| 5 — La mi-parcours et la finale | [verdict] | [si les deux tests pouvaient échouer dès la première écriture] |
+
+**Risques classés (Porte 4) — le plus susceptible de mal tourner en premier :**
+
+1. [risque]
+2. [risque]
+3. [risque]
+
+**Toujours non vérifié :**
+
+- [affirmation avancée sans source]
+- [affirmation avancée sans source]
+
+---
+
 ## Étape 1 : Les Fondamentaux
 
 <!--

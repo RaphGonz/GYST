@@ -42,7 +42,7 @@ Solo entrepreneurs, existing companies but also artists or game-designers that w
 - Guides you through positioning (2x2 matrix) and differentiator selection
 - Evaluates multiple solution approaches using five business lenses (the 5PM framework)
 - Scores how deeply the market needs a solution using the Need Intensity framework (6 dimensions, 0–6,000 scale)
-- Runs five reality gates that can stop the sprint outright when the idea doesn't survive an honest look (English workflow)
+- Runs five reality gates that can stop the sprint outright when the idea doesn't survive an honest look
 - Produces six output files in your project directory: competitor profiles, positioning map, decision journal, falsifiable hypothesis, a 5PM Scorecard, and a Need Intensity report
 
 ## The 5PM Framework
@@ -79,7 +79,7 @@ Every claim the AI asserts without a source lands in a **Still unverified** ledg
 
 > Most ideas stop at one of the first three gates. That's the point of having them.
 
-> The gates currently run in the English workflow only — the six translated workflows are unchanged.
+> The gates run in all seven languages.
 
 ## Need Intensity
 

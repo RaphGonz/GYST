@@ -12,6 +12,38 @@
 
 ---
 
+## Portões de Realidade
+
+<!--
+  Os cinco veredictos de portão, em ordem, exatamente como foram dados durante
+  o sprint. Um portão que o usuário ignorou após um STOP é registrado como
+  STOP-IGNORADO com a razão pela qual parou — nunca suavizado para CONTINUAR.
+  Um portão que o sprint nunca alcançou: "não alcançado".
+-->
+
+**Portões ignorados:** [liste cada portão atravessado apesar de um STOP, ou "nenhum"]
+
+| Portão | Veredicto | Constatação |
+|--------|-----------|-------------|
+| 1 — Linguagem simples | [CONTINUAR / STOP-IGNORADO / não alcançado] | [a versão em linguagem simples, ou a parte que faltava] |
+| 2 — Como isso é resolvido hoje | [veredicto] | [players nomeados + o que há de ruim especificamente, com fontes] |
+| 3 — Nomeie a pessoa | [veredicto] | [quem foi encontrado, onde, e quais partes foram preenchidas] |
+| 4 — O que precisa dar certo | [veredicto] | [o risco nº 1] |
+| 5 — A parcial e a final | [veredicto] | [se ambos os testes podiam falhar já na primeira escrita] |
+
+**Riscos ordenados (Portão 4) — o mais provável de dar errado primeiro:**
+
+1. [risco]
+2. [risco]
+3. [risco]
+
+**Ainda não verificado:**
+
+- [afirmação feita sem fonte]
+- [afirmação feita sem fonte]
+
+---
+
 ## Passo 1: O Básico
 
 <!--

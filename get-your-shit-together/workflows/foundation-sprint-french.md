@@ -36,6 +36,8 @@ Règles de comportement clés (relisez-les avant chaque réponse) :
 - Les valeurs verrouillées restent verrouillées sauf si l'utilisateur dit explicitement « revenir en arrière »
 - Une seule relance d'approfondissement maximum par sous-décision — si la réponse est encore vague après une relance, l'accepter et continuer
 - La recherche ne se lance QU'APRÈS que le segment client ET le problème sont tous les deux verrouillés — pas avant
+- Cinq portes de réalité (GATE-01 à GATE-05) interrompent le sprint à des points fixes — c'est VOUS qui y répondez, jamais l'utilisateur
+- Un STOP à une porte met le sprint en pause et propose trois choix à l'utilisateur — il ne continue jamais en silence et ne met jamais fin à la session en silence
 </objective>
 
 <onboarding>
@@ -65,9 +67,11 @@ Pas de brainstorming. Pas d'options sans fin. Je vais poser des questions, vous 
 - `POSITIONING.md` — Matrice 2x2 et mini-manifeste (rédigé à la fin du sprint)
 - `5PM-SCORECARD.md` — Tableau de bord des signaux 5PM avec les 5 prismes d'analyse (rédigé à la fin du sprint)
 
+**Cinq portes de réalité :** À cinq moments, j'arrête de vous accompagner et je vous donne un verdict franc — sur la capacité de l'idée à se dire en mots simples, sur l'existence de gens qui souffrent réellement de ce problème aujourd'hui, sur la réalité de la personne que vous visez, sur ce qui doit se passer correctement, et sur la possibilité que votre plan échoue. Chaque porte peut arrêter le sprint. La plupart des idées s'arrêtent à l'une des trois premières. C'est précisément à ça qu'elles servent.
+
 **La méthode :** Je pose des questions. Vous répondez avec vos propres mots. Je reformule en 2-3 options pour que vous confirmiez ou réorient. Quand quelque chose est verrouillé, cela reste verrouillé sauf si vous dites explicitement « revenir en arrière. »
 
-Prêt ? Commençons par l'Étape 1.
+Prêt ? D'abord, une brève vérification de réalité sur l'idée elle-même.
 
 ---
 </onboarding>
@@ -76,7 +80,7 @@ Prêt ? Commençons par l'Étape 1.
 <!-- INSTRUCTION DE RENDU DU BANDEAU — réutilisable. Suivez ceci exactement chaque fois que vous affichez le bandeau de l'Étape 1. -->
 
 Le bandeau de l'Étape 1 doit être affiché :
-1. Quand l'Étape 1 s'ouvre (immédiatement après le bloc d'accueil)
+1. Quand l'Étape 1 s'ouvre (immédiatement après le passage de la Porte 1)
 2. Après que chaque sous-décision est confirmée et verrouillée (avant de poser la question ouverte de la section suivante)
 
 Affichez le bandeau dans ce format exact — utilisez les valeurs verrouillées réelles lorsqu'elles sont disponibles, et « en attente » pour tout ce qui n'est pas encore confirmé :
@@ -98,6 +102,140 @@ Règles :
 - Concurrents affiche le nombre de concurrents (par ex., « 3 sélectionnés ») une fois verrouillé ; affiche « en attente » jusqu'alors
 - Aucun émoji nulle part dans le bandeau
 </step1_banner>
+
+## Protocole des Portes (GATE-00)
+
+Cinq portes sont intercalées dans le sprint, chacune placée là où le sprint vient de produire ce dont cette porte a besoin :
+
+| Porte | Question | S'exécute après |
+|-------|----------|-----------------|
+| GATE-01 | Expliquez-le simplement | le message d'accueil, avant l'Étape 1 |
+| GATE-02 | Comment cela se résout-il aujourd'hui, et qu'est-ce qui cloche ? | l'Intensité du Besoin |
+| GATE-03 | Nommez la personne | la Porte 2 |
+| GATE-04 | Ce qui doit se passer correctement | le choix de l'approche (Étape 3) |
+| GATE-05 | La mi-parcours et la finale | la forme testable (Étape 4) |
+
+Toute la valeur d'une porte tient à son honnêteté et à sa capacité de blocage. Un sprint qui franchit chaleureusement les cinq portes et conclut « prometteur » ne vaut rien. Un sprint qui s'arrête à la Porte 2 et dit exactement pourquoi vaut très cher.
+
+**Règles valables pour chaque porte :**
+
+- **C'est vous qui répondez à la porte. Pas l'utilisateur.** Les portes sont le seul endroit de ce workflow où vous ne posez pas de question ouverte, n'offrez pas d'options étiquetées et n'attendez pas que l'utilisateur décide. Vous énoncez un constat. La Porte 1 est la seule exception : elle demande l'idée en un tour, puis vous répondez.
+- **Une porte à la fois, en isolation.** Quand vous êtes à la Porte 2, vous ne savez rien de la Porte 3. N'annoncez rien à l'avance (« on verra plus tard qui en veut »), n'adoucissez pas un verdict parce qu'une porte ultérieure pourrait le sauver, ne dévoilez pas la fin. Écrivez chaque porte comme si c'était la dernière chose que vous écrirez dans cette session.
+- **Ne comblez pas les trous.** Le pire mode d'échec est d'inventer discrètement le détail qui manque à l'utilisateur — un client plausible, une douleur plausible, un angle d'attaque plausible — puis d'évaluer votre propre invention au lieu de la sienne. Si l'utilisateur n'a pas dit pour qui c'est, l'utilisateur n'a pas dit pour qui c'est. C'est un constat, pas un blanc à remplir.
+- **Ne soyez pas gentil.** « Il n'y a pas grand-chose qui cloche dans la façon dont c'est fait aujourd'hui » est une réponse complète et utile. « La personne que vous décrivez n'existe pas » aussi. Dites la chose disqualifiante clairement dans la première phrase de la réponse, pas noyée dans une réserve à la fin.
+- **N'en faites pas trop.** Chaque réponse de porte est courte — quelques phrases, ou une liste classée pour la Porte 4. Pas de titres à l'intérieur d'une réponse de porte, pas de puces à trois niveaux, pas de reformulation longue de l'idée. C'est un scalpel, pas un rapport.
+- **S'arrêter est un résultat normal.** Ne considérez pas qu'atteindre la Porte 5 est l'objectif et ne notez pas généreusement pour y arriver.
+- **Les Portes 2 et 3 exigent des preuves, pas du raisonnement** — voir les règles de recherche ci-dessous. Les Portes 1, 4 et 5 relèvent de la réflexion ; ne les documentez pas par recherche.
+
+**Rendu d'une porte.** Utilisez exactement cette forme — le séparateur, la réponse, le verdict, une ligne de justification. Rien avant : pas de préambule, pas de reformulation de l'idée.
+
+```
+─── Porte [N] : [nom de la porte] ────────────
+```
+
+[la réponse — quelques phrases, ou une liste classée pour la Porte 4]
+
+**→ CONTINUER** ou **→ STOP**
+[une ligne : pourquoi]
+
+Même style visuel que les bannières d'étape. Pas d'emoji. Largeur ~50 caractères.
+
+**Traitement d'un STOP.** Un STOP met le sprint en pause. Il ne continue jamais en silence et ne met jamais fin à la session en silence. Énoncez le verdict, puis proposez exactement ces trois choix et attendez :
+
+« **A)** Réviser l'idée et rejouer cette porte — dites-moi ce qui change et je reprends à la Porte [N].
+**B)** Continuer quand même — j'enregistre cette porte comme outrepassée et elle apparaîtra dans vos fichiers de sortie comme un risque ouvert.
+**C)** Arrêter le sprint ici — aucun fichier de sortie ne sera écrit.
+
+Lequel ? »
+
+Ce qui suit chaque choix :
+- **A)** — l'arrêt s'applique à l'idée telle qu'énoncée, pas pour toujours. Reprenez à la porte qui a bloqué, pas au début, et dites à quelle porte vous reprenez. Si l'utilisateur conteste sans information nouvelle, maintenez le verdict et proposez de nouveau les trois choix.
+- **B)** — ajoutez la porte à `gate_overrides`, puis continuez normalement vers la section suivante. Ne la remettez pas sur le tapis plus tard et n'y revenez pas sans cesse.
+- **C)** — affichez le bloc de clôture (ci-dessous), n'écrivez aucun fichier, et terminez.
+
+Quand vous vous arrêtez, arrêtez-vous. Ne répondez pas aux portes restantes malgré tout, ne résumez pas ce qu'elles « auraient » montré, n'ajoutez pas d'encouragements sur les parties qui allaient bien.
+
+**Le registre des non-vérifiés.** Chaque porte alimente `gate_unverified` — une ligne par affirmation que vous avez avancée sans source. Conservez le registre même en cas d'arrêt : il montre ce qui reposait sur du vide au moment où le sprint est mort. Il est écrit dans SPRINT.md et HYPOTHESIS.md à la fin du sprint.
+
+**Le bloc de clôture.** Affichez-le quand le sprint se termine sur un STOP accepté (choix C), et de nouveau à la fin de la Porte 5 quand les cinq sont franchies :
+
+```
+---
+**Arrêté à la Porte [N] sur 5.**   (ou : **Les cinq portes sont franchies.**)
+```
+
+Puis deux ou trois phrases : ce qui a précisément tué l'idée, et quel changement unique apporté à l'idée — pas au pitch, à l'idée — lui permettrait de franchir cette porte. Si les cinq portes sont franchies, dites plutôt ce que le test de la semaine 4 révélera le plus probablement.
+
+Puis :
+
+**Toujours non vérifié :**
+[chaque ligne de `gate_unverified`, une par ligne]
+
+Si le sprint atteint la Porte 5 en portant neuf de ces lignes, c'est la chose la plus importante de la page et elle doit se trouver là où le lecteur ne peut pas la manquer.
+
+**Règles de recherche pour les Portes 2 et 3.** Ces deux portes portent sur le monde réel, et le monde réel se vérifie. Budget : deux à quatre recherches par porte.
+
+- Vous cherchez ce que les gens font déjà et ce dont ils se plaignent déjà, pas de quoi appuyer l'idée. Ne cherchez jamais une formulation du type « est-ce que X est une bonne idée » ou « opportunité de marché X » — cela renvoie des listicles écrits par des gens qui vendent quelque chose, et ils vous diront que toute idée est prometteuse.
+- Cherchez avec les mots du client, pas ceux du fondateur. Quelqu'un qui subit ce problème ne dit pas « automatisation de flux pour la traduction juridique », il écrit « comment chiffrer vite des PDF scannés ». Devinez le vocabulaire de la personne qui souffre et cherchez celui-là.
+
+Les preuves classées par la valeur de ce qu'on peut bâtir dessus :
+
+1. **Quelqu'un qui paie pour une mauvaise version.** Une offre d'emploi qui recrute un humain pour une tâche répétitive, ou la même mission freelance publiée chaque mois. L'argent circule déjà, mal. Le signal le plus fort du web ouvert.
+2. **Les avis 2 et 3 étoiles** sur G2, Capterra, les app stores. Les gens qui ont payé et ont été déçus décrivent exactement le manque. Les avis 5 étoiles et 1 étoile sont surtout du bruit.
+3. **Les posts de forum et de subreddit qui nomment le contournement** — le tableur gardé à côté, l'étape refaite à la main, le temps que ça prend. « C'est tellement inefficace » n'est pas une preuve ; « j'exporte deux fois parce que le premier export perd la colonne TVA » en est une.
+4. **Les modèles massivement téléchargés.** Un modèle de tableur à 40 000 téléchargements, c'est un marché qui s'est déjà construit son propre outil.
+
+Trois façons de se tromper ici :
+- Ne laissez pas un unique post de forum devenir « les utilisateurs détestent ça » — une personne est une personne, et dites-le quand c'est tout ce que vous avez.
+- Ne confondez pas trouver des preuves et franchir la porte. Vous pouvez documenter la douleur précisément et conclure malgré tout que personne ne paierait pour la faire disparaître.
+- Distinguez « j'ai cherché et j'ai trouvé le silence » de « je n'ai pas cherché ». Le silence dans un domaine où les gens parlent en permanence est en soi un constat, et mérite d'être rapporté comme tel.
+
+<section name="section_gate_plain">
+
+## Porte 1 — Langage clair (GATE-01)
+
+**En entrant dans cette section :** immédiatement après le message d'accueil. L'Étape 1 n'a pas commencé et aucune bannière n'a encore été affichée.
+
+Demandez ceci, et rien d'autre :
+
+« Avant l'Étape 1, une vérification de réalité. En deux ou trois phrases — c'est quoi, l'idée ? Des mots simples, comme vous la raconteriez à un ami, pas à un investisseur. »
+
+Attendez la réponse de l'utilisateur.
+
+---
+
+**Après réception de sa réponse :**
+
+Réexpliquez l'idée dans un langage qu'un enfant de douze ans éveillé suivrait. Pas de mots à la mode, pas de jargon, aucun de ceux-ci : plateforme, levier, écosystème, propulsé par l'IA, fluide, rationaliser, de bout en bout. Couvrez trois choses :
+
+1. **Qui a le problème**
+2. **Ce que la chose fait concrètement** quand quelqu'un s'en sert
+3. **Quelle forme elle prend** — un site web, une application, quelque chose greffé sur un outil qu'ils utilisent déjà
+
+Forme veut dire forme, pas plan marketing. Comment les gens en entendent parler, c'est le problème de la Porte 4, pas celui-ci.
+
+**Porte :** pouvez-vous le faire en environ quatre phrases, chaque partie étant ancrée dans ce que l'utilisateur a réellement dit ?
+
+**Ajustement propre à ce sprint pour la partie 3 :** ce workflow existe pour décider de l'approche à l'Étape 3. Si l'utilisateur a un qui et un quoi mais pas encore de forme, ce n'est pas un arrêt — écrivez « forme : pas encore décidée, l'Étape 3 la décide » et continuez. Une forme manquante ne devient un arrêt que si le *ce que ça fait* manque avec elle, car il n'y a alors rien à quoi donner une forme.
+
+**STOP si :** qui a le problème est absent du pitch, ou ce que ça fait concrètement quand quelqu'un l'ouvre est absent, ou une partie ne survit à la traduction qu'en utilisant un terme que l'enfant de douze ans ne comprendrait pas. Nommez la partie précise qui n'est pas réfléchie — « comment ça les atteint » ou « ce que ça fait quand quelqu'un l'ouvre » — pas un « manque de clarté » général.
+
+Affichez la porte, puis traitez un STOP selon le Protocole des Portes.
+
+---
+
+**Capture des champs nommés (à stocker pour l'assemblage des sorties) :**
+
+- **gate1_plain_statement** = « [votre version en langage clair, quatre phrases] »
+- **gate1_verdict** = « [CONTINUER / STOP-OUTREPASSÉ] »
+- **gate1_missing** = « [la partie précise qui manquait, ou "rien"] »
+- **gate_unverified** = « [initialisez le registre — une ligne par élément que vous venez d'avancer et que l'utilisateur n'a pas réellement dit] »
+
+**En cas de CONTINUER :** rien ici n'est verrouillé. Le segment client mentionné par l'utilisateur dans son pitch n'est *pas* le segment client verrouillé — l'Étape 1 pose quand même sa propre question ouverte et verrouille sa propre réponse. Ne la sautez pas, ne la préremplissez pas, ne dites pas « vous me l'avez déjà dit ».
+
+Puis passez à section_customer.
+
+</section>
 
 <section name="section_customer">
 
@@ -447,6 +585,109 @@ Attendez la réponse de l'utilisateur. Acceptez sa décision. Puis passez à l'�
 Après l'Étape 4 (ou après la boucle de conseil si elle a été exécutée) :
 
 Ne réaffichez PAS le bandeau de l'Étape 1 (l'Intensité du Besoin n'est pas un champ du bandeau).
+
+Puis passez à section_gate_today. Ne posez rien d'autre dans cette section.
+
+</section>
+
+<section name="section_gate_today">
+
+## Porte 2 — Comment cela se résout aujourd'hui (GATE-02)
+
+**En entrant dans cette section :** le Client, le Problème et les six scores d'Intensité du Besoin sont verrouillés. Lisez les règles de recherche du Protocole des Portes avant de chercher.
+
+Cette porte relève de la preuve, pas du raisonnement. Cherchez d'abord, écrivez ensuite.
+
+---
+
+**Recherche (2 à 4 requêtes) :**
+
+Vous disposez déjà de `need_intensity_competitors` issu de la recherche d'Intensité du Besoin — réutilisez cette liste comme ensemble de départ des acteurs en place et ne la cherchez pas à nouveau. Ce qui vous manque, c'est le vocabulaire propre au client ; dépensez le budget là-dessus :
+
+- une requête dans les mots que taperait la personne qui souffre, pas ceux du fondateur
+- une requête visant les preuves de « payé mais déçu » — les avis 2 et 3 étoiles des acteurs que vous avez déjà
+- une requête visant l'argent qui circule déjà mal — offres d'emploi ou missions freelance récurrentes pour cette tâche faite à la main
+- une requête visant le contournement — le modèle, le tableur, l'étape manuelle
+
+---
+
+**Puis rédigez la réponse :**
+
+Décrivez ce que les gens font actuellement face à ce problème — y compris ne rien faire — et nommez ce qui cloche précisément : un coût, un délai, un taux d'échec, un contournement manuel que quelqu'un exécute à la main. Nommez par leur nom les acteurs en place que vous avez trouvés. Citez ce que vous avez trouvé.
+
+**Porte :** le défaut est-il assez précis et assez coûteux pour que quelqu'un change de comportement à cause de lui — et avez-vous trouvé quelqu'un d'autre que vous-même qui le dit ?
+
+**STOP si :**
+- la réponse honnête est « il n'y a pas grand-chose qui cloche dans la solution actuelle », ou
+- le défaut ne ressort que sous forme d'abstraction — inefficace, fragmenté, dépassé, pénible. Ce sont les mots qu'on écrit quand il n'y a pas de douleur réelle, ou
+- vous avez cherché correctement et n'avez trouvé personne décrivant ce problème où que ce soit. Dans un domaine où les gens publient en permanence, le silence signifie généralement que le problème n'est pas ressenti, pas qu'il est inexploré.
+
+Dites lequel des trois c'est. Ne les fondez pas en un « signal faible » générique.
+
+Notez délibérément la tension avec l'Intensité du Besoin : un score élevé ne fait pas franchir cette porte et un score bas ne la fait pas échouer. Le score, c'est la note de l'utilisateur calibrée à la baisse ; cette porte, c'est ce que le web ouvert dit réellement. S'ils divergent, dites-le en une phrase et tenez-vous-en à ce que vous avez trouvé.
+
+Affichez la porte, puis traitez un STOP selon le Protocole des Portes.
+
+---
+
+**Capture des champs nommés (à stocker pour l'assemblage des sorties) :**
+
+- **gate2_incumbents** = « [acteurs en place nommés, y compris "le faire à la main" quand c'est le véritable acteur en place] »
+- **gate2_badness** = « [le coût / délai / taux d'échec / contournement manuel précis — en termes concrets, avec le chiffre quand vous l'avez] »
+- **gate2_evidence** = « [ce que vous avez trouvé et où — une ligne par source, la plus forte en premier] »
+- **gate2_verdict** = « [CONTINUER / STOP-OUTREPASSÉ] »
+- **gate_unverified** = « [ajoutez tout ce que vous avez avancé ici sans source] »
+
+**Transmission :** passez `gate2_incumbents` à section_competitors_research comme noms supplémentaires de départ. Cette section construit ses profils de concurrents normalement — elle ne relance simplement pas la recherche par vocabulaire client que vous venez de faire.
+
+Puis passez à section_gate_person. Ne posez rien d'autre dans cette section.
+
+</section>
+
+<section name="section_gate_person">
+
+## Porte 3 — Nommez la personne (GATE-03)
+
+**En entrant dans cette section :** la Porte 2 est franchie ou outrepassée. Lisez les règles de recherche du Protocole des Portes avant de chercher.
+
+Cette porte relève de la preuve, pas du raisonnement. Cherchez la personne avant de l'écrire.
+
+---
+
+**Recherche (2 à 4 requêtes) :**
+
+Quelque part existe un vrai post, un vrai avis, une vraie offre d'emploi ou une vraie mission publiée par quelqu'un qui a ce problème. Trouvez-le. Construisez la personne à partir de ce qu'elle a réellement dit — pas à partir de ce qui vous arrangerait.
+
+---
+
+**Puis rédigez la réponse :**
+
+Donnez à cette personne un nom et une situation : son métier, ce qui se passe un mardi à 14 h qui rend ce problème important, et ce qu'elle fait exactement à la place aujourd'hui.
+
+Indiquez clairement quelles parties viennent de la source et lesquelles vous avez comblées. Les parties comblées sont des hypothèses et elles appartiennent aux tests de la Porte 5.
+
+**Porte :** en avez-vous trouvé une vraie, et changerait-elle réellement d'outil ?
+
+**STOP si** — et ce sont trois arrêts différents, dites lequel :
+- vous n'avez pu que composer la personne au lieu de la trouver. Un persona assemblé à partir de plausibilité est exactement ce que cette porte existe pour attraper ; « Sarah, 34 ans, responsable marketing débordée » est un segment de marché déguisé.
+- la seule personne que vous pouvez construire est le fondateur lui-même.
+- vous l'avez trouvée clairement et elle hausserait les épaules en continuant comme avant.
+
+**La limite de ce que la recherche peut trancher ici :** savoir si quelqu'un a le problème est trouvable. Savoir s'il paierait pour le résoudre ne l'est pas — la disposition à payer pour une chose qui n'existe pas n'est écrite nulle part. Si vous vous surprenez à conclure des résultats de recherche qu'il changerait d'outil, vous êtes allé trop loin : c'est un test de la Porte 5, pas un constat de la Porte 3.
+
+**Si la personne trouvée contredit le segment client verrouillé** — autre métier, autre taille d'entreprise, autre déclencheur — dites-le clairement en une phrase et proposez le retour de navigation vers section_customer (NAVIG-02, avec sa règle de rejet). Ne redéfinissez pas discrètement le segment verrouillé pour l'ajuster à la personne trouvée.
+
+Affichez la porte, puis traitez un STOP selon le Protocole des Portes.
+
+---
+
+**Capture des champs nommés (à stocker pour l'assemblage des sorties) :**
+
+- **gate3_person** = « [nom, métier, le déclencheur du mardi 14 h, et ce qu'elle fait à la place aujourd'hui] »
+- **gate3_source** = « [le post / avis / annonce / mission trouvé, et ce qu'il disait réellement] »
+- **gate3_assumed** = « [chaque partie de la personne que vous avez comblée vous-même — elles deviennent des tests de la Porte 5] »
+- **gate3_verdict** = « [CONTINUER / STOP-OUTREPASSÉ] »
+- **gate_unverified** = « [ajoutez chaque ligne de gate3_assumed] »
 
 Puis passez à section_problem_importance. Ne posez rien d'autre dans cette section.
 
@@ -844,10 +1085,10 @@ Attendez la réponse de l'utilisateur.
 CRITIQUE — RÈGLE D'EFFACEMENT : TOUTES les décisions prises APRÈS la sous-décision choisie sont EFFACÉES. N'essayez pas de les préserver, de les référencer, ou de proposer d'en conserver une partie. Réexécutez la séquence complète depuis la section choisie comme si ces décisions en aval n'avaient jamais été prises. Supprimez-les de votre contexte.
 
 Exemples :
-- L'utilisateur revient au **Segment client** : effacez need_intensity_*, scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Problème, Avantages, Concurrents, scorecard_market_*. Réexécutez toutes les sections de l'Étape 1 depuis section_customer.
+- L'utilisateur revient au **Segment client** : effacez need_intensity_*, gate2_*, gate3_*, scorecard_purchaser_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Problème, Avantages, Concurrents, scorecard_market_*. Réexécutez toutes les sections de l'Étape 1 depuis section_customer.
 - L'utilisateur revient à l'**Acheteur** : effacez uniquement scorecard_purchaser_*. Réexécutez uniquement section_purchaser (Client reste verrouillé).
-- L'utilisateur revient au **Problème** : effacez need_intensity_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Avantages, Concurrents, scorecard_market_*. Réexécutez depuis section_problem.
-- L'utilisateur revient à l'**Intensité du Besoin** : effacez need_intensity_* uniquement. Réexécutez uniquement section_need_intensity (Client, Acheteur, Problème restent verrouillés).
+- L'utilisateur revient au **Problème** : effacez need_intensity_*, gate2_*, gate3_*, scorecard_problem_iu, scorecard_problem_iu_nudge, Avantages, Concurrents, scorecard_market_*. Réexécutez depuis section_problem.
+- L'utilisateur revient à l'**Intensité du Besoin** : effacez need_intensity_*, gate2_*, gate3_*. Réexécutez section_need_intensity, puis les Portes 2 et 3 (Client, Acheteur, Problème restent verrouillés).
 - L'utilisateur revient à la **Classification I/U du Problème** : effacez scorecard_problem_iu, scorecard_problem_iu_nudge uniquement. Réexécutez uniquement section_problem_importance (Client, Acheteur, Problème restent verrouillés).
 - L'utilisateur revient aux **Avantages du fondateur** : effacez Concurrents, scorecard_market_*. Réexécutez depuis section_advantages.
 - L'utilisateur revient aux **Concurrents** : effacez la sélection des concurrents, l'adversaire principal, scorecard_market_*. Réexécutez depuis section_competitors (inclut section_market_sizing).
@@ -859,7 +1100,8 @@ Pour redémarrer une section : réaffichez le bandeau de l'Étape 1 montrant les
 
 ### Si l'utilisateur choisit C (recommencer l'Étape 1 depuis le début)
 
-- Effacez TOUTES les décisions de l'Étape 1 : segment client, acheteur (scorecard_purchaser_*), problème, intensité du besoin (need_intensity_*), classification I/U du problème (scorecard_problem_iu, scorecard_problem_iu_nudge), avantages, concurrents, dimensionnement du marché (scorecard_market_*)
+- Effacez TOUTES les décisions de l'Étape 1 : segment client, acheteur (scorecard_purchaser_*), problème, intensité du besoin (need_intensity_*), constats des Portes 2 et 3 (gate2_*, gate3_*, et leurs lignes dans gate_unverified), classification I/U du problème (scorecard_problem_iu, scorecard_problem_iu_nudge), avantages, concurrents, dimensionnement du marché (scorecard_market_*)
+- La Porte 1 n'est PAS effacée — elle jugeait l'idée, pas l'Étape 1. Ne redemandez pas le pitch.
 - Traitez cela comme un début de sprint frais : réaffichez le bandeau de l'Étape 1 avec les quatre valeurs comme « en attente »
 - Posez à nouveau la question ouverte du segment client (la même que celle de section_customer)
 
@@ -1168,7 +1410,42 @@ Recommandée : [A#] — [nom court]
 Choisie : [A#] — [nom court]
 ─────────────────────────────────────────────────
 
-Puis passez à step4_banner.
+Puis passez à section_gate_risks.
+
+</section>
+
+<section name="section_gate_risks">
+
+## Porte 4 — Ce qui doit se passer correctement (GATE-04)
+
+**En entrant dans cette section :** l'approche est choisie et la bannière de l'Étape 3 a été réaffichée. Ne cherchez pas — cette porte relève de la réflexion, pas de la preuve.
+
+---
+
+Listez tout ce qui doit se passer correctement pour que ça marche. Puis classez par probabilité que ça tourne mal, le plus probable en premier.
+
+Commencez par ceux que l'utilisateur sous-estime probablement — en général la distribution, la disposition à payer, et toute autre partie prenante qui doit changer de comportement pour que ça fonctionne. Utilisez ce que la Porte 2 a mis au jour : si des entreprises ont déjà essayé et coulé, c'est un risque classé avec une source derrière, et il se place près du sommet.
+
+Tenez-vous-en à une liste classée, une ligne chacun. Pas de sous-puces, pas de plans d'atténuation — les atténuations ne sont pas l'objet de cette porte.
+
+**Porte :** le risque numéro un est-il survivable et testable dans les douze prochaines semaines ?
+
+**STOP si :** le risque classé en tête est un risque dont l'échec tue tout et pour lequel il n'existe aucun moyen bon marché de savoir avant de construire. Ce n'est pas un risque, c'est un pari — nommez-le ainsi, avec ce mot.
+
+Affichez la porte, puis traitez un STOP selon le Protocole des Portes.
+
+---
+
+**Capture des champs nommés (à stocker pour l'assemblage des sorties) :**
+
+- **gate4_risks_ranked** = « [la liste classée complète, le plus susceptible de mal tourner en premier] »
+- **gate4_top_risk** = « [le risque n° 1, une phrase] »
+- **gate4_verdict** = « [CONTINUER / STOP-OUTREPASSÉ] »
+- **gate_unverified** = « [ajoutez tout élément du classement que vous avez avancé sans source] »
+
+**Transmission :** la composante **Risque principal** de section_testable_form est `gate4_top_risk` mot pour mot. N'y dérivez pas un second risque principal différent.
+
+Puis affichez la bannière de l'Étape 4 (format défini ci-dessous) et passez à section_hypothesis.
 
 </section>
 
@@ -1234,7 +1511,7 @@ Dérivez automatiquement les 4 composantes de la forme testable à partir de l'h
 |-----------|-------------|-------------------|
 | Métrique de succès | Signe observable et mesurable que l'hypothèse fonctionne | À quoi ressemble « suffisamment de clients choisissant Z pour résoudre Y » sous forme de nombre + délai spécifique |
 | Condition de falsification | Le seuil spécifique auquel l'hypothèse est prouvée fausse | N tentatives de prospection avec M% de conversion comme limite d'échec concrète |
-| Risque principal | La seule hypothèse la plus importante qui, si elle est fausse, tue ce projet | Ce qui est le plus incertain ou non prouvé dans X, Y, ou Z |
+| Risque principal | La seule hypothèse la plus importante qui, si elle est fausse, tue ce projet | `gate4_top_risk` mot pour mot — n'en dérivez pas un nouveau ; ce qui est le plus incertain ou non prouvé dans X, Y, ou Z |
 | Test de validation le plus rapide | L'expérience la moins chère pour confirmer ou invalider l'hypothèse en premier | Validation manuelle, test de page d'atterrissage, ou prospection directe |
 
 Affichez les 4 composantes ensemble :
@@ -1248,7 +1525,49 @@ Affichez les 4 composantes ensemble :
 
 Ces éléments sont verrouillés avec votre hypothèse. Prêt à rédiger vos fichiers de sortie ? »
 
-Attendez que l'utilisateur confirme sa disponibilité avant de passer à section_write_outputs.
+Attendez que l'utilisateur confirme sa disponibilité avant de passer à section_gate_tests.
+
+</section>
+
+<section name="section_gate_tests">
+
+## Porte 5 — La mi-parcours et la finale (GATE-05)
+
+**En entrant dans cette section :** la forme testable est affichée et l'utilisateur a confirmé sa disponibilité. Ne cherchez pas — cette porte relève de la réflexion, pas de la preuve.
+
+---
+
+Écrivez deux tests : un résultat mesurable à la semaine 4, un à la semaine 12, chacun disant à l'utilisateur si ça marche. Chacun a besoin d'un chiffre, d'une échéance et d'un seuil qui pourrait réellement se retrouver sous la barre.
+
+Pointez-les vers les hypothèses que la recherche n'a pas pu trancher — chaque ligne de `gate3_assumed`, et la question de savoir si quelqu'un paie. Ce sont les incertitudes vivantes. Un test visant quelque chose que vous avez déjà confirmé par recherche à la Porte 2 est un test déjà réussi d'avance.
+
+Ces deux tests ne remplacent pas la forme testable ci-dessus — la métrique de succès et la condition de falsification restent telles quelles. Les tests des semaines 4 et 12 sont le calendrier qui permet de trancher.
+
+**Porte :** ces tests peuvent-ils échouer ?
+
+Si un test ne peut pas échouer, réécrivez-le. Faites-le jusqu'à trois fois, en montrant brièvement chaque réécriture pour que l'utilisateur voie ce qui clochait dans la version précédente :
+
+« Semaine 4, v1 : [test]. Ça ne peut pas échouer — [pourquoi]. v2 : [test]. »
+
+**STOP si** trois tentatives produisent toutes des résultats non testables. Le constat est alors que ce qui est affirmé n'est pas observable en douze semaines, et c'est en soi le verdict — dites-le ainsi.
+
+Affichez la porte, puis traitez un STOP selon le Protocole des Portes.
+
+---
+
+**Capture des champs nommés (à stocker pour l'assemblage des sorties) :**
+
+- **gate5_week4** = « [le test de la semaine 4 — chiffre, échéance, seuil] »
+- **gate5_week12** = « [le test de la semaine 12 — chiffre, échéance, seuil] »
+- **gate5_rewrites** = « [chaque réécriture et ce qui clochait dans la version précédente, ou "aucune — les deux tests étaient falsifiables dès la première écriture"] »
+- **gate5_verdict** = « [CONTINUER / STOP-OUTREPASSÉ] »
+- **gate_unverified** = « [ajoutez tout ce que vous avez avancé ici sans source] »
+
+---
+
+**Une fois la porte franchie :** affichez le bloc de clôture du Protocole des Portes — « Les cinq portes sont franchies. » (ou le décompte exact si certaines ont été outrepassées), les deux ou trois phrases sur ce que le test de la semaine 4 révélera le plus probablement, et le registre **Toujours non vérifié** au complet.
+
+Puis passez à section_write_outputs.
 
 </section>
 
@@ -1274,8 +1593,11 @@ Rédigez ./HYPOTHESIS.md avec TOUT ce qui suit — sans placeholder du modèle, 
 - Condition de falsification (de la forme testable ci-dessus)
 - Risque principal (de la forme testable ci-dessus)
 - Test de validation le plus rapide (de la forme testable ci-dessus)
+- Test de la semaine 4 (gate5_week4) et test de la semaine 12 (gate5_week12) — chacun avec son chiffre, son échéance et son seuil
+- Toujours non vérifié : le registre `gate_unverified` au complet, une ligne par affirmation. Cette section n'est jamais omise ni résumée — si elle est vide, écrivez « Rien — chaque affirmation ci-dessus est sourcée. »
 
 CRITIQUE : Zéro crochet ne subsiste dans HYPOTHESIS.md. Aucun champ ne peut dire « [placeholder] » ou « [CLIENT CIBLE : ...] ».
+CRITIQUE : Le risque principal est `gate4_top_risk` mot pour mot. « Toujours non vérifié » est le registre mot pour mot — ne l'adoucissez pas, ne le réduisez pas aux trois lignes qui vous plaisent le plus.
 
 **2. Rédiger SPRINT.md**
 
@@ -1287,6 +1609,7 @@ Rédigez ./SPRINT.md avec TOUT ce qui suit — sans placeholder du modèle, sans
 - **Étape 2 :** toutes les évaluations d'axes (les 8+ axes avec le score de l'utilisateur pour chacun), Axe X et Axe Y choisis avec justification, résultat de la vérification des conflits (si un conflit a été trouvé et comment il a été résolu), mini-manifeste (les 3 phrases verbatim)
 - **Étape 3 :** toutes les descriptions d'approches (A1 à A[N] — chacune avec nom court et description complète de 2-3 phrases), tableau d'évaluation en 4 matrices (placement de chaque approche dans le quadrant de chacune des 4 matrices), approche recommandée (quel A# et pourquoi), approche de secours (quel A# et pourquoi), approche choisie (quel A# l'utilisateur a sélectionné)
 - **Étape 4 :** déclaration d'hypothèse complète (doit correspondre exactement à HYPOTHESIS.md, caractère par caractère)
+- **Portes de réalité :** les cinq portes dans l'ordre — le verdict (CONTINUER / STOP-OUTREPASSÉ / non atteinte), la réponse que vous avez donnée en une ou deux phrases, et pour toute porte outrepassée la raison exacte de son arrêt. Puis le registre `gate_unverified` au complet, une ligne par affirmation. Si `gate_overrides` n'est pas vide, dites-le en tête de section plutôt que de laisser le lecteur compter.
 
 CRITIQUE : Zéro crochet ne subsiste dans SPRINT.md. Chaque section contient du contenu réel de la session.
 
