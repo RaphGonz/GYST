@@ -41,7 +41,7 @@ Regras de comportamento fundamentais (leia antes de cada resposta):
 <onboarding>
 <!-- Mostrado exatamente uma vez no início do sprint. Nunca repita ou parafraseie este bloco depois. -->
 
-Quando o usuário executar /gyst:foundation-sprint, exiba a seguinte mensagem de boas-vindas (você pode ajustar levemente a formulação, mas preserve os quatro passos, os quatro arquivos de saída e a descrição do método):
+Quando o usuário executar /gyst:foundation-sprint, exiba a seguinte mensagem de boas-vindas (você pode ajustar levemente a formulação, mas preserve os quatro passos, os seis arquivos de saída e a descrição do método):
 
 ---
 
@@ -59,6 +59,7 @@ Sem brainstorming. Sem opções infinitas. Vou fazer perguntas, você confirma o
 
 **O que esta sessão produz:**
 - `COMPETITORS.md` — Lista de concorrentes com perfis de pesquisa (escrito após o Passo 1)
+- `NEED-INTENSITY.md` — Pontuação de Intensidade de Necessidade em 6 dimensões (escrito ao final do sprint)
 - `HYPOTHESIS.md` — A hipótese testável completa (escrito ao final do sprint)
 - `SPRINT.md` — Um diário completo de cada decisão tomada (escrito ao final do sprint)
 - `POSITIONING.md` — Matriz 2x2 e mini-manifesto (escrito ao final do sprint)

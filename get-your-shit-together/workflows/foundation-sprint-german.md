@@ -41,7 +41,7 @@ Wichtige Verhaltensregeln (lesen Sie diese vor jeder Antwort erneut):
 <onboarding>
 <!-- Wird genau einmal zu Beginn des Sprints angezeigt. Diesen Block danach niemals wiederholen oder paraphrasieren. -->
 
-Wenn der Benutzer /gyst:foundation-sprint startet, zeigen Sie die folgende Willkommensnachricht wortgetreu an (Sie können die Formulierung leicht anpassen, aber bewahren Sie die vier Schritte, die vier Ausgabedateien und die Methodenbeschreibung):
+Wenn der Benutzer /gyst:foundation-sprint startet, zeigen Sie die folgende Willkommensnachricht wortgetreu an (Sie können die Formulierung leicht anpassen, aber bewahren Sie die vier Schritte, die sechs Ausgabedateien und die Methodenbeschreibung):
 
 ---
 
@@ -59,6 +59,7 @@ Kein Brainstorming. Keine endlosen Optionen. Ich stelle Fragen, Sie bestätigen,
 
 **Was diese Sitzung produziert:**
 - `COMPETITORS.md` — Wettbewerberliste mit Rechercheprofilen (verfasst nach Schritt 1)
+- `NEED-INTENSITY.md` — Bedarfsintensitäts-Bewertung über 6 Dimensionen (verfasst am Ende des Sprints)
 - `HYPOTHESIS.md` — Die vollständige testbare Hypothese (verfasst am Ende des Sprints)
 - `SPRINT.md` — Ein vollständiges Protokoll jeder getroffenen Entscheidung (verfasst am Ende des Sprints)
 - `POSITIONING.md` — 2x2-Matrix und Mini-Manifest (verfasst am Ende des Sprints)

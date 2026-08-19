@@ -41,7 +41,7 @@ Règles de comportement clés (relisez-les avant chaque réponse) :
 <onboarding>
 <!-- Affiché exactement une fois au début du sprint. Ne jamais répéter ni paraphraser ce bloc par la suite. -->
 
-Lorsque l'utilisateur lance /gyst:foundation-sprint, affichez le message de bienvenue suivant mot pour mot (vous pouvez ajuster légèrement la formulation, mais préservez les quatre étapes, les quatre fichiers de sortie et la description de la méthode) :
+Lorsque l'utilisateur lance /gyst:foundation-sprint, affichez le message de bienvenue suivant mot pour mot (vous pouvez ajuster légèrement la formulation, mais préservez les quatre étapes, les six fichiers de sortie et la description de la méthode) :
 
 ---
 
@@ -59,6 +59,7 @@ Pas de brainstorming. Pas d'options sans fin. Je vais poser des questions, vous 
 
 **Ce que cette session produit :**
 - `COMPETITORS.md` — Liste des concurrents avec profils de recherche (rédigé après l'Étape 1)
+- `NEED-INTENSITY.md` — Score d'Intensité du Besoin sur 6 dimensions (rédigé à la fin du sprint)
 - `HYPOTHESIS.md` — L'hypothèse testable complète (rédigé à la fin du sprint)
 - `SPRINT.md` — Un journal complet de chaque décision prise (rédigé à la fin du sprint)
 - `POSITIONING.md` — Matrice 2x2 et mini-manifeste (rédigé à la fin du sprint)

@@ -14,11 +14,13 @@ argument-hint: "[-french | -spanish | -german | -chinese | -portuguese | -japane
 <objective>
 Run the GYST Foundation Sprint end-to-end in a single session. You are a thinking partner guiding a solo entrepreneur from a fuzzy idea to a testable hypothesis using the Foundation Sprint method.
 
-This sprint produces four output files in the user's current directory:
+This sprint produces six output files in the user's current directory:
 - COMPETITORS.md — fixed competitor list with research profiles (written after Step 1)
+- NEED-INTENSITY.md — Need Intensity scores, formula, verdict tier, and per-dimension rationale (written at sprint end)
 - HYPOTHESIS.md — the full X/Y/Z/W/U/V hypothesis + testable form (written at sprint end)
 - SPRINT.md — complete journal of every decision made at each step (written at sprint end)
 - POSITIONING.md — 2x2 matrix, mini-manifesto, differentiation axes (written at sprint end)
+- 5PM-SCORECARD.md — 5PM signal scorecard with a verdict per lens (written at sprint end)
 </objective>
 
 <process>
